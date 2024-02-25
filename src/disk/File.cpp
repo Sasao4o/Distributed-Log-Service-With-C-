@@ -15,23 +15,25 @@ File::File(std::string fileName) : fileName(fileName) {
   }
 }
 
-  void File::WriteFile(int offset, const char * data, int size) {
+  bool File::WriteFile(int offset, const char * data, int size) {
         std::cout << "Writing To File" << std::endl;
         fileIo.seekp(offset);
         fileIo.write(data, size);
         if (fileIo.bad()) {
             std::cout <<  "The fileIo crashes"  << std::endl;
-           
+            return false;
         }
-        fileIo.flush(); //Note File is already flushed when file is closed but we flush here !!!! thats very important note which affect pefroamnce
+        fileIo.flush(); //This can protect from ungracful shut down but nullifies the buffering property of fstreams "Need to make an abstract recovery schema"
+        return true;
   }
 
 
 
-void File::ReadFile(int offset,  char *data, int size) {
+bool File::ReadFile(int offset,  char *data, int size) {
  
   if (offset > GetFileSize(fileName)) {
       std::cout << "I/O error reading past end of file" << std::endl ;
+      return false;
         // throw "I/O error reading past end of file";
   } else {
     // set read cursor to offset
@@ -39,9 +41,9 @@ void File::ReadFile(int offset,  char *data, int size) {
     fileIo.read(data, size);
     if (fileIo.bad()) {
     std::cout << "I/O While Reading" << std::endl;
-      return;
+      return false;
     }
- 
+    return true;
   }
 }
 void File::Close() {

@@ -1,0 +1,2 @@
+- Change all the offsets "Size and position" in store and File class to off_t
+- fstream doesn't provide file size change , so we need a new function. "Solved by using lseek"

@@ -1,0 +1,6 @@
+- What can we do to ensure that bustub doesn't fail on ungraceful shut down ?
+- More Explanation : Bufferpool view is on pages and this is a bulk description for the modification to be put in a log file 
+  and if we wanted to put sql commands with index on the log 
+  "The index would be benefial for identifying the last flushed command to the original file", we wouldn't be able to sync that index 
+  with the pages that the bufferpool flushed.
+  ::To solve this problem we need to read more about transactional logging "May include major changes to the transactions schema of the project and implementing the WAL and Transaction commit protocol"

@@ -1,23 +1,27 @@
+#ifndef FILE_H
+#define FILE_H
+
+#include <iostream>
 #include <fstream>
-#include<string>
-#include<iostream>
 #include <sys/stat.h>
+
 namespace log {
+
 class File {
-
-    public:
+public:
     File(std::string fileName);
-    void WriteFile(int offset, const char * data, int size);
-    void ReadFile(int offset,  char*data, int size);
+    ~File() = default;
+
+    bool WriteFile(int offset, const char* data, int size);
+    bool ReadFile(int offset, char* data, int size);
     void Close();
-    int GetFileSize(const std::string &file_name);
-    private:
-    std::fstream fileIo;   //File streams are associated with files either on construction, or by calling member open.
+    int GetFileSize(const std::string& file_name);
+
+private:
     std::string fileName;
-
-
+    std::fstream fileIo;
 };
 
-
-
 }
+
+#endif // FILE_H

@@ -1,0 +1,5 @@
+- How does mmap work ? 
+- mmap in Go, the entire file is mapped into the process's virtual address space, but only the portions that are accessed incur actual physical memory usage. The virtual space is managed by the operating system and may involve using disk space as needed. Access to the file through mmap can have relatively low access times, as the operating system can efficiently manage the loading of pages on demand.
+:: In C++, you can achieve similar functionality to mmap in Go using the <fstream> library for file operations and the <sys/mman.h> header for memory-mapping. 
+   The C++ equivalent for mmap is the mmap function provided by the <sys/mman.h> header, and you can use it to map a file into memory or allow
+   the OS to perform demand paging using the MAP_PRIVATE flag
