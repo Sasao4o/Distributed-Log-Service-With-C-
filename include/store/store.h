@@ -15,7 +15,7 @@ namespace log {
         ~Store();
 
         bool Append(const char * data, uint64_t *returnPos);
-        void Read(uint64_t position, char** data);
+        void Read(uint64_t position, char** data, size_t * returnedDataSize);
         void Close();
         uint64_t GetSize();
     private:

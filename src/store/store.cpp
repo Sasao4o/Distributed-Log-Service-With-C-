@@ -20,21 +20,22 @@ namespace log {
         uint64_t position = size;
         *returnPos = position;
         size_t dataSize = std::strlen(data);
-        
+        std::cout << "In Store Append Size is " << dataSize << std::endl;
         bool success = true;
         success &= file->WriteFile(position, reinterpret_cast<const char*>(&dataSize), lenWidth);
         success &= file->WriteFile(position + lenWidth, data, dataSize);
 
-        size += lenWidth + dataSize;
+        size += (lenWidth + dataSize);
 
         return success;
     }
 
-    void Store::Read(uint64_t position, char** data) {
+    void Store::Read(uint64_t position, char** data, size_t * returnedDataSize) {
         std::lock_guard<std::mutex> lock(mutex);
 
         size_t dataSize;
         file->ReadFile(position, reinterpret_cast<char*>(&dataSize), lenWidth);
+        *returnedDataSize = dataSize;
         std::cout << "I am allocationg " << dataSize << " In Store . cpp " << std::endl;
         *data = new char[dataSize];
         file->ReadFile(position + lenWidth, *data, dataSize);

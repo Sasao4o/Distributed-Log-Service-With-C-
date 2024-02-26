@@ -81,9 +81,10 @@ namespace log {
         tmpPos = tmpOut * entWidth;
 
         
-        if (size < tmpPos + entWidth) {
+        if (desiredExpansionSize < tmpPos + entWidth) {
             *out = 0;
             *pos = 0;
+            //LOOK HERE
             return;
         }
         

@@ -19,15 +19,15 @@ void BulkTestInsertAndReterive() {
      Config config;
      config.MaxIndexBytes = 10000;
      config.MaxStoreBytes = 10000;
-     log::Segment seg("./logsData", 0, &config);
-     for (int i = 0; i < 100; i++) {
+     log::Segment seg("./logsData", 1, &config);
+     for (int i = 1; i < 300; i++) {
      log::v1::Record record;
      record.set_value("mostafa");
     //  record.set_offset(i);
      seg.Append(&record);
      }
     
-    for (int i = 0; i < 100; i++) {
+    for (int i = 1; i < 300; i++) {
         std::cout << "At i = " << i << std::endl;
      log::v1::Record * rec = seg.Read(i);   
      assert(rec != nullptr);

@@ -12,6 +12,7 @@ uint32_t offset;
 uint64_t pos;
 index->Read(-1, &offset, &pos);
 if (offset == -1 && pos == -1) {
+    std::cout << "A7AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" << std::endl;
     nextOffset = baseOffset;
 } else {
     //Note offset is relative to baseoffset
@@ -27,6 +28,7 @@ void Segment::Append(v1::Record *record) {
         std::cerr << "Failed to serialize Record." << std::endl;
         return ;
     }
+    std::cout << "Serialized Record is " << serialized_record.c_str() << std::endl;
     uint64_t insertedPos;
     bool insertInStore =   store->Append(serialized_record.c_str(), &insertedPos);
     bool insertInIndex = index->Write(uint32_t(nextOffset - baseOffset), insertedPos);
@@ -42,7 +44,9 @@ void Segment::Append(v1::Record *record) {
     //Offset is absolute offset  
     uint32_t out;
     uint64_t pos;
+    std::cout << "In Index Reading from offset " << int64_t(offset - baseOffset) << std::endl;
     index->Read(int64_t(offset - baseOffset), &out, &pos);
+        std::cout << "Position in Store File is " << pos << std::endl;
     if (out == -1 && pos == -1) {
         std::cout << "Can't Read Index File from Segment" << std::endl;
         return nullptr;
@@ -50,15 +54,16 @@ void Segment::Append(v1::Record *record) {
   
      char ** data;
      data = new char*;
-     
-     store->Read(pos, data);
+     size_t  returnedDataSize;
+     store->Read(pos, data, &returnedDataSize);
     
     log::v1::Record* deserializedRecord = new log::v1::Record();
-    if (!deserializedRecord->ParseFromString(*data)) {
+    if (! deserializedRecord->ParseFromString(std::string(*data,returnedDataSize))) {
         std::cerr << "Failed to parse serialized data into Record." << std::endl;
         delete [] data;
         return nullptr;
     }
+    
     delete [] data;
     return deserializedRecord;
 }
