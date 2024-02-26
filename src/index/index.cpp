@@ -5,7 +5,7 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 
-namespace Log {
+namespace log {
     Index::Index(std::string filename) : fileName(filename) {
          const char* cFileName = fileName.c_str();
         fileDescriptor = open(cFileName, O_RDWR | O_CREAT, S_IRUSR | S_IWUSR | S_IRGRP | S_IROTH);
@@ -94,9 +94,11 @@ namespace Log {
         *pos = tmpPos;
     }
 
-    int Index::Write(uint32_t off, uint64_t pos) {
+    bool Index::Write(uint32_t off, uint64_t pos) {
         if (desiredExpansionSize < size + entWidth) {
-            return -1;
+            std::cout << "Size is " << size << " " << entWidth << std::endl;
+            std::cout << "You are writing after end of file " << std::endl;
+            return 0;
         }
 
         memcpy(mMap + size, &off, offWidth);
@@ -107,6 +109,16 @@ namespace Log {
         // memcpy(&test_pos, mMap + size + offWidth, posWidth);
         // std::cout << test_off << test_pos << std::endl;
         size += entWidth;
-        return 0;
+        return 1;
+    }
+    uint64_t Index::GetSize() {
+         File file(fileName);
+        int size = file.GetFileSize(fileName);
+        file.Close();
+        return size;
+    }
+
+    void Index::Close() {
+        
     }
 }

@@ -1,12 +1,24 @@
  
 compileProtocolBuffer: 
 	protoc --cpp_out=. api/v1/*.proto
+ 
+compileProject:
+	g++ -o ./exc ./main.cpp ./api/v1/log.pb.cc ./src/disk/File.cpp ./src/segment/segment.cpp ./src/index/index.cpp ./src/store/store.cpp -lprotobuf -pthread
 
 compileDiskTest:
 	g++ -o ./build/disk/File_test ./test/disk/File_test.cpp ./src/disk/File.cpp
 
 compileIndexTest:
-	 g++ -o ./build/index/index_test ./test/index/index_test.cpp ./src/index/index.cpp 
+	 g++ -o ./build/index/index_test ./test/index/index_test.cpp ./src/index/index.cpp ./src/disk/File.cpp
 
 compileStoreTest:
 	g++ -o ./build/store/store_test ./test/store/store_test.cpp ./src/store/store.cpp ./src/disk/File.cpp
+
+compileSegmentTest:
+	g++ -o ./build/segment/segment_test ./test/segment/segment_test.cpp ./api/v1/log.pb.cc ./src/disk/File.cpp ./src/segment/segment.cpp ./src/index/index.cpp ./src/store/store.cpp -lprotobuf -pthread
+
+runSegmentTest: 
+	g++ -o ./build/segment/segment_test ./test/segment/segment_test.cpp ./api/v1/log.pb.cc ./src/disk/File.cpp ./src/segment/segment.cpp ./src/index/index.cpp ./src/store/store.cpp -lprotobuf -pthread && ./build/segment/segment_test
+
+runStoreTest:
+	g++ -o ./build/store/store_test ./test/store/store_test.cpp ./src/store/store.cpp ./src/disk/File.cpp && ./build/store/store_test

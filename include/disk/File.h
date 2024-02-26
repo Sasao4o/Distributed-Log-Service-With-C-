@@ -12,8 +12,8 @@ public:
     File(std::string fileName);
     ~File() = default;
 
-    bool WriteFile(int offset, const char* data, int size);
-    bool ReadFile(int offset, char* data, int size);
+    bool WriteFile(uint64_t offset, const char* data, int size);
+    bool ReadFile(uint64_t offset, char* data, int size);
     void Close();
     int GetFileSize(const std::string& file_name);
 

@@ -15,7 +15,7 @@ File::File(std::string fileName) : fileName(fileName) {
   }
 }
 
-  bool File::WriteFile(int offset, const char * data, int size) {
+  bool File::WriteFile(uint64_t offset, const char * data, int size) {
         std::cout << "Writing To File" << std::endl;
         fileIo.seekp(offset);
         fileIo.write(data, size);
@@ -29,7 +29,7 @@ File::File(std::string fileName) : fileName(fileName) {
 
 
 
-bool File::ReadFile(int offset,  char *data, int size) {
+bool File::ReadFile(uint64_t offset,  char *data, int size) {
  
   if (offset > GetFileSize(fileName)) {
       std::cout << "I/O error reading past end of file" << std::endl ;

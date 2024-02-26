@@ -14,14 +14,14 @@ namespace log {
         Store(std::string filename);
         ~Store();
 
-        bool Append(const char * data);
-        void Read(int position, char* data);
+        bool Append(const char * data, uint64_t *returnPos);
+        void Read(uint64_t position, char** data);
         void Close();
-
+        uint64_t GetSize();
     private:
         File* file;
         std::string fileName;
-        int size;
+        uint64_t size;
         std::mutex mutex;
     };
 }

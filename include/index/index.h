@@ -3,16 +3,17 @@
 
 #include <iostream>
 #include <cstdint>
-
-namespace مog {
+#include "../disk/File.h"
+namespace log {
     class Index {
     public:
         Index(std::string filename);
         ~Index();
 
         void Read(int64_t in, uint32_t *out, uint64_t *pos);
-        int Write(uint32_t off, uint64_t pos);
-
+        bool Write(uint32_t off, uint64_t pos);
+        uint64_t GetSize();
+        void Close();
     private:
         int fileDescriptor;
         std::string fileName;
@@ -22,7 +23,7 @@ namespace مog {
         static constexpr uint64_t offWidth = 4;
         static constexpr uint64_t posWidth = 8;
         static constexpr uint64_t entWidth = offWidth + posWidth;
-        static constexpr uint64_t desiredExpansionSize = 1024;
+        static constexpr uint64_t desiredExpansionSize = 10240;
     };
 }
 

@@ -1,8 +1,9 @@
 #include "../../include/index/index.h"
+#include <cassert>
+ using namespace log;
 
-int main() {
-    using namespace Log;
-
+void BasicTest() {
+ 
     // Test case 1: Create an Index instance and write some entries
     Index index("index");
     index.Write(100, 1000);
@@ -22,6 +23,29 @@ int main() {
 
     delete [] offset;
     delete [] position;
+ 
+}
 
-    return 0;
+void InsertAndReterive() {
+ 
+    
+    Index index("index");
+    for (int i = 0; i < 100; i++) {
+    
+    index.Write(i, 1000);
+    }
+      for (int i = 0; i < 100; i++) {
+         std::cout << "I is " << i << std::endl;
+        uint32_t x;
+        uint64_t y;
+        index.Read(i, &x, &y);
+        assert(y == 1000);
+        assert(x ==   i);
+
+    }
+  
+ 
+}
+int main() {
+    InsertAndReterive();
 }
