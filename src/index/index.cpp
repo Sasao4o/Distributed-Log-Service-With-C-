@@ -111,14 +111,27 @@ namespace log {
         size += entWidth;
         return 1;
     }
-    uint64_t Index::GetSize() {
-         File file(fileName);
-        int size = file.GetFileSize(fileName);
-        file.Close();
+    off_t Index::GetSize() {
         return size;
     }
 
     void Index::Close() {
-        
+        //Not needed
+    }
+
+    void Index::Remove(){ // Don't use delete or any destructor for the same object that has been removed as u will get SEGV 
+        if (munmap(mMap, desiredExpansionSize) == -1) {
+            perror("Error unmapping file from memory");
+        }
+        struct stat file_stat;
+        if (fstat(fileDescriptor, &file_stat) == -1) {
+            perror("Error getting file information");
+            close(fileDescriptor);
+        }
+        if (unlink(file_stat.st_path) == -1) {
+            perror("unlink");
+            close(fileDescriptor);
+        }
+        close(fileDescriptor);
     }
 }

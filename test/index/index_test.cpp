@@ -21,8 +21,8 @@ void BasicTest() {
     index.Read(5, offset, position);
     std::cout << "Attempted to read out-of-bounds entry. Offset = " << *offset << ", Position = " << *position << std::endl;
 
-    delete [] offset;
-    delete [] position;
+    delete offset;
+    delete position;
  
 }
 
