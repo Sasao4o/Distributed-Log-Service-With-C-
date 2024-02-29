@@ -12,7 +12,8 @@ namespace log {
 
         void Read(int64_t in, uint32_t *out, uint64_t *pos);
         bool Write(uint32_t off, uint64_t pos);
-        uint64_t GetSize();
+        off_t GetSize();
+        void Remove();
         void Close();
     private:
         int fileDescriptor;

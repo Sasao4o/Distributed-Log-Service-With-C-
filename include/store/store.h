@@ -17,6 +17,7 @@ namespace log {
         bool Append(const char * data, uint64_t *returnPos);
         void Read(uint64_t position, char** data, size_t * returnedDataSize);
         void Close();
+        void Remove();
         uint64_t GetSize();
     private:
         File* file;

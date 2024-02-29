@@ -47,4 +47,11 @@ namespace log {
     uint64_t Store::GetSize() {
         return size;
     }
+    void Store::Remove(){  // Don't use delete or any destructor for the same object that has been removed as u will get SEGV 
+        const char* cFileName = fileName.c_str();
+        if (unlink(cFileName) == -1) {
+            perror("unlink");
+        }
+        delete file;
+    }
 }

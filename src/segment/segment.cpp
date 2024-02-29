@@ -12,8 +12,7 @@ uint32_t offset;
 uint64_t pos;
 index->Read(-1, &offset, &pos);
 if (offset == -1 && pos == -1) {
-    std::cout << "A7AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" << std::endl;
-    nextOffset = baseOffset;
+     nextOffset = baseOffset;
 } else {
     //Note offset is relative to baseoffset
     //so offset will be 32 bytes but baseOffset wil be 64 byte
