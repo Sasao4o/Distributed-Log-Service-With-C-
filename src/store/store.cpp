@@ -1,21 +1,24 @@
 #include "../../include/store/store.h"
-#include <cstring>
+ 
 
-namespace log {
+namespace logModule {
     Store::Store(std::string filename) : fileName(filename) {
         file = new File(filename);
         int fileSize = file->GetFileSize(filename);
         if(fileSize != -1) {
             size = fileSize;
         }
+        fileExist = true;
     }
 
     Store::~Store() {
-        delete file;
+        if (fileExist) {
+        Close();
+        }
     }
 
     bool Store::Append(const char * data, uint64_t *returnPos) {
-        std::lock_guard<std::mutex> lock(mutex);
+        std::lock_guard<std::mutex> lock(mtx);
 
         uint64_t position = size;
         *returnPos = position;
@@ -31,7 +34,7 @@ namespace log {
     }
 
     void Store::Read(uint64_t position, char** data, size_t * returnedDataSize) {
-        std::lock_guard<std::mutex> lock(mutex);
+        std::lock_guard<std::mutex> lock(mtx);
 
         size_t dataSize;
         file->ReadFile(position, reinterpret_cast<char*>(&dataSize), lenWidth);
@@ -43,15 +46,18 @@ namespace log {
 
     void Store::Close() {
         file->Close();
+        // delete file;
     }
     uint64_t Store::GetSize() {
         return size;
     }
     void Store::Remove(){  // Don't use delete or any destructor for the same object that has been removed as u will get SEGV 
+        Close();
         const char* cFileName = fileName.c_str();
         if (unlink(cFileName) == -1) {
             perror("unlink");
         }
-        delete file;
+        fileExist = false;
+         
     }
 }

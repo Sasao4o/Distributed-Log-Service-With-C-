@@ -1,3 +1,4 @@
 - Change all the offsets "Size and position" in store and File class to off_t
 - fstream doesn't provide file size change , so we need a new function. "Solved by using lseek"]
 -How to save nullcharacter in char*
+-you could optimize this further and make the locks per segment rather than across the whole log

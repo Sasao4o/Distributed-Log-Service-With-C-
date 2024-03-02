@@ -1,12 +1,13 @@
 #ifndef STORE_H
 #define STORE_H
-
-#include <iostream>
 #include <mutex>
+#include <cstring>
+#include <iostream>
+#include <unistd.h>
 #include "../disk/File.h"
 #include <string>
-
-namespace log {
+#include <cstdint>
+namespace logModule {
     const size_t lenWidth = 8;
 
     class Store {
@@ -20,10 +21,11 @@ namespace log {
         void Remove();
         uint64_t GetSize();
     private:
+        bool fileExist = false;
         File* file;
         std::string fileName;
         uint64_t size;
-        std::mutex mutex;
+        std::mutex mtx;
     };
 }
 

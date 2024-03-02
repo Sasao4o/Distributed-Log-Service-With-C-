@@ -1,6 +1,6 @@
 #include "../../include/disk/File.h"
  
-namespace log {
+namespace logModule {
 
 File::File(std::string fileName) : fileName(fileName) {
     fileIo.open(fileName, std::ios::binary | std::ios::in | std::ios::out);

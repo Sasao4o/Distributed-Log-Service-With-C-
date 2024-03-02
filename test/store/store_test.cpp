@@ -2,7 +2,7 @@
 #include <cassert>
 #include <cstring>
 
- using namespace log;
+ using namespace logModule;
 void BasicTest() {
     
     Store store("store");

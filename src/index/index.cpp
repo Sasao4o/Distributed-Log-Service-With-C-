@@ -1,11 +1,7 @@
 #include "../../include/index/index.h"
-#include <cstring>
-#include <sys/mman.h>
-#include <unistd.h>
-#include <sys/stat.h>
-#include <fcntl.h>
+ 
 
-namespace log {
+namespace logModule {
     Index::Index(std::string filename) : fileName(filename) {
          const char* cFileName = fileName.c_str();
         fileDescriptor = open(cFileName, O_RDWR | O_CREAT, S_IRUSR | S_IWUSR | S_IRGRP | S_IROTH);
@@ -40,25 +36,13 @@ namespace log {
             perror("Error mapping file to memory");
             close(fileDescriptor);
         }
+        fileExist = true;
     }
 
     Index::~Index() {
-        if (msync(mMap, desiredExpansionSize, MS_SYNC) == -1) {
-            perror("Error synchronizing changes to the file");
+        if (fileExist) {
+        Close();
         }
-
-        // Don't forget to unmap the memory when you're done
-        if (munmap(mMap, desiredExpansionSize) == -1) {
-            perror("Error unmapping file from memory");
-        }
-
-        // truncate the file back to the updated size
-        if (ftruncate(fileDescriptor, size)) {
-            perror("Error truncating the file");
-            close(fileDescriptor);
-        }
-        //delete [] mMap;
-        close(fileDescriptor);
     }
 
     void Index::Read(int64_t in, uint32_t *out, uint64_t *pos) {
@@ -70,7 +54,7 @@ namespace log {
             *pos = -1;
             return;
         }
-        
+       
         if (in == -1) {
             tmpOut = (size / entWidth) - 1;
         } else {
@@ -90,7 +74,7 @@ namespace log {
         
         memcpy(&o, mMap + tmpPos, offWidth);
         memcpy(&tmpPos, mMap + tmpPos + offWidth, posWidth);
-        //std::cout<<"looooool"<<std::endl;
+        
         *out = o;
         *pos = tmpPos;
     }
@@ -118,21 +102,32 @@ namespace log {
 
     void Index::Close() {
         //Not needed
-    }
+         if (msync(mMap, desiredExpansionSize, MS_SYNC) == -1) {
+            perror("Error synchronizing changes to the file");
+        }
 
-    void Index::Remove(){ // Don't use delete or any destructor for the same object that has been removed as u will get SEGV 
+        // Don't forget to unmap the memory when you're done
         if (munmap(mMap, desiredExpansionSize) == -1) {
             perror("Error unmapping file from memory");
         }
-        struct stat file_stat;
-        if (fstat(fileDescriptor, &file_stat) == -1) {
-            perror("Error getting file information");
-            close(fileDescriptor);
+
+        // truncate the file back to the updated size
+        if (ftruncate(fileDescriptor, size)) {
+            perror("Error truncating the file");
         }
-        if (unlink(file_stat.st_path) == -1) {
-            perror("unlink");
-            close(fileDescriptor);
-        }
+        //delete [] mMap;
         close(fileDescriptor);
     }
+ 
+    void Index::Remove(){ // Don't use delete or any destructor for the same object that has been removed as u will get SEGV 
+        Close();
+        if (unlink(fileName.c_str()) == -1) {
+            perror("unlink");
+        }
+        std::cout << "Removed the Index " << std::endl;
+        fileExist = false;
+       
+    }
+ 
+
 }

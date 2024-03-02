@@ -5,7 +5,7 @@
 #include <fstream>
 #include <sys/stat.h>
 
-namespace log {
+namespace logModule {
 
 class File {
 public:

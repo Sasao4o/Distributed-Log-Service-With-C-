@@ -17,8 +17,8 @@ void TestInsertAndReterive() {
 
 void BulkTestInsertAndReterive() {
      Config config;
-     config.MaxIndexBytes = 10000;
-     config.MaxStoreBytes = 10000;
+     config.MaxIndexBytes = 1024;
+     config.MaxStoreBytes = 1024;
      log::Segment seg("./logsData", 1, &config);
      for (int i = 1; i < 300; i++) {
      log::v1::Record record;

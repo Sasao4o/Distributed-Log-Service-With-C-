@@ -2,7 +2,7 @@
 #include "../../include/segment/segment.h"
   
  
-using namespace log;
+using namespace logModule;
 Segment::Segment(std::string segmentDirectoryName, uint64_t baseOffset, Config *config) : segmentDirectoryName(segmentDirectoryName), baseOffset(baseOffset), config_(config) {
 std::string storeFileName = segmentDirectoryName + "/"  + std::to_string(baseOffset) + ".store";
 std::string indexFileName = segmentDirectoryName + "/"  + std::to_string(baseOffset) + ".index";
@@ -20,7 +20,7 @@ if (offset == -1 && pos == -1) {
 }
 
 }
-void Segment::Append(v1::Record *record) {
+void Segment::Append(logprog::v1::Record *record) {
     record->set_offset(nextOffset);
     std::string serialized_record;
     if (!record->SerializeToString(&serialized_record)) {
@@ -39,7 +39,7 @@ void Segment::Append(v1::Record *record) {
     }
      
 }  
-    v1::Record * Segment::Read(uint64_t offset) {
+    logprog::v1::Record * Segment::Read(uint64_t offset) {
     //Offset is absolute offset  
     uint32_t out;
     uint64_t pos;
@@ -56,7 +56,7 @@ void Segment::Append(v1::Record *record) {
      size_t  returnedDataSize;
      store->Read(pos, data, &returnedDataSize);
     
-    log::v1::Record* deserializedRecord = new log::v1::Record();
+    logprog::v1::Record* deserializedRecord = new logprog::v1::Record();
     if (! deserializedRecord->ParseFromString(std::string(*data,returnedDataSize))) {
         std::cerr << "Failed to parse serialized data into Record." << std::endl;
         delete [] data;
@@ -68,8 +68,9 @@ void Segment::Append(v1::Record *record) {
 }
 
 void Segment::Remove() {
-        // store->Remove();
-        // index->Remove();
+        store->Remove();
+        index->Remove();
+    
 }
 
 void Segment::Close() {
@@ -85,4 +86,13 @@ uint64_t Segment::nearestMultiple(uint64_t j, uint64_t k) {
         return (j / k) * k;
     }
     return ((j - k + 1) / k) * k;
+}
+
+uint64_t Segment::getBaseOffset() {return baseOffset;}
+
+uint64_t Segment::getNextOffset() {return nextOffset;}
+
+Segment::~Segment() {
+    delete store;
+    delete index;
 }
