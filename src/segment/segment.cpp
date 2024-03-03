@@ -21,7 +21,9 @@ if (offset == -1 && pos == -1) {
 
 }
 void Segment::Append(logprog::v1::Record *record) {
-    record->set_offset(nextOffset);
+    // std::cout << "A7A 3LEK 2  " << std::endl <<  nextOffset << std::endl;
+    // record->set_offset(nextOffset);
+        std::cout  << " GRPC DEBUGGING " << record->value() << std::endl;
     std::string serialized_record;
     if (!record->SerializeToString(&serialized_record)) {
         std::cerr << "Failed to serialize Record." << std::endl;

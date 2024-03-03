@@ -1,2 +1,2 @@
 # Hashes of file build rules.
-4f2277134e311d42e9fe5d9b1d232512 logprog.pb.cc
+44a65706cea69b1da101c9b0bd834d9f logprog.pb.cc

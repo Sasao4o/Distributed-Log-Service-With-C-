@@ -19,8 +19,10 @@ class LogImplementation final : public Logging::Service {
                      ProduceResponse* reply) override {
     // Obtains the original string from the request
     Record  rec = request->record();
-    commitLog_->Append(rec);
-    std::cout << rec.value() << std::endl;
+    // commitLog_->Append(&rec);
+    Record * recADD = &rec;
+     commitLog_->Append(recADD);
+    std::cout << recADD->value() << std::endl;
 
     reply->set_offset(++x);
     return Status::OK;
@@ -31,7 +33,9 @@ Log * commitLog_;
 void RunServer() {
   std::string server_address("0.0.0.0:50051");
   Config b;
-  Log lg("./logsData", b);
+  b.InitialOffset = 0;
+  Log lg("../../logsData", b);
+  lg.SetUp();
   LogImplementation service(&lg);
  
   ServerBuilder builder;

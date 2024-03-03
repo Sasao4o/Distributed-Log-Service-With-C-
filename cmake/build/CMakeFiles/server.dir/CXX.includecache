@@ -5248,9 +5248,9 @@ grpcpp/support/config.h
 
 /home/sasa/.local/include/grpcpp/version_info.h
 
-/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/logprog.grpc.pb.h
+/mnt/c/users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/logprog.grpc.pb.h
 logprog.pb.h
-/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/logprog.pb.h
+/mnt/c/users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/logprog.pb.h
 functional
 -
 grpcpp/generic/async_generic_service.h
@@ -5288,7 +5288,7 @@ grpcpp/support/stub_options.h
 grpcpp/support/sync_stream.h
 -
 
-/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/logprog.pb.h
+/mnt/c/users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/logprog.pb.h
 limits
 -
 string
@@ -5298,37 +5298,37 @@ type_traits
 utility
 -
 google/protobuf/port_def.inc
-/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/google/protobuf/port_def.inc
+/mnt/c/users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/google/protobuf/port_def.inc
 google/protobuf/port_undef.inc
-/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/google/protobuf/port_undef.inc
+/mnt/c/users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/google/protobuf/port_undef.inc
 google/protobuf/io/coded_stream.h
-/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/google/protobuf/io/coded_stream.h
+/mnt/c/users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/google/protobuf/io/coded_stream.h
 google/protobuf/arena.h
-/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/google/protobuf/arena.h
+/mnt/c/users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/google/protobuf/arena.h
 google/protobuf/arenastring.h
-/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/google/protobuf/arenastring.h
+/mnt/c/users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/google/protobuf/arenastring.h
 google/protobuf/generated_message_tctable_decl.h
-/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/google/protobuf/generated_message_tctable_decl.h
+/mnt/c/users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/google/protobuf/generated_message_tctable_decl.h
 google/protobuf/generated_message_util.h
-/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/google/protobuf/generated_message_util.h
+/mnt/c/users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/google/protobuf/generated_message_util.h
 google/protobuf/metadata_lite.h
-/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/google/protobuf/metadata_lite.h
+/mnt/c/users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/google/protobuf/metadata_lite.h
 google/protobuf/generated_message_reflection.h
-/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/google/protobuf/generated_message_reflection.h
+/mnt/c/users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/google/protobuf/generated_message_reflection.h
 google/protobuf/message.h
-/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/google/protobuf/message.h
+/mnt/c/users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/google/protobuf/message.h
 google/protobuf/repeated_field.h
-/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/google/protobuf/repeated_field.h
+/mnt/c/users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/google/protobuf/repeated_field.h
 google/protobuf/extension_set.h
-/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/google/protobuf/extension_set.h
+/mnt/c/users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/google/protobuf/extension_set.h
 google/protobuf/unknown_field_set.h
-/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/google/protobuf/unknown_field_set.h
+/mnt/c/users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/google/protobuf/unknown_field_set.h
 google/protobuf/port_def.inc
-/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/google/protobuf/port_def.inc
+/mnt/c/users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/google/protobuf/port_def.inc
 google/protobuf/port_undef.inc
-/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/google/protobuf/port_undef.inc
+/mnt/c/users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/google/protobuf/port_undef.inc
 
-/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/include/disk/File.h
+/mnt/c/users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/include/disk/File.h
 iostream
 -
 fstream
@@ -5336,7 +5336,7 @@ fstream
 sys/stat.h
 -
 
-/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/include/index/index.h
+/mnt/c/users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/include/index/index.h
 cstring
 -
 sys/mman.h
@@ -5352,15 +5352,15 @@ iostream
 cstdint
 -
 ../disk/File.h
-/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/include/disk/File.h
+/mnt/c/users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/include/disk/File.h
 
-/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/include/log/config.h
+/mnt/c/users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/include/log/config.h
 cstdint
 -
 
-/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/include/log/log.h
+/mnt/c/users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/include/log/log.h
 ../segment/segment.h
-/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/include/segment/segment.h
+/mnt/c/users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/include/segment/segment.h
 string
 -
 iostream
@@ -5368,21 +5368,21 @@ iostream
 filesystem
 -
 ../../cmake/build/logprog.pb.h
-/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/logprog.pb.h
+/mnt/c/users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/logprog.pb.h
 
-/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/include/segment/segment.h
+/mnt/c/users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/include/segment/segment.h
 ../store/store.h
-/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/include/store/store.h
+/mnt/c/users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/include/store/store.h
 ../index/index.h
-/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/include/index/index.h
+/mnt/c/users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/include/index/index.h
 ../../cmake/build/logprog.pb.h
-/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/logprog.pb.h
+/mnt/c/users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/logprog.pb.h
 ../../include/disk/File.h
-/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/include/disk/File.h
+/mnt/c/users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/include/disk/File.h
 ../../include/log/config.h
-/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/include/log/config.h
+/mnt/c/users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/include/log/config.h
 
-/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/include/store/store.h
+/mnt/c/users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/include/store/store.h
 mutex
 -
 cstring
@@ -5392,41 +5392,25 @@ iostream
 unistd.h
 -
 ../disk/File.h
-/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/include/disk/File.h
+/mnt/c/users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/include/disk/File.h
 string
 -
 cstdint
 -
 
-/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/src/disk/file.cpp
-../../include/disk/File.h
-/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/include/disk/File.h
-
-/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/src/index/index.cpp
-../../include/index/index.h
-/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/include/index/index.h
-
-/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/src/log/log.cpp
+/mnt/c/users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/src/log/log.cpp
 ../../include/log/log.h
-/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/include/log/log.h
+/mnt/c/users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/include/log/log.h
 
-/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/src/segment/segment.cpp
-../../include/segment/segment.h
-/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/include/segment/segment.h
-
-/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/src/server/server.cpp
+/mnt/c/users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/src/server/server.cpp
 grpcpp/grpcpp.h
 -
 string
 -
 ../../cmake/build/logprog.grpc.pb.h
-/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/logprog.grpc.pb.h
+/mnt/c/users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/logprog.grpc.pb.h
 ../../include/log/log.h
-/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/include/log/log.h
+/mnt/c/users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/include/log/log.h
 iostream
 -
-
-/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/src/store/store.cpp
-../../include/store/store.h
-/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/include/store/store.h
 

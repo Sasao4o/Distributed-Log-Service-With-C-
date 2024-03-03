@@ -38,7 +38,6 @@ namespace logModule {
 
   void Log::Append(logprog::v1::Record *record) {
     std::lock_guard<std::mutex> lock(mtx);
-    
     activeSegment->Append(record);
     if (activeSegment->IsMaxed()) {
       uint64_t currentOffset = activeSegment->getNextOffset();

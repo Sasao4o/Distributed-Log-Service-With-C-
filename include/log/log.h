@@ -21,7 +21,7 @@ namespace logModule {
         Config conf;
         std::string directoryPath; 
         std::mutex mtx;
-        Segment *activeSegment;
+        Segment *activeSegment = nullptr;
         std::vector<Segment*>segments;
     };
 

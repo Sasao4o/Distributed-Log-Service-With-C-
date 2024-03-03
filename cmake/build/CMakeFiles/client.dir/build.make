@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-"
+CMAKE_SOURCE_DIR = "/mnt/c/users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build"
+CMAKE_BINARY_DIR = "/mnt/c/users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/client.dir/depend.make
@@ -59,81 +59,81 @@ include CMakeFiles/client.dir/flags.make
 
 CMakeFiles/client.dir/src/server/client.cpp.o: CMakeFiles/client.dir/flags.make
 CMakeFiles/client.dir/src/server/client.cpp.o: ../../src/server/client.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/client.dir/src/server/client.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/src/server/client.cpp.o -c "/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/src/server/client.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/c/users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/client.dir/src/server/client.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/src/server/client.cpp.o -c "/mnt/c/users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/src/server/client.cpp"
 
 CMakeFiles/client.dir/src/server/client.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/src/server/client.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/src/server/client.cpp" > CMakeFiles/client.dir/src/server/client.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/c/users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/src/server/client.cpp" > CMakeFiles/client.dir/src/server/client.cpp.i
 
 CMakeFiles/client.dir/src/server/client.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/src/server/client.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/src/server/client.cpp" -o CMakeFiles/client.dir/src/server/client.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/src/server/client.cpp" -o CMakeFiles/client.dir/src/server/client.cpp.s
 
 CMakeFiles/client.dir/src/log/log.cpp.o: CMakeFiles/client.dir/flags.make
 CMakeFiles/client.dir/src/log/log.cpp.o: ../../src/log/log.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/client.dir/src/log/log.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/src/log/log.cpp.o -c "/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/src/log/log.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/c/users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/client.dir/src/log/log.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/src/log/log.cpp.o -c "/mnt/c/users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/src/log/log.cpp"
 
 CMakeFiles/client.dir/src/log/log.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/src/log/log.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/src/log/log.cpp" > CMakeFiles/client.dir/src/log/log.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/c/users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/src/log/log.cpp" > CMakeFiles/client.dir/src/log/log.cpp.i
 
 CMakeFiles/client.dir/src/log/log.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/src/log/log.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/src/log/log.cpp" -o CMakeFiles/client.dir/src/log/log.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/src/log/log.cpp" -o CMakeFiles/client.dir/src/log/log.cpp.s
 
 CMakeFiles/client.dir/src/disk/file.cpp.o: CMakeFiles/client.dir/flags.make
 CMakeFiles/client.dir/src/disk/file.cpp.o: ../../src/disk/file.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/client.dir/src/disk/file.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/src/disk/file.cpp.o -c "/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/src/disk/file.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/c/users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/client.dir/src/disk/file.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/src/disk/file.cpp.o -c "/mnt/c/users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/src/disk/file.cpp"
 
 CMakeFiles/client.dir/src/disk/file.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/src/disk/file.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/src/disk/file.cpp" > CMakeFiles/client.dir/src/disk/file.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/c/users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/src/disk/file.cpp" > CMakeFiles/client.dir/src/disk/file.cpp.i
 
 CMakeFiles/client.dir/src/disk/file.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/src/disk/file.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/src/disk/file.cpp" -o CMakeFiles/client.dir/src/disk/file.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/src/disk/file.cpp" -o CMakeFiles/client.dir/src/disk/file.cpp.s
 
 CMakeFiles/client.dir/src/segment/segment.cpp.o: CMakeFiles/client.dir/flags.make
 CMakeFiles/client.dir/src/segment/segment.cpp.o: ../../src/segment/segment.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/client.dir/src/segment/segment.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/src/segment/segment.cpp.o -c "/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/src/segment/segment.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/c/users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/client.dir/src/segment/segment.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/src/segment/segment.cpp.o -c "/mnt/c/users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/src/segment/segment.cpp"
 
 CMakeFiles/client.dir/src/segment/segment.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/src/segment/segment.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/src/segment/segment.cpp" > CMakeFiles/client.dir/src/segment/segment.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/c/users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/src/segment/segment.cpp" > CMakeFiles/client.dir/src/segment/segment.cpp.i
 
 CMakeFiles/client.dir/src/segment/segment.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/src/segment/segment.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/src/segment/segment.cpp" -o CMakeFiles/client.dir/src/segment/segment.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/src/segment/segment.cpp" -o CMakeFiles/client.dir/src/segment/segment.cpp.s
 
 CMakeFiles/client.dir/src/store/store.cpp.o: CMakeFiles/client.dir/flags.make
 CMakeFiles/client.dir/src/store/store.cpp.o: ../../src/store/store.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/client.dir/src/store/store.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/src/store/store.cpp.o -c "/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/src/store/store.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/c/users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/client.dir/src/store/store.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/src/store/store.cpp.o -c "/mnt/c/users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/src/store/store.cpp"
 
 CMakeFiles/client.dir/src/store/store.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/src/store/store.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/src/store/store.cpp" > CMakeFiles/client.dir/src/store/store.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/c/users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/src/store/store.cpp" > CMakeFiles/client.dir/src/store/store.cpp.i
 
 CMakeFiles/client.dir/src/store/store.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/src/store/store.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/src/store/store.cpp" -o CMakeFiles/client.dir/src/store/store.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/src/store/store.cpp" -o CMakeFiles/client.dir/src/store/store.cpp.s
 
 CMakeFiles/client.dir/src/index/index.cpp.o: CMakeFiles/client.dir/flags.make
 CMakeFiles/client.dir/src/index/index.cpp.o: ../../src/index/index.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/client.dir/src/index/index.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/src/index/index.cpp.o -c "/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/src/index/index.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/c/users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/client.dir/src/index/index.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/src/index/index.cpp.o -c "/mnt/c/users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/src/index/index.cpp"
 
 CMakeFiles/client.dir/src/index/index.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/src/index/index.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/src/index/index.cpp" > CMakeFiles/client.dir/src/index/index.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/c/users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/src/index/index.cpp" > CMakeFiles/client.dir/src/index/index.cpp.i
 
 CMakeFiles/client.dir/src/index/index.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/src/index/index.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/src/index/index.cpp" -o CMakeFiles/client.dir/src/index/index.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/src/index/index.cpp" -o CMakeFiles/client.dir/src/index/index.cpp.s
 
 # Object files for target client
 client_OBJECTS = \
@@ -250,7 +250,7 @@ client: /home/sasa/.local/lib/libabsl_throw_delegate.a
 client: /home/sasa/.local/lib/libabsl_raw_logging_internal.a
 client: /home/sasa/.local/lib/libabsl_log_severity.a
 client: CMakeFiles/client.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable client"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/mnt/c/users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable client"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/client.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -263,6 +263,6 @@ CMakeFiles/client.dir/clean:
 .PHONY : CMakeFiles/client.dir/clean
 
 CMakeFiles/client.dir/depend:
-	cd "/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-" "/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-" "/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build" "/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build" "/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/CMakeFiles/client.dir/DependInfo.cmake" --color=$(COLOR)
+	cd "/mnt/c/users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/mnt/c/users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-" "/mnt/c/users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-" "/mnt/c/users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build" "/mnt/c/users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build" "/mnt/c/users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/CMakeFiles/client.dir/DependInfo.cmake" --color=$(COLOR)
 .PHONY : CMakeFiles/client.dir/depend
 

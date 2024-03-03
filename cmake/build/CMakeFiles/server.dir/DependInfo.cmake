@@ -4,12 +4,12 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/src/disk/file.cpp" "/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/CMakeFiles/server.dir/src/disk/file.cpp.o"
-  "/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/src/index/index.cpp" "/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/CMakeFiles/server.dir/src/index/index.cpp.o"
-  "/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/src/log/log.cpp" "/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/CMakeFiles/server.dir/src/log/log.cpp.o"
-  "/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/src/segment/segment.cpp" "/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/CMakeFiles/server.dir/src/segment/segment.cpp.o"
-  "/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/src/server/server.cpp" "/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/CMakeFiles/server.dir/src/server/server.cpp.o"
-  "/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/src/store/store.cpp" "/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/CMakeFiles/server.dir/src/store/store.cpp.o"
+  "/mnt/c/users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/src/disk/file.cpp" "/mnt/c/users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/CMakeFiles/server.dir/src/disk/file.cpp.o"
+  "/mnt/c/users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/src/index/index.cpp" "/mnt/c/users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/CMakeFiles/server.dir/src/index/index.cpp.o"
+  "/mnt/c/users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/src/log/log.cpp" "/mnt/c/users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/CMakeFiles/server.dir/src/log/log.cpp.o"
+  "/mnt/c/users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/src/segment/segment.cpp" "/mnt/c/users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/CMakeFiles/server.dir/src/segment/segment.cpp.o"
+  "/mnt/c/users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/src/server/server.cpp" "/mnt/c/users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/CMakeFiles/server.dir/src/server/server.cpp.o"
+  "/mnt/c/users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/src/store/store.cpp" "/mnt/c/users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/CMakeFiles/server.dir/src/store/store.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -26,7 +26,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/CMakeFiles/logprog_grpc_proto.dir/DependInfo.cmake"
+  "/mnt/c/users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/CMakeFiles/logprog_grpc_proto.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

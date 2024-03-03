@@ -284,9 +284,9 @@ CMakeFiles/logprog_grpc_proto.dir/logprog.grpc.pb.cc.o
  /home/sasa/.local/include/grpcpp/support/stub_options.h
  /home/sasa/.local/include/grpcpp/support/sync_stream.h
  /home/sasa/.local/include/grpcpp/support/time.h
- /mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/logprog.grpc.pb.cc
- /mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/logprog.grpc.pb.h
- /mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/logprog.pb.h
+ /mnt/c/users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/logprog.grpc.pb.cc
+ /mnt/c/users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/logprog.grpc.pb.h
+ /mnt/c/users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/logprog.pb.h
 CMakeFiles/logprog_grpc_proto.dir/logprog.pb.cc.o
  /home/sasa/.local/include/absl/algorithm/algorithm.h
  /home/sasa/.local/include/absl/algorithm/container.h
@@ -478,5 +478,5 @@ CMakeFiles/logprog_grpc_proto.dir/logprog.pb.cc.o
  /home/sasa/.local/include/google/protobuf/unknown_field_set.h
  /home/sasa/.local/include/google/protobuf/wire_format.h
  /home/sasa/.local/include/google/protobuf/wire_format_lite.h
- /mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/logprog.pb.cc
- /mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/logprog.pb.h
+ /mnt/c/users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/logprog.pb.cc
+ /mnt/c/users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/logprog.pb.h
