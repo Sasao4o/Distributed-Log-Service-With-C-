@@ -38,13 +38,6 @@ namespace logModule {
 
   bool Log::Append(logprog::v1::Record *record, uint64_t *offset) {
     std::lock_guard<std::mutex> lock(mtx);
-<<<<<<< HEAD
-    activeSegment->Append(record);
-    if (activeSegment->IsMaxed()) {
-      uint64_t currentOffset = activeSegment->getNextOffset();
-      activeSegment =  new Segment(directoryPath, currentOffset, &conf);
-      segments.push_back(activeSegment);
-=======
 
     if(activeSegment->Append(record)){
       *offset = activeSegment->getNextOffset() - 1;// offset is one less than the next record
@@ -56,7 +49,6 @@ namespace logModule {
       return true;
     } else {
       return false;
->>>>>>> origin/WaelBranch
     }
   }
 
@@ -128,5 +120,9 @@ uint64_t Log::HighestOffset() {
     this->segments = newSegments;
     return true;
  } 
-
+   Log::~Log() {
+    for (int i = 0; i < segments.size(); i++) {
+      delete segments[i];
+    }
+  }
 }

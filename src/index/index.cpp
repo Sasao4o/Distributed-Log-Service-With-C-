@@ -41,7 +41,7 @@ namespace logModule {
 
     Index::~Index() {
         if (fileExist) {
-           // std::cout<<"In Destructor Index"<<endl;
+           std::cout<<"In Destructor Index L HAWAAA YA M3LMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM"<<std::endl;
             Close();
         }
     }
@@ -51,6 +51,7 @@ namespace logModule {
         uint64_t tmpPos;
         uint32_t o;
         if (size == 0) {
+            std::cout << "Index is Empty" << std::endl;
             *out = -1;
             *pos = -1;
             return;
@@ -67,9 +68,10 @@ namespace logModule {
 
         
         if (desiredExpansionSize < tmpPos + entWidth) {
-            *out = 0;
-            *pos = 0;
+            *out = -1;
+            *pos = -1;
             //LOOK HERE
+        std::cout << "Index is Full" << std::endl;
             return;
         }
         

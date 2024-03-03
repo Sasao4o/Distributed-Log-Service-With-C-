@@ -8,6 +8,7 @@ namespace logModule {
     class Log {
         public:
         Log(std::string directoryName,Config conf);
+        ~Log();
         void SetUp();
         bool Append(logprog::v1::Record *record, uint64_t *offset );
         logprog::v1::Record * Read(uint64_t offset);

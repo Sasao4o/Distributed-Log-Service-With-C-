@@ -35,37 +35,40 @@ using grpc::ClientReaderWriter;
     if (status.ok()) {
       return reply;
     } else {
+      std::cout << "Produce Failed" << std::endl;
       std::cout << status.error_code() << ": " << status.error_message()
                 << std::endl;
       
     }
   }
 
-  ProduceResponse ProduceStream() {
-    // Data to be sent to server
-    // Record  * myRecord = new Record();
-    // myRecord->set_value("mostafa");
-    
-    // ProduceRequest request;
-    // request.set_allocated_record(myRecord);
+    ConsumeResponse Consume(uint64_t offset) {
+    ConsumeRequest request;
+    request.set_offset(offset);
+    // Container for server response
+    ConsumeResponse reply;
 
-    // // Container for server response
-    // ProduceResponse reply;
+    // Context can be used to send meta data to server or modify RPC behaviour
+    ClientContext context;
 
-    // // Context can be used to send meta data to server or modify RPC behaviour
-    
+    // Actual Remote Procedure Call
+    Status status = stub_->Consume(&context, request, &reply);
 
-    // // Actual Remote Procedure Call
-    // Status status = stub_->Produce(&context, request, &reply);
-
-    // // Returns results based on RPC status
-    // if (status.ok()) {
-    //   return reply;
-    // } else {
-    //   std::cout << status.error_code() << ": " << status.error_message()
-    //             << std::endl;
+    // Returns results based on RPC status
+    if (status.ok()) {
+      return reply;
+    } else {
+      std::cout << "Consume Failed" << std::endl;
+      std::cout << status.error_code() << ": " << status.error_message()
+                << std::endl;
       
-    // }
+    }
+  }
+
+
+
+  void ProduceStream() {
+   
         ProduceRequest request;
         ProduceResponse response;
 
@@ -93,11 +96,41 @@ using grpc::ClientReaderWriter;
         if (!status.ok()) {
             std::cerr << "RPC failed: " << status.error_message() << std::endl;
         }
-        delete myRecord;
-        delete myRecord_2;
-        return response;
+        // delete myRecord;
+        // delete myRecord_2;
+         
   }
 
+  void ConsumeStream(uint64_t offset) {
+     ConsumeRequest request;
+    request.set_offset(offset);
+    // Container for server response
+    ConsumeResponse response;
+
+    // Context can be used to send meta data to server or modify RPC behaviour
+    ClientContext context;
+   std::shared_ptr<grpc::ClientReader<ConsumeResponse>> stream(
+            stub_->ConsumeStream(&context, request));
+
+    // Actual Remote Procedure Call
+     while(1) {
+      if (stream->Read(&response)){
+       std::cout << "Response is " << response.record().value() << std::endl;
+     }
+     }
+  // Status status = stream->Finish();
+  //   // Returns results based on RPC status
+  //   if (status.ok()) {
+  //    std::cout << "Consume Success" << std::endl;
+  //    std::cout << "Response is " << response.record().value() << std::endl;
+  //   } else {
+  //     std::cout << "Consume Failed" << std::endl;
+  //     std::cout << status.error_code() << ": " << status.error_message()
+  //               << std::endl;
+      
+  //   }
+
+  }
  private:
   std::unique_ptr<Logging::Stub> stub_;
 };
@@ -113,12 +146,13 @@ using grpc::ClientReaderWriter;
 
   ProduceResponse response;
   std::string a = "grpc is cool!";
-
+  ConsumeResponse response2;
   // RPC is created and response is stored
-  response = client.ProduceStream();
-
+  response = client.Produce(a);
+   client.ConsumeStream(0);
   // Prints results
-  //std::cout << "Offset is: " << response.offset() << std::endl;
+  std::cout << "Offset is " << response.offset() << std::endl;
+  //  std::cout << "Record is: " << response2.record().value() << std::endl;
   // std::cout << "Reversed string: " << response << std::endl;
 
  }

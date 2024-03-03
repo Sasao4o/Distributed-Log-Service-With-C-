@@ -11,6 +11,7 @@ using grpc::Channel;
 using grpc::ServerContext;
 using grpc::Status;
 using grpc::ServerReaderWriter;
+using grpc::ServerWriter;
 // Server Implementation
  uint64_t x = 0;
 class LogImplementation final : public Logging::Service {
@@ -21,14 +22,7 @@ class LogImplementation final : public Logging::Service {
                      ProduceResponse* reply) override {
     // Obtains the original string from the request
     Record  rec = request->record();
-<<<<<<< HEAD
-    // commitLog_->Append(&rec);
-    Record * recADD = &rec;
-     commitLog_->Append(recADD);
-    std::cout << recADD->value() << std::endl;
-=======
     uint64_t *offset = new uint64_t();
->>>>>>> origin/WaelBranch
 
     bool ok = commitLog_->Append(&rec, offset);
     std::cout << rec.value() << std::endl;
@@ -41,6 +35,28 @@ class LogImplementation final : public Logging::Service {
     return Status::OK;
   }
 
+  Status Consume(ServerContext* context, const ConsumeRequest* request,
+                     ConsumeResponse* response) override {
+    // Obtains the original string from the request
+    uint64_t offset = request->offset();
+
+  std::cout << "offset is " << offset << std::endl;
+    Record * record  = commitLog_->Read(offset);
+    if (record == nullptr) {
+      std::cout << "Record is nullptr " << std::endl;
+      return Status::CANCELLED;
+    }
+
+    response->set_allocated_record(record);
+
+    
+    return Status::OK;
+  }
+  
+  
+
+  
+  
   Status ProduceStream(
         ServerContext* context,
         ServerReaderWriter<ProduceResponse, ProduceRequest>* stream
@@ -62,16 +78,48 @@ class LogImplementation final : public Logging::Service {
 
         return Status::OK;
     }
+
+
+Status ConsumeStream(ServerContext* context,const ConsumeRequest* req,  ServerWriter<ConsumeResponse>* writer) override {
+          uint64_t offset = req->offset();
+            while (1) {
+             
+            ConsumeResponse res;
+             ConsumeRequest newReq;
+            newReq.set_offset(offset);
+            Status status = Consume(context, &newReq, &res);
+            if (status.ok()) {
+                if (!writer->Write(res)) {
+                    return grpc::Status(grpc::StatusCode::INTERNAL, "Failed to write response");
+                }
+                 offset++;
+            } else {
+              continue;
+            }
+            // else if (status.error_code() == grpc::StatusCode::NOT_FOUND) {
+            //   std::cout << "NO FOUND " << std::endl;
+            //     continue;
+            // } else {
+            //     return status;
+            // }
+            if (context->IsCancelled()) {
+              std::cout << "Context is Cancelled " << std::endl;
+                break;
+            }
+        }
+        return grpc::Status::OK;
+
+  }
+
+
 Log * commitLog_;
 };
 
+
+   
 void RunServer() {
   std::string server_address("0.0.0.0:50051");
   Config b;
-<<<<<<< HEAD
-  b.InitialOffset = 0;
-=======
->>>>>>> origin/WaelBranch
   Log lg("../../logsData", b);
   lg.SetUp();
   LogImplementation service(&lg);
