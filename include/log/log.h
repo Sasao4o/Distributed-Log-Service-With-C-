@@ -9,7 +9,7 @@ namespace logModule {
         public:
         Log(std::string directoryName,Config conf);
         void SetUp();
-        void Append(logprog::v1::Record *record);
+        bool Append(logprog::v1::Record *record, uint64_t *offset );
         logprog::v1::Record * Read(uint64_t offset);
         void Close();
         void Remove();

@@ -1,5 +1,0 @@
-/mnt/c/users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/CMakeFiles/rebuild_cache.dir
-/mnt/c/users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/CMakeFiles/edit_cache.dir
-/mnt/c/users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/CMakeFiles/server.dir
-/mnt/c/users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/CMakeFiles/client.dir
-/mnt/c/users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/CMakeFiles/logprog_grpc_proto.dir

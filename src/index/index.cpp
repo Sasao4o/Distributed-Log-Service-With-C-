@@ -41,7 +41,8 @@ namespace logModule {
 
     Index::~Index() {
         if (fileExist) {
-        Close();
+           // std::cout<<"In Destructor Index"<<endl;
+            Close();
         }
     }
 

@@ -20,14 +20,19 @@ if (offset == -1 && pos == -1) {
 }
 
 }
+<<<<<<< HEAD
 void Segment::Append(logprog::v1::Record *record) {
     // std::cout << "A7A 3LEK 2  " << std::endl <<  nextOffset << std::endl;
     // record->set_offset(nextOffset);
         std::cout  << " GRPC DEBUGGING " << record->value() << std::endl;
+=======
+bool Segment::Append(logprog::v1::Record *record) {
+    record->set_offset(nextOffset);
+>>>>>>> origin/WaelBranch
     std::string serialized_record;
     if (!record->SerializeToString(&serialized_record)) {
         std::cerr << "Failed to serialize Record." << std::endl;
-        return ;
+        return false;
     }
     std::cout << "Serialized Record is " << serialized_record.c_str() << std::endl;
     uint64_t insertedPos;
@@ -35,9 +40,10 @@ void Segment::Append(logprog::v1::Record *record) {
     bool insertInIndex = index->Write(uint32_t(nextOffset - baseOffset), insertedPos);
     if (insertInStore && insertInIndex) {
         nextOffset++;
+        return true;
     } else {
          std::cerr << "Failed to Append Record." << std::endl;
-         return;
+         return false;
     }
      
 }  
@@ -48,7 +54,7 @@ void Segment::Append(logprog::v1::Record *record) {
     std::cout << "In Index Reading from offset " << int64_t(offset - baseOffset) << std::endl;
     index->Read(int64_t(offset - baseOffset), &out, &pos);
         std::cout << "Position in Store File is " << pos << std::endl;
-    if (out == -1 && pos == -1) {
+    if (out == -1 && pos == -1 || out == 0 && pos == 0) {
         std::cout << "Can't Read Index File from Segment" << std::endl;
         return nullptr;
     }

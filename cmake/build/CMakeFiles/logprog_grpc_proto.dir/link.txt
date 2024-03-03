@@ -1,2 +1,0 @@
-/usr/bin/ar qc liblogprog_grpc_proto.a  CMakeFiles/logprog_grpc_proto.dir/logprog.grpc.pb.cc.o CMakeFiles/logprog_grpc_proto.dir/logprog.pb.cc.o
-/usr/bin/ranlib liblogprog_grpc_proto.a
