@@ -10,28 +10,59 @@ using grpc::Server;
 using grpc::Channel;
 using grpc::ServerContext;
 using grpc::Status;
+using grpc::ServerReaderWriter;
 // Server Implementation
  uint64_t x = 0;
 class LogImplementation final : public Logging::Service {
   public:
   LogImplementation(Log *CommitLog) : commitLog_(CommitLog) {};
+
   Status Produce(ServerContext* context, const ProduceRequest* request,
                      ProduceResponse* reply) override {
     // Obtains the original string from the request
     Record  rec = request->record();
-    commitLog_->Append(rec);
-    std::cout << rec.value() << std::endl;
+    uint64_t *offset = new uint64_t();
 
-    reply->set_offset(++x);
+    bool ok = commitLog_->Append(&rec, offset);
+    std::cout << rec.value() << std::endl;
+    if (ok == false){
+      return Status::CANCELLED;
+    }
+    reply->set_offset(*offset);
+
+    delete offset;
     return Status::OK;
   }
+
+  Status ProduceStream(
+        ServerContext* context,
+        ServerReaderWriter<ProduceResponse, ProduceRequest>* stream
+    ) override {
+        ProduceRequest req;
+        ProduceResponse res;
+
+        while (stream->Read(&req)) {
+            Status status = Produce(context, &req, &res);
+
+            if (!status.ok()) {
+                return status;
+            }
+
+            if (!stream->Write(res)) {
+                return Status::CANCELLED;
+            }
+        }
+
+        return Status::OK;
+    }
 Log * commitLog_;
 };
 
 void RunServer() {
   std::string server_address("0.0.0.0:50051");
   Config b;
-  Log lg("./logsData", b);
+  Log lg("../../logsData", b);
+  lg.SetUp();
   LogImplementation service(&lg);
  
   ServerBuilder builder;

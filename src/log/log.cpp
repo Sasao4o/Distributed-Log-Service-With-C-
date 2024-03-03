@@ -36,14 +36,19 @@ namespace logModule {
     }
   }
 
-  void Log::Append(logprog::v1::Record *record) {
+  bool Log::Append(logprog::v1::Record *record, uint64_t *offset) {
     std::lock_guard<std::mutex> lock(mtx);
-    
-    activeSegment->Append(record);
-    if (activeSegment->IsMaxed()) {
-      uint64_t currentOffset = activeSegment->getNextOffset();
-      activeSegment =  new Segment(directoryPath, currentOffset, &conf);
-      segments.push_back(activeSegment);
+
+    if(activeSegment->Append(record)){
+      *offset = activeSegment->getNextOffset() - 1;// offset is one less than the next record
+      if (activeSegment->IsMaxed()) {
+        uint64_t currentOffset = activeSegment->getNextOffset(); 
+        activeSegment =  new Segment(directoryPath, currentOffset, &conf);
+        segments.push_back(activeSegment);
+      }
+      return true;
+    } else {
+      return false;
     }
   }
 

@@ -1,4 +1,4 @@
-# Install script for directory: /mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-
+# Install script for directory: /mnt/d/codes/Distributed_Log_With_C++/Distributed-Log-Service-With-C-
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/mnt/d/codes/Distributed_Log_With_C++/Distributed-Log-Service-With-C-/cmake/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

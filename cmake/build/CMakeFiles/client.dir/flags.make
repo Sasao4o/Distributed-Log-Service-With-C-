@@ -6,5 +6,5 @@ CXX_FLAGS =   -std=gnu++17
 
 CXX_DEFINES = -DCARES_STATICLIB
 
-CXX_INCLUDES = -I"/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build" -isystem /home/sasa/.local/include 
+CXX_INCLUDES = -I/mnt/d/codes/Distributed_Log_With_C++/Distributed-Log-Service-With-C-/cmake/build -isystem /home/ahmed/.local/include 
 

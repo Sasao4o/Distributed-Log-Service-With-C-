@@ -11,7 +11,7 @@ namespace logModule {
 class Segment {
  public:
  Segment(std::string segmentDirectoryName, uint64_t baseOffset, Config *);
- void Append(logprog::v1::Record *record);
+ bool Append(logprog::v1::Record *record);
  logprog::v1::Record * Read(uint64_t offset);
  void Remove();
  bool IsMaxed();

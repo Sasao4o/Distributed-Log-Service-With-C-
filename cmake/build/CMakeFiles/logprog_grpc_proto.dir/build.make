@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-"
+CMAKE_SOURCE_DIR = /mnt/d/codes/Distributed_Log_With_C++/Distributed-Log-Service-With-C-
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build"
+CMAKE_BINARY_DIR = /mnt/d/codes/Distributed_Log_With_C++/Distributed-Log-Service-With-C-/cmake/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/logprog_grpc_proto.dir/depend.make
@@ -58,8 +58,8 @@ include CMakeFiles/logprog_grpc_proto.dir/progress.make
 include CMakeFiles/logprog_grpc_proto.dir/flags.make
 
 logprog.pb.cc: ../../api/v1/logprog.proto
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir="/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Generating logprog.pb.cc, logprog.pb.h, logprog.grpc.pb.cc, logprog.grpc.pb.h"
-	/home/sasa/.local/bin/protoc-25.1.0 --grpc_out /mnt/c/Users/pc/Desktop/wael\ ds/as3/Distributed-Log-Service-With-C-/cmake/build --cpp_out /mnt/c/Users/pc/Desktop/wael\ ds/as3/Distributed-Log-Service-With-C-/cmake/build -I /mnt/c/Users/pc/Desktop/wael\ ds/as3/Distributed-Log-Service-With-C-/api/v1 --plugin=protoc-gen-grpc="/home/sasa/.local/bin/grpc_cpp_plugin" /mnt/c/Users/pc/Desktop/wael\ ds/as3/Distributed-Log-Service-With-C-/api/v1/logprog.proto
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/mnt/d/codes/Distributed_Log_With_C++/Distributed-Log-Service-With-C-/cmake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating logprog.pb.cc, logprog.pb.h, logprog.grpc.pb.cc, logprog.grpc.pb.h"
+	/home/ahmed/.local/bin/protoc-25.1.0 --grpc_out /mnt/d/codes/Distributed_Log_With_C++/Distributed-Log-Service-With-C-/cmake/build --cpp_out /mnt/d/codes/Distributed_Log_With_C++/Distributed-Log-Service-With-C-/cmake/build -I /mnt/d/codes/Distributed_Log_With_C++/Distributed-Log-Service-With-C-/api/v1 --plugin=protoc-gen-grpc="/home/ahmed/.local/bin/grpc_cpp_plugin" /mnt/d/codes/Distributed_Log_With_C++/Distributed-Log-Service-With-C-/api/v1/logprog.proto
 
 logprog.pb.h: logprog.pb.cc
 	@$(CMAKE_COMMAND) -E touch_nocreate logprog.pb.h
@@ -72,29 +72,29 @@ logprog.grpc.pb.h: logprog.pb.cc
 
 CMakeFiles/logprog_grpc_proto.dir/logprog.grpc.pb.cc.o: CMakeFiles/logprog_grpc_proto.dir/flags.make
 CMakeFiles/logprog_grpc_proto.dir/logprog.grpc.pb.cc.o: logprog.grpc.pb.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/logprog_grpc_proto.dir/logprog.grpc.pb.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/logprog_grpc_proto.dir/logprog.grpc.pb.cc.o -c "/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/logprog.grpc.pb.cc"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/codes/Distributed_Log_With_C++/Distributed-Log-Service-With-C-/cmake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/logprog_grpc_proto.dir/logprog.grpc.pb.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/logprog_grpc_proto.dir/logprog.grpc.pb.cc.o -c /mnt/d/codes/Distributed_Log_With_C++/Distributed-Log-Service-With-C-/cmake/build/logprog.grpc.pb.cc
 
 CMakeFiles/logprog_grpc_proto.dir/logprog.grpc.pb.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/logprog_grpc_proto.dir/logprog.grpc.pb.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/logprog.grpc.pb.cc" > CMakeFiles/logprog_grpc_proto.dir/logprog.grpc.pb.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/d/codes/Distributed_Log_With_C++/Distributed-Log-Service-With-C-/cmake/build/logprog.grpc.pb.cc > CMakeFiles/logprog_grpc_proto.dir/logprog.grpc.pb.cc.i
 
 CMakeFiles/logprog_grpc_proto.dir/logprog.grpc.pb.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/logprog_grpc_proto.dir/logprog.grpc.pb.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/logprog.grpc.pb.cc" -o CMakeFiles/logprog_grpc_proto.dir/logprog.grpc.pb.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/d/codes/Distributed_Log_With_C++/Distributed-Log-Service-With-C-/cmake/build/logprog.grpc.pb.cc -o CMakeFiles/logprog_grpc_proto.dir/logprog.grpc.pb.cc.s
 
 CMakeFiles/logprog_grpc_proto.dir/logprog.pb.cc.o: CMakeFiles/logprog_grpc_proto.dir/flags.make
 CMakeFiles/logprog_grpc_proto.dir/logprog.pb.cc.o: logprog.pb.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/logprog_grpc_proto.dir/logprog.pb.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/logprog_grpc_proto.dir/logprog.pb.cc.o -c "/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/logprog.pb.cc"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/codes/Distributed_Log_With_C++/Distributed-Log-Service-With-C-/cmake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/logprog_grpc_proto.dir/logprog.pb.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/logprog_grpc_proto.dir/logprog.pb.cc.o -c /mnt/d/codes/Distributed_Log_With_C++/Distributed-Log-Service-With-C-/cmake/build/logprog.pb.cc
 
 CMakeFiles/logprog_grpc_proto.dir/logprog.pb.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/logprog_grpc_proto.dir/logprog.pb.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/logprog.pb.cc" > CMakeFiles/logprog_grpc_proto.dir/logprog.pb.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/d/codes/Distributed_Log_With_C++/Distributed-Log-Service-With-C-/cmake/build/logprog.pb.cc > CMakeFiles/logprog_grpc_proto.dir/logprog.pb.cc.i
 
 CMakeFiles/logprog_grpc_proto.dir/logprog.pb.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/logprog_grpc_proto.dir/logprog.pb.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/logprog.pb.cc" -o CMakeFiles/logprog_grpc_proto.dir/logprog.pb.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/d/codes/Distributed_Log_With_C++/Distributed-Log-Service-With-C-/cmake/build/logprog.pb.cc -o CMakeFiles/logprog_grpc_proto.dir/logprog.pb.cc.s
 
 # Object files for target logprog_grpc_proto
 logprog_grpc_proto_OBJECTS = \
@@ -108,7 +108,7 @@ liblogprog_grpc_proto.a: CMakeFiles/logprog_grpc_proto.dir/logprog.grpc.pb.cc.o
 liblogprog_grpc_proto.a: CMakeFiles/logprog_grpc_proto.dir/logprog.pb.cc.o
 liblogprog_grpc_proto.a: CMakeFiles/logprog_grpc_proto.dir/build.make
 liblogprog_grpc_proto.a: CMakeFiles/logprog_grpc_proto.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX static library liblogprog_grpc_proto.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/d/codes/Distributed_Log_With_C++/Distributed-Log-Service-With-C-/cmake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX static library liblogprog_grpc_proto.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/logprog_grpc_proto.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/logprog_grpc_proto.dir/link.txt --verbose=$(VERBOSE)
 
@@ -125,6 +125,6 @@ CMakeFiles/logprog_grpc_proto.dir/depend: logprog.pb.cc
 CMakeFiles/logprog_grpc_proto.dir/depend: logprog.pb.h
 CMakeFiles/logprog_grpc_proto.dir/depend: logprog.grpc.pb.cc
 CMakeFiles/logprog_grpc_proto.dir/depend: logprog.grpc.pb.h
-	cd "/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-" "/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-" "/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build" "/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build" "/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/CMakeFiles/logprog_grpc_proto.dir/DependInfo.cmake" --color=$(COLOR)
+	cd /mnt/d/codes/Distributed_Log_With_C++/Distributed-Log-Service-With-C-/cmake/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/d/codes/Distributed_Log_With_C++/Distributed-Log-Service-With-C- /mnt/d/codes/Distributed_Log_With_C++/Distributed-Log-Service-With-C- /mnt/d/codes/Distributed_Log_With_C++/Distributed-Log-Service-With-C-/cmake/build /mnt/d/codes/Distributed_Log_With_C++/Distributed-Log-Service-With-C-/cmake/build /mnt/d/codes/Distributed_Log_With_C++/Distributed-Log-Service-With-C-/cmake/build/CMakeFiles/logprog_grpc_proto.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/logprog_grpc_proto.dir/depend
 
