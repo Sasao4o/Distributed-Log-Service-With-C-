@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/mnt/d/codes/Distributed_Log_With_C++/Distributed-Log-Service-With-C-/include/disk/File.h
+iostream
+-
+fstream
+-
+sys/stat.h
+-
+
+/mnt/d/codes/Distributed_Log_With_C++/Distributed-Log-Service-With-C-/src/disk/File.cpp
+../../include/disk/File.h
+/mnt/d/codes/Distributed_Log_With_C++/Distributed-Log-Service-With-C-/include/disk/File.h
+
+/mnt/d/codes/Distributed_Log_With_C++/Distributed-Log-Service-With-C-/test/disk/File_test.cpp
+iostream
+-
+../../include/disk/File.h
+/mnt/d/codes/Distributed_Log_With_C++/Distributed-Log-Service-With-C-/include/disk/File.h
+

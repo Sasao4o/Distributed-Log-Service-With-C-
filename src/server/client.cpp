@@ -67,38 +67,34 @@ using grpc::ClientReaderWriter;
 
 
 
-  void ProduceStream() {
    
+   
+  void ProduceStream(std::vector<Record*> &records) {
         ProduceRequest request;
         ProduceResponse response;
 
         ClientContext context;
         std::shared_ptr<ClientReaderWriter<ProduceRequest, ProduceResponse>> stream(
-            stub_->ProduceStream(&context));
+        stub_->ProduceStream(&context));
 
-        Record  * myRecord = new Record();
-        myRecord->set_value("mostafa");
-        request.set_allocated_record(myRecord);
-        stream->Write(request);
-        Record  * myRecord_2 = new Record();
-        myRecord_2->set_value("ahmed");
-        request.set_allocated_record(myRecord_2);
-        stream->Write(request);
-
+        for (auto record:records){
+          request.set_allocated_record(record);
+          stream->Write(request);
+        }
         stream->WritesDone();
         
         while (stream->Read(&response)) {
             // Process the received response
             std::cout << "Received response: " << response.offset() << std::endl;
         }
-
+        
         Status status = stream->Finish();
         if (!status.ok()) {
             std::cerr << "RPC failed: " << status.error_message() << std::endl;
         }
         // delete myRecord;
         // delete myRecord_2;
-         
+        // return response;
   }
 
   void ConsumeStream(uint64_t offset) {
@@ -148,8 +144,19 @@ using grpc::ClientReaderWriter;
   std::string a = "grpc is cool!";
   ConsumeResponse response2;
   // RPC is created and response is stored
-  response = client.Produce(a);
-   client.ConsumeStream(0);
+  std::vector<Record*> records;
+
+
+  Record  * myRecord = new Record();
+  myRecord->set_value("mostafa");
+  records.push_back(myRecord);
+  // Record  * myRecord_2 = new Record();
+  // myRecord_2->set_value("ahmed");
+  // records.push_back(myRecord_2);
+  
+
+  client.ProduceStream(records);
+
   // Prints results
   std::cout << "Offset is " << response.offset() << std::endl;
   //  std::cout << "Record is: " << response2.record().value() << std::endl;
