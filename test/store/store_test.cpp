@@ -16,7 +16,8 @@ void BasicTest() {
     store.Append(data_2, &returnedPos1);
 
     char* data = new char[size_2];
-    store.Read(31, &data);
+    size_t * s = new size_t();
+    store.Read(31, &data, s);
 
     for (size_t i = 0; i < size_2; i++) {
         std::cout << data[i];
@@ -41,7 +42,8 @@ void InsertAndReterive() {
         uint32_t x;
         uint64_t y;
         char ** m = new char *;
-        store.Read(pos, m);
+        size_t * s = new size_t();
+        store.Read(pos, m, s);
         std::cout << *m << std::endl;
         char *answer = "Mostafa";
         assert(std::strcmp(answer, *m) == 0);

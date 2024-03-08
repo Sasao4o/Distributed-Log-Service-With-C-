@@ -67,8 +67,8 @@ namespace logModule {
 
         
         if (desiredExpansionSize < tmpPos + entWidth) {
-            *out = 0;
-            *pos = 0;
+            *out = -1;
+            *pos = -1;
             //LOOK HERE
             return;
         }

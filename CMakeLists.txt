@@ -23,7 +23,14 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 project(PROLOG C CXX)
 
- include(./comman.cmake)
+set(CPP_LIST ${})
+list(APPEND CPP_LIST ${CPP_LIST}  "./src/log/log.cpp" "./src/disk/file.cpp" "./src/segment/segment.cpp" "./src/store/store.cpp" "./src/index/index.cpp")
+# set(CPP_SEGMENT_LIST ${})
+# list(APPEND CPP_SEGMENT_LIST ${CPP_SEGMENT_LIST} ${CPP_LIST}) 
+# list(APPEND CPP_SEGMENT_LIST ${CPP_SEGMENT_LIST} "./cmake/build/logprog.pb.cc")
+
+include(./comman.cmake)
+
 
 # Proto file
 get_filename_component(logprog_proto "./api/v1/logprog.proto" ABSOLUTE)
@@ -66,11 +73,36 @@ target_link_libraries(logprog_grpc_proto
 #   ${_GRPC_GRPCPP}
 #   ${_PROTOBUF_LIBPROTOBUF})
 
+# Tests executables "temporary"
+add_executable(File_test
+    "./test/disk/File_test.cpp" "./src/disk/File.cpp")
+add_executable(index_test
+    "./test/index/index_test.cpp" "./src/index/index.cpp" "./src/disk/File.cpp")
+add_executable(store_test
+    "./test/store/store_test.cpp" "./src/store/store.cpp" "./src/disk/File.cpp")
+add_executable(log_test
+    "./test/log/log_test.cpp" "./src/log/log.cpp" "./cmake/build/logprog.pb.cc" "./src/disk/File.cpp" "./src/segment/segment.cpp" "./src/index/index.cpp" "./src/store/store.cpp")
+add_executable(segment_test
+    "./test/segment/segment_test.cpp" "./cmake/build/logprog.pb.cc" "./src/disk/File.cpp" "./src/segment/segment.cpp" "./src/index/index.cpp" "./src/store/store.cpp")
+target_compile_options(log_test PRIVATE -lprotobuf -pthread)
+target_compile_options(segment_test PRIVATE -lprotobuf -pthread)
+target_link_libraries(segment_test
+    logprog_grpc_proto
+    ${_REFLECTION}
+    ${_GRPC_GRPCPP}
+    ${_PROTOBUF_LIBPROTOBUF}
+    )
+target_link_libraries(log_test
+    logprog_grpc_proto
+    ${_REFLECTION}
+    ${_GRPC_GRPCPP}
+    ${_PROTOBUF_LIBPROTOBUF}
+    )
 # Targets route_guide_(client|server)
 foreach(_target
   client server)
   add_executable(${_target}
-    "./src/server/${_target}.cpp" "./src/log/log.cpp" "./src/disk/file.cpp" "./src/segment/segment.cpp" "./src/store/store.cpp" "./src/index/index.cpp")
+    "./src/server/${_target}.cpp" ${CPP_LIST})
   target_link_libraries(${_target}
     logprog_grpc_proto
     ${_REFLECTION}
@@ -78,3 +110,4 @@ foreach(_target
     ${_PROTOBUF_LIBPROTOBUF}
     )
 endforeach()
+

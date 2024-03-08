@@ -41,61 +41,32 @@ using grpc::ClientReaderWriter;
     }
   }
 
-  ProduceResponse ProduceStream() {
-    // Data to be sent to server
-    // Record  * myRecord = new Record();
-    // myRecord->set_value("mostafa");
-    
-    // ProduceRequest request;
-    // request.set_allocated_record(myRecord);
-
-    // // Container for server response
-    // ProduceResponse reply;
-
-    // // Context can be used to send meta data to server or modify RPC behaviour
-    
-
-    // // Actual Remote Procedure Call
-    // Status status = stub_->Produce(&context, request, &reply);
-
-    // // Returns results based on RPC status
-    // if (status.ok()) {
-    //   return reply;
-    // } else {
-    //   std::cout << status.error_code() << ": " << status.error_message()
-    //             << std::endl;
-      
-    // }
+  void ProduceStream(std::vector<Record*> &records) {
         ProduceRequest request;
         ProduceResponse response;
 
         ClientContext context;
         std::shared_ptr<ClientReaderWriter<ProduceRequest, ProduceResponse>> stream(
-            stub_->ProduceStream(&context));
+        stub_->ProduceStream(&context));
 
-        Record  * myRecord = new Record();
-        myRecord->set_value("mostafa");
-        request.set_allocated_record(myRecord);
-        stream->Write(request);
-        Record  * myRecord_2 = new Record();
-        myRecord_2->set_value("ahmed");
-        request.set_allocated_record(myRecord_2);
-        stream->Write(request);
-
+        for (auto record:records){
+          request.set_allocated_record(record);
+          stream->Write(request);
+        }
         stream->WritesDone();
         
         while (stream->Read(&response)) {
             // Process the received response
             std::cout << "Received response: " << response.offset() << std::endl;
         }
-
+        
         Status status = stream->Finish();
         if (!status.ok()) {
             std::cerr << "RPC failed: " << status.error_message() << std::endl;
         }
-        delete myRecord;
-        delete myRecord_2;
-        return response;
+        // delete myRecord;
+        // delete myRecord_2;
+        // return response;
   }
 
  private:
@@ -115,7 +86,18 @@ using grpc::ClientReaderWriter;
   std::string a = "grpc is cool!";
 
   // RPC is created and response is stored
-  response = client.ProduceStream();
+  std::vector<Record*> records;
+
+
+  Record  * myRecord = new Record();
+  myRecord->set_value("mostafa");
+  records.push_back(myRecord);
+  // Record  * myRecord_2 = new Record();
+  // myRecord_2->set_value("ahmed");
+  // records.push_back(myRecord_2);
+  
+
+  client.ProduceStream(records);
 
   // Prints results
   //std::cout << "Offset is: " << response.offset() << std::endl;

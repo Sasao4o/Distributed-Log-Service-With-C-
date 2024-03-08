@@ -47,7 +47,7 @@ bool Segment::Append(logprog::v1::Record *record) {
     std::cout << "In Index Reading from offset " << int64_t(offset - baseOffset) << std::endl;
     index->Read(int64_t(offset - baseOffset), &out, &pos);
         std::cout << "Position in Store File is " << pos << std::endl;
-    if (out == -1 && pos == -1 || out == 0 && pos == 0) {
+    if (out == -1 && pos == -1) {
         std::cout << "Can't Read Index File from Segment" << std::endl;
         return nullptr;
     }

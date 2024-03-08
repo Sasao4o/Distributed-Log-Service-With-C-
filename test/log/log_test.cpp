@@ -6,15 +6,16 @@ void BasicTest(Log *lg) {
    lg->SetUp();
     
     for (int i = lg->LowestOffset(); i < 300; i++) {
-     log::v1::Record record;
+     logprog::v1::Record record;
      record.set_value("mostafa");
     //  record.set_offset(i);
-     lg->Append(&record);
+    uint64_t *off = new uint64_t();
+     lg->Append(&record, off);
      }
     
     for (int i = lg->LowestOffset(); i < 300; i++) {
         std::cout << "At i = " << i << std::endl;
-     log::v1::Record * rec = lg->Read(i);   
+     logprog::v1::Record * rec = lg->Read(i);   
      assert(rec != nullptr);
      assert(rec->value() == "mostafa");
     }
@@ -27,19 +28,20 @@ void RemoveTest() {
   b.MaxStoreBytes = 1024;
   b.MaxIndexBytes = 1024;
   b.InitialOffset = 1;
-  Log lg("./logsData", b);
+  Log lg("../../logsData", b);
    lg.SetUp();
 
     for (int i = b.InitialOffset; i < 2; i++) {
-     log::v1::Record record;
+     logprog::v1::Record record;
      record.set_value("mostafa");
     //  record.set_offset(i);
-     lg.Append(&record);
+     uint64_t *off = new uint64_t();
+     lg.Append(&record, off);
      }
     
     for (int i = b.InitialOffset; i < 2; i++) {
         std::cout << "At i = " << i << std::endl;
-     log::v1::Record * rec = lg.Read(i);   
+     logprog::v1::Record * rec = lg.Read(i);   
      assert(rec != nullptr);
      assert(rec->value() == "mostafa");
     }
@@ -59,7 +61,7 @@ int main() {
   b.MaxStoreBytes = 1024;
   b.MaxIndexBytes = 1024;
   b.InitialOffset = 1;
-     Log lg("./logsData", b);
+     Log lg("../../logsData", b);
     // BasicTest(&lg);
     // RemoveTest();
     TruncateTest(&lg);

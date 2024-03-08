@@ -4,7 +4,7 @@ using namespace std;
 #include "../../include/disk/File.h"
 int main() {
 
-log::File a("which");
+logModule::File a("which");
  
 char *x = "mostaaa";
 a.WriteFile(0, x, 7);
