@@ -56,17 +56,6 @@ CMAKE_BINARY_DIR = /mnt/d/codes/Distributed_Log_With_C++/Distributed-Log-Service
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -77,6 +66,17 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -137,6 +137,71 @@ client/fast:
 .PHONY : client/fast
 
 #=============================================================================
+# Target rules for targets named segment_test
+
+# Build rule for target.
+segment_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 segment_test
+.PHONY : segment_test
+
+# fast build rule for target.
+segment_test/fast:
+	$(MAKE) -f CMakeFiles/segment_test.dir/build.make CMakeFiles/segment_test.dir/build
+.PHONY : segment_test/fast
+
+#=============================================================================
+# Target rules for targets named log_test
+
+# Build rule for target.
+log_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 log_test
+.PHONY : log_test
+
+# fast build rule for target.
+log_test/fast:
+	$(MAKE) -f CMakeFiles/log_test.dir/build.make CMakeFiles/log_test.dir/build
+.PHONY : log_test/fast
+
+#=============================================================================
+# Target rules for targets named store_test
+
+# Build rule for target.
+store_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 store_test
+.PHONY : store_test
+
+# fast build rule for target.
+store_test/fast:
+	$(MAKE) -f CMakeFiles/store_test.dir/build.make CMakeFiles/store_test.dir/build
+.PHONY : store_test/fast
+
+#=============================================================================
+# Target rules for targets named File_test
+
+# Build rule for target.
+File_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 File_test
+.PHONY : File_test
+
+# fast build rule for target.
+File_test/fast:
+	$(MAKE) -f CMakeFiles/File_test.dir/build.make CMakeFiles/File_test.dir/build
+.PHONY : File_test/fast
+
+#=============================================================================
+# Target rules for targets named index_test
+
+# Build rule for target.
+index_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 index_test
+.PHONY : index_test
+
+# fast build rule for target.
+index_test/fast:
+	$(MAKE) -f CMakeFiles/index_test.dir/build.make CMakeFiles/index_test.dir/build
+.PHONY : index_test/fast
+
+#=============================================================================
 # Target rules for targets named logprog_grpc_proto
 
 # Build rule for target.
@@ -182,6 +247,8 @@ logprog.pb.o: logprog.pb.cc.o
 
 # target to build an object file
 logprog.pb.cc.o:
+	$(MAKE) -f CMakeFiles/segment_test.dir/build.make CMakeFiles/segment_test.dir/logprog.pb.cc.o
+	$(MAKE) -f CMakeFiles/log_test.dir/build.make CMakeFiles/log_test.dir/logprog.pb.cc.o
 	$(MAKE) -f CMakeFiles/logprog_grpc_proto.dir/build.make CMakeFiles/logprog_grpc_proto.dir/logprog.pb.cc.o
 .PHONY : logprog.pb.cc.o
 
@@ -191,6 +258,8 @@ logprog.pb.i: logprog.pb.cc.i
 
 # target to preprocess a source file
 logprog.pb.cc.i:
+	$(MAKE) -f CMakeFiles/segment_test.dir/build.make CMakeFiles/segment_test.dir/logprog.pb.cc.i
+	$(MAKE) -f CMakeFiles/log_test.dir/build.make CMakeFiles/log_test.dir/logprog.pb.cc.i
 	$(MAKE) -f CMakeFiles/logprog_grpc_proto.dir/build.make CMakeFiles/logprog_grpc_proto.dir/logprog.pb.cc.i
 .PHONY : logprog.pb.cc.i
 
@@ -200,8 +269,49 @@ logprog.pb.s: logprog.pb.cc.s
 
 # target to generate assembly for a file
 logprog.pb.cc.s:
+	$(MAKE) -f CMakeFiles/segment_test.dir/build.make CMakeFiles/segment_test.dir/logprog.pb.cc.s
+	$(MAKE) -f CMakeFiles/log_test.dir/build.make CMakeFiles/log_test.dir/logprog.pb.cc.s
 	$(MAKE) -f CMakeFiles/logprog_grpc_proto.dir/build.make CMakeFiles/logprog_grpc_proto.dir/logprog.pb.cc.s
 .PHONY : logprog.pb.cc.s
+
+src/disk/File.o: src/disk/File.cpp.o
+
+.PHONY : src/disk/File.o
+
+# target to build an object file
+src/disk/File.cpp.o:
+	$(MAKE) -f CMakeFiles/segment_test.dir/build.make CMakeFiles/segment_test.dir/src/disk/File.cpp.o
+	$(MAKE) -f CMakeFiles/log_test.dir/build.make CMakeFiles/log_test.dir/src/disk/File.cpp.o
+	$(MAKE) -f CMakeFiles/store_test.dir/build.make CMakeFiles/store_test.dir/src/disk/File.cpp.o
+	$(MAKE) -f CMakeFiles/File_test.dir/build.make CMakeFiles/File_test.dir/src/disk/File.cpp.o
+	$(MAKE) -f CMakeFiles/index_test.dir/build.make CMakeFiles/index_test.dir/src/disk/File.cpp.o
+.PHONY : src/disk/File.cpp.o
+
+src/disk/File.i: src/disk/File.cpp.i
+
+.PHONY : src/disk/File.i
+
+# target to preprocess a source file
+src/disk/File.cpp.i:
+	$(MAKE) -f CMakeFiles/segment_test.dir/build.make CMakeFiles/segment_test.dir/src/disk/File.cpp.i
+	$(MAKE) -f CMakeFiles/log_test.dir/build.make CMakeFiles/log_test.dir/src/disk/File.cpp.i
+	$(MAKE) -f CMakeFiles/store_test.dir/build.make CMakeFiles/store_test.dir/src/disk/File.cpp.i
+	$(MAKE) -f CMakeFiles/File_test.dir/build.make CMakeFiles/File_test.dir/src/disk/File.cpp.i
+	$(MAKE) -f CMakeFiles/index_test.dir/build.make CMakeFiles/index_test.dir/src/disk/File.cpp.i
+.PHONY : src/disk/File.cpp.i
+
+src/disk/File.s: src/disk/File.cpp.s
+
+.PHONY : src/disk/File.s
+
+# target to generate assembly for a file
+src/disk/File.cpp.s:
+	$(MAKE) -f CMakeFiles/segment_test.dir/build.make CMakeFiles/segment_test.dir/src/disk/File.cpp.s
+	$(MAKE) -f CMakeFiles/log_test.dir/build.make CMakeFiles/log_test.dir/src/disk/File.cpp.s
+	$(MAKE) -f CMakeFiles/store_test.dir/build.make CMakeFiles/store_test.dir/src/disk/File.cpp.s
+	$(MAKE) -f CMakeFiles/File_test.dir/build.make CMakeFiles/File_test.dir/src/disk/File.cpp.s
+	$(MAKE) -f CMakeFiles/index_test.dir/build.make CMakeFiles/index_test.dir/src/disk/File.cpp.s
+.PHONY : src/disk/File.cpp.s
 
 src/disk/file.o: src/disk/file.cpp.o
 
@@ -241,6 +351,9 @@ src/index/index.o: src/index/index.cpp.o
 src/index/index.cpp.o:
 	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/index/index.cpp.o
 	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/index/index.cpp.o
+	$(MAKE) -f CMakeFiles/segment_test.dir/build.make CMakeFiles/segment_test.dir/src/index/index.cpp.o
+	$(MAKE) -f CMakeFiles/log_test.dir/build.make CMakeFiles/log_test.dir/src/index/index.cpp.o
+	$(MAKE) -f CMakeFiles/index_test.dir/build.make CMakeFiles/index_test.dir/src/index/index.cpp.o
 .PHONY : src/index/index.cpp.o
 
 src/index/index.i: src/index/index.cpp.i
@@ -251,6 +364,9 @@ src/index/index.i: src/index/index.cpp.i
 src/index/index.cpp.i:
 	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/index/index.cpp.i
 	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/index/index.cpp.i
+	$(MAKE) -f CMakeFiles/segment_test.dir/build.make CMakeFiles/segment_test.dir/src/index/index.cpp.i
+	$(MAKE) -f CMakeFiles/log_test.dir/build.make CMakeFiles/log_test.dir/src/index/index.cpp.i
+	$(MAKE) -f CMakeFiles/index_test.dir/build.make CMakeFiles/index_test.dir/src/index/index.cpp.i
 .PHONY : src/index/index.cpp.i
 
 src/index/index.s: src/index/index.cpp.s
@@ -261,6 +377,9 @@ src/index/index.s: src/index/index.cpp.s
 src/index/index.cpp.s:
 	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/index/index.cpp.s
 	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/index/index.cpp.s
+	$(MAKE) -f CMakeFiles/segment_test.dir/build.make CMakeFiles/segment_test.dir/src/index/index.cpp.s
+	$(MAKE) -f CMakeFiles/log_test.dir/build.make CMakeFiles/log_test.dir/src/index/index.cpp.s
+	$(MAKE) -f CMakeFiles/index_test.dir/build.make CMakeFiles/index_test.dir/src/index/index.cpp.s
 .PHONY : src/index/index.cpp.s
 
 src/log/log.o: src/log/log.cpp.o
@@ -271,6 +390,7 @@ src/log/log.o: src/log/log.cpp.o
 src/log/log.cpp.o:
 	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/log/log.cpp.o
 	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/log/log.cpp.o
+	$(MAKE) -f CMakeFiles/log_test.dir/build.make CMakeFiles/log_test.dir/src/log/log.cpp.o
 .PHONY : src/log/log.cpp.o
 
 src/log/log.i: src/log/log.cpp.i
@@ -281,6 +401,7 @@ src/log/log.i: src/log/log.cpp.i
 src/log/log.cpp.i:
 	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/log/log.cpp.i
 	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/log/log.cpp.i
+	$(MAKE) -f CMakeFiles/log_test.dir/build.make CMakeFiles/log_test.dir/src/log/log.cpp.i
 .PHONY : src/log/log.cpp.i
 
 src/log/log.s: src/log/log.cpp.s
@@ -291,6 +412,7 @@ src/log/log.s: src/log/log.cpp.s
 src/log/log.cpp.s:
 	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/log/log.cpp.s
 	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/log/log.cpp.s
+	$(MAKE) -f CMakeFiles/log_test.dir/build.make CMakeFiles/log_test.dir/src/log/log.cpp.s
 .PHONY : src/log/log.cpp.s
 
 src/segment/segment.o: src/segment/segment.cpp.o
@@ -301,6 +423,8 @@ src/segment/segment.o: src/segment/segment.cpp.o
 src/segment/segment.cpp.o:
 	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/segment/segment.cpp.o
 	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/segment/segment.cpp.o
+	$(MAKE) -f CMakeFiles/segment_test.dir/build.make CMakeFiles/segment_test.dir/src/segment/segment.cpp.o
+	$(MAKE) -f CMakeFiles/log_test.dir/build.make CMakeFiles/log_test.dir/src/segment/segment.cpp.o
 .PHONY : src/segment/segment.cpp.o
 
 src/segment/segment.i: src/segment/segment.cpp.i
@@ -311,6 +435,8 @@ src/segment/segment.i: src/segment/segment.cpp.i
 src/segment/segment.cpp.i:
 	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/segment/segment.cpp.i
 	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/segment/segment.cpp.i
+	$(MAKE) -f CMakeFiles/segment_test.dir/build.make CMakeFiles/segment_test.dir/src/segment/segment.cpp.i
+	$(MAKE) -f CMakeFiles/log_test.dir/build.make CMakeFiles/log_test.dir/src/segment/segment.cpp.i
 .PHONY : src/segment/segment.cpp.i
 
 src/segment/segment.s: src/segment/segment.cpp.s
@@ -321,6 +447,8 @@ src/segment/segment.s: src/segment/segment.cpp.s
 src/segment/segment.cpp.s:
 	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/segment/segment.cpp.s
 	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/segment/segment.cpp.s
+	$(MAKE) -f CMakeFiles/segment_test.dir/build.make CMakeFiles/segment_test.dir/src/segment/segment.cpp.s
+	$(MAKE) -f CMakeFiles/log_test.dir/build.make CMakeFiles/log_test.dir/src/segment/segment.cpp.s
 .PHONY : src/segment/segment.cpp.s
 
 src/server/client.o: src/server/client.cpp.o
@@ -385,6 +513,9 @@ src/store/store.o: src/store/store.cpp.o
 src/store/store.cpp.o:
 	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/store/store.cpp.o
 	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/store/store.cpp.o
+	$(MAKE) -f CMakeFiles/segment_test.dir/build.make CMakeFiles/segment_test.dir/src/store/store.cpp.o
+	$(MAKE) -f CMakeFiles/log_test.dir/build.make CMakeFiles/log_test.dir/src/store/store.cpp.o
+	$(MAKE) -f CMakeFiles/store_test.dir/build.make CMakeFiles/store_test.dir/src/store/store.cpp.o
 .PHONY : src/store/store.cpp.o
 
 src/store/store.i: src/store/store.cpp.i
@@ -395,6 +526,9 @@ src/store/store.i: src/store/store.cpp.i
 src/store/store.cpp.i:
 	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/store/store.cpp.i
 	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/store/store.cpp.i
+	$(MAKE) -f CMakeFiles/segment_test.dir/build.make CMakeFiles/segment_test.dir/src/store/store.cpp.i
+	$(MAKE) -f CMakeFiles/log_test.dir/build.make CMakeFiles/log_test.dir/src/store/store.cpp.i
+	$(MAKE) -f CMakeFiles/store_test.dir/build.make CMakeFiles/store_test.dir/src/store/store.cpp.i
 .PHONY : src/store/store.cpp.i
 
 src/store/store.s: src/store/store.cpp.s
@@ -405,7 +539,145 @@ src/store/store.s: src/store/store.cpp.s
 src/store/store.cpp.s:
 	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/store/store.cpp.s
 	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/store/store.cpp.s
+	$(MAKE) -f CMakeFiles/segment_test.dir/build.make CMakeFiles/segment_test.dir/src/store/store.cpp.s
+	$(MAKE) -f CMakeFiles/log_test.dir/build.make CMakeFiles/log_test.dir/src/store/store.cpp.s
+	$(MAKE) -f CMakeFiles/store_test.dir/build.make CMakeFiles/store_test.dir/src/store/store.cpp.s
 .PHONY : src/store/store.cpp.s
+
+test/disk/File_test.o: test/disk/File_test.cpp.o
+
+.PHONY : test/disk/File_test.o
+
+# target to build an object file
+test/disk/File_test.cpp.o:
+	$(MAKE) -f CMakeFiles/File_test.dir/build.make CMakeFiles/File_test.dir/test/disk/File_test.cpp.o
+.PHONY : test/disk/File_test.cpp.o
+
+test/disk/File_test.i: test/disk/File_test.cpp.i
+
+.PHONY : test/disk/File_test.i
+
+# target to preprocess a source file
+test/disk/File_test.cpp.i:
+	$(MAKE) -f CMakeFiles/File_test.dir/build.make CMakeFiles/File_test.dir/test/disk/File_test.cpp.i
+.PHONY : test/disk/File_test.cpp.i
+
+test/disk/File_test.s: test/disk/File_test.cpp.s
+
+.PHONY : test/disk/File_test.s
+
+# target to generate assembly for a file
+test/disk/File_test.cpp.s:
+	$(MAKE) -f CMakeFiles/File_test.dir/build.make CMakeFiles/File_test.dir/test/disk/File_test.cpp.s
+.PHONY : test/disk/File_test.cpp.s
+
+test/index/index_test.o: test/index/index_test.cpp.o
+
+.PHONY : test/index/index_test.o
+
+# target to build an object file
+test/index/index_test.cpp.o:
+	$(MAKE) -f CMakeFiles/index_test.dir/build.make CMakeFiles/index_test.dir/test/index/index_test.cpp.o
+.PHONY : test/index/index_test.cpp.o
+
+test/index/index_test.i: test/index/index_test.cpp.i
+
+.PHONY : test/index/index_test.i
+
+# target to preprocess a source file
+test/index/index_test.cpp.i:
+	$(MAKE) -f CMakeFiles/index_test.dir/build.make CMakeFiles/index_test.dir/test/index/index_test.cpp.i
+.PHONY : test/index/index_test.cpp.i
+
+test/index/index_test.s: test/index/index_test.cpp.s
+
+.PHONY : test/index/index_test.s
+
+# target to generate assembly for a file
+test/index/index_test.cpp.s:
+	$(MAKE) -f CMakeFiles/index_test.dir/build.make CMakeFiles/index_test.dir/test/index/index_test.cpp.s
+.PHONY : test/index/index_test.cpp.s
+
+test/log/log_test.o: test/log/log_test.cpp.o
+
+.PHONY : test/log/log_test.o
+
+# target to build an object file
+test/log/log_test.cpp.o:
+	$(MAKE) -f CMakeFiles/log_test.dir/build.make CMakeFiles/log_test.dir/test/log/log_test.cpp.o
+.PHONY : test/log/log_test.cpp.o
+
+test/log/log_test.i: test/log/log_test.cpp.i
+
+.PHONY : test/log/log_test.i
+
+# target to preprocess a source file
+test/log/log_test.cpp.i:
+	$(MAKE) -f CMakeFiles/log_test.dir/build.make CMakeFiles/log_test.dir/test/log/log_test.cpp.i
+.PHONY : test/log/log_test.cpp.i
+
+test/log/log_test.s: test/log/log_test.cpp.s
+
+.PHONY : test/log/log_test.s
+
+# target to generate assembly for a file
+test/log/log_test.cpp.s:
+	$(MAKE) -f CMakeFiles/log_test.dir/build.make CMakeFiles/log_test.dir/test/log/log_test.cpp.s
+.PHONY : test/log/log_test.cpp.s
+
+test/segment/segment_test.o: test/segment/segment_test.cpp.o
+
+.PHONY : test/segment/segment_test.o
+
+# target to build an object file
+test/segment/segment_test.cpp.o:
+	$(MAKE) -f CMakeFiles/segment_test.dir/build.make CMakeFiles/segment_test.dir/test/segment/segment_test.cpp.o
+.PHONY : test/segment/segment_test.cpp.o
+
+test/segment/segment_test.i: test/segment/segment_test.cpp.i
+
+.PHONY : test/segment/segment_test.i
+
+# target to preprocess a source file
+test/segment/segment_test.cpp.i:
+	$(MAKE) -f CMakeFiles/segment_test.dir/build.make CMakeFiles/segment_test.dir/test/segment/segment_test.cpp.i
+.PHONY : test/segment/segment_test.cpp.i
+
+test/segment/segment_test.s: test/segment/segment_test.cpp.s
+
+.PHONY : test/segment/segment_test.s
+
+# target to generate assembly for a file
+test/segment/segment_test.cpp.s:
+	$(MAKE) -f CMakeFiles/segment_test.dir/build.make CMakeFiles/segment_test.dir/test/segment/segment_test.cpp.s
+.PHONY : test/segment/segment_test.cpp.s
+
+test/store/store_test.o: test/store/store_test.cpp.o
+
+.PHONY : test/store/store_test.o
+
+# target to build an object file
+test/store/store_test.cpp.o:
+	$(MAKE) -f CMakeFiles/store_test.dir/build.make CMakeFiles/store_test.dir/test/store/store_test.cpp.o
+.PHONY : test/store/store_test.cpp.o
+
+test/store/store_test.i: test/store/store_test.cpp.i
+
+.PHONY : test/store/store_test.i
+
+# target to preprocess a source file
+test/store/store_test.cpp.i:
+	$(MAKE) -f CMakeFiles/store_test.dir/build.make CMakeFiles/store_test.dir/test/store/store_test.cpp.i
+.PHONY : test/store/store_test.cpp.i
+
+test/store/store_test.s: test/store/store_test.cpp.s
+
+.PHONY : test/store/store_test.s
+
+# target to generate assembly for a file
+test/store/store_test.cpp.s:
+	$(MAKE) -f CMakeFiles/store_test.dir/build.make CMakeFiles/store_test.dir/test/store/store_test.cpp.s
+.PHONY : test/store/store_test.cpp.s
 
 # Help Target
 help:
@@ -413,10 +685,15 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... server"
 	@echo "... client"
+	@echo "... segment_test"
+	@echo "... rebuild_cache"
+	@echo "... log_test"
+	@echo "... store_test"
+	@echo "... File_test"
+	@echo "... index_test"
 	@echo "... logprog_grpc_proto"
 	@echo "... logprog.grpc.pb.o"
 	@echo "... logprog.grpc.pb.i"
@@ -424,6 +701,9 @@ help:
 	@echo "... logprog.pb.o"
 	@echo "... logprog.pb.i"
 	@echo "... logprog.pb.s"
+	@echo "... src/disk/File.o"
+	@echo "... src/disk/File.i"
+	@echo "... src/disk/File.s"
 	@echo "... src/disk/file.o"
 	@echo "... src/disk/file.i"
 	@echo "... src/disk/file.s"
@@ -445,6 +725,21 @@ help:
 	@echo "... src/store/store.o"
 	@echo "... src/store/store.i"
 	@echo "... src/store/store.s"
+	@echo "... test/disk/File_test.o"
+	@echo "... test/disk/File_test.i"
+	@echo "... test/disk/File_test.s"
+	@echo "... test/index/index_test.o"
+	@echo "... test/index/index_test.i"
+	@echo "... test/index/index_test.s"
+	@echo "... test/log/log_test.o"
+	@echo "... test/log/log_test.i"
+	@echo "... test/log/log_test.s"
+	@echo "... test/segment/segment_test.o"
+	@echo "... test/segment/segment_test.i"
+	@echo "... test/segment/segment_test.s"
+	@echo "... test/store/store_test.o"
+	@echo "... test/store/store_test.i"
+	@echo "... test/store/store_test.s"
 .PHONY : help
 
 

@@ -147,5 +147,10 @@ set(CMAKE_MAKEFILE_PRODUCTS
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/server.dir/DependInfo.cmake"
   "CMakeFiles/client.dir/DependInfo.cmake"
+  "CMakeFiles/segment_test.dir/DependInfo.cmake"
+  "CMakeFiles/log_test.dir/DependInfo.cmake"
+  "CMakeFiles/store_test.dir/DependInfo.cmake"
+  "CMakeFiles/File_test.dir/DependInfo.cmake"
+  "CMakeFiles/index_test.dir/DependInfo.cmake"
   "CMakeFiles/logprog_grpc_proto.dir/DependInfo.cmake"
   )
