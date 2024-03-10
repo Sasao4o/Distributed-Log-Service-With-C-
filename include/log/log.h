@@ -1,3 +1,6 @@
+#ifndef LogModule
+#define LogModule
+
 
 #include "../segment/segment.h"
  #include <string>
@@ -29,3 +32,5 @@ namespace logModule {
 
 
 };
+
+#endif

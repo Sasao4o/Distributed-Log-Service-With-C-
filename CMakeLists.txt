@@ -24,7 +24,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 project(PROLOG C CXX)
 
 set(CPP_LIST ${})
-list(APPEND CPP_LIST ${CPP_LIST}  "./src/log/log.cpp" "./src/disk/file.cpp" "./src/segment/segment.cpp" "./src/store/store.cpp" "./src/index/index.cpp")
+list(APPEND CPP_LIST ${CPP_LIST}  "./src/log/log.cpp" "./src/disk/file.cpp" "./src/segment/segment.cpp" "./src/store/store.cpp" "./src/index/index.cpp" "./src/server/server.cpp" "./src/server/client.cpp")
 # set(CPP_SEGMENT_LIST ${})
 # list(APPEND CPP_SEGMENT_LIST ${CPP_SEGMENT_LIST} ${CPP_LIST}) 
 # list(APPEND CPP_SEGMENT_LIST ${CPP_SEGMENT_LIST} "./cmake/build/logprog.pb.cc")
@@ -84,8 +84,11 @@ add_executable(log_test
     "./test/log/log_test.cpp" "./src/log/log.cpp" "./cmake/build/logprog.pb.cc" "./src/disk/File.cpp" "./src/segment/segment.cpp" "./src/index/index.cpp" "./src/store/store.cpp")
 add_executable(segment_test
     "./test/segment/segment_test.cpp" "./cmake/build/logprog.pb.cc" "./src/disk/File.cpp" "./src/segment/segment.cpp" "./src/index/index.cpp" "./src/store/store.cpp")
+    add_executable(grpc_test
+    "./test/grpc/grpc_test.cpp" "./src/log/log.cpp" "./cmake/build/logprog.pb.cc" "./src/disk/File.cpp" "./src/segment/segment.cpp" "./src/index/index.cpp" "./src/store/store.cpp" "./src/server/server.cpp" "./src/server/client.cpp")
 target_compile_options(log_test PRIVATE -lprotobuf -pthread)
 target_compile_options(segment_test PRIVATE -lprotobuf -pthread)
+target_compile_options(grpc_test PRIVATE -lprotobuf -pthread)
 target_link_libraries(segment_test
     logprog_grpc_proto
     ${_REFLECTION}
@@ -98,16 +101,24 @@ target_link_libraries(log_test
     ${_GRPC_GRPCPP}
     ${_PROTOBUF_LIBPROTOBUF}
     )
-# Targets route_guide_(client|server)
-foreach(_target
-  client server)
-  add_executable(${_target}
-    "./src/server/${_target}.cpp" ${CPP_LIST})
-  target_link_libraries(${_target}
+
+    target_link_libraries(grpc_test
     logprog_grpc_proto
     ${_REFLECTION}
     ${_GRPC_GRPCPP}
     ${_PROTOBUF_LIBPROTOBUF}
     )
+# Targets route_guide_(client|server)
+foreach(_target client server)
+    file(GLOB RUNNER_FILE "./src/server/${_target}_runner.cpp")
+
+    add_executable(${_target} ${RUNNER_FILE} ${CPP_LIST})
+    target_link_libraries(${_target}
+        logprog_grpc_proto
+        ${_REFLECTION}
+        ${_GRPC_GRPCPP}
+        ${_PROTOBUF_LIBPROTOBUF}
+    )
 endforeach()
+
 

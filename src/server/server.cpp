@@ -3,6 +3,7 @@
 #include "../../cmake/build/logprog.grpc.pb.h"
 #include "../../include/log/log.h"
 #include<iostream>
+#include "../../include/server/server.h"
 using grpc::ServerBuilder; 
 using namespace logprog::v1;
 using namespace logModule;
@@ -14,12 +15,12 @@ using grpc::ServerReaderWriter;
 using grpc::ServerWriter;
 // Server Implementation
  uint64_t x = 0;
-class LogImplementation final : public Logging::Service {
-  public:
-  LogImplementation(Log *CommitLog) : commitLog_(CommitLog) {};
+ 
+   
+  LogImplementation::LogImplementation(Log *CommitLog) : commitLog_(CommitLog) {};
 
-  Status Produce(ServerContext* context, const ProduceRequest* request,
-                     ProduceResponse* reply) override {
+  Status LogImplementation::Produce(ServerContext* context, const ProduceRequest* request,
+                     ProduceResponse* reply)  {
     // Obtains the original string from the request
     Record  rec = request->record();
     uint64_t *offset = new uint64_t();
@@ -35,8 +36,8 @@ class LogImplementation final : public Logging::Service {
     return Status::OK;
   }
 
-  Status Consume(ServerContext* context, const ConsumeRequest* request,
-                     ConsumeResponse* response) override {
+  Status LogImplementation::Consume(ServerContext* context, const ConsumeRequest* request,
+                     ConsumeResponse* response)  {
     // Obtains the original string from the request
     uint64_t offset = request->offset();
 
@@ -57,10 +58,10 @@ class LogImplementation final : public Logging::Service {
 
   
   
-  Status ProduceStream(
+  Status LogImplementation::ProduceStream(
         ServerContext* context,
         ServerReaderWriter<ProduceResponse, ProduceRequest>* stream
-    ) override {
+    )  {
         ProduceRequest req;
         ProduceResponse res;
 
@@ -80,7 +81,7 @@ class LogImplementation final : public Logging::Service {
     }
 
 
-Status ConsumeStream(ServerContext* context,const ConsumeRequest* req,  ServerWriter<ConsumeResponse>* writer) override {
+Status LogImplementation::ConsumeStream(ServerContext* context,const ConsumeRequest* req,  ServerWriter<ConsumeResponse>* writer)  {
           uint64_t offset = req->offset();
             while (1) {
              
@@ -112,32 +113,35 @@ Status ConsumeStream(ServerContext* context,const ConsumeRequest* req,  ServerWr
   }
 
 
-Log * commitLog_;
-};
+ 
 
-
-   
-void RunServer() {
+ 
+ 
+BussinessServer::BussinessServer(Logging::Service *service) {
+ this->service = service;
+}
+void BussinessServer::RunServer() {
   std::string server_address("0.0.0.0:50051");
-  Config b;
-  Log lg("../../logsData", b);
-  lg.SetUp();
-  LogImplementation service(&lg);
+ 
+  
  
   ServerBuilder builder;
   // Listen on the given address without any authentication mechanism
   builder.AddListeningPort(server_address, grpc::InsecureServerCredentials());
   // Register "service" as the instance through which
   // communication with client takes place
-  builder.RegisterService(&service);
+  builder.RegisterService(service);
   // Assembling the server
-  std::unique_ptr<Server> server(builder.BuildAndStart());
+  // std::unique_ptr<Server> server(builder.BuildAndStart());
+  server = std::make_unique<Server>(builder.BuildAndStart());
   std::cout << "Server listening on port: " << server_address << std::endl;
 
   server->Wait();
 }
-
-int main(int argc, char** argv) {
-  RunServer();
-  return 0;
-}
+ 
+  void BussinessServer::ShutServer() {
+      server->Shutdown();
+    }
+ Logging::Service * BussinessServer::GetService() {
+  return service;
+ }

@@ -2,19 +2,19 @@
 #include <string>
  
 #include "../../cmake/build/logprog.grpc.pb.h"
-
+#include "../../include/server/client.h"
 using namespace logprog::v1;
 using grpc::Channel;
 using grpc::ClientContext;
 using grpc::Status;
 using grpc::ClientReaderWriter;
-  class MyClient {
- public:
-  MyClient(std::shared_ptr<Channel> channel)
+ 
+ 
+  MyClient::MyClient(std::shared_ptr<Channel> channel)
       : stub_(Logging::NewStub(channel)) {}
 
   // Assembles client payload, sends it to the server, and returns its response
-  ProduceResponse Produce(std::string a) {
+  ProduceResponse MyClient::Produce(std::string a) {
     // Data to be sent to server
     Record  * myRecord = new Record();
     myRecord->set_value("mostafa");
@@ -42,7 +42,7 @@ using grpc::ClientReaderWriter;
     }
   }
 
-    ConsumeResponse Consume(uint64_t offset) {
+    ConsumeResponse MyClient::Consume(uint64_t offset) {
     ConsumeRequest request;
     request.set_offset(offset);
     // Container for server response
@@ -69,7 +69,7 @@ using grpc::ClientReaderWriter;
 
    
    
-  void ProduceStream(std::vector<Record*> &records) {
+  void MyClient::ProduceStream(std::vector<Record*> &records) {
         ProduceRequest request;
         ProduceResponse response;
 
@@ -97,7 +97,7 @@ using grpc::ClientReaderWriter;
         // return response;
   }
 
-  void ConsumeStream(uint64_t offset) {
+  void MyClient::ConsumeStream(uint64_t offset) {
      ConsumeRequest request;
     request.set_offset(offset);
     // Container for server response
@@ -127,39 +127,37 @@ using grpc::ClientReaderWriter;
   //   }
 
   }
- private:
-  std::unique_ptr<Logging::Stub> stub_;
-};
+ 
 
-  int main() {
-    std::string target_address("0.0.0.0:50051");
-  // Instantiates the client
-  MyClient client(
-      // Channel from which RPCs are made - endpoint is the target_address
-      grpc::CreateChannel(target_address,
-                          // Indicate when channel is not authenticated
-                          grpc::InsecureChannelCredentials()));
+//   int main() {
+//     std::string target_address("0.0.0.0:50051");
+//   // Instantiates the client
+//   MyClient client(
+//       // Channel from which RPCs are made - endpoint is the target_address
+//       grpc::CreateChannel(target_address,
+//                           // Indicate when channel is not authenticated
+//                           grpc::InsecureChannelCredentials()));
 
-  ProduceResponse response;
-  std::string a = "grpc is cool!";
-  ConsumeResponse response2;
-  // RPC is created and response is stored
-  std::vector<Record*> records;
+//   ProduceResponse response;
+//   std::string a = "grpc is cool!";
+//   ConsumeResponse response2;
+//   // RPC is created and response is stored
+//   std::vector<Record*> records;
 
 
-  Record  * myRecord = new Record();
-  myRecord->set_value("mostafa");
-  records.push_back(myRecord);
-  // Record  * myRecord_2 = new Record();
-  // myRecord_2->set_value("ahmed");
-  // records.push_back(myRecord_2);
+//   Record  * myRecord = new Record();
+//   myRecord->set_value("mostafa");
+//   records.push_back(myRecord);
+//   // Record  * myRecord_2 = new Record();
+//   // myRecord_2->set_value("ahmed");
+//   // records.push_back(myRecord_2);
   
 
-  client.ProduceStream(records);
+//   client.ProduceStream(records);
 
-  // Prints results
-  std::cout << "Offset is " << response.offset() << std::endl;
-  //  std::cout << "Record is: " << response2.record().value() << std::endl;
-  // std::cout << "Reversed string: " << response << std::endl;
+//   // Prints results
+ 
+//   //  std::cout << "Record is: " << response2.record().value() << std::endl;
+//   // std::cout << "Reversed string: " << response << std::endl;
 
- }
+//  }

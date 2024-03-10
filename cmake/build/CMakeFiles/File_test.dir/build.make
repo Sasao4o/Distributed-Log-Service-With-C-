@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/d/codes/Distributed_Log_With_C++/Distributed-Log-Service-With-C-
+CMAKE_SOURCE_DIR = "/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/d/codes/Distributed_Log_With_C++/Distributed-Log-Service-With-C-/cmake/build
+CMAKE_BINARY_DIR = "/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/File_test.dir/depend.make
@@ -59,29 +59,29 @@ include CMakeFiles/File_test.dir/flags.make
 
 CMakeFiles/File_test.dir/test/disk/File_test.cpp.o: CMakeFiles/File_test.dir/flags.make
 CMakeFiles/File_test.dir/test/disk/File_test.cpp.o: ../../test/disk/File_test.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/codes/Distributed_Log_With_C++/Distributed-Log-Service-With-C-/cmake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/File_test.dir/test/disk/File_test.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/File_test.dir/test/disk/File_test.cpp.o -c /mnt/d/codes/Distributed_Log_With_C++/Distributed-Log-Service-With-C-/test/disk/File_test.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/File_test.dir/test/disk/File_test.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/File_test.dir/test/disk/File_test.cpp.o -c "/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/test/disk/File_test.cpp"
 
 CMakeFiles/File_test.dir/test/disk/File_test.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/File_test.dir/test/disk/File_test.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/d/codes/Distributed_Log_With_C++/Distributed-Log-Service-With-C-/test/disk/File_test.cpp > CMakeFiles/File_test.dir/test/disk/File_test.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/test/disk/File_test.cpp" > CMakeFiles/File_test.dir/test/disk/File_test.cpp.i
 
 CMakeFiles/File_test.dir/test/disk/File_test.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/File_test.dir/test/disk/File_test.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/d/codes/Distributed_Log_With_C++/Distributed-Log-Service-With-C-/test/disk/File_test.cpp -o CMakeFiles/File_test.dir/test/disk/File_test.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/test/disk/File_test.cpp" -o CMakeFiles/File_test.dir/test/disk/File_test.cpp.s
 
 CMakeFiles/File_test.dir/src/disk/File.cpp.o: CMakeFiles/File_test.dir/flags.make
 CMakeFiles/File_test.dir/src/disk/File.cpp.o: ../../src/disk/File.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/codes/Distributed_Log_With_C++/Distributed-Log-Service-With-C-/cmake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/File_test.dir/src/disk/File.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/File_test.dir/src/disk/File.cpp.o -c /mnt/d/codes/Distributed_Log_With_C++/Distributed-Log-Service-With-C-/src/disk/File.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/File_test.dir/src/disk/File.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/File_test.dir/src/disk/File.cpp.o -c "/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/src/disk/File.cpp"
 
 CMakeFiles/File_test.dir/src/disk/File.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/File_test.dir/src/disk/File.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/d/codes/Distributed_Log_With_C++/Distributed-Log-Service-With-C-/src/disk/File.cpp > CMakeFiles/File_test.dir/src/disk/File.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/src/disk/File.cpp" > CMakeFiles/File_test.dir/src/disk/File.cpp.i
 
 CMakeFiles/File_test.dir/src/disk/File.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/File_test.dir/src/disk/File.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/d/codes/Distributed_Log_With_C++/Distributed-Log-Service-With-C-/src/disk/File.cpp -o CMakeFiles/File_test.dir/src/disk/File.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/src/disk/File.cpp" -o CMakeFiles/File_test.dir/src/disk/File.cpp.s
 
 # Object files for target File_test
 File_test_OBJECTS = \
@@ -95,7 +95,7 @@ File_test: CMakeFiles/File_test.dir/test/disk/File_test.cpp.o
 File_test: CMakeFiles/File_test.dir/src/disk/File.cpp.o
 File_test: CMakeFiles/File_test.dir/build.make
 File_test: CMakeFiles/File_test.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/d/codes/Distributed_Log_With_C++/Distributed-Log-Service-With-C-/cmake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable File_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable File_test"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/File_test.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -108,6 +108,6 @@ CMakeFiles/File_test.dir/clean:
 .PHONY : CMakeFiles/File_test.dir/clean
 
 CMakeFiles/File_test.dir/depend:
-	cd /mnt/d/codes/Distributed_Log_With_C++/Distributed-Log-Service-With-C-/cmake/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/d/codes/Distributed_Log_With_C++/Distributed-Log-Service-With-C- /mnt/d/codes/Distributed_Log_With_C++/Distributed-Log-Service-With-C- /mnt/d/codes/Distributed_Log_With_C++/Distributed-Log-Service-With-C-/cmake/build /mnt/d/codes/Distributed_Log_With_C++/Distributed-Log-Service-With-C-/cmake/build /mnt/d/codes/Distributed_Log_With_C++/Distributed-Log-Service-With-C-/cmake/build/CMakeFiles/File_test.dir/DependInfo.cmake --color=$(COLOR)
+	cd "/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-" "/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-" "/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build" "/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build" "/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/CMakeFiles/File_test.dir/DependInfo.cmake" --color=$(COLOR)
 .PHONY : CMakeFiles/File_test.dir/depend
 

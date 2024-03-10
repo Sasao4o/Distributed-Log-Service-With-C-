@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/d/codes/Distributed_Log_With_C++/Distributed-Log-Service-With-C-
+CMAKE_SOURCE_DIR = "/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/d/codes/Distributed_Log_With_C++/Distributed-Log-Service-With-C-/cmake/build
+CMAKE_BINARY_DIR = "/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/index_test.dir/depend.make
@@ -59,42 +59,42 @@ include CMakeFiles/index_test.dir/flags.make
 
 CMakeFiles/index_test.dir/test/index/index_test.cpp.o: CMakeFiles/index_test.dir/flags.make
 CMakeFiles/index_test.dir/test/index/index_test.cpp.o: ../../test/index/index_test.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/codes/Distributed_Log_With_C++/Distributed-Log-Service-With-C-/cmake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/index_test.dir/test/index/index_test.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/index_test.dir/test/index/index_test.cpp.o -c /mnt/d/codes/Distributed_Log_With_C++/Distributed-Log-Service-With-C-/test/index/index_test.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/index_test.dir/test/index/index_test.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/index_test.dir/test/index/index_test.cpp.o -c "/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/test/index/index_test.cpp"
 
 CMakeFiles/index_test.dir/test/index/index_test.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/index_test.dir/test/index/index_test.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/d/codes/Distributed_Log_With_C++/Distributed-Log-Service-With-C-/test/index/index_test.cpp > CMakeFiles/index_test.dir/test/index/index_test.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/test/index/index_test.cpp" > CMakeFiles/index_test.dir/test/index/index_test.cpp.i
 
 CMakeFiles/index_test.dir/test/index/index_test.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/index_test.dir/test/index/index_test.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/d/codes/Distributed_Log_With_C++/Distributed-Log-Service-With-C-/test/index/index_test.cpp -o CMakeFiles/index_test.dir/test/index/index_test.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/test/index/index_test.cpp" -o CMakeFiles/index_test.dir/test/index/index_test.cpp.s
 
 CMakeFiles/index_test.dir/src/index/index.cpp.o: CMakeFiles/index_test.dir/flags.make
 CMakeFiles/index_test.dir/src/index/index.cpp.o: ../../src/index/index.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/codes/Distributed_Log_With_C++/Distributed-Log-Service-With-C-/cmake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/index_test.dir/src/index/index.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/index_test.dir/src/index/index.cpp.o -c /mnt/d/codes/Distributed_Log_With_C++/Distributed-Log-Service-With-C-/src/index/index.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/index_test.dir/src/index/index.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/index_test.dir/src/index/index.cpp.o -c "/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/src/index/index.cpp"
 
 CMakeFiles/index_test.dir/src/index/index.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/index_test.dir/src/index/index.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/d/codes/Distributed_Log_With_C++/Distributed-Log-Service-With-C-/src/index/index.cpp > CMakeFiles/index_test.dir/src/index/index.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/src/index/index.cpp" > CMakeFiles/index_test.dir/src/index/index.cpp.i
 
 CMakeFiles/index_test.dir/src/index/index.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/index_test.dir/src/index/index.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/d/codes/Distributed_Log_With_C++/Distributed-Log-Service-With-C-/src/index/index.cpp -o CMakeFiles/index_test.dir/src/index/index.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/src/index/index.cpp" -o CMakeFiles/index_test.dir/src/index/index.cpp.s
 
 CMakeFiles/index_test.dir/src/disk/File.cpp.o: CMakeFiles/index_test.dir/flags.make
 CMakeFiles/index_test.dir/src/disk/File.cpp.o: ../../src/disk/File.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/codes/Distributed_Log_With_C++/Distributed-Log-Service-With-C-/cmake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/index_test.dir/src/disk/File.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/index_test.dir/src/disk/File.cpp.o -c /mnt/d/codes/Distributed_Log_With_C++/Distributed-Log-Service-With-C-/src/disk/File.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/index_test.dir/src/disk/File.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/index_test.dir/src/disk/File.cpp.o -c "/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/src/disk/File.cpp"
 
 CMakeFiles/index_test.dir/src/disk/File.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/index_test.dir/src/disk/File.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/d/codes/Distributed_Log_With_C++/Distributed-Log-Service-With-C-/src/disk/File.cpp > CMakeFiles/index_test.dir/src/disk/File.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/src/disk/File.cpp" > CMakeFiles/index_test.dir/src/disk/File.cpp.i
 
 CMakeFiles/index_test.dir/src/disk/File.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/index_test.dir/src/disk/File.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/d/codes/Distributed_Log_With_C++/Distributed-Log-Service-With-C-/src/disk/File.cpp -o CMakeFiles/index_test.dir/src/disk/File.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/src/disk/File.cpp" -o CMakeFiles/index_test.dir/src/disk/File.cpp.s
 
 # Object files for target index_test
 index_test_OBJECTS = \
@@ -110,7 +110,7 @@ index_test: CMakeFiles/index_test.dir/src/index/index.cpp.o
 index_test: CMakeFiles/index_test.dir/src/disk/File.cpp.o
 index_test: CMakeFiles/index_test.dir/build.make
 index_test: CMakeFiles/index_test.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/d/codes/Distributed_Log_With_C++/Distributed-Log-Service-With-C-/cmake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable index_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable index_test"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/index_test.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -123,6 +123,6 @@ CMakeFiles/index_test.dir/clean:
 .PHONY : CMakeFiles/index_test.dir/clean
 
 CMakeFiles/index_test.dir/depend:
-	cd /mnt/d/codes/Distributed_Log_With_C++/Distributed-Log-Service-With-C-/cmake/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/d/codes/Distributed_Log_With_C++/Distributed-Log-Service-With-C- /mnt/d/codes/Distributed_Log_With_C++/Distributed-Log-Service-With-C- /mnt/d/codes/Distributed_Log_With_C++/Distributed-Log-Service-With-C-/cmake/build /mnt/d/codes/Distributed_Log_With_C++/Distributed-Log-Service-With-C-/cmake/build /mnt/d/codes/Distributed_Log_With_C++/Distributed-Log-Service-With-C-/cmake/build/CMakeFiles/index_test.dir/DependInfo.cmake --color=$(COLOR)
+	cd "/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-" "/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-" "/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build" "/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build" "/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/CMakeFiles/index_test.dir/DependInfo.cmake" --color=$(COLOR)
 .PHONY : CMakeFiles/index_test.dir/depend
 

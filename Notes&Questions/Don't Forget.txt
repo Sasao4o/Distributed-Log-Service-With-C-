@@ -2,3 +2,5 @@
 - fstream doesn't provide file size change , so we need a new function. "Solved by using lseek"]
 -How to save nullcharacter in char*
 -you could optimize this further and make the locks per segment rather than across the whole log
+
+-ShutDown the RPC in safe way? there is SHUTDOWN method? when we shutdown are there singals handlers?

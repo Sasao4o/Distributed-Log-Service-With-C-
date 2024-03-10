@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/mnt/d/codes/Distributed_Log_With_C++/Distributed-Log-Service-With-C-/src/disk/File.cpp" "/mnt/d/codes/Distributed_Log_With_C++/Distributed-Log-Service-With-C-/cmake/build/CMakeFiles/store_test.dir/src/disk/File.cpp.o"
-  "/mnt/d/codes/Distributed_Log_With_C++/Distributed-Log-Service-With-C-/src/store/store.cpp" "/mnt/d/codes/Distributed_Log_With_C++/Distributed-Log-Service-With-C-/cmake/build/CMakeFiles/store_test.dir/src/store/store.cpp.o"
-  "/mnt/d/codes/Distributed_Log_With_C++/Distributed-Log-Service-With-C-/test/store/store_test.cpp" "/mnt/d/codes/Distributed_Log_With_C++/Distributed-Log-Service-With-C-/cmake/build/CMakeFiles/store_test.dir/test/store/store_test.cpp.o"
+  "/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/src/disk/File.cpp" "/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/CMakeFiles/store_test.dir/src/disk/File.cpp.o"
+  "/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/src/store/store.cpp" "/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/CMakeFiles/store_test.dir/src/store/store.cpp.o"
+  "/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/test/store/store_test.cpp" "/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/CMakeFiles/store_test.dir/test/store/store_test.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

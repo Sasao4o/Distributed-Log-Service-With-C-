@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/mnt/d/codes/Distributed_Log_With_C++/Distributed-Log-Service-With-C-/include/disk/File.h
+/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/include/disk/File.h
 iostream
 -
 fstream
@@ -14,7 +14,7 @@ fstream
 sys/stat.h
 -
 
-/mnt/d/codes/Distributed_Log_With_C++/Distributed-Log-Service-With-C-/include/index/index.h
+/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/include/index/index.h
 cstring
 -
 sys/mman.h
@@ -30,9 +30,19 @@ iostream
 cstdint
 -
 ../disk/File.h
-/mnt/d/codes/Distributed_Log_With_C++/Distributed-Log-Service-With-C-/include/disk/File.h
+/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/include/disk/File.h
 
-/mnt/d/codes/Distributed_Log_With_C++/Distributed-Log-Service-With-C-/src/index/index.cpp
+/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/src/disk/File.cpp
+../../include/disk/File.h
+/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/include/disk/File.h
+
+/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/src/index/index.cpp
 ../../include/index/index.h
-/mnt/d/codes/Distributed_Log_With_C++/Distributed-Log-Service-With-C-/include/index/index.h
+/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/include/index/index.h
+
+/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/test/index/index_test.cpp
+../../include/index/index.h
+/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/include/index/index.h
+cassert
+-
 

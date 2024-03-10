@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/d/codes/Distributed_Log_With_C++/Distributed-Log-Service-With-C-
+CMAKE_SOURCE_DIR = "/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/d/codes/Distributed_Log_With_C++/Distributed-Log-Service-With-C-/cmake/build
+CMAKE_BINARY_DIR = "/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/codes/Distributed_Log_With_C++/Distributed-Log-Service-With-C-/cmake/build/CMakeFiles /mnt/d/codes/Distributed_Log_With_C++/Distributed-Log-Service-With-C-/cmake/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start "/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/CMakeFiles" "/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/CMakeFiles/progress.marks"
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/codes/Distributed_Log_With_C++/Distributed-Log-Service-With-C-/cmake/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -148,6 +148,19 @@ segment_test: cmake_check_build_system
 segment_test/fast:
 	$(MAKE) -f CMakeFiles/segment_test.dir/build.make CMakeFiles/segment_test.dir/build
 .PHONY : segment_test/fast
+
+#=============================================================================
+# Target rules for targets named grpc_test
+
+# Build rule for target.
+grpc_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 grpc_test
+.PHONY : grpc_test
+
+# fast build rule for target.
+grpc_test/fast:
+	$(MAKE) -f CMakeFiles/grpc_test.dir/build.make CMakeFiles/grpc_test.dir/build
+.PHONY : grpc_test/fast
 
 #=============================================================================
 # Target rules for targets named log_test
@@ -248,6 +261,7 @@ logprog.pb.o: logprog.pb.cc.o
 # target to build an object file
 logprog.pb.cc.o:
 	$(MAKE) -f CMakeFiles/segment_test.dir/build.make CMakeFiles/segment_test.dir/logprog.pb.cc.o
+	$(MAKE) -f CMakeFiles/grpc_test.dir/build.make CMakeFiles/grpc_test.dir/logprog.pb.cc.o
 	$(MAKE) -f CMakeFiles/log_test.dir/build.make CMakeFiles/log_test.dir/logprog.pb.cc.o
 	$(MAKE) -f CMakeFiles/logprog_grpc_proto.dir/build.make CMakeFiles/logprog_grpc_proto.dir/logprog.pb.cc.o
 .PHONY : logprog.pb.cc.o
@@ -259,6 +273,7 @@ logprog.pb.i: logprog.pb.cc.i
 # target to preprocess a source file
 logprog.pb.cc.i:
 	$(MAKE) -f CMakeFiles/segment_test.dir/build.make CMakeFiles/segment_test.dir/logprog.pb.cc.i
+	$(MAKE) -f CMakeFiles/grpc_test.dir/build.make CMakeFiles/grpc_test.dir/logprog.pb.cc.i
 	$(MAKE) -f CMakeFiles/log_test.dir/build.make CMakeFiles/log_test.dir/logprog.pb.cc.i
 	$(MAKE) -f CMakeFiles/logprog_grpc_proto.dir/build.make CMakeFiles/logprog_grpc_proto.dir/logprog.pb.cc.i
 .PHONY : logprog.pb.cc.i
@@ -270,6 +285,7 @@ logprog.pb.s: logprog.pb.cc.s
 # target to generate assembly for a file
 logprog.pb.cc.s:
 	$(MAKE) -f CMakeFiles/segment_test.dir/build.make CMakeFiles/segment_test.dir/logprog.pb.cc.s
+	$(MAKE) -f CMakeFiles/grpc_test.dir/build.make CMakeFiles/grpc_test.dir/logprog.pb.cc.s
 	$(MAKE) -f CMakeFiles/log_test.dir/build.make CMakeFiles/log_test.dir/logprog.pb.cc.s
 	$(MAKE) -f CMakeFiles/logprog_grpc_proto.dir/build.make CMakeFiles/logprog_grpc_proto.dir/logprog.pb.cc.s
 .PHONY : logprog.pb.cc.s
@@ -281,6 +297,7 @@ src/disk/File.o: src/disk/File.cpp.o
 # target to build an object file
 src/disk/File.cpp.o:
 	$(MAKE) -f CMakeFiles/segment_test.dir/build.make CMakeFiles/segment_test.dir/src/disk/File.cpp.o
+	$(MAKE) -f CMakeFiles/grpc_test.dir/build.make CMakeFiles/grpc_test.dir/src/disk/File.cpp.o
 	$(MAKE) -f CMakeFiles/log_test.dir/build.make CMakeFiles/log_test.dir/src/disk/File.cpp.o
 	$(MAKE) -f CMakeFiles/store_test.dir/build.make CMakeFiles/store_test.dir/src/disk/File.cpp.o
 	$(MAKE) -f CMakeFiles/File_test.dir/build.make CMakeFiles/File_test.dir/src/disk/File.cpp.o
@@ -294,6 +311,7 @@ src/disk/File.i: src/disk/File.cpp.i
 # target to preprocess a source file
 src/disk/File.cpp.i:
 	$(MAKE) -f CMakeFiles/segment_test.dir/build.make CMakeFiles/segment_test.dir/src/disk/File.cpp.i
+	$(MAKE) -f CMakeFiles/grpc_test.dir/build.make CMakeFiles/grpc_test.dir/src/disk/File.cpp.i
 	$(MAKE) -f CMakeFiles/log_test.dir/build.make CMakeFiles/log_test.dir/src/disk/File.cpp.i
 	$(MAKE) -f CMakeFiles/store_test.dir/build.make CMakeFiles/store_test.dir/src/disk/File.cpp.i
 	$(MAKE) -f CMakeFiles/File_test.dir/build.make CMakeFiles/File_test.dir/src/disk/File.cpp.i
@@ -307,6 +325,7 @@ src/disk/File.s: src/disk/File.cpp.s
 # target to generate assembly for a file
 src/disk/File.cpp.s:
 	$(MAKE) -f CMakeFiles/segment_test.dir/build.make CMakeFiles/segment_test.dir/src/disk/File.cpp.s
+	$(MAKE) -f CMakeFiles/grpc_test.dir/build.make CMakeFiles/grpc_test.dir/src/disk/File.cpp.s
 	$(MAKE) -f CMakeFiles/log_test.dir/build.make CMakeFiles/log_test.dir/src/disk/File.cpp.s
 	$(MAKE) -f CMakeFiles/store_test.dir/build.make CMakeFiles/store_test.dir/src/disk/File.cpp.s
 	$(MAKE) -f CMakeFiles/File_test.dir/build.make CMakeFiles/File_test.dir/src/disk/File.cpp.s
@@ -352,6 +371,7 @@ src/index/index.cpp.o:
 	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/index/index.cpp.o
 	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/index/index.cpp.o
 	$(MAKE) -f CMakeFiles/segment_test.dir/build.make CMakeFiles/segment_test.dir/src/index/index.cpp.o
+	$(MAKE) -f CMakeFiles/grpc_test.dir/build.make CMakeFiles/grpc_test.dir/src/index/index.cpp.o
 	$(MAKE) -f CMakeFiles/log_test.dir/build.make CMakeFiles/log_test.dir/src/index/index.cpp.o
 	$(MAKE) -f CMakeFiles/index_test.dir/build.make CMakeFiles/index_test.dir/src/index/index.cpp.o
 .PHONY : src/index/index.cpp.o
@@ -365,6 +385,7 @@ src/index/index.cpp.i:
 	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/index/index.cpp.i
 	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/index/index.cpp.i
 	$(MAKE) -f CMakeFiles/segment_test.dir/build.make CMakeFiles/segment_test.dir/src/index/index.cpp.i
+	$(MAKE) -f CMakeFiles/grpc_test.dir/build.make CMakeFiles/grpc_test.dir/src/index/index.cpp.i
 	$(MAKE) -f CMakeFiles/log_test.dir/build.make CMakeFiles/log_test.dir/src/index/index.cpp.i
 	$(MAKE) -f CMakeFiles/index_test.dir/build.make CMakeFiles/index_test.dir/src/index/index.cpp.i
 .PHONY : src/index/index.cpp.i
@@ -378,6 +399,7 @@ src/index/index.cpp.s:
 	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/index/index.cpp.s
 	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/index/index.cpp.s
 	$(MAKE) -f CMakeFiles/segment_test.dir/build.make CMakeFiles/segment_test.dir/src/index/index.cpp.s
+	$(MAKE) -f CMakeFiles/grpc_test.dir/build.make CMakeFiles/grpc_test.dir/src/index/index.cpp.s
 	$(MAKE) -f CMakeFiles/log_test.dir/build.make CMakeFiles/log_test.dir/src/index/index.cpp.s
 	$(MAKE) -f CMakeFiles/index_test.dir/build.make CMakeFiles/index_test.dir/src/index/index.cpp.s
 .PHONY : src/index/index.cpp.s
@@ -390,6 +412,7 @@ src/log/log.o: src/log/log.cpp.o
 src/log/log.cpp.o:
 	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/log/log.cpp.o
 	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/log/log.cpp.o
+	$(MAKE) -f CMakeFiles/grpc_test.dir/build.make CMakeFiles/grpc_test.dir/src/log/log.cpp.o
 	$(MAKE) -f CMakeFiles/log_test.dir/build.make CMakeFiles/log_test.dir/src/log/log.cpp.o
 .PHONY : src/log/log.cpp.o
 
@@ -401,6 +424,7 @@ src/log/log.i: src/log/log.cpp.i
 src/log/log.cpp.i:
 	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/log/log.cpp.i
 	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/log/log.cpp.i
+	$(MAKE) -f CMakeFiles/grpc_test.dir/build.make CMakeFiles/grpc_test.dir/src/log/log.cpp.i
 	$(MAKE) -f CMakeFiles/log_test.dir/build.make CMakeFiles/log_test.dir/src/log/log.cpp.i
 .PHONY : src/log/log.cpp.i
 
@@ -412,6 +436,7 @@ src/log/log.s: src/log/log.cpp.s
 src/log/log.cpp.s:
 	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/log/log.cpp.s
 	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/log/log.cpp.s
+	$(MAKE) -f CMakeFiles/grpc_test.dir/build.make CMakeFiles/grpc_test.dir/src/log/log.cpp.s
 	$(MAKE) -f CMakeFiles/log_test.dir/build.make CMakeFiles/log_test.dir/src/log/log.cpp.s
 .PHONY : src/log/log.cpp.s
 
@@ -424,6 +449,7 @@ src/segment/segment.cpp.o:
 	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/segment/segment.cpp.o
 	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/segment/segment.cpp.o
 	$(MAKE) -f CMakeFiles/segment_test.dir/build.make CMakeFiles/segment_test.dir/src/segment/segment.cpp.o
+	$(MAKE) -f CMakeFiles/grpc_test.dir/build.make CMakeFiles/grpc_test.dir/src/segment/segment.cpp.o
 	$(MAKE) -f CMakeFiles/log_test.dir/build.make CMakeFiles/log_test.dir/src/segment/segment.cpp.o
 .PHONY : src/segment/segment.cpp.o
 
@@ -436,6 +462,7 @@ src/segment/segment.cpp.i:
 	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/segment/segment.cpp.i
 	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/segment/segment.cpp.i
 	$(MAKE) -f CMakeFiles/segment_test.dir/build.make CMakeFiles/segment_test.dir/src/segment/segment.cpp.i
+	$(MAKE) -f CMakeFiles/grpc_test.dir/build.make CMakeFiles/grpc_test.dir/src/segment/segment.cpp.i
 	$(MAKE) -f CMakeFiles/log_test.dir/build.make CMakeFiles/log_test.dir/src/segment/segment.cpp.i
 .PHONY : src/segment/segment.cpp.i
 
@@ -448,6 +475,7 @@ src/segment/segment.cpp.s:
 	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/segment/segment.cpp.s
 	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/segment/segment.cpp.s
 	$(MAKE) -f CMakeFiles/segment_test.dir/build.make CMakeFiles/segment_test.dir/src/segment/segment.cpp.s
+	$(MAKE) -f CMakeFiles/grpc_test.dir/build.make CMakeFiles/grpc_test.dir/src/segment/segment.cpp.s
 	$(MAKE) -f CMakeFiles/log_test.dir/build.make CMakeFiles/log_test.dir/src/segment/segment.cpp.s
 .PHONY : src/segment/segment.cpp.s
 
@@ -457,7 +485,9 @@ src/server/client.o: src/server/client.cpp.o
 
 # target to build an object file
 src/server/client.cpp.o:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/client.cpp.o
 	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/server/client.cpp.o
+	$(MAKE) -f CMakeFiles/grpc_test.dir/build.make CMakeFiles/grpc_test.dir/src/server/client.cpp.o
 .PHONY : src/server/client.cpp.o
 
 src/server/client.i: src/server/client.cpp.i
@@ -466,7 +496,9 @@ src/server/client.i: src/server/client.cpp.i
 
 # target to preprocess a source file
 src/server/client.cpp.i:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/client.cpp.i
 	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/server/client.cpp.i
+	$(MAKE) -f CMakeFiles/grpc_test.dir/build.make CMakeFiles/grpc_test.dir/src/server/client.cpp.i
 .PHONY : src/server/client.cpp.i
 
 src/server/client.s: src/server/client.cpp.s
@@ -475,8 +507,37 @@ src/server/client.s: src/server/client.cpp.s
 
 # target to generate assembly for a file
 src/server/client.cpp.s:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/client.cpp.s
 	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/server/client.cpp.s
+	$(MAKE) -f CMakeFiles/grpc_test.dir/build.make CMakeFiles/grpc_test.dir/src/server/client.cpp.s
 .PHONY : src/server/client.cpp.s
+
+src/server/client_runner.o: src/server/client_runner.cpp.o
+
+.PHONY : src/server/client_runner.o
+
+# target to build an object file
+src/server/client_runner.cpp.o:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/server/client_runner.cpp.o
+.PHONY : src/server/client_runner.cpp.o
+
+src/server/client_runner.i: src/server/client_runner.cpp.i
+
+.PHONY : src/server/client_runner.i
+
+# target to preprocess a source file
+src/server/client_runner.cpp.i:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/server/client_runner.cpp.i
+.PHONY : src/server/client_runner.cpp.i
+
+src/server/client_runner.s: src/server/client_runner.cpp.s
+
+.PHONY : src/server/client_runner.s
+
+# target to generate assembly for a file
+src/server/client_runner.cpp.s:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/server/client_runner.cpp.s
+.PHONY : src/server/client_runner.cpp.s
 
 src/server/server.o: src/server/server.cpp.o
 
@@ -485,6 +546,8 @@ src/server/server.o: src/server/server.cpp.o
 # target to build an object file
 src/server/server.cpp.o:
 	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/server.cpp.o
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/server/server.cpp.o
+	$(MAKE) -f CMakeFiles/grpc_test.dir/build.make CMakeFiles/grpc_test.dir/src/server/server.cpp.o
 .PHONY : src/server/server.cpp.o
 
 src/server/server.i: src/server/server.cpp.i
@@ -494,6 +557,8 @@ src/server/server.i: src/server/server.cpp.i
 # target to preprocess a source file
 src/server/server.cpp.i:
 	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/server.cpp.i
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/server/server.cpp.i
+	$(MAKE) -f CMakeFiles/grpc_test.dir/build.make CMakeFiles/grpc_test.dir/src/server/server.cpp.i
 .PHONY : src/server/server.cpp.i
 
 src/server/server.s: src/server/server.cpp.s
@@ -503,7 +568,36 @@ src/server/server.s: src/server/server.cpp.s
 # target to generate assembly for a file
 src/server/server.cpp.s:
 	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/server.cpp.s
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/server/server.cpp.s
+	$(MAKE) -f CMakeFiles/grpc_test.dir/build.make CMakeFiles/grpc_test.dir/src/server/server.cpp.s
 .PHONY : src/server/server.cpp.s
+
+src/server/server_runner.o: src/server/server_runner.cpp.o
+
+.PHONY : src/server/server_runner.o
+
+# target to build an object file
+src/server/server_runner.cpp.o:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/server_runner.cpp.o
+.PHONY : src/server/server_runner.cpp.o
+
+src/server/server_runner.i: src/server/server_runner.cpp.i
+
+.PHONY : src/server/server_runner.i
+
+# target to preprocess a source file
+src/server/server_runner.cpp.i:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/server_runner.cpp.i
+.PHONY : src/server/server_runner.cpp.i
+
+src/server/server_runner.s: src/server/server_runner.cpp.s
+
+.PHONY : src/server/server_runner.s
+
+# target to generate assembly for a file
+src/server/server_runner.cpp.s:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/server_runner.cpp.s
+.PHONY : src/server/server_runner.cpp.s
 
 src/store/store.o: src/store/store.cpp.o
 
@@ -514,6 +608,7 @@ src/store/store.cpp.o:
 	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/store/store.cpp.o
 	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/store/store.cpp.o
 	$(MAKE) -f CMakeFiles/segment_test.dir/build.make CMakeFiles/segment_test.dir/src/store/store.cpp.o
+	$(MAKE) -f CMakeFiles/grpc_test.dir/build.make CMakeFiles/grpc_test.dir/src/store/store.cpp.o
 	$(MAKE) -f CMakeFiles/log_test.dir/build.make CMakeFiles/log_test.dir/src/store/store.cpp.o
 	$(MAKE) -f CMakeFiles/store_test.dir/build.make CMakeFiles/store_test.dir/src/store/store.cpp.o
 .PHONY : src/store/store.cpp.o
@@ -527,6 +622,7 @@ src/store/store.cpp.i:
 	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/store/store.cpp.i
 	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/store/store.cpp.i
 	$(MAKE) -f CMakeFiles/segment_test.dir/build.make CMakeFiles/segment_test.dir/src/store/store.cpp.i
+	$(MAKE) -f CMakeFiles/grpc_test.dir/build.make CMakeFiles/grpc_test.dir/src/store/store.cpp.i
 	$(MAKE) -f CMakeFiles/log_test.dir/build.make CMakeFiles/log_test.dir/src/store/store.cpp.i
 	$(MAKE) -f CMakeFiles/store_test.dir/build.make CMakeFiles/store_test.dir/src/store/store.cpp.i
 .PHONY : src/store/store.cpp.i
@@ -540,6 +636,7 @@ src/store/store.cpp.s:
 	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/store/store.cpp.s
 	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/store/store.cpp.s
 	$(MAKE) -f CMakeFiles/segment_test.dir/build.make CMakeFiles/segment_test.dir/src/store/store.cpp.s
+	$(MAKE) -f CMakeFiles/grpc_test.dir/build.make CMakeFiles/grpc_test.dir/src/store/store.cpp.s
 	$(MAKE) -f CMakeFiles/log_test.dir/build.make CMakeFiles/log_test.dir/src/store/store.cpp.s
 	$(MAKE) -f CMakeFiles/store_test.dir/build.make CMakeFiles/store_test.dir/src/store/store.cpp.s
 .PHONY : src/store/store.cpp.s
@@ -570,6 +667,33 @@ test/disk/File_test.s: test/disk/File_test.cpp.s
 test/disk/File_test.cpp.s:
 	$(MAKE) -f CMakeFiles/File_test.dir/build.make CMakeFiles/File_test.dir/test/disk/File_test.cpp.s
 .PHONY : test/disk/File_test.cpp.s
+
+test/grpc/grpc_test.o: test/grpc/grpc_test.cpp.o
+
+.PHONY : test/grpc/grpc_test.o
+
+# target to build an object file
+test/grpc/grpc_test.cpp.o:
+	$(MAKE) -f CMakeFiles/grpc_test.dir/build.make CMakeFiles/grpc_test.dir/test/grpc/grpc_test.cpp.o
+.PHONY : test/grpc/grpc_test.cpp.o
+
+test/grpc/grpc_test.i: test/grpc/grpc_test.cpp.i
+
+.PHONY : test/grpc/grpc_test.i
+
+# target to preprocess a source file
+test/grpc/grpc_test.cpp.i:
+	$(MAKE) -f CMakeFiles/grpc_test.dir/build.make CMakeFiles/grpc_test.dir/test/grpc/grpc_test.cpp.i
+.PHONY : test/grpc/grpc_test.cpp.i
+
+test/grpc/grpc_test.s: test/grpc/grpc_test.cpp.s
+
+.PHONY : test/grpc/grpc_test.s
+
+# target to generate assembly for a file
+test/grpc/grpc_test.cpp.s:
+	$(MAKE) -f CMakeFiles/grpc_test.dir/build.make CMakeFiles/grpc_test.dir/test/grpc/grpc_test.cpp.s
+.PHONY : test/grpc/grpc_test.cpp.s
 
 test/index/index_test.o: test/index/index_test.cpp.o
 
@@ -690,6 +814,7 @@ help:
 	@echo "... client"
 	@echo "... segment_test"
 	@echo "... rebuild_cache"
+	@echo "... grpc_test"
 	@echo "... log_test"
 	@echo "... store_test"
 	@echo "... File_test"
@@ -719,15 +844,24 @@ help:
 	@echo "... src/server/client.o"
 	@echo "... src/server/client.i"
 	@echo "... src/server/client.s"
+	@echo "... src/server/client_runner.o"
+	@echo "... src/server/client_runner.i"
+	@echo "... src/server/client_runner.s"
 	@echo "... src/server/server.o"
 	@echo "... src/server/server.i"
 	@echo "... src/server/server.s"
+	@echo "... src/server/server_runner.o"
+	@echo "... src/server/server_runner.i"
+	@echo "... src/server/server_runner.s"
 	@echo "... src/store/store.o"
 	@echo "... src/store/store.i"
 	@echo "... src/store/store.s"
 	@echo "... test/disk/File_test.o"
 	@echo "... test/disk/File_test.i"
 	@echo "... test/disk/File_test.s"
+	@echo "... test/grpc/grpc_test.o"
+	@echo "... test/grpc/grpc_test.i"
+	@echo "... test/grpc/grpc_test.s"
 	@echo "... test/index/index_test.o"
 	@echo "... test/index/index_test.i"
 	@echo "... test/index/index_test.s"
