@@ -5385,6 +5385,8 @@ filesystem
 /mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/include/server/server.h
 ../../cmake/build/logprog.grpc.pb.h
 /mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/logprog.grpc.pb.h
+memory
+-
 ../log/log.h
 /mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/include/log/log.h
 
@@ -5405,20 +5407,6 @@ cstdint
 -
 
 /mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/src/server/server.cpp
-grpcpp/grpcpp.h
--
-string
--
-../../cmake/build/logprog.grpc.pb.h
-/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/logprog.grpc.pb.h
-../../include/log/log.h
-/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/include/log/log.h
-iostream
--
-../../include/server/server.h
-/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/include/server/server.h
-
-/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/src/server/server_runner.cpp
 grpcpp/grpcpp.h
 -
 string

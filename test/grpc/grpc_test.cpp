@@ -16,8 +16,9 @@ void RunServer(BussinessServer * bs) {
   lg.SetUp();
   LogImplementation service(&lg);
   BussinessServer s(&service);
-  s.RunServer();
-  // *bs = std::move(s);
+  *bs = std::move(s);
+  bs->RunServer();
+  
   //note that there is unique_ptr so the class is not copiable!!!
   //https://stackoverflow.com/questions/29124592/copy-constructor-to-transfer-ownership-of-a-unique-ptr
  
@@ -38,15 +39,16 @@ MyClient ClientConnection() {
  void TestProduceAndConsume() {
   BussinessServer * bs = new BussinessServer();
   std::thread grpcThread(RunServer, bs);
-  std::this_thread::sleep_for(std::chrono::milliseconds(100));
+   std::this_thread::sleep_for(std::chrono::milliseconds(500));
+ 
   MyClient b = ClientConnection();
   b.Produce("mostafa");
   ConsumeResponse response = b.Consume(0);
   std::cout << response.record().value() << std::endl;
-  assert(response.record().value() == "xx");
-
-  grpcThread.join();
+  assert(response.record().value() == "mostafa");
   bs->ShutServer();
+  grpcThread.join();
+  
  }
 int main() {
  TestProduceAndConsume();

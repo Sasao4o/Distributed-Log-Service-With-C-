@@ -132,15 +132,22 @@ void BussinessServer::RunServer() {
   // communication with client takes place
   builder.RegisterService(service);
   // Assembling the server
-  // std::unique_ptr<Server> server(builder.BuildAndStart());
-  server = std::make_unique<Server>(builder.BuildAndStart());
+    // std::unique_ptr<Server> server(builder.BuildAndStart());
+    server = std::unique_ptr<Server>(builder.BuildAndStart());
   std::cout << "Server listening on port: " << server_address << std::endl;
 
   server->Wait();
+  
 }
  
   void BussinessServer::ShutServer() {
+    std::cout << "Shut Downning the Server" << std::endl;
+    if (server == nullptr) {
+      std::cout << "CANOTTT" << std::endl;
+    }
+    if (server != nullptr) {
       server->Shutdown();
+    }
     }
  Logging::Service * BussinessServer::GetService() {
   return service;

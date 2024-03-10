@@ -1,6 +1,7 @@
  #ifndef BussinessServerModule
  #define BussinessServerModule
 #include "../../cmake/build/logprog.grpc.pb.h"
+#include<memory>
 #include "../log/log.h"
 using namespace logprog::v1;
 using namespace logModule;
@@ -8,10 +9,22 @@ using namespace logModule;
     public:
     BussinessServer() {}
     BussinessServer(Logging::Service *service);
-      BussinessServer(BussinessServer&& other) {
-        server = std::move(other.server);
-        std::cout << "Moving Constructor " << std::endl;
-    }
+    //   BussinessServer(BussinessServer&& other) {
+
+    //     server = std::move(other.server);
+        
+    //     std::cout << "Moving Constructor " << std::endl;
+    // }
+    //     BussinessServer& operator=(BussinessServer&& other) {
+    //     if (this != &other) {
+    //         server = std::move(other.server);
+    //         service = other.service;
+    //         std::cout << "Move Assignment Operator" << std::endl;
+    //     }
+        // return *this;
+    // }
+
+
     void RunServer();
     void ShutServer();
     Logging::Service * GetService();
