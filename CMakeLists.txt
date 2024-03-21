@@ -84,11 +84,15 @@ add_executable(log_test
     "./test/log/log_test.cpp" "./src/log/log.cpp" "./cmake/build/logprog.pb.cc" "./src/disk/File.cpp" "./src/segment/segment.cpp" "./src/index/index.cpp" "./src/store/store.cpp")
 add_executable(segment_test
     "./test/segment/segment_test.cpp" "./cmake/build/logprog.pb.cc" "./src/disk/File.cpp" "./src/segment/segment.cpp" "./src/index/index.cpp" "./src/store/store.cpp")
-    add_executable(grpc_test
+ 
+
+add_executable(grpc_test
     "./test/grpc/grpc_test.cpp" "./src/log/log.cpp" "./cmake/build/logprog.pb.cc" "./src/disk/File.cpp" "./src/segment/segment.cpp" "./src/index/index.cpp" "./src/store/store.cpp" "./src/server/server.cpp" "./src/server/client.cpp")
-target_compile_options(log_test PRIVATE -lprotobuf -pthread)
-target_compile_options(segment_test PRIVATE -lprotobuf -pthread)
-target_compile_options(grpc_test PRIVATE -lprotobuf -pthread)
+ 
+target_compile_options(log_test PRIVATE -lprotobuf-c -pthread)
+target_compile_options(segment_test PRIVATE -lprotobuf-c -pthread)
+target_compile_options(grpc_test PRIVATE -lprotobuf-c -pthread)
+target_compile_options(store_test PRIVATE -pthread)
 target_link_libraries(segment_test
     logprog_grpc_proto
     ${_REFLECTION}
@@ -107,6 +111,13 @@ target_link_libraries(log_test
     ${_REFLECTION}
     ${_GRPC_GRPCPP}
     ${_PROTOBUF_LIBPROTOBUF}
+    )
+
+
+    
+    target_link_libraries(store_test
+    PRIVATE
+    pthread
     )
 # Targets route_guide_(client|server)
 foreach(_target client server)

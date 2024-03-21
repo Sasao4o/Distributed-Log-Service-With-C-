@@ -1,21 +1,23 @@
 Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
 Change Dir: /mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_2122c/fast && /usr/bin/make -f CMakeFiles/cmTC_2122c.dir/build.make CMakeFiles/cmTC_2122c.dir/build
+Run Build Command(s):/usr/bin/make cmTC_e5e4f/fast && make: Warning: File 'Makefile' has modification time 16 s in the future
+/usr/bin/make -f CMakeFiles/cmTC_e5e4f.dir/build.make CMakeFiles/cmTC_e5e4f.dir/build
 make[1]: Entering directory '/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_2122c.dir/src.c.o
-/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_2122c.dir/src.c.o   -c "/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/CMakeFiles/CMakeTmp/src.c"
-Linking C executable cmTC_2122c
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2122c.dir/link.txt --verbose=1
-/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_2122c.dir/src.c.o  -o cmTC_2122c 
-/usr/bin/ld: CMakeFiles/cmTC_2122c.dir/src.c.o: in function `main':
+make[1]: Warning: File 'CMakeFiles/cmTC_e5e4f.dir/flags.make' has modification time 16 s in the future
+Building C object CMakeFiles/cmTC_e5e4f.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_e5e4f.dir/src.c.o   -c "/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/CMakeFiles/CMakeTmp/src.c"
+Linking C executable cmTC_e5e4f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e5e4f.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_e5e4f.dir/src.c.o  -o cmTC_e5e4f 
+/usr/bin/ld: CMakeFiles/cmTC_e5e4f.dir/src.c.o: in function `main':
 src.c:(.text+0x46): undefined reference to `pthread_create'
 /usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
 /usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
 collect2: error: ld returned 1 exit status
-make[1]: *** [CMakeFiles/cmTC_2122c.dir/build.make:87: cmTC_2122c] Error 1
+make[1]: *** [CMakeFiles/cmTC_e5e4f.dir/build.make:87: cmTC_e5e4f] Error 1
 make[1]: Leaving directory '/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/CMakeFiles/CMakeTmp'
-make: *** [Makefile:121: cmTC_2122c/fast] Error 2
+make: *** [Makefile:121: cmTC_e5e4f/fast] Error 2
 
 
 Source file was:
@@ -41,18 +43,20 @@ int main(void)
 Determining if the function pthread_create exists in the pthreads failed with the following output:
 Change Dir: /mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_d59a0/fast && /usr/bin/make -f CMakeFiles/cmTC_d59a0.dir/build.make CMakeFiles/cmTC_d59a0.dir/build
+Run Build Command(s):/usr/bin/make cmTC_4506e/fast && make: Warning: File 'Makefile' has modification time 16 s in the future
+/usr/bin/make -f CMakeFiles/cmTC_4506e.dir/build.make CMakeFiles/cmTC_4506e.dir/build
 make[1]: Entering directory '/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_d59a0.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_d59a0.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
-Linking C executable cmTC_d59a0
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d59a0.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_d59a0.dir/CheckFunctionExists.c.o  -o cmTC_d59a0  -lpthreads 
+make[1]: Warning: File 'CMakeFiles/cmTC_4506e.dir/flags.make' has modification time 16 s in the future
+Building C object CMakeFiles/cmTC_4506e.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_4506e.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_4506e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4506e.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_4506e.dir/CheckFunctionExists.c.o  -o cmTC_4506e  -lpthreads 
 /usr/bin/ld: cannot find -lpthreads
 collect2: error: ld returned 1 exit status
-make[1]: *** [CMakeFiles/cmTC_d59a0.dir/build.make:87: cmTC_d59a0] Error 1
+make[1]: *** [CMakeFiles/cmTC_4506e.dir/build.make:87: cmTC_4506e] Error 1
 make[1]: Leaving directory '/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/cmake/build/CMakeFiles/CMakeTmp'
-make: *** [Makefile:121: cmTC_d59a0/fast] Error 2
+make: *** [Makefile:121: cmTC_4506e/fast] Error 2
 
 
 

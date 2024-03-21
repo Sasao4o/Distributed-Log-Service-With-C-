@@ -15,10 +15,11 @@ namespace logModule {
         ~Index();
 
         void Read(int64_t in, uint32_t *out, uint64_t *pos);
-        bool Write(uint32_t off, uint64_t pos);
+        void Write(uint32_t off, uint64_t pos);
         off_t GetSize();
         void Remove();
         void Close();
+        bool isFileExist();
     private:
         int fileDescriptor;
         std::string fileName;

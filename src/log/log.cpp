@@ -4,7 +4,7 @@ namespace fs = std::filesystem;
 
 namespace logModule {
 
-  Log::Log(std::string directoryPath, Config conf): directoryPath(directoryPath), conf(conf) {
+  Log::Log(std::string directoryPath,  std::shared_ptr<Config>config ): directoryPath(directoryPath), conf(config) {
 
   };
 
@@ -24,37 +24,38 @@ namespace logModule {
 
     std::sort(baseOffsets.begin(), baseOffsets.end());
     for (int i = 0; i < baseOffsets.size(); i = i + 2) {
-        Segment * currentSeg = new Segment(directoryPath, baseOffsets[i], &conf);
+        // Segment * currentSeg = new Segment(directoryPath, baseOffsets[i], &conf);
+        std::shared_ptr<Segment> currentSeg = std::make_shared<Segment>(directoryPath, baseOffsets[i], conf);
+
         segments.push_back(currentSeg);
         activeSegment = currentSeg;
     }
 
     if (segments.size() == 0) {
-        Segment * currentSeg = new Segment(directoryPath, conf.InitialOffset, &conf);
+        // Segment * currentSeg = new Segment(directoryPath, conf.InitialOffset, &conf);
+            std::shared_ptr<Segment> currentSeg = std::make_shared<Segment>(directoryPath, conf->InitialOffset, conf);
         segments.push_back(currentSeg);
         activeSegment = currentSeg;
     }
   }
 
-  bool Log::Append(logprog::v1::Record *record, uint64_t *offset) {
+  void Log::Append(logprog::v1::Record *record, uint64_t *offset) {
     std::lock_guard<std::mutex> lock(mtx);
-
-    if(activeSegment->Append(record)){
+       activeSegment->Append(record);
       *offset = activeSegment->getNextOffset() - 1;// offset is one less than the next record
       if (activeSegment->IsMaxed()) {
         uint64_t currentOffset = activeSegment->getNextOffset(); 
-        activeSegment =  new Segment(directoryPath, currentOffset, &conf);
+        activeSegment =  std::shared_ptr<Segment>(new Segment(directoryPath, currentOffset, conf));
         segments.push_back(activeSegment);
       }
-      return true;
-    } else {
-      return false;
-    }
+    
+   
   }
 
  logprog::v1::Record * Log::Read(uint64_t offset) {
      std::lock_guard<std::mutex> lock(mtx);
-     Segment *currentSeg = nullptr;
+    //  Segment *currentSeg = nullptr;
+    std::shared_ptr<Segment>currentSeg = nullptr;
      for (int i = 0; i < segments.size(); i++) {
        
       if (segments[i]->getBaseOffset() <= offset && offset < segments[i]->getNextOffset()) {
@@ -64,6 +65,7 @@ namespace logModule {
  
   if (currentSeg == nullptr) {
     std::cout << "The Offset is Out Of Range " << offset << std::endl;
+    throw std::runtime_error("The Offset is Out of Range");
     return nullptr;
   } 
     return currentSeg->Read(offset);
@@ -107,11 +109,11 @@ uint64_t Log::HighestOffset() {
 
  bool Log::Truncate(uint64_t lowest) {
     std::lock_guard<std::mutex> lock(mtx);
-    std::vector<Segment *>newSegments;
+  
+    std::vector<std::shared_ptr<Segment>>newSegments;
     for (int i = 0; i < segments.size(); i++) {
       if (segments[i]->getNextOffset() - 1 <= lowest) {
         segments[i]->Remove();
-        delete segments[i];
       } else {
         newSegments.push_back(segments[i]);
       }
@@ -121,8 +123,8 @@ uint64_t Log::HighestOffset() {
     return true;
  } 
    Log::~Log() {
-    for (int i = 0; i < segments.size(); i++) {
-      delete segments[i];
-    }
+    // for (int i = 0; i < segments.size(); i++) {
+    //   delete segments[i];
+    // }
   }
 }

@@ -9,25 +9,28 @@ namespace logModule {
         struct stat file_stat;
         if (fstat(fileDescriptor, &file_stat) == -1) {
             perror("Error getting file information");
-            close(fileDescriptor);
-        
+            close(fileDescriptor);  
+            return;
         }
         size = file_stat.st_size;
         
         if (fileDescriptor == -1) {
             perror("Error opening file");
+            return;
         }
 
         // Stretch the file size to the desired size
         if (lseek(fileDescriptor, desiredExpansionSize, SEEK_SET) == -1) {
             perror("Error stretching the file");
             close(fileDescriptor);
+            return;
         }
         // In the next line we are decieving the os into thinking that the file has been expanded by
         // writing a byte at the end of the expansion size. This will allow the OS to allocate desired space on disk for us.
         if (write(fileDescriptor, "", 1) == -1) {
             perror("Error writing a byte to extend the file");
             close(fileDescriptor);
+            return;
         }
         
         mMap = static_cast<char *>(mmap(0, desiredExpansionSize, PROT_READ | PROT_WRITE, MAP_SHARED, fileDescriptor, 0));
@@ -35,6 +38,7 @@ namespace logModule {
         if (mMap == MAP_FAILED) {
             perror("Error mapping file to memory");
             close(fileDescriptor);
+            return;
         }
         fileExist = true;
     }
@@ -54,6 +58,7 @@ namespace logModule {
             std::cout << "Index is Empty" << std::endl;
             *out = -1;
             *pos = -1;
+            // throw std::runtime_error("Index is Empty");
             return;
         }
        
@@ -71,7 +76,8 @@ namespace logModule {
             *out = -1;
             *pos = -1;
             //LOOK HERE
-        std::cout << "Index is Full" << std::endl;
+            throw std::runtime_error("Index is Full");
+            std::cout << "Index is Full" << std::endl;
             return;
         }
         
@@ -82,11 +88,12 @@ namespace logModule {
         *pos = tmpPos;
     }
 
-    bool Index::Write(uint32_t off, uint64_t pos) {
+    void Index::Write(uint32_t off, uint64_t pos) {
         if (desiredExpansionSize < size + entWidth) {
             std::cout << "Size is " << size << " " << entWidth << std::endl;
             std::cout << "You are writing after end of file " << std::endl;
-            return 0;
+            throw std::runtime_error("The Offset is Out of Range");
+      
         }
 
         memcpy(mMap + size, &off, offWidth);
@@ -97,7 +104,7 @@ namespace logModule {
         // memcpy(&test_pos, mMap + size + offWidth, posWidth);
         // std::cout << test_off << test_pos << std::endl;
         size += entWidth;
-        return 1;
+ 
     }
     off_t Index::GetSize() {
         return size;
@@ -130,6 +137,9 @@ namespace logModule {
         std::cout << "Removed the Index " << std::endl;
         fileExist = false;
        
+    }
+    bool Index::isFileExist() {
+        return fileExist;
     }
  
 

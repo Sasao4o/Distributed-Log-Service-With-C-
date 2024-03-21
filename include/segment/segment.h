@@ -10,8 +10,8 @@
 namespace logModule {
 class Segment {
  public:
- Segment(std::string segmentDirectoryName, uint64_t baseOffset, Config *);
- bool Append(logprog::v1::Record *record);
+ Segment(std::string segmentDirectoryName, uint64_t baseOffset, std::shared_ptr<Config> config);
+ void Append(logprog::v1::Record *record);
  logprog::v1::Record * Read(uint64_t offset);
  void Remove();
  bool IsMaxed();
@@ -21,12 +21,16 @@ class Segment {
  void Close();
  ~Segment();
 private:
-    Store * store;
-    Index* index;
+    // Store * store;
+    std::unique_ptr<Store>store;
+    std::unique_ptr<Index>index;
+
+    // Index* index;
     uint64_t baseOffset;
     uint64_t nextOffset; 
     std::string segmentDirectoryName;
-    Config *config_;
+    std::shared_ptr<Config> config_;
+
 };
 
 

@@ -13,14 +13,10 @@ fstream
 -
 sys/stat.h
 -
+mutex
+-
 
 /mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/src/disk/File.cpp
-../../include/disk/File.h
-/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/include/disk/File.h
-
-/mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/test/disk/File_test.cpp
-iostream
--
 ../../include/disk/File.h
 /mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/include/disk/File.h
 

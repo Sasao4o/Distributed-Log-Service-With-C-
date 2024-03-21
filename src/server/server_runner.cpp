@@ -15,7 +15,8 @@ using grpc::ServerReaderWriter;
 using grpc::ServerWriter;
 
 int main() {
-  Config b;
+    std::shared_ptr<Config>b = std::shared_ptr<Config>(new Config());
+ 
   Log lg("../../logsData", b);
   lg.SetUp();
   LogImplementation service(&lg);

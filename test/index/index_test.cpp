@@ -29,7 +29,7 @@ void BasicTest() {
 void InsertAndReterive() {
  
     
-    Index index("index");
+    Index index("../../logsData/index");
     for (int i = 0; i < 100; i++) {
     
     index.Write(i, 1000);
@@ -44,7 +44,7 @@ void InsertAndReterive() {
 
     }
   
- 
+ index.Remove();
 }
 int main() {
     InsertAndReterive();

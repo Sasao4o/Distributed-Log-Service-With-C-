@@ -3,11 +3,27 @@
   
  
 using namespace logModule;
-Segment::Segment(std::string segmentDirectoryName, uint64_t baseOffset, Config *config) : segmentDirectoryName(segmentDirectoryName), baseOffset(baseOffset), config_(config) {
+
+template<typename T>
+struct free_functor
+{
+    void operator() (T* ptr)
+    {   
+        delete [] *ptr;
+        delete  ptr;
+        ptr=nullptr;            
+    }
+};
+
+
+Segment::Segment(std::string segmentDirectoryName, uint64_t baseOffset, std::shared_ptr<Config> config) : segmentDirectoryName(segmentDirectoryName), baseOffset(baseOffset), config_(config) {
 std::string storeFileName = segmentDirectoryName + "/"  + std::to_string(baseOffset) + ".store";
 std::string indexFileName = segmentDirectoryName + "/"  + std::to_string(baseOffset) + ".index";
- store = new Store(storeFileName);
- index = new Index(indexFileName);
+ store = std::unique_ptr<Store>(new Store(storeFileName));
+ index = std::unique_ptr<Index>(new Index(indexFileName));
+ if (!(index->isFileExist())) {
+    throw std::runtime_error("Can't Create Index");
+ }
 uint32_t offset;
 uint64_t pos;
 index->Read(-1, &offset, &pos);
@@ -20,24 +36,21 @@ if (offset == -1 && pos == -1) {
 }
 
 }
-bool Segment::Append(logprog::v1::Record *record) {
+void Segment::Append(logprog::v1::Record *record) {
     record->set_offset(nextOffset);
     std::string serialized_record;
     if (!record->SerializeToString(&serialized_record)) {
         std::cerr << "Failed to serialize Record." << std::endl;
-        return false;
+          throw std::runtime_error("Failed To Serialize Record");
+      
     }
     std::cout << "Serialized Record is " << serialized_record.c_str() << std::endl;
     uint64_t insertedPos;
-    bool insertInStore =   store->Append(serialized_record.c_str(), &insertedPos);
-    bool insertInIndex = index->Write(uint32_t(nextOffset - baseOffset), insertedPos);
-    if (insertInStore && insertInIndex) {
-        nextOffset++;
-        return true;
-    } else {
-         std::cerr << "Failed to Append Record." << std::endl;
-         return false;
-    }
+    store->Append(serialized_record.c_str(), &insertedPos);
+    //To do is to wrap this index library to convert error code to exceptions
+    index->Write(uint32_t(nextOffset - baseOffset), insertedPos);
+    nextOffset++;
+   
      
 }  
     logprog::v1::Record * Segment::Read(uint64_t offset) {
@@ -49,22 +62,26 @@ bool Segment::Append(logprog::v1::Record *record) {
         std::cout << "Position in Store File is " << pos << std::endl;
     if ((out == -1 && pos == -1)) {
         std::cout << "Can't Read Index File from Segment" << std::endl;
+        throw std::runtime_error("Can't Read From Index");
         return nullptr;
     }
   
-     char ** data;
-     data = new char*;
+    // std::unique_ptr<char*>data;
+    //  char ** data;
+    //  data = new char*;
+    char** x = new char*; // Example pointer creation
+    std::shared_ptr<char*> data(x, free_functor<char*>());
      size_t  returnedDataSize;
-     store->Read(pos, data, &returnedDataSize);
+     store->Read(pos, data.get(), &returnedDataSize);
     
     logprog::v1::Record* deserializedRecord = new logprog::v1::Record();
     if (! deserializedRecord->ParseFromString(std::string(*data,returnedDataSize))) {
         std::cerr << "Failed to parse serialized data into Record." << std::endl;
-        delete [] data;
+        // delete [] data;
         return nullptr;
     }
     
-    delete [] data;
+    // delete [] data;
     return deserializedRecord;
 }
 
@@ -94,6 +111,6 @@ uint64_t Segment::getBaseOffset() {return baseOffset;}
 uint64_t Segment::getNextOffset() {return nextOffset;}
 
 Segment::~Segment() {
-    delete store;
-    delete index;
+    // delete store;
+    // delete index;
 }

@@ -1,1 +1,1 @@
-/usr/bin/c++     CMakeFiles/store_test.dir/test/store/store_test.cpp.o CMakeFiles/store_test.dir/src/store/store.cpp.o CMakeFiles/store_test.dir/src/disk/File.cpp.o  -o store_test 
+/usr/bin/c++     CMakeFiles/store_test.dir/test/store/store_test.cpp.o CMakeFiles/store_test.dir/src/store/store.cpp.o CMakeFiles/store_test.dir/src/disk/File.cpp.o  -o store_test  -lpthread 

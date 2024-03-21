@@ -4,6 +4,7 @@
 #include <cstring>
 #include <iostream>
 #include <unistd.h>
+#include<memory>
 #include "../disk/File.h"
 #include <string>
 #include <cstdint>
@@ -15,14 +16,15 @@ namespace logModule {
         Store(std::string filename);
         ~Store();
 
-        bool Append(const char * data, uint64_t *returnPos);
+        void Append(const char * data, uint64_t *returnPos);
         void Read(uint64_t position, char** data, size_t * returnedDataSize);
         void Close();
         void Remove();
         uint64_t GetSize();
     private:
         bool fileExist = false;
-        File* file;
+        // File* file;
+        std::unique_ptr<File>file;
         std::string fileName;
         uint64_t size;
         std::mutex mtx;

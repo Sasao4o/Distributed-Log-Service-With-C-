@@ -11,7 +11,7 @@
 using namespace logprog::v1;
 using namespace logModule;
 void RunServer(BussinessServer * bs) {
-  Config b;
+  std::shared_ptr<Config>b = std::shared_ptr<Config>(new Config());
   Log lg("../../logsData", b);
   lg.SetUp();
   LogImplementation service(&lg);
@@ -52,5 +52,7 @@ MyClient ClientConnection() {
  }
 int main() {
  TestProduceAndConsume();
+//  MyClient b = ClientConnection();
+//  std::cout << b.Consume(0).record().value();
  
  }

@@ -25,11 +25,11 @@ using grpc::ServerWriter;
     Record  rec = request->record();
     uint64_t *offset = new uint64_t();
 
-    bool ok = commitLog_->Append(&rec, offset);
+     commitLog_->Append(&rec, offset);
     std::cout << rec.value() << std::endl;
-    if (ok == false){
-      return Status::CANCELLED;
-    }
+    // if (ok == false){
+    //   return Status::CANCELLED;
+    // }
     reply->set_offset(*offset);
 
     delete offset;

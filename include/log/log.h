@@ -10,10 +10,10 @@
 namespace logModule {
     class Log {
         public:
-        Log(std::string directoryName,Config conf);
+        Log(std::string directoryName,std::shared_ptr<Config>conf);
         ~Log();
         void SetUp();
-        bool Append(logprog::v1::Record *record, uint64_t *offset );
+        void Append(logprog::v1::Record *record, uint64_t *offset );
         logprog::v1::Record * Read(uint64_t offset);
         void Close();
         void Remove();
@@ -22,11 +22,12 @@ namespace logModule {
         uint64_t HighestOffset();
         bool Truncate(uint64_t lowest);
         private:
-        Config conf;
+        std::shared_ptr<Config>conf;
         std::string directoryPath; 
         std::mutex mtx;
-        Segment *activeSegment = nullptr;
-        std::vector<Segment*>segments;
+        // Segment *activeSegment = nullptr;
+        std::shared_ptr<Segment>activeSegment = nullptr;
+        std::vector<std::shared_ptr<Segment>>segments;
     };
 
 

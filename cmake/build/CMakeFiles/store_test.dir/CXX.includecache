@@ -13,6 +13,8 @@ fstream
 -
 sys/stat.h
 -
+mutex
+-
 
 /mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/include/store/store.h
 mutex
@@ -22,6 +24,8 @@ cstring
 iostream
 -
 unistd.h
+-
+memory
 -
 ../disk/File.h
 /mnt/c/Users/pc/Desktop/wael ds/as3/Distributed-Log-Service-With-C-/include/disk/File.h
@@ -44,5 +48,9 @@ cstdint
 cassert
 -
 cstring
+-
+vector
+-
+thread
 -
 
