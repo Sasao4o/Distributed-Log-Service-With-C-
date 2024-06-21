@@ -1,0 +1,13 @@
+{
+    "keyboard.dispatch": "keyCode",
+    "C_Cpp.configurationWarnings": "Disabled",
+    "files.associations": {
+        "vector": "cpp",
+        "iosfwd": "cpp"
+    },
+    "clangtidy.buildPath": "${workspaceFolder}/build",
+    "clangtidy.sourcePath": "${workspaceFolder}/src",
+    "clangtidy.checksPath": "${workspaceFolder}/.vscode",
+    "cmake.configureOnOpen": false,
+
+}

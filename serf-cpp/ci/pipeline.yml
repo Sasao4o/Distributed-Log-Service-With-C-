@@ -1,0 +1,70 @@
+---
+resources:
+- name: serf-cpp-git
+  type: git
+  icon: github
+  source:
+    uri: http://fir.love.io:3000/CJLove/serf-cpp
+
+jobs:
+- name: set-pipeline
+  public: true
+  plan:
+  - get: serf-cpp-git
+    trigger: true
+  - set_pipeline: serf-cpp
+    file: serf-cpp-git/ci/pipeline.yml
+# Build using current gcc and clang and fail fast
+- name: build-current
+  public: true
+  plan:
+  - get: serf-cpp-git
+    passed: [ set-pipeline ]
+    trigger: true
+  - in_parallel:
+    - task: gcc13_1_1
+      file: serf-cpp-git/ci/gcc1311.yml
+    - task: clang
+      file: serf-cpp-git/ci/clang.yml
+
+- name: build-matrix
+  public: true
+  plan:  
+  - get: serf-cpp-git
+    passed: [ build-current ]
+    trigger: true
+  - in_parallel:
+    - task: gcc12_3_0
+      file: serf-cpp-git/ci/gcc1230.yml
+    - task: gcc11_3_0
+      file: serf-cpp-git/ci/gcc1130.yml
+    - task: gcc10_3_0
+      file: serf-cpp-git/ci/gcc1030.yml
+    - task: gcc9_4_0
+      file: serf-cpp-git/ci/gcc940.yml
+    - task: gcc8_4_0
+      file: serf-cpp-git/ci/gcc840.yml
+    - task: gcc_7_4_0
+      file: serf-cpp-git/ci/gcc740.yml
+    - task: gcc_6_5_0
+      file: serf-cpp-git/ci/gcc650.yml
+    - task: gcc_5_3_0
+      file: serf-cpp-git/ci/gcc530.yml
+    - task: gcc_4_9_3
+      file: serf-cpp-git/ci/gcc493.yml
+
+- name: sanitizers
+  public: true
+  plan:
+  - get: serf-cpp-git
+    passed: [ build-matrix ]
+    trigger: true
+  - in_parallel:
+    - task: asan
+      privileged: true
+      file: serf-cpp-git/ci/asan.yml
+    - task: tsan
+      file: serf-cpp-git/ci/tsan.yml
+      privileged: true
+
+        

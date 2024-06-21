@@ -1,3 +1,42 @@
+<<<<<<< HEAD
 logsData/
 cmake/
 build/
+=======
+logsData/
+cmake/
+build/
+serf-cpp/build/*
+
+# Xemacs backup files
+serf-cpp/*~
+
+# Compiled Object files
+serf-cpp/*.slo
+serf-cpp/*.lo
+serf-cpp/*.o
+serf-cpp/*.obj
+
+# Precompiled Headers
+serf-cpp/*.gch
+serf-cpp/*.pch
+
+# Compiled Dynamic libraries
+serf-cpp/*.so
+serf-cpp/*.dylib
+serf-cpp/*.dll
+
+# Fortran module files
+serf-cpp/*.mod
+
+# Compiled Static libraries
+serf-cpp/*.lai
+serf-cpp/*.la
+serf-cpp/*.a
+serf-cpp/*.lib
+
+# Executables
+serf-cpp/*.exe
+serf-cpp/*.out
+serf-cpp/*.app
+>>>>>>> origin/WaelBranch

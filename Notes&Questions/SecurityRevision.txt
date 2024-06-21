@@ -1,0 +1,13 @@
+- Symmetric vs Asymmetric Key encryption :
+  => In symmetric key encryption :
+  the same key is used for both encryption and decryption of data,
+  The encryption and decryption processes are fast and efficient also it uses Feistel Networks to ensure 
+  generating a psuedorandom permutation with 16 rounds as a standard.
+  => Asymmetric key encryption :
+  uses a pair of keys: a public key for encryption and a private key for decryption.
+  Using the CRT "Chinese Remainder Theroem" to speed up the calculations in modular arithmetic,
+  A standard Diffie Hellman key Exchange is used to share the public and private key securely between the 2 parties "depending
+  on the NP-hard problem of finding the modular exponent for a large number as the base modulo"
+  initialy alice have g , a , p so it has g^a mod p "p is very large prime" and bob has g , b , p , g^b mod p so they share g and p 
+  at first then alice "which starts the handshake" shares g^a to bob and then bob shares g^b to alice so, Now alice and bob have g^ab mod p which is
+  the secret key.
