@@ -1,0 +1,7 @@
+1 - differnece between add_library (to put some src files in it  and linking it to an exec) and 
+    defining  list and appending the src files to it "what does it do more in this situation"?
+
+  - It gives a whole lot of options to give over just using a list like the compile options and 
+    ability to link multiple libraries together. "And other stuff like enabling certain configs in the projects"
+2 - What are the cmake generator expressions?
+    

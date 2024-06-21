@@ -7,7 +7,7 @@ void TestInsertAndReterive() {
      Config config;
      config.MaxIndexBytes = 1000;
      config.MaxStoreBytes = 1000;
-     logModule::Segment seg("../../logsData", 0, &config);
+     logModule::Segment seg("../../../logsData", 0, &config);
      seg.Append(&record);
      logprog::v1::Record * rec = seg.Read(0);   
      assert(rec != nullptr);
@@ -19,7 +19,7 @@ void BulkTestInsertAndReterive() {
      Config config;
      config.MaxIndexBytes = 1024;
      config.MaxStoreBytes = 1024;
-     logModule::Segment seg("../../logsData", 1, &config);
+     logModule::Segment seg("../../../logsData", 1, &config);
      for (int i = 1; i < 300; i++) {
      logprog::v1::Record record;
      record.set_value("mostafa");

@@ -28,7 +28,7 @@ void RemoveTest() {
   b.MaxStoreBytes = 1024;
   b.MaxIndexBytes = 1024;
   b.InitialOffset = 1;
-  Log lg("../../logsData", b);
+  Log lg("../../../logsData", b);
    lg.SetUp();
 
     for (int i = b.InitialOffset; i < 2; i++) {
@@ -61,7 +61,7 @@ int main() {
   b.MaxStoreBytes = 1024;
   b.MaxIndexBytes = 1024;
   b.InitialOffset = 1;
-     Log lg("../../logsData", b);
+     Log lg("../../../logsData", b);
     // BasicTest(&lg);
     // RemoveTest();
     TruncateTest(&lg);

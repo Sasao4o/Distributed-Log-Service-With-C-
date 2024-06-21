@@ -12,7 +12,7 @@ using namespace logprog::v1;
 using namespace logModule;
 void RunServer(BussinessServer * bs) {
   Config b;
-  Log lg("../../logsData", b);
+  Log lg("../../../logsData", b);
   lg.SetUp();
   LogImplementation service(&lg);
   BussinessServer s(&service);
