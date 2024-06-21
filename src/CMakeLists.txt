@@ -12,7 +12,6 @@ list(APPEND CPP_LIST
 "./server/client.cpp")
 
 include(${CMAKE_SOURCE_DIR}/comman.cmake)
-
 # Proto file
 get_filename_component(logprog_proto "${CMAKE_SOURCE_DIR}/api/v1/logprog.proto" ABSOLUTE)
 get_filename_component(logprog_proto_path "${logprog_proto}" PATH)
