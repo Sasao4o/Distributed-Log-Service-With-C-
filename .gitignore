@@ -1,7 +1,7 @@
 logsData/
 cmake/
 build/
-build/*
+serf-cpp/build/*
 
 # Xemacs backup files
 serf-cpp/*~
