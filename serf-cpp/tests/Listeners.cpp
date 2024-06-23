@@ -24,6 +24,18 @@ EventListener::onMemberEventRecord(ResponseHeader &, MemberEventRecord &)
 }
 
 void
+EventListener::onMemberJoin(ResponseHeader &, MemberEventRecord &)
+{
+    m_memberCount++;
+}
+
+void
+EventListener::onMemberLeave(ResponseHeader &, MemberEventRecord &)
+{
+    m_memberCount++;
+}
+
+void
 EventListener::onQueryEventRecord(ResponseHeader &, QueryRecord &)
 {
 	m_queryCount++;

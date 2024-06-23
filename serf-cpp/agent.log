@@ -1,8 +1,51 @@
 ==> Starting Serf agent...
 ==> Starting Serf agent RPC...
 ==> Serf agent running!
-                      Node name: 'zna-bind=127.0.0.1:7373'
+                      Node name: 'zna'
                       Bind addr: '0.0.0.0:7946'
+                       RPC addr: '127.0.0.1:7374'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+
+==> Log data will now stream in as it occurs:
+
+    2024/06/24 00:56:30 [INFO] agent: Serf agent starting
+    2024/06/24 00:56:30 [INFO] serf: EventMemberJoin: zna 172.28.149.191
+    2024/06/24 00:56:30 [INFO] agent.ipc: Accepted client: 127.0.0.1:34502
+    2024/06/24 00:56:30 [INFO] agent.ipc: Graceful leave triggered
+    2024/06/24 00:56:30 [INFO] agent: requesting graceful leave from Serf
+    2024/06/24 00:56:30 [INFO] serf: EventMemberLeave: zna 172.28.149.191
+    2024/06/24 00:56:31 [INFO] agent: requesting serf shutdown
+    2024/06/24 00:56:31 [INFO] agent: shutdown complete
+    2024/06/24 00:56:31 [INFO] agent: Received event: member-leave==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+                      Node name: 'zna'
+                      Bind addr: '0.0.0.0:7946'
+                       RPC addr: '127.0.0.1:7374'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+
+==> Log data will now stream in as it occurs:
+
+    2024/06/24 00:57:38 [INFO] agent: Serf agent starting
+    2024/06/24 00:57:38 [INFO] serf: EventMemberJoin: zna 172.28.149.191
+    2024/06/24 00:57:38 [INFO] agent.ipc: Accepted client: 127.0.0.1:55654
+    2024/06/24 00:57:38 [INFO] agent.ipc: Graceful leave triggered
+    2024/06/24 00:57:38 [INFO] agent: requesting graceful leave from Serf
+    2024/06/24 00:57:38 [INFO] serf: EventMemberLeave: zna 172.28.149.191
+    2024/06/24 00:57:39 [INFO] agent: Received event: member-leave
+    2024/06/24 00:57:39 [INFO] agent: requesting serf shutdown
+    2024/06/24 00:57:39 [INFO] agent: shutdown complete
+    2024/06/24 00:57:39 [WARN] agent: Serf shutdown detected, quitting==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+                      Node name: 'zna'
+                      Bind addr: '127.0.0.1:5000'
                        RPC addr: '127.0.0.1:7373'
                       Encrypted: false
                        Snapshot: false
@@ -11,22 +54,15 @@
 
 ==> Log data will now stream in as it occurs:
 
-    2024/05/09 21:11:43 [INFO] agent: Serf agent starting
-    2024/05/09 21:11:43 [INFO] serf: EventMemberJoin: zna-bind=127.0.0.1:7373 172.28.149.191
-    2024/05/09 21:11:43 [INFO] agent.ipc: Accepted client: 127.0.0.1:50134
-    2024/05/09 21:11:43 [INFO] agent.ipc: Graceful leave triggered
-    2024/05/09 21:11:43 [INFO] agent: requesting graceful leave from Serf
-    2024/05/09 21:11:43 [INFO] serf: EventMemberLeave: zna-bind=127.0.0.1:7373 172.28.149.191
-    2024/05/09 21:11:44 [INFO] agent: requesting serf shutdown
-    2024/05/09 21:11:44 [INFO] agent: Received event: member-leave
-    2024/05/09 21:11:44 [WARN] agent: Serf shutdown detected, quitting
-    2024/05/09 21:11:44 [INFO] agent: shutdown complete
+    2024/06/24 01:26:00 [INFO] agent: Serf agent starting
+    2024/06/24 01:26:00 [INFO] serf: EventMemberJoin: zna 127.0.0.1
+    2024/06/24 01:26:00 [INFO] agent.ipc: Accepted client: 127.0.0.1:50612
 ==> Starting Serf agent...
 ==> Starting Serf agent RPC...
 ==> Serf agent running!
-                      Node name: 'zna-bind=127.0.0.1:7373'
-                      Bind addr: '0.0.0.0:7946'
-                       RPC addr: '127.0.0.1:7373'
+                      Node name: 'zna2'
+                      Bind addr: '127.0.0.1:5001'
+                       RPC addr: '127.0.0.1:7374'
                       Encrypted: false
                        Snapshot: false
                         Profile: lan
@@ -34,13 +70,27 @@
 
 ==> Log data will now stream in as it occurs:
 
-    2024/05/09 21:12:51 [INFO] agent: Serf agent starting
-    2024/05/09 21:12:51 [INFO] serf: EventMemberJoin: zna-bind=127.0.0.1:7373 172.28.149.191
-    2024/05/09 21:12:51 [INFO] agent.ipc: Accepted client: 127.0.0.1:40960
-    2024/05/09 21:12:51 [INFO] agent.ipc: Graceful leave triggered
-    2024/05/09 21:12:51 [INFO] agent: requesting graceful leave from Serf
-    2024/05/09 21:12:51 [INFO] serf: EventMemberLeave: zna-bind=127.0.0.1:7373 172.28.149.191
-    2024/05/09 21:12:52 [INFO] agent: Received event: member-leave
-    2024/05/09 21:12:52 [INFO] agent: requesting serf shutdown
-    2024/05/09 21:12:52 [INFO] agent: shutdown complete
-    2024/05/09 21:12:52 [WARN] agent: Serf shutdown detected, quitting
+    2024/06/24 01:26:00 [INFO] agent: Serf agent starting
+    2024/06/24 01:26:00 [INFO] serf: EventMemberJoin: zna2 127.0.0.1
+    2024/06/24 01:26:00 [INFO] agent.ipc: Accepted client: 127.0.0.1:54278
+    2024/06/24 01:26:00 [INFO] agent: joining: [127.0.0.1:5001] replay: false
+    2024/06/24 01:26:00 [INFO] serf: EventMemberJoin: zna 127.0.0.1    2024/06/24 01:26:00 [INFO] serf: EventMemberJoin: zna2 127.0.0.1
+
+    2024/06/24 01:26:00 [INFO] agent: joined: 1 nodes
+    2024/06/24 01:26:00 [INFO] agent.ipc: Graceful leave triggered
+    2024/06/24 01:26:00 [INFO] agent: requesting graceful leave from Serf
+    2024/06/24 01:26:01 [INFO] serf: EventMemberLeave: zna2 127.0.0.1
+    2024/06/24 01:26:01 [INFO] serf: EventMemberLeave: zna2 127.0.0.1
+    2024/06/24 01:26:02 [INFO] agent: Received event: member-leave
+    2024/06/24 01:26:02 [INFO] agent: Received event: member-join
+    2024/06/24 01:26:02 [INFO] agent: Received event: member-join
+    2024/06/24 01:26:02 [INFO] agent: Received event: member-leave
+    2024/06/24 01:26:02 [INFO] agent: requesting serf shutdown
+    2024/06/24 01:26:02 [INFO] agent: shutdown complete
+    2024/06/24 01:26:02 [WARN] agent: Serf shutdown detected, quitting    2024/06/24 01:26:02 [INFO] agent.ipc: Graceful leave triggered
+    2024/06/24 01:26:02 [INFO] agent: requesting graceful leave from Serf
+    2024/06/24 01:26:02 [INFO] serf: EventMemberLeave: zna 127.0.0.1
+    2024/06/24 01:26:03 [INFO] agent: Received event: member-leave
+    2024/06/24 01:26:03 [INFO] agent: requesting serf shutdown
+    2024/06/24 01:26:03 [INFO] agent: shutdown complete
+    2024/06/24 01:26:03 [WARN] agent: Serf shutdown detected, quitting
