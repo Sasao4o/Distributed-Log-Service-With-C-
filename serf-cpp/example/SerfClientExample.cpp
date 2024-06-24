@@ -54,6 +54,7 @@ void EventListener::onUserEventRecord(SerfCpp::ResponseHeader &hdr, SerfCpp::Use
 }
 
 void EventListener::onMemberEventRecord(SerfCpp::ResponseHeader &hdr, SerfCpp::MemberEventRecord &record) {
+    std::cout << "From The Program " << std::endl;
     std::cout << "\n==> Received MemberEvent Hdr: " << hdr << record;
 }
 

@@ -1,0 +1,27 @@
+==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: 'zna-bind=127.0.0.1:7373'
+         Bind addr: '0.0.0.0:7946'
+                       RPC addr: '127.0.0.1:7373'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+
+==> Log data will now stream in as it occurs:
+
+    2024/06/22 14:59:25 [INFO] agent: Serf agent starting
+    2024/06/22 14:59:25 [INFO] serf: EventMemberJoin: zna-bind=127.0.0.1:7373 172.28.89.167
+    2024/06/22 14:59:25 [INFO] agent.ipc: Accepted client: 127.0.0.1:47406
+    2024/06/22 14:59:26 [INFO] agent: Received event: member-join
+    2024/06/22 14:59:48 [INFO] serf: EventMemberJoin: DESKTOP-8H5C3P8 127.0.0.1
+    2024/06/22 14:59:49 [INFO] agent: Received event: member-join
+==> Caught signal: interrupt
+==> Gracefully shutting down agent...
+    2024/06/22 15:00:35 [INFO] agent: requesting graceful leave from Serf
+    2024/06/22 15:00:35 [INFO] serf: EventMemberLeave: zna-bind=127.0.0.1:7373 172.28.89.167
+    2024/06/22 15:00:36 [INFO] agent: Received event: member-leave
+    2024/06/22 15:00:37 [INFO] agent: requesting serf shutdown
+    2024/06/22 15:00:37 [INFO] agent: shutdown complete
+    2024/06/22 15:00:37 [WARN] agent: Serf shutdown detected, quitting

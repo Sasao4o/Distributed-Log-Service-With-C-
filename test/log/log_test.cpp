@@ -130,12 +130,12 @@ int main() {
   b->MaxIndexBytes = 1024;
   b->InitialOffset = 1;
   Log lg("../../logsData", b);
-  // InsertOneAndReteriveOne( & lg);
-  // BasicTest(&lg);
-  // ReadOutOfRange(&lg);
+    InsertOneAndReteriveOne( & lg);
+    BasicTest(&lg);
+   ReadOutOfRange(&lg);
   RemoveTest();
-  // TruncateTest(&lg);
-      // RemoveTest();
-  //     TruncateTest(&lg);
-  //     lg.Remove();
+   TruncateTest(&lg);
+      RemoveTest();
+       TruncateTest(&lg);
+     lg.Remove();
 }

@@ -1,0 +1,8 @@
+serf agent -bind=127.0.0.1:7890 -rpc-addr=127.0.0.1:7891 &
+
+serf join -rpc-addr=127.0.0.1:7891 172.28.89.167:7946
+
+
+serf leave -rpc-addr=127.0.0.1:7891
+
+serf leave -rpc-addr=172.28.89.167:7946
