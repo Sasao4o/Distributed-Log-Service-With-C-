@@ -207,7 +207,9 @@ SerfClient::SerfResponse SerfClient::Members(MembersResponse &members) {
     if (m_pImpl->m_serfThread.sendData(hdr, &channel, seq)) {
         channel.consume();
 
+        //channel.m_dataPending = true;
         if (channel.m_dataPending) {
+            std::cout<<"HERE...."<<"\n";
             members = channel.m_data;
             return (channel.m_hdr.Error.empty()) ? SerfClient::SUCCESS : SerfClient::FAILURE;
         } else {
@@ -419,6 +421,7 @@ SerfClient::SerfResponse SerfClient::Query(const std::string &name, const SerfPa
             SerfClient::SerfResponse resp = (channel.m_hdr.Error.empty()) ? SerfClient::SUCCESS : SerfClient::FAILURE;
 
             if (resp == SerfClient::SUCCESS) {
+
                 m_pImpl->m_serfThread.addQueryChannel(channel.m_hdr.Seq, listener);
             }
             return resp;
@@ -441,11 +444,12 @@ SerfClient::SerfResponse SerfClient::Stream(const std::string &type, ISerfEventL
 
     if (m_pImpl->m_serfThread.sendData(hdr, req, &channel, seq)) {
         channel.consume();
-
+        //channel.m_dataPending = true;
         if (channel.m_dataPending) {
             SerfClient::SerfResponse resp = (channel.m_hdr.Error.empty()) ? SerfClient::SUCCESS : SerfClient::FAILURE;
 
             if (resp == SerfClient::SUCCESS) {
+                std::cout<<"Adding Event Channel"<< std::endl;
                 m_pImpl->m_serfThread.addEventChannel(channel.m_hdr.Seq, listener);
                 seq = channel.m_hdr.Seq;
             }

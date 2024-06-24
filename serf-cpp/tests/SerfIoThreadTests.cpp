@@ -38,6 +38,10 @@ public:
 
     void onMemberEventRecord(SerfCpp::ResponseHeader &hdr, SerfCpp::MemberEventRecord &record) override;
 
+    void onMemberJoin(SerfCpp::ResponseHeader &hdr, SerfCpp::MemberEventRecord &record) override;
+
+    void onMemberLeave(SerfCpp::ResponseHeader &hdr, SerfCpp::MemberEventRecord &record) override;
+
     void onQueryEventRecord(SerfCpp::ResponseHeader &hdr, SerfCpp::QueryRecord &record) override;
 
     int m_userCount;
@@ -55,6 +59,18 @@ void
 MyEventListener::onMemberEventRecord(SerfCpp::ResponseHeader &, SerfCpp::MemberEventRecord &)
 {
 	m_memberCount++;
+}
+
+void
+MyEventListener::onMemberJoin(SerfCpp::ResponseHeader &, SerfCpp::MemberEventRecord &)
+{
+    m_memberCount++;
+}
+
+void
+MyEventListener::onMemberLeave(SerfCpp::ResponseHeader &, SerfCpp::MemberEventRecord &)
+{
+    m_memberCount++;
 }
 
 void

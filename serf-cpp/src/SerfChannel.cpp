@@ -93,14 +93,25 @@ namespace SerfCpp {
                     obj.convert(rec);
                     m_listener->onQueryEventRecord(hdr,rec);
                     return;
-                } else if (type.Event == "member-join" ||
-                           type.Event == "member-leave" ||
-                           type.Event == "member-update" ||
+                } else if (type.Event == "member-update" ||
                            type.Event == "member-failed" ||
                            type.Event == "member-reap") {
                     MemberEventRecord rec;
                     obj.convert(rec);
                     m_listener->onMemberEventRecord(hdr,rec);
+                    //std::cout<<"Recieved Member Event"
+                    return;
+                }
+                else if (type.Event == "member-join"){
+                    MemberEventRecord rec;
+                    obj.convert(rec);
+                    m_listener->onMemberJoin(hdr,rec);
+                    return;
+                }
+                else if (type.Event == "member-leave"){
+                    MemberEventRecord rec;
+                    obj.convert(rec);
+                    m_listener->onMemberLeave(hdr,rec);
                     return;
                 }
             } catch (std::exception &e) {

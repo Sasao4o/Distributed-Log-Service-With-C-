@@ -44,8 +44,12 @@ void BulkTestInsertAndReterive() {
 
 
 int main() {
+<<<<<<< HEAD
     
     TestInsertAndReterive();
     BulkTestInsertAndReterive();
     google::protobuf::ShutdownProtobufLibrary();
+=======
+    BulkTestInsertAndReterive();
+>>>>>>> origin/WaelBranch
 }

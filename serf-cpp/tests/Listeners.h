@@ -28,6 +28,10 @@ public:
 
     void onMemberEventRecord(SerfCpp::ResponseHeader &hdr, SerfCpp::MemberEventRecord &record);
 
+    void onMemberJoin(SerfCpp::ResponseHeader &hdr, SerfCpp::MemberEventRecord &record);
+
+    void onMemberLeave(SerfCpp::ResponseHeader &hdr, SerfCpp::MemberEventRecord &record);
+
     void onQueryEventRecord(SerfCpp::ResponseHeader &hdr, SerfCpp::QueryRecord &record);
 
     int m_userCount;

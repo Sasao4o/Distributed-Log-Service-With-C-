@@ -84,6 +84,22 @@ public:
     virtual void onMemberEventRecord(ResponseHeader &hdr, MemberEventRecord &record) = 0;
 
     /**
+     * @brief Callback method for member join events
+     *
+     * @param hdr - RPC message header
+     * @param record - member event record
+     */
+    virtual void onMemberJoin(ResponseHeader &hdr, MemberEventRecord &record) = 0;
+
+    /**
+     * @brief Callback method for member leave events
+     *
+     * @param hdr - RPC message header
+     * @param record - member event record
+     */
+    virtual void onMemberLeave(ResponseHeader &hdr, MemberEventRecord &record) = 0;
+
+    /**
      * @brief Callback method for query events
      *
      * @param hdr - RPC message header

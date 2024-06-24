@@ -43,6 +43,10 @@ public:
 
     void onMemberEventRecord(SerfCpp::ResponseHeader &hdr, SerfCpp::MemberEventRecord &record) override;
 
+    void onMemberJoin(SerfCpp::ResponseHeader &hdr, SerfCpp::MemberEventRecord &record) override;
+
+    void onMemberLeave(SerfCpp::ResponseHeader &hdr, SerfCpp::MemberEventRecord &record) override;
+
     void onQueryEventRecord(SerfCpp::ResponseHeader &hdr, SerfCpp::QueryRecord &record) override;
 
 private:
@@ -56,6 +60,14 @@ void EventListener::onUserEventRecord(SerfCpp::ResponseHeader &hdr, SerfCpp::Use
 void EventListener::onMemberEventRecord(SerfCpp::ResponseHeader &hdr, SerfCpp::MemberEventRecord &record) {
     std::cout << "From The Program " << std::endl;
     std::cout << "\n==> Received MemberEvent Hdr: " << hdr << record;
+}
+
+void EventListener::onMemberJoin(SerfCpp::ResponseHeader &hdr, SerfCpp::MemberEventRecord &record){
+    std::cout << "\n==> Received join event Hdr: " << hdr << record;
+}
+
+void EventListener::onMemberLeave(SerfCpp::ResponseHeader &hdr, SerfCpp::MemberEventRecord &record){
+    std::cout << "\n==> Received leave event Hdr: " << hdr << record;
 }
 
 void EventListener::onQueryEventRecord(SerfCpp::ResponseHeader &hdr, SerfCpp::QueryRecord &record) {
