@@ -36,16 +36,11 @@ if (offset == -1 && pos == -1) {
 }
 
 }
-<<<<<<< HEAD
 void Segment::Append(logprog::v1::Record *record) {
-=======
-bool Segment::Append(logprog::v1::Record *record) {
->>>>>>> origin/WaelBranch
     record->set_offset(nextOffset);
     std::string serialized_record;
     if (!record->SerializeToString(&serialized_record)) {
         std::cerr << "Failed to serialize Record." << std::endl;
-<<<<<<< HEAD
           throw std::runtime_error("Failed To Serialize Record");
       
     }
@@ -56,21 +51,6 @@ bool Segment::Append(logprog::v1::Record *record) {
     index->Write(uint32_t(nextOffset - baseOffset), insertedPos);
     nextOffset++;
    
-=======
-        return false;
-    }
-    std::cout << "Serialized Record is " << serialized_record.c_str() << std::endl;
-    uint64_t insertedPos;
-    bool insertInStore =   store->Append(serialized_record.c_str(), &insertedPos);
-    bool insertInIndex = index->Write(uint32_t(nextOffset - baseOffset), insertedPos);
-    if (insertInStore && insertInIndex) {
-        nextOffset++;
-        return true;
-    } else {
-         std::cerr << "Failed to Append Record." << std::endl;
-         return false;
-    }
->>>>>>> origin/WaelBranch
      
 }  
     logprog::v1::Record * Segment::Read(uint64_t offset) {
@@ -82,7 +62,6 @@ bool Segment::Append(logprog::v1::Record *record) {
         std::cout << "Position in Store File is " << pos << std::endl;
     if ((out == -1 && pos == -1)) {
         std::cout << "Can't Read Index File from Segment" << std::endl;
-<<<<<<< HEAD
         throw std::runtime_error("Can't Read From Index");
         return nullptr;
     }
@@ -94,32 +73,15 @@ bool Segment::Append(logprog::v1::Record *record) {
     std::shared_ptr<char*> data(x, free_functor<char*>());
      size_t  returnedDataSize;
      store->Read(pos, data.get(), &returnedDataSize);
-=======
-        return nullptr;
-    }
-  
-     char ** data;
-     data = new char*;
-     size_t  returnedDataSize;
-     store->Read(pos, data, &returnedDataSize);
->>>>>>> origin/WaelBranch
     
     logprog::v1::Record* deserializedRecord = new logprog::v1::Record();
     if (! deserializedRecord->ParseFromString(std::string(*data,returnedDataSize))) {
         std::cerr << "Failed to parse serialized data into Record." << std::endl;
-<<<<<<< HEAD
         // delete [] data;
         return nullptr;
     }
     
     // delete [] data;
-=======
-        delete [] data;
-        return nullptr;
-    }
-    
-    delete [] data;
->>>>>>> origin/WaelBranch
     return deserializedRecord;
 }
 
@@ -149,11 +111,6 @@ uint64_t Segment::getBaseOffset() {return baseOffset;}
 uint64_t Segment::getNextOffset() {return nextOffset;}
 
 Segment::~Segment() {
-<<<<<<< HEAD
     // delete store;
     // delete index;
-=======
-    delete store;
-    delete index;
->>>>>>> origin/WaelBranch
 }

@@ -94,3 +94,3200 @@
     2024/06/24 01:26:03 [INFO] agent: requesting serf shutdown
     2024/06/24 01:26:03 [INFO] agent: shutdown complete
     2024/06/24 01:26:03 [WARN] agent: Serf shutdown detected, quitting
+==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: 'zna'
+         Bind addr: '127.0.0.1:5000'
+                       RPC addr: '127.0.0.1:7373'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+
+==> Log data will now stream in as it occurs:
+
+    2024/06/24 05:08:50 [INFO] agent: Serf agent starting
+    2024/06/24 05:08:50 [INFO] serf: EventMemberJoin: zna 127.0.0.1
+    2024/06/24 05:08:50 [INFO] agent.ipc: Accepted client: 127.0.0.1:55036
+==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: 'zna2'
+         Bind addr: '127.0.0.1:5001'
+                       RPC addr: '127.0.0.1:7374'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+
+==> Log data will now stream in as it occurs:
+
+    2024/06/24 05:08:50 [INFO] agent: Serf agent starting
+    2024/06/24 05:08:50 [INFO] serf: EventMemberJoin: zna2 127.0.0.1
+    2024/06/24 05:08:50 [INFO] agent.ipc: Accepted client: 127.0.0.1:47418
+    2024/06/24 05:08:50 [INFO] agent: joining: [127.0.0.1:5001] replay: false
+    2024/06/24 05:08:50 [INFO] serf: EventMemberJoin: zna 127.0.0.1
+    2024/06/24 05:08:50 [INFO] serf: EventMemberJoin: zna2 127.0.0.1
+    2024/06/24 05:08:50 [INFO] agent: joined: 1 nodes
+    2024/06/24 05:08:50 [INFO] agent.ipc: Graceful leave triggered
+    2024/06/24 05:08:50 [INFO] agent: requesting graceful leave from Serf
+    2024/06/24 05:08:50 [INFO] serf: EventMemberLeave: zna2 127.0.0.1
+    2024/06/24 05:08:51 [INFO] serf: EventMemberLeave: zna2 127.0.0.1
+    2024/06/24 05:08:51 [INFO] agent: Received event: member-join
+    2024/06/24 05:08:51 [INFO] agent: Received event: member-leave
+    2024/06/24 05:08:52 [INFO] agent: Received event: member-join
+    2024/06/24 05:08:52 [INFO] agent: Received event: member-leave
+    2024/06/24 05:08:52 [INFO] agent: requesting serf shutdown
+    2024/06/24 05:08:52 [INFO] agent: shutdown complete
+    2024/06/24 05:08:52 [WARN] agent: Serf shutdown detected, quitting    2024/06/24 05:08:52 [INFO] agent.ipc: Graceful leave triggered
+    2024/06/24 05:08:52 [INFO] agent: requesting graceful leave from Serf
+    2024/06/24 05:08:52 [INFO] serf: EventMemberLeave: zna 127.0.0.1
+    2024/06/24 05:08:53 [INFO] agent: Received event: member-leave
+    2024/06/24 05:08:53 [INFO] agent: requesting serf shutdown
+    2024/06/24 05:08:53 [INFO] agent: shutdown complete
+    2024/06/24 05:08:53 [WARN] agent: Serf shutdown detected, quitting==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: 'zna'
+         Bind addr: '127.0.0.1:5000'
+                       RPC addr: '127.0.0.1:7373'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+
+==> Log data will now stream in as it occurs:
+
+    2024/06/24 05:10:16 [INFO] agent: Serf agent starting
+    2024/06/24 05:10:16 [INFO] serf: EventMemberJoin: zna 127.0.0.1
+    2024/06/24 05:10:16 [INFO] agent.ipc: Accepted client: 127.0.0.1:60290
+==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: 'zna2'
+         Bind addr: '127.0.0.1:5001'
+                       RPC addr: '127.0.0.1:7374'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+
+==> Log data will now stream in as it occurs:
+
+    2024/06/24 05:10:16 [INFO] agent: Serf agent starting
+    2024/06/24 05:10:16 [INFO] serf: EventMemberJoin: zna2 127.0.0.1
+    2024/06/24 05:10:16 [INFO] agent.ipc: Accepted client: 127.0.0.1:52386
+    2024/06/24 05:10:16 [INFO] agent: joining: [127.0.0.1:5001] replay: false
+    2024/06/24 05:10:16 [INFO] serf: EventMemberJoin: zna2 127.0.0.1    2024/06/24 05:10:16 [INFO] serf: EventMemberJoin: zna 127.0.0.1
+
+    2024/06/24 05:10:16 [INFO] agent: joined: 1 nodes
+    2024/06/24 05:10:16 [INFO] agent.ipc: Graceful leave triggered
+    2024/06/24 05:10:16 [INFO] agent: requesting graceful leave from Serf
+    2024/06/24 05:10:16 [INFO] serf: EventMemberLeave: zna2 127.0.0.1
+    2024/06/24 05:10:17 [INFO] serf: EventMemberLeave: zna2 127.0.0.1
+    2024/06/24 05:10:17 [INFO] agent: Received event: member-leave
+    2024/06/24 05:10:17 [INFO] agent: Received event: member-join
+    2024/06/24 05:10:18 [INFO] agent: Received event: member-join
+    2024/06/24 05:10:18 [INFO] agent: Received event: member-leave
+    2024/06/24 05:10:18 [INFO] agent: requesting serf shutdown
+    2024/06/24 05:10:18 [INFO] agent: shutdown complete
+    2024/06/24 05:10:18 [WARN] agent: Serf shutdown detected, quitting    2024/06/24 05:10:18 [INFO] agent.ipc: Graceful leave triggered
+    2024/06/24 05:10:18 [INFO] agent: requesting graceful leave from Serf
+    2024/06/24 05:10:18 [INFO] serf: EventMemberLeave: zna 127.0.0.1
+    2024/06/24 05:10:19 [INFO] agent: Received event: member-leave
+    2024/06/24 05:10:19 [INFO] agent: requesting serf shutdown
+    2024/06/24 05:10:19 [INFO] agent: shutdown complete
+    2024/06/24 05:10:19 [WARN] agent: Serf shutdown detected, quitting==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: 'zna'
+         Bind addr: '127.0.0.1:5000'
+                       RPC addr: '127.0.0.1:7373'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+
+==> Log data will now stream in as it occurs:
+
+    2024/06/24 05:13:15 [INFO] agent: Serf agent starting
+    2024/06/24 05:13:15 [INFO] serf: EventMemberJoin: zna 127.0.0.1
+    2024/06/24 05:13:15 [INFO] agent.ipc: Accepted client: 127.0.0.1:36354
+==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: 'zna2'
+         Bind addr: '127.0.0.1:5001'
+                       RPC addr: '127.0.0.1:7374'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+
+==> Log data will now stream in as it occurs:
+
+    2024/06/24 05:13:15 [INFO] agent: Serf agent starting
+    2024/06/24 05:13:15 [INFO] serf: EventMemberJoin: zna2 127.0.0.1
+    2024/06/24 05:13:15 [INFO] agent.ipc: Accepted client: 127.0.0.1:57134
+    2024/06/24 05:13:15 [INFO] agent: joining: [127.0.0.1:5001] replay: false
+    2024/06/24 05:13:15 [INFO] serf: EventMemberJoin: zna 127.0.0.1    2024/06/24 05:13:15 [INFO] serf: EventMemberJoin: zna2 127.0.0.1
+
+    2024/06/24 05:13:15 [INFO] agent: joined: 1 nodes
+    2024/06/24 05:13:15 [INFO] agent.ipc: Graceful leave triggered
+    2024/06/24 05:13:15 [INFO] agent: requesting graceful leave from Serf
+    2024/06/24 05:13:16 [INFO] serf: EventMemberLeave: zna2 127.0.0.1
+    2024/06/24 05:13:16 [INFO] serf: EventMemberLeave: zna2 127.0.0.1
+    2024/06/24 05:13:17 [INFO] agent: Received event: member-join
+    2024/06/24 05:13:17 [INFO] agent: Received event: member-leave
+    2024/06/24 05:13:17 [INFO] agent: Received event: member-join
+    2024/06/24 05:13:17 [INFO] agent: Received event: member-leave
+    2024/06/24 05:13:17 [INFO] agent: requesting serf shutdown
+    2024/06/24 05:13:17 [INFO] agent: shutdown complete
+    2024/06/24 05:13:17 [WARN] agent: Serf shutdown detected, quitting    2024/06/24 05:13:21 [INFO] agent.ipc: Accepted client: 127.0.0.1:38862
+    2024/06/24 05:13:27 [INFO] agent.ipc: Accepted client: 127.0.0.1:38864
+    2024/06/24 05:13:28 [INFO] agent.ipc: Accepted client: 127.0.0.1:38866
+==> Starting Serf agent...
+==> Failed to start the Serf agent: Error creating Serf: Failed to create memberlist: Could not set up network transport: failed to obtain an address: Failed to start TCP listener on "127.0.0.1" port 5000: listen tcp 127.0.0.1:5000: bind: address already in use
+==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: 'zna2'
+         Bind addr: '127.0.0.1:5001'
+                       RPC addr: '127.0.0.1:7374'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+
+==> Log data will now stream in as it occurs:
+
+    2024/06/24 05:13:29 [INFO] agent: Serf agent starting
+    2024/06/24 05:13:29 [INFO] serf: EventMemberJoin: zna2 127.0.0.1
+    2024/06/24 05:13:29 [INFO] agent.ipc: Accepted client: 127.0.0.1:59352
+    2024/06/24 05:13:29 [INFO] agent: joining: [127.0.0.1:5001] replay: false
+    2024/06/24 05:13:29 [INFO] serf: EventMemberJoin: zna 127.0.0.1    2024/06/24 05:13:29 [INFO] agent: joined: 1 nodes
+
+    2024/06/24 05:13:29 [WARN] memberlist: Refuting a suspect message (from: zna2)
+    2024/06/24 05:13:29 [INFO] agent.ipc: Graceful leave triggered
+    2024/06/24 05:13:29 [INFO] agent: requesting graceful leave from Serf
+    2024/06/24 05:13:29 [INFO] serf: EventMemberJoin: zna2 127.0.0.1
+    2024/06/24 05:13:29 [INFO] serf: EventMemberLeave: zna2 127.0.0.1
+    2024/06/24 05:13:29 [INFO] serf: EventMemberLeave: zna2 127.0.0.1
+    2024/06/24 05:13:30 [INFO] agent: Received event: member-leave
+    2024/06/24 05:13:30 [INFO] agent: Received event: member-join
+==> Caught signal: interrupt
+==> Gracefully shutting down agent...
+    2024/06/24 05:13:30 [INFO] agent: requesting graceful leave from Serf
+==> Error: Leave already in progress
+    2024/06/24 05:13:31 [INFO] agent: requesting serf shutdown
+    2024/06/24 05:13:31 [INFO] agent: shutdown complete
+    2024/06/24 05:13:31 [WARN] agent: Serf shutdown detected, quitting
+    2024/06/24 06:11:36 [INFO] agent.ipc: Accepted client: 127.0.0.1:41084
+    2024/06/24 06:12:15 [INFO] agent.ipc: Accepted client: 127.0.0.1:41086
+    2024/06/24 06:13:03 [INFO] agent.ipc: Accepted client: 127.0.0.1:41088
+==> Starting Serf agent...
+==> Failed to start the Serf agent: Error creating Serf: Failed to create memberlist: Could not set up network transport: failed to obtain an address: Failed to start TCP listener on "127.0.0.1" port 5000: listen tcp 127.0.0.1:5000: bind: address already in use
+==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: 'zna2'
+         Bind addr: '127.0.0.1:5001'
+                       RPC addr: '127.0.0.1:7374'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+
+==> Log data will now stream in as it occurs:
+
+    2024/06/24 06:13:03 [INFO] agent: Serf agent starting
+    2024/06/24 06:13:03 [INFO] serf: EventMemberJoin: zna2 127.0.0.1
+    2024/06/24 06:13:03 [INFO] agent.ipc: Accepted client: 127.0.0.1:60984
+    2024/06/24 06:13:03 [INFO] agent: joining: [127.0.0.1:5001] replay: false
+    2024/06/24 06:13:03 [INFO] serf: EventMemberJoin: zna 127.0.0.1    2024/06/24 06:13:03 [INFO] serf: EventMemberJoin: zna2 127.0.0.1
+
+    2024/06/24 06:13:03 [INFO] agent: joined: 1 nodes
+    2024/06/24 06:13:03 [INFO] agent.ipc: Graceful leave triggered
+    2024/06/24 06:13:03 [INFO] agent: requesting graceful leave from Serf
+    2024/06/24 06:13:03 [INFO] serf: EventMemberLeave: zna2 127.0.0.1
+    2024/06/24 06:13:03 [INFO] serf: EventMemberLeave: zna2 127.0.0.1
+    2024/06/24 06:13:04 [INFO] agent: Received event: member-join
+    2024/06/24 06:13:04 [INFO] agent: Received event: member-leave
+    2024/06/24 06:13:05 [INFO] agent: requesting serf shutdown
+    2024/06/24 06:13:05 [INFO] agent: shutdown complete
+    2024/06/24 06:13:05 [WARN] agent: Serf shutdown detected, quitting    2024/06/24 06:13:05 [INFO] agent.ipc: Graceful leave triggered
+    2024/06/24 06:13:05 [INFO] agent: requesting graceful leave from Serf
+    2024/06/24 06:13:05 [INFO] serf: EventMemberLeave: zna 127.0.0.1
+    2024/06/24 06:13:06 [INFO] agent: Received event: member-leave
+    2024/06/24 06:13:06 [INFO] agent: requesting serf shutdown
+    2024/06/24 06:13:06 [INFO] agent: shutdown complete
+    2024/06/24 06:13:06 [WARN] agent: Serf shutdown detected, quitting==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: 'zna'
+         Bind addr: '127.0.0.1:5000'
+                       RPC addr: '127.0.0.1:7373'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+
+==> Log data will now stream in as it occurs:
+
+    2024/06/24 06:28:49 [INFO] agent: Serf agent starting
+    2024/06/24 06:28:49 [INFO] serf: EventMemberJoin: zna 127.0.0.1
+    2024/06/24 06:28:49 [INFO] agent.ipc: Accepted client: 127.0.0.1:45110
+==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: 'zna2'
+         Bind addr: '127.0.0.1:5001'
+                       RPC addr: '127.0.0.1:7374'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+
+==> Log data will now stream in as it occurs:
+
+    2024/06/24 06:28:49 [INFO] agent: Serf agent starting
+    2024/06/24 06:28:49 [INFO] serf: EventMemberJoin: zna2 127.0.0.1
+    2024/06/24 06:28:49 [INFO] agent.ipc: Accepted client: 127.0.0.1:38298
+    2024/06/24 06:28:49 [INFO] agent: joining: [127.0.0.1:5001] replay: false
+    2024/06/24 06:28:49 [INFO] serf: EventMemberJoin: zna 127.0.0.1
+    2024/06/24 06:28:49 [INFO] serf: EventMemberJoin: zna2 127.0.0.1
+    2024/06/24 06:28:49 [INFO] agent: joined: 1 nodes
+    2024/06/24 06:28:49 [INFO] agent.ipc: Graceful leave triggered
+    2024/06/24 06:28:49 [INFO] agent: requesting graceful leave from Serf
+    2024/06/24 06:28:50 [INFO] serf: EventMemberLeave: zna2 127.0.0.1
+    2024/06/24 06:28:50 [INFO] serf: EventMemberLeave: zna2 127.0.0.1
+==> Caught signal: interrupt==> Caught signal: interrupt
+
+==> Gracefully shutting down agent...==> Gracefully shutting down agent...
+
+    2024/06/24 06:28:50 [INFO] agent: requesting graceful leave from Serf    2024/06/24 06:28:50 [INFO] agent: requesting graceful leave from Serf
+
+    2024/06/24 06:28:50 [INFO] serf: EventMemberLeave: zna 127.0.0.1==> Error: Leave already in progress
+
+    2024/06/24 06:28:50 [INFO] serf: EventMemberFailed: zna 127.0.0.1
+    2024/06/24 06:28:51 [INFO] agent: Received event: member-leave
+    2024/06/24 06:28:51 [INFO] agent: requesting serf shutdown
+    2024/06/24 06:28:51 [INFO] agent: shutdown complete
+    2024/06/24 06:28:51 [WARN] agent: Serf shutdown detected, quitting    2024/06/24 06:28:51 [INFO] agent: Received event: member-failed
+    2024/06/24 06:28:51 [INFO] agent: Received event: member-leave
+    2024/06/24 06:28:51 [INFO] agent: requesting serf shutdown
+    2024/06/24 06:28:51 [INFO] agent: shutdown complete
+    2024/06/24 06:28:51 [WARN] agent: Serf shutdown detected, quitting
+==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: 'zna'
+         Bind addr: '127.0.0.1:5000'
+                       RPC addr: '127.0.0.1:7373'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+
+==> Log data will now stream in as it occurs:
+
+    2024/06/24 07:09:23 [INFO] agent: Serf agent starting
+    2024/06/24 07:09:23 [INFO] serf: EventMemberJoin: zna 127.0.0.1
+    2024/06/24 07:09:23 [INFO] agent.ipc: Accepted client: 127.0.0.1:50532
+==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: 'zna2'
+         Bind addr: '127.0.0.1:5001'
+                       RPC addr: '127.0.0.1:7374'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+
+==> Log data will now stream in as it occurs:
+
+    2024/06/24 07:09:23 [INFO] agent: Serf agent starting
+    2024/06/24 07:09:23 [INFO] serf: EventMemberJoin: zna2 127.0.0.1
+    2024/06/24 07:09:23 [INFO] agent.ipc: Accepted client: 127.0.0.1:45176
+    2024/06/24 07:09:23 [INFO] agent: joining: [127.0.0.1:5001] replay: false
+    2024/06/24 07:09:23 [INFO] serf: EventMemberJoin: zna 127.0.0.1    2024/06/24 07:09:23 [INFO] serf: EventMemberJoin: zna2 127.0.0.1
+
+    2024/06/24 07:09:23 [INFO] agent: joined: 1 nodes
+    2024/06/24 07:09:24 [INFO] agent.ipc: Graceful leave triggered
+    2024/06/24 07:09:24 [INFO] agent: requesting graceful leave from Serf
+    2024/06/24 07:09:24 [INFO] serf: EventMemberLeave: zna2 127.0.0.1
+    2024/06/24 07:09:24 [INFO] serf: EventMemberLeave: zna2 127.0.0.1
+    2024/06/24 07:09:25 [INFO] agent: Received event: member-leave
+    2024/06/24 07:09:25 [INFO] agent: Received event: member-join
+    2024/06/24 07:09:25 [INFO] agent: Received event: member-join
+    2024/06/24 07:09:25 [INFO] agent: Received event: member-leave
+    2024/06/24 07:09:26 [INFO] agent: requesting serf shutdown
+    2024/06/24 07:09:26 [INFO] agent: shutdown complete
+    2024/06/24 07:09:26 [WARN] agent: Serf shutdown detected, quitting
+    2024/06/24 07:09:26 [INFO] agent.ipc: Graceful leave triggered
+    2024/06/24 07:09:26 [INFO] agent: requesting graceful leave from Serf
+    2024/06/24 07:09:26 [INFO] serf: EventMemberLeave: zna 127.0.0.1
+    2024/06/24 07:09:27 [INFO] agent: Received event: member-leave
+    2024/06/24 07:09:27 [INFO] agent: requesting serf shutdown
+    2024/06/24 07:09:27 [INFO] agent: shutdown complete
+    2024/06/24 07:09:27 [WARN] agent: Serf shutdown detected, quitting==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: 'zna'
+         Bind addr: '127.0.0.1:5000'
+                       RPC addr: '127.0.0.1:7373'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+
+==> Log data will now stream in as it occurs:
+
+    2024/06/24 07:09:35 [INFO] agent: Serf agent starting
+    2024/06/24 07:09:35 [INFO] serf: EventMemberJoin: zna 127.0.0.1
+    2024/06/24 07:09:35 [INFO] agent.ipc: Accepted client: 127.0.0.1:58070
+==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: 'zna2'
+         Bind addr: '127.0.0.1:5001'
+                       RPC addr: '127.0.0.1:7374'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+
+==> Log data will now stream in as it occurs:
+
+    2024/06/24 07:09:35 [INFO] agent: Serf agent starting
+    2024/06/24 07:09:35 [INFO] serf: EventMemberJoin: zna2 127.0.0.1
+    2024/06/24 07:09:35 [INFO] agent.ipc: Accepted client: 127.0.0.1:51166
+    2024/06/24 07:09:35 [INFO] agent: joining: [127.0.0.1:5001] replay: false
+    2024/06/24 07:09:35 [INFO] serf: EventMemberJoin: zna 127.0.0.1    2024/06/24 07:09:35 [INFO] serf: EventMemberJoin: zna2 127.0.0.1
+
+    2024/06/24 07:09:35 [INFO] agent: joined: 1 nodes
+    2024/06/24 07:09:35 [INFO] agent.ipc: Graceful leave triggered
+    2024/06/24 07:09:35 [INFO] agent: requesting graceful leave from Serf
+    2024/06/24 07:09:36 [INFO] serf: EventMemberLeave: zna2 127.0.0.1
+    2024/06/24 07:09:36 [INFO] serf: EventMemberLeave: zna2 127.0.0.1
+    2024/06/24 07:09:37 [INFO] agent: Received event: member-leave
+    2024/06/24 07:09:37 [INFO] agent: Received event: member-join
+    2024/06/24 07:09:37 [INFO] agent: Received event: member-join
+    2024/06/24 07:09:37 [INFO] agent: Received event: member-leave
+    2024/06/24 07:09:37 [INFO] agent: requesting serf shutdown
+    2024/06/24 07:09:37 [INFO] agent: shutdown complete
+    2024/06/24 07:09:37 [WARN] agent: Serf shutdown detected, quitting    2024/06/24 07:09:37 [INFO] agent.ipc: Graceful leave triggered
+    2024/06/24 07:09:37 [INFO] agent: requesting graceful leave from Serf
+    2024/06/24 07:09:37 [INFO] serf: EventMemberLeave: zna 127.0.0.1
+    2024/06/24 07:09:38 [INFO] agent: requesting serf shutdown
+    2024/06/24 07:09:38 [INFO] agent: Received event: member-leave
+    2024/06/24 07:09:38 [WARN] agent: Serf shutdown detected, quitting
+    2024/06/24 07:09:38 [INFO] agent: shutdown complete
+==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: 'zna'
+         Bind addr: '127.0.0.1:5000'
+                       RPC addr: '127.0.0.1:7373'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+
+==> Log data will now stream in as it occurs:
+
+    2024/06/24 07:09:57 [INFO] agent: Serf agent starting
+    2024/06/24 07:09:57 [INFO] serf: EventMemberJoin: zna 127.0.0.1
+    2024/06/24 07:09:57 [INFO] agent.ipc: Accepted client: 127.0.0.1:35090
+==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: 'zna2'
+         Bind addr: '127.0.0.1:5001'
+                       RPC addr: '127.0.0.1:7374'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+
+==> Log data will now stream in as it occurs:
+
+    2024/06/24 07:09:57 [INFO] agent: Serf agent starting
+    2024/06/24 07:09:57 [INFO] serf: EventMemberJoin: zna2 127.0.0.1
+    2024/06/24 07:09:57 [INFO] agent.ipc: Accepted client: 127.0.0.1:59048
+    2024/06/24 07:09:57 [INFO] agent: joining: [127.0.0.1:5001] replay: false
+    2024/06/24 07:09:57 [INFO] serf: EventMemberJoin: zna 127.0.0.1    2024/06/24 07:09:57 [INFO] serf: EventMemberJoin: zna2 127.0.0.1
+
+    2024/06/24 07:09:57 [INFO] agent: joined: 1 nodes
+    2024/06/24 07:09:57 [INFO] agent.ipc: Graceful leave triggered
+    2024/06/24 07:09:57 [INFO] agent: requesting graceful leave from Serf
+    2024/06/24 07:09:58 [INFO] serf: EventMemberLeave: zna2 127.0.0.1
+    2024/06/24 07:09:58 [INFO] serf: EventMemberLeave: zna2 127.0.0.1
+    2024/06/24 07:09:59 [INFO] agent: Received event: member-leave
+    2024/06/24 07:09:59 [INFO] agent: Received event: member-join
+==> Caught signal: interrupt==> Caught signal: interrupt
+
+==> Gracefully shutting down agent...==> Gracefully shutting down agent...
+
+    2024/06/24 07:09:59 [INFO] agent: requesting graceful leave from Serf    2024/06/24 07:09:59 [INFO] agent: requesting graceful leave from Serf
+
+==> Error: Leave already in progress    2024/06/24 07:09:59 [INFO] serf: EventMemberLeave: zna 127.0.0.1
+
+    2024/06/24 07:09:59 [INFO] serf: EventMemberFailed: zna 127.0.0.1
+    2024/06/24 07:09:59 [INFO] agent: requesting serf shutdown
+    2024/06/24 07:09:59 [INFO] agent: shutdown complete
+    2024/06/24 07:09:59 [INFO] agent: Received event: member-failed
+    2024/06/24 07:10:00 [INFO] agent: Received event: member-leave
+    2024/06/24 07:10:00 [INFO] agent: requesting serf shutdown
+    2024/06/24 07:10:00 [INFO] agent: shutdown complete
+==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: 'zna'
+         Bind addr: '127.0.0.1:5000'
+                       RPC addr: '127.0.0.1:7373'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+
+==> Log data will now stream in as it occurs:
+
+    2024/06/24 07:10:00 [INFO] agent: Serf agent starting
+    2024/06/24 07:10:00 [INFO] serf: EventMemberJoin: zna 127.0.0.1
+    2024/06/24 07:10:00 [INFO] agent.ipc: Accepted client: 127.0.0.1:43300
+    2024/06/24 07:10:00 [INFO] agent.ipc: Accepted client: 127.0.0.1:33346
+==> Starting Serf agent...
+==> Error starting RPC listener: listen tcp 127.0.0.1:7374: bind: address already in use
+    2024/06/24 07:10:00 [INFO] agent: joining: [127.0.0.1:5001] replay: false
+    2024/06/24 07:10:00 [WARN] agent: error joining: 1 error occurred:
+	* Failed to join 127.0.0.1: dial tcp 127.0.0.1:5001: connect: connection refused
+
+    2024/06/24 07:10:00 [INFO] agent.ipc: Graceful leave triggered
+    2024/06/24 07:10:00 [INFO] agent: requesting graceful leave from Serf
+    2024/06/24 07:10:00 [ERR] agent.ipc: leave failed: Leave called after Shutdown
+    2024/06/24 07:10:00 [INFO] agent.ipc: Graceful leave triggered
+    2024/06/24 07:10:00 [INFO] agent: requesting graceful leave from Serf
+    2024/06/24 07:10:00 [INFO] serf: EventMemberLeave: zna 127.0.0.1
+==> Caught signal: interrupt
+==> Gracefully shutting down agent...
+    2024/06/24 07:10:01 [INFO] agent: requesting graceful leave from Serf
+==> Error: Leave already in progress
+    2024/06/24 07:10:01 [INFO] agent: Received event: member-leave
+    2024/06/24 07:10:01 [INFO] agent: requesting serf shutdown
+    2024/06/24 07:10:01 [INFO] agent: shutdown complete
+    2024/06/24 07:10:01 [ERR] agent.ipc: Failed to stream event to ipc.client: 127.0.0.1:43300: write tcp 127.0.0.1:7373->127.0.0.1:43300: write: broken pipe
+    2024/06/24 07:10:01 [WARN] agent: Serf shutdown detected, quitting
+==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: 'zna'
+         Bind addr: '127.0.0.1:5000'
+                       RPC addr: '127.0.0.1:7373'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+
+==> Log data will now stream in as it occurs:
+
+    2024/06/24 07:10:37 [INFO] agent: Serf agent starting
+    2024/06/24 07:10:37 [INFO] serf: EventMemberJoin: zna 127.0.0.1
+    2024/06/24 07:10:37 [INFO] agent.ipc: Accepted client: 127.0.0.1:45132
+==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: 'zna2'
+         Bind addr: '127.0.0.1:5001'
+                       RPC addr: '127.0.0.1:7374'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+
+==> Log data will now stream in as it occurs:
+
+    2024/06/24 07:10:37 [INFO] agent: Serf agent starting
+    2024/06/24 07:10:37 [INFO] serf: EventMemberJoin: zna2 127.0.0.1
+    2024/06/24 07:10:37 [INFO] agent.ipc: Accepted client: 127.0.0.1:37246
+    2024/06/24 07:10:37 [INFO] agent: joining: [127.0.0.1:5001] replay: false
+    2024/06/24 07:10:37 [INFO] serf: EventMemberJoin: zna 127.0.0.1    2024/06/24 07:10:37 [INFO] serf: EventMemberJoin: zna2 127.0.0.1
+
+    2024/06/24 07:10:37 [INFO] agent: joined: 1 nodes
+    2024/06/24 07:10:37 [INFO] agent.ipc: Graceful leave triggered
+    2024/06/24 07:10:37 [INFO] agent: requesting graceful leave from Serf
+    2024/06/24 07:10:38 [INFO] serf: EventMemberLeave: zna2 127.0.0.1
+    2024/06/24 07:10:38 [INFO] serf: EventMemberLeave: zna2 127.0.0.1
+    2024/06/24 07:10:39 [INFO] agent: Received event: member-join
+    2024/06/24 07:10:39 [INFO] agent: Received event: member-leave
+    2024/06/24 07:10:39 [INFO] agent: Received event: member-leave
+    2024/06/24 07:10:39 [INFO] agent: Received event: member-join
+    2024/06/24 07:10:39 [INFO] agent: requesting serf shutdown
+    2024/06/24 07:10:39 [INFO] agent: shutdown complete
+    2024/06/24 07:10:39 [WARN] agent: Serf shutdown detected, quitting    2024/06/24 07:10:39 [INFO] agent.ipc: Graceful leave triggered
+    2024/06/24 07:10:39 [INFO] agent: requesting graceful leave from Serf
+    2024/06/24 07:10:39 [INFO] serf: EventMemberLeave: zna 127.0.0.1
+    2024/06/24 07:10:40 [INFO] agent: requesting serf shutdown
+    2024/06/24 07:10:40 [INFO] agent: Received event: member-leave
+    2024/06/24 07:10:40 [INFO] agent: shutdown complete
+    2024/06/24 07:10:40 [WARN] agent: Serf shutdown detected, quitting==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: 'zna'
+         Bind addr: '127.0.0.1:5000'
+                       RPC addr: '127.0.0.1:7373'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+
+==> Log data will now stream in as it occurs:
+
+    2024/06/24 07:10:57 [INFO] agent: Serf agent starting
+    2024/06/24 07:10:57 [INFO] serf: EventMemberJoin: zna 127.0.0.1
+    2024/06/24 07:10:57 [INFO] agent.ipc: Accepted client: 127.0.0.1:49378
+==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: 'zna2'
+         Bind addr: '127.0.0.1:5001'
+                       RPC addr: '127.0.0.1:7374'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+
+==> Log data will now stream in as it occurs:
+
+    2024/06/24 07:10:57 [INFO] agent: Serf agent starting
+    2024/06/24 07:10:57 [INFO] serf: EventMemberJoin: zna2 127.0.0.1
+    2024/06/24 07:10:57 [INFO] agent.ipc: Accepted client: 127.0.0.1:41470
+    2024/06/24 07:10:57 [INFO] agent: joining: [127.0.0.1:5001] replay: false
+    2024/06/24 07:10:57 [INFO] serf: EventMemberJoin: zna 127.0.0.1
+    2024/06/24 07:10:57 [INFO] serf: EventMemberJoin: zna2 127.0.0.1
+    2024/06/24 07:10:57 [INFO] agent: joined: 1 nodes
+    2024/06/24 07:10:57 [INFO] agent.ipc: Graceful leave triggered
+    2024/06/24 07:10:57 [INFO] agent: requesting graceful leave from Serf
+    2024/06/24 07:10:58 [INFO] serf: EventMemberLeave: zna2 127.0.0.1
+    2024/06/24 07:10:58 [INFO] serf: EventMemberLeave: zna2 127.0.0.1
+==> Caught signal: interrupt==> Caught signal: interrupt
+
+==> Gracefully shutting down agent...==> Gracefully shutting down agent...
+
+    2024/06/24 07:10:59 [INFO] agent: requesting graceful leave from Serf    2024/06/24 07:10:59 [INFO] agent: requesting graceful leave from Serf
+
+==> Error: Leave already in progress    2024/06/24 07:10:59 [INFO] serf: EventMemberLeave: zna 127.0.0.1
+
+    2024/06/24 07:10:59 [INFO] serf: EventMemberFailed: zna 127.0.0.1
+    2024/06/24 07:10:59 [INFO] agent: requesting serf shutdown
+    2024/06/24 07:10:59 [INFO] agent: shutdown complete
+    2024/06/24 07:10:59 [INFO] agent: Received event: member-leave
+    2024/06/24 07:10:59 [INFO] agent: Received event: member-failed
+    2024/06/24 07:10:59 [WARN] agent: Serf shutdown detected, quitting
+    2024/06/24 07:11:00 [INFO] agent: requesting serf shutdown
+    2024/06/24 07:11:00 [INFO] agent: shutdown complete
+==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: 'zna'
+         Bind addr: '127.0.0.1:5000'
+                       RPC addr: '127.0.0.1:7373'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+
+==> Log data will now stream in as it occurs:
+
+    2024/06/24 07:11:29 [INFO] agent: Serf agent starting
+    2024/06/24 07:11:29 [INFO] serf: EventMemberJoin: zna 127.0.0.1
+    2024/06/24 07:11:29 [INFO] agent.ipc: Accepted client: 127.0.0.1:54026
+==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: 'zna2'
+         Bind addr: '127.0.0.1:5001'
+                       RPC addr: '127.0.0.1:7374'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+
+==> Log data will now stream in as it occurs:
+
+    2024/06/24 07:11:30 [INFO] agent: Serf agent starting
+    2024/06/24 07:11:30 [INFO] serf: EventMemberJoin: zna2 127.0.0.1
+    2024/06/24 07:11:30 [INFO] agent.ipc: Accepted client: 127.0.0.1:46216
+    2024/06/24 07:11:30 [INFO] agent: joining: [127.0.0.1:5001] replay: false
+    2024/06/24 07:11:30 [INFO] serf: EventMemberJoin: zna 127.0.0.1    2024/06/24 07:11:30 [INFO] serf: EventMemberJoin: zna2 127.0.0.1
+
+    2024/06/24 07:11:30 [INFO] agent: joined: 1 nodes
+    2024/06/24 07:11:30 [INFO] agent.ipc: Graceful leave triggered
+    2024/06/24 07:11:30 [INFO] agent: requesting graceful leave from Serf
+    2024/06/24 07:11:30 [INFO] serf: EventMemberLeave: zna2 127.0.0.1
+    2024/06/24 07:11:31 [INFO] serf: EventMemberLeave: zna2 127.0.0.1
+    2024/06/24 07:11:31 [INFO] agent: Received event: member-leave
+    2024/06/24 07:11:31 [INFO] agent: Received event: member-join
+    2024/06/24 07:11:32 [INFO] agent: Received event: member-join
+    2024/06/24 07:11:32 [INFO] agent: Received event: member-leave
+    2024/06/24 07:11:32 [INFO] agent: requesting serf shutdown
+    2024/06/24 07:11:32 [INFO] agent: shutdown complete
+    2024/06/24 07:11:32 [WARN] agent: Serf shutdown detected, quitting    2024/06/24 07:11:32 [INFO] agent.ipc: Graceful leave triggered
+    2024/06/24 07:11:32 [INFO] agent: requesting graceful leave from Serf
+    2024/06/24 07:11:32 [INFO] serf: EventMemberLeave: zna 127.0.0.1
+    2024/06/24 07:11:33 [INFO] agent: requesting serf shutdown
+    2024/06/24 07:11:33 [INFO] agent: Received event: member-leave
+    2024/06/24 07:11:33 [WARN] agent: Serf shutdown detected, quitting
+    2024/06/24 07:11:33 [INFO] agent: shutdown complete
+==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: 'zna'
+         Bind addr: '127.0.0.1:5000'
+                       RPC addr: '127.0.0.1:7373'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+
+==> Log data will now stream in as it occurs:
+
+    2024/06/24 07:11:35 [INFO] agent: Serf agent starting
+    2024/06/24 07:11:35 [INFO] serf: EventMemberJoin: zna 127.0.0.1
+    2024/06/24 07:11:35 [INFO] agent.ipc: Accepted client: 127.0.0.1:58548
+==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: 'zna2'
+         Bind addr: '127.0.0.1:5001'
+                       RPC addr: '127.0.0.1:7374'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+
+==> Log data will now stream in as it occurs:
+
+    2024/06/24 07:11:35 [INFO] agent: Serf agent starting
+    2024/06/24 07:11:35 [INFO] serf: EventMemberJoin: zna2 127.0.0.1
+    2024/06/24 07:11:35 [INFO] agent.ipc: Accepted client: 127.0.0.1:51022
+    2024/06/24 07:11:35 [INFO] agent: joining: [127.0.0.1:5001] replay: false
+    2024/06/24 07:11:35 [INFO] serf: EventMemberJoin: zna 127.0.0.1    2024/06/24 07:11:35 [INFO] serf: EventMemberJoin: zna2 127.0.0.1
+
+    2024/06/24 07:11:35 [INFO] agent: joined: 1 nodes
+    2024/06/24 07:11:35 [INFO] agent.ipc: Graceful leave triggered
+    2024/06/24 07:11:35 [INFO] agent: requesting graceful leave from Serf
+    2024/06/24 07:11:36 [INFO] serf: EventMemberLeave: zna2 127.0.0.1
+    2024/06/24 07:11:36 [INFO] serf: EventMemberLeave: zna2 127.0.0.1
+    2024/06/24 07:11:37 [INFO] agent: Received event: member-leave
+    2024/06/24 07:11:37 [INFO] agent: Received event: member-join
+    2024/06/24 07:11:37 [INFO] agent: Received event: member-join
+    2024/06/24 07:11:37 [INFO] agent: Received event: member-leave
+    2024/06/24 07:11:37 [INFO] agent: requesting serf shutdown
+    2024/06/24 07:11:37 [INFO] agent: shutdown complete
+    2024/06/24 07:11:37 [WARN] agent: Serf shutdown detected, quitting    2024/06/24 07:11:37 [INFO] agent.ipc: Graceful leave triggered
+    2024/06/24 07:11:37 [INFO] agent: requesting graceful leave from Serf
+    2024/06/24 07:11:37 [INFO] serf: EventMemberLeave: zna 127.0.0.1
+    2024/06/24 07:11:38 [INFO] agent: Received event: member-leave
+    2024/06/24 07:11:38 [INFO] agent: requesting serf shutdown
+    2024/06/24 07:11:38 [INFO] agent: shutdown complete
+    2024/06/24 07:11:38 [WARN] agent: Serf shutdown detected, quitting==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: 'zna'
+         Bind addr: '127.0.0.1:5000'
+                       RPC addr: '127.0.0.1:7373'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+
+==> Log data will now stream in as it occurs:
+
+    2024/06/24 07:32:10 [INFO] agent: Serf agent starting
+    2024/06/24 07:32:10 [INFO] serf: EventMemberJoin: zna 127.0.0.1
+    2024/06/24 07:32:10 [INFO] agent.ipc: Accepted client: 127.0.0.1:35092
+==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: 'zna2'
+         Bind addr: '127.0.0.1:5001'
+                       RPC addr: '127.0.0.1:7374'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+
+==> Log data will now stream in as it occurs:
+
+    2024/06/24 07:32:10 [INFO] agent: Serf agent starting
+    2024/06/24 07:32:10 [INFO] serf: EventMemberJoin: zna2 127.0.0.1
+    2024/06/24 07:32:10 [INFO] agent.ipc: Accepted client: 127.0.0.1:57068
+    2024/06/24 07:32:10 [INFO] agent: joining: [127.0.0.1:5001] replay: false
+    2024/06/24 07:32:10 [INFO] serf: EventMemberJoin: zna2 127.0.0.1    2024/06/24 07:32:10 [INFO] serf: EventMemberJoin: zna 127.0.0.1
+
+    2024/06/24 07:32:10 [INFO] agent: joined: 1 nodes
+    2024/06/24 07:32:10 [INFO] agent.ipc: Graceful leave triggered
+    2024/06/24 07:32:10 [INFO] agent: requesting graceful leave from Serf
+    2024/06/24 07:32:11 [INFO] serf: EventMemberLeave: zna2 127.0.0.1
+    2024/06/24 07:32:11 [INFO] serf: EventMemberLeave: zna2 127.0.0.1
+    2024/06/24 07:32:12 [INFO] agent: Received event: member-leave
+    2024/06/24 07:32:12 [INFO] agent: Received event: member-join
+    2024/06/24 07:32:12 [INFO] agent: Received event: member-join
+    2024/06/24 07:32:12 [INFO] agent: Received event: member-leave
+    2024/06/24 07:32:12 [INFO] agent: requesting serf shutdown
+    2024/06/24 07:32:12 [INFO] agent: shutdown complete
+    2024/06/24 07:32:12 [WARN] agent: Serf shutdown detected, quitting    2024/06/24 07:32:12 [INFO] agent.ipc: Graceful leave triggered
+    2024/06/24 07:32:12 [INFO] agent: requesting graceful leave from Serf
+    2024/06/24 07:32:12 [INFO] serf: EventMemberLeave: zna 127.0.0.1
+==> Caught signal: interrupt
+==> Gracefully shutting down agent...
+    2024/06/24 07:32:13 [INFO] agent: requesting graceful leave from Serf
+==> Error: Leave already in progress
+    2024/06/24 07:32:13 [INFO] agent: Received event: member-leave
+    2024/06/24 07:32:13 [INFO] agent: requesting serf shutdown
+    2024/06/24 07:32:13 [ERR] agent.ipc: Failed to stream event to ipc.client: 127.0.0.1:35092: write tcp 127.0.0.1:7373->127.0.0.1:35092: write: broken pipe
+    2024/06/24 07:32:13 [INFO] agent: shutdown complete
+    2024/06/24 07:32:13 [WARN] agent: Serf shutdown detected, quitting
+==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: 'zna'
+         Bind addr: '127.0.0.1:5000'
+                       RPC addr: '127.0.0.1:7373'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+
+==> Log data will now stream in as it occurs:
+
+    2024/06/24 07:33:58 [INFO] agent: Serf agent starting
+    2024/06/24 07:33:58 [INFO] serf: EventMemberJoin: zna 127.0.0.1
+    2024/06/24 07:33:58 [INFO] agent.ipc: Accepted client: 127.0.0.1:41324
+==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: 'zna2'
+         Bind addr: '127.0.0.1:5001'
+                       RPC addr: '127.0.0.1:7374'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+
+==> Log data will now stream in as it occurs:
+
+    2024/06/24 07:33:58 [INFO] agent: Serf agent starting
+    2024/06/24 07:33:58 [INFO] serf: EventMemberJoin: zna2 127.0.0.1
+    2024/06/24 07:33:58 [INFO] agent.ipc: Accepted client: 127.0.0.1:33744
+    2024/06/24 07:33:58 [INFO] agent: joining: [127.0.0.1:5001] replay: false
+    2024/06/24 07:33:58 [INFO] serf: EventMemberJoin: zna 127.0.0.1    2024/06/24 07:33:58 [INFO] serf: EventMemberJoin: zna2 127.0.0.1
+
+    2024/06/24 07:33:58 [INFO] agent: joined: 1 nodes
+    2024/06/24 07:33:58 [INFO] agent.ipc: Graceful leave triggered
+    2024/06/24 07:33:58 [INFO] agent: requesting graceful leave from Serf
+    2024/06/24 07:33:59 [INFO] serf: EventMemberLeave: zna2 127.0.0.1
+    2024/06/24 07:33:59 [INFO] serf: EventMemberLeave: zna2 127.0.0.1
+    2024/06/24 07:34:00 [INFO] agent: Received event: member-leave
+    2024/06/24 07:34:00 [INFO] agent: Received event: member-join
+    2024/06/24 07:34:00 [INFO] agent: Received event: member-join
+    2024/06/24 07:34:00 [INFO] agent: Received event: member-leave
+    2024/06/24 07:34:00 [INFO] agent: requesting serf shutdown
+    2024/06/24 07:34:00 [INFO] agent: shutdown complete
+    2024/06/24 07:34:00 [WARN] agent: Serf shutdown detected, quitting    2024/06/24 07:34:00 [INFO] agent.ipc: Graceful leave triggered
+    2024/06/24 07:34:00 [INFO] agent: requesting graceful leave from Serf
+    2024/06/24 07:34:00 [INFO] serf: EventMemberLeave: zna 127.0.0.1
+    2024/06/24 07:34:01 [INFO] agent: Received event: member-leave
+    2024/06/24 07:34:01 [INFO] agent: requesting serf shutdown
+    2024/06/24 07:34:01 [INFO] agent: shutdown complete
+    2024/06/24 07:34:01 [WARN] agent: Serf shutdown detected, quitting==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: 'zna'
+         Bind addr: '127.0.0.1:5000'
+                       RPC addr: '127.0.0.1:7373'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+
+==> Log data will now stream in as it occurs:
+
+    2024/06/24 07:34:41 [INFO] agent: Serf agent starting
+    2024/06/24 07:34:41 [INFO] serf: EventMemberJoin: zna 127.0.0.1
+    2024/06/24 07:34:41 [INFO] agent.ipc: Accepted client: 127.0.0.1:45878
+==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: 'zna2'
+         Bind addr: '127.0.0.1:5001'
+                       RPC addr: '127.0.0.1:7374'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+
+==> Log data will now stream in as it occurs:
+
+    2024/06/24 07:34:41 [INFO] agent: Serf agent starting
+    2024/06/24 07:34:41 [INFO] serf: EventMemberJoin: zna2 127.0.0.1
+    2024/06/24 07:34:41 [INFO] agent.ipc: Accepted client: 127.0.0.1:37732
+    2024/06/24 07:34:41 [INFO] agent: joining: [127.0.0.1:5001] replay: false
+    2024/06/24 07:34:41 [INFO] serf: EventMemberJoin: zna 127.0.0.1
+    2024/06/24 07:34:41 [INFO] serf: EventMemberJoin: zna2 127.0.0.1
+    2024/06/24 07:34:41 [INFO] agent: joined: 1 nodes
+    2024/06/24 07:34:41 [INFO] agent.ipc: Graceful leave triggered
+    2024/06/24 07:34:41 [INFO] agent: requesting graceful leave from Serf
+    2024/06/24 07:34:42 [INFO] serf: EventMemberLeave: zna2 127.0.0.1
+    2024/06/24 07:34:42 [INFO] serf: EventMemberLeave: zna2 127.0.0.1
+==> Caught signal: interrupt==> Caught signal: interrupt
+
+==> Gracefully shutting down agent...==> Gracefully shutting down agent...
+
+    2024/06/24 07:34:42 [INFO] agent: requesting graceful leave from Serf    2024/06/24 07:34:42 [INFO] agent: requesting graceful leave from Serf
+
+==> Error: Leave already in progress    2024/06/24 07:34:42 [INFO] serf: EventMemberLeave: zna 127.0.0.1
+
+    2024/06/24 07:34:42 [INFO] serf: EventMemberFailed: zna 127.0.0.1
+    2024/06/24 07:34:43 [INFO] agent: requesting serf shutdown
+    2024/06/24 07:34:43 [INFO] agent: shutdown complete
+    2024/06/24 07:34:43 [WARN] agent: Serf shutdown detected, quitting
+    2024/06/24 07:34:43 [INFO] agent: Received event: member-leave
+    2024/06/24 07:34:43 [INFO] agent: requesting serf shutdown
+    2024/06/24 07:34:43 [INFO] agent: shutdown complete
+    2024/06/24 07:34:43 [WARN] agent: Serf shutdown detected, quitting==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: 'zna'
+         Bind addr: '127.0.0.1:5000'
+                       RPC addr: '127.0.0.1:7373'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+
+==> Log data will now stream in as it occurs:
+
+    2024/06/24 07:35:47 [INFO] agent: Serf agent starting
+    2024/06/24 07:35:47 [INFO] serf: EventMemberJoin: zna 127.0.0.1
+    2024/06/24 07:35:47 [INFO] agent.ipc: Accepted client: 127.0.0.1:49946
+==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: 'zna2'
+         Bind addr: '127.0.0.1:5001'
+                       RPC addr: '127.0.0.1:7374'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+
+==> Log data will now stream in as it occurs:
+
+    2024/06/24 07:35:47 [INFO] agent: Serf agent starting
+    2024/06/24 07:35:47 [INFO] serf: EventMemberJoin: zna2 127.0.0.1
+    2024/06/24 07:35:47 [INFO] agent.ipc: Accepted client: 127.0.0.1:42006
+    2024/06/24 07:35:47 [INFO] agent: joining: [127.0.0.1:5001] replay: false
+    2024/06/24 07:35:47 [INFO] serf: EventMemberJoin: zna2 127.0.0.1    2024/06/24 07:35:47 [INFO] serf: EventMemberJoin: zna 127.0.0.1
+
+    2024/06/24 07:35:47 [INFO] agent: joined: 1 nodes
+    2024/06/24 07:35:47 [INFO] agent.ipc: Graceful leave triggered
+    2024/06/24 07:35:47 [INFO] agent: requesting graceful leave from Serf
+    2024/06/24 07:35:48 [INFO] serf: EventMemberLeave: zna2 127.0.0.1
+    2024/06/24 07:35:48 [INFO] serf: EventMemberLeave: zna2 127.0.0.1
+    2024/06/24 07:35:49 [INFO] agent: Received event: member-leave
+    2024/06/24 07:35:49 [INFO] agent: Received event: member-join
+    2024/06/24 07:35:49 [INFO] agent: Received event: member-join
+    2024/06/24 07:35:49 [INFO] agent: Received event: member-leave
+    2024/06/24 07:35:49 [INFO] agent: requesting serf shutdown
+    2024/06/24 07:35:49 [INFO] agent: shutdown complete
+    2024/06/24 07:35:49 [WARN] agent: Serf shutdown detected, quitting    2024/06/24 07:35:49 [INFO] agent.ipc: Graceful leave triggered
+    2024/06/24 07:35:49 [INFO] agent: requesting graceful leave from Serf
+    2024/06/24 07:35:49 [INFO] serf: EventMemberLeave: zna 127.0.0.1
+    2024/06/24 07:35:50 [INFO] agent: Received event: member-leave
+    2024/06/24 07:35:50 [INFO] agent: requesting serf shutdown
+    2024/06/24 07:35:50 [INFO] agent: shutdown complete
+    2024/06/24 07:35:50 [WARN] agent: Serf shutdown detected, quitting
+==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: 'zna'
+         Bind addr: '127.0.0.1:5000'
+                       RPC addr: '127.0.0.1:7373'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+
+==> Log data will now stream in as it occurs:
+
+    2024/06/24 07:44:17 [INFO] agent: Serf agent starting
+    2024/06/24 07:44:17 [INFO] serf: EventMemberJoin: zna 127.0.0.1
+    2024/06/24 07:44:17 [INFO] agent.ipc: Accepted client: 127.0.0.1:54562
+==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: 'zna2'
+         Bind addr: '127.0.0.1:5001'
+                       RPC addr: '127.0.0.1:7374'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+
+==> Log data will now stream in as it occurs:
+
+    2024/06/24 07:44:17 [INFO] agent: Serf agent starting
+    2024/06/24 07:44:17 [INFO] serf: EventMemberJoin: zna2 127.0.0.1
+    2024/06/24 07:44:17 [INFO] agent.ipc: Accepted client: 127.0.0.1:46866
+    2024/06/24 07:44:17 [INFO] agent: joining: [127.0.0.1:5001] replay: false
+    2024/06/24 07:44:17 [INFO] serf: EventMemberJoin: zna 127.0.0.1
+    2024/06/24 07:44:17 [INFO] serf: EventMemberJoin: zna2 127.0.0.1
+    2024/06/24 07:44:17 [INFO] agent: joined: 1 nodes
+    2024/06/24 07:44:17 [INFO] agent.ipc: Graceful leave triggered
+    2024/06/24 07:44:17 [INFO] agent: requesting graceful leave from Serf
+    2024/06/24 07:44:17 [INFO] serf: EventMemberLeave: zna2 127.0.0.1
+    2024/06/24 07:44:18 [INFO] serf: EventMemberLeave: zna2 127.0.0.1
+    2024/06/24 07:44:18 [INFO] agent: Received event: member-leave
+    2024/06/24 07:44:18 [INFO] agent: Received event: member-join
+    2024/06/24 07:44:19 [INFO] agent: Received event: member-join
+    2024/06/24 07:44:19 [INFO] agent: Received event: member-leave
+    2024/06/24 07:44:19 [INFO] agent: requesting serf shutdown
+    2024/06/24 07:44:19 [INFO] agent: shutdown complete
+    2024/06/24 07:44:19 [WARN] agent: Serf shutdown detected, quitting    2024/06/24 07:44:19 [INFO] agent.ipc: Graceful leave triggered
+    2024/06/24 07:44:19 [INFO] agent: requesting graceful leave from Serf
+    2024/06/24 07:44:19 [INFO] serf: EventMemberLeave: zna 127.0.0.1
+    2024/06/24 07:44:20 [INFO] agent: Received event: member-leave
+    2024/06/24 07:44:20 [INFO] agent: requesting serf shutdown
+    2024/06/24 07:44:20 [INFO] agent: shutdown complete
+    2024/06/24 07:44:20 [WARN] agent: Serf shutdown detected, quitting==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: 'zna'
+         Bind addr: '127.0.0.1:5000'
+                       RPC addr: '127.0.0.1:7373'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+
+==> Log data will now stream in as it occurs:
+
+    2024/06/24 09:28:17 [INFO] agent: Serf agent starting
+    2024/06/24 09:28:17 [INFO] serf: EventMemberJoin: zna 127.0.0.1
+    2024/06/24 09:28:17 [INFO] agent.ipc: Accepted client: 127.0.0.1:34030
+    2024/06/24 09:28:17 [INFO] agent: joining: [127.0.0.1:7373 127.0.0.1:7374] replay: false
+    2024/06/24 09:28:17 [INFO] agent.ipc: Accepted client: 127.0.0.1:34032
+    2024/06/24 09:28:17 [ERR] agent.ipc: failed to decode request header: codec.decoder: Only encoded map or array can be decoded into a struct. (valueType: 2)
+    2024/06/24 09:28:17 [WARN] agent: error joining: 2 errors occurred:
+	* Failed to join 127.0.0.1: EOF
+	* Failed to join 127.0.0.1: dial tcp 127.0.0.1:7374: connect: connection refused
+
+    2024/06/24 09:28:18 [INFO] agent: Received event: member-join
+    2024/06/24 09:28:31 [INFO] agent.ipc: Accepted client: 127.0.0.1:34036
+==> Starting Serf agent...
+==> Failed to start the Serf agent: Error creating Serf: Failed to create memberlist: Could not set up network transport: failed to obtain an address: Failed to start TCP listener on "127.0.0.1" port 5000: listen tcp 127.0.0.1:5000: bind: address already in use
+    2024/06/24 09:28:31 [INFO] agent: joining: [127.0.0.1:7373 127.0.0.1:7374] replay: false
+    2024/06/24 09:28:31 [INFO] agent.ipc: Accepted client: 127.0.0.1:34038
+    2024/06/24 09:28:31 [ERR] agent.ipc: failed to decode request header: codec.decoder: Only encoded map or array can be decoded into a struct. (valueType: 2)
+    2024/06/24 09:28:31 [WARN] agent: error joining: 2 errors occurred:
+	* Failed to join 127.0.0.1: EOF
+	* Failed to join 127.0.0.1: dial tcp 127.0.0.1:7374: connect: connection refused
+
+    2024/06/24 09:29:16 [INFO] agent.ipc: Accepted client: 127.0.0.1:34046
+==> Starting Serf agent...
+==> Failed to start the Serf agent: Error creating Serf: Failed to create memberlist: Could not set up network transport: failed to obtain an address: Failed to start TCP listener on "127.0.0.1" port 5000: listen tcp 127.0.0.1:5000: bind: address already in use
+    2024/06/24 09:29:16 [INFO] agent: joining: [127.0.0.1:7373 127.0.0.1:7374] replay: false
+    2024/06/24 09:29:16 [INFO] agent.ipc: Accepted client: 127.0.0.1:34048
+    2024/06/24 09:29:16 [ERR] agent.ipc: failed to decode request header: codec.decoder: Only encoded map or array can be decoded into a struct. (valueType: 2)
+    2024/06/24 09:29:16 [WARN] agent: error joining: 2 errors occurred:
+	* Failed to join 127.0.0.1: EOF
+	* Failed to join 127.0.0.1: dial tcp 127.0.0.1:7374: connect: connection refused
+
+==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: 'zna2'
+         Bind addr: '127.0.0.1:5001'
+                       RPC addr: '127.0.0.1:7374'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+
+==> Log data will now stream in as it occurs:
+
+    2024/06/24 09:29:16 [INFO] agent: Serf agent starting
+    2024/06/24 09:29:16 [INFO] serf: EventMemberJoin: zna2 127.0.0.1
+    2024/06/24 09:29:16 [INFO] agent.ipc: Accepted client: 127.0.0.1:54256
+    2024/06/24 09:29:16 [INFO] agent: joining: [127.0.0.1:7373 127.0.0.1:7374] replay: false
+    2024/06/24 09:29:16 [INFO] agent.ipc: Accepted client: 127.0.0.1:35982
+    2024/06/24 09:29:16 [ERR] agent.ipc: failed to decode request header: codec.decoder: Only encoded map or array can be decoded into a struct. (valueType: 2)
+    2024/06/24 09:29:16 [INFO] agent.ipc: Accepted client: 127.0.0.1:54260
+    2024/06/24 09:29:16 [ERR] agent.ipc: failed to decode request header: codec.decoder: Only encoded map or array can be decoded into a struct. (valueType: 2)
+    2024/06/24 09:29:16 [WARN] agent: error joining: 2 errors occurred:
+	* Failed to join 127.0.0.1: EOF
+	* Failed to join 127.0.0.1: EOF
+
+    2024/06/24 09:29:17 [INFO] agent: Received event: member-join
+    2024/06/24 09:29:52 [INFO] agent.ipc: Accepted client: 127.0.0.1:35986
+    2024/06/24 09:30:48 [INFO] agent.ipc: Accepted client: 127.0.0.1:35988
+    2024/06/24 09:30:49 [INFO] agent.ipc: Accepted client: 127.0.0.1:35990
+==> Starting Serf agent...
+==> Failed to start the Serf agent: Error creating Serf: Failed to create memberlist: Could not set up network transport: failed to obtain an address: Failed to start TCP listener on "127.0.0.1" port 5000: listen tcp 127.0.0.1:5000: bind: address already in use
+    2024/06/24 09:30:50 [INFO] agent: joining: [127.0.0.1:7373 127.0.0.1:7374] replay: false
+    2024/06/24 09:30:50 [INFO] agent.ipc: Accepted client: 127.0.0.1:35992
+    2024/06/24 09:30:50 [ERR] agent.ipc: failed to decode request header: codec.decoder: Only encoded map or array can be decoded into a struct. (valueType: 2)
+    2024/06/24 09:30:50 [INFO] agent.ipc: Accepted client: 127.0.0.1:54270
+    2024/06/24 09:30:50 [ERR] agent.ipc: failed to decode request header: codec.decoder: Only encoded map or array can be decoded into a struct. (valueType: 2)
+    2024/06/24 09:30:50 [WARN] agent: error joining: 2 errors occurred:
+	* Failed to join 127.0.0.1: EOF
+	* Failed to join 127.0.0.1: EOF
+
+    2024/06/24 09:30:50 [INFO] agent.ipc: Accepted client: 127.0.0.1:54272
+==> Starting Serf agent...
+==> Failed to start the Serf agent: Error creating Serf: Failed to create memberlist: Could not set up network transport: failed to obtain an address: Failed to start TCP listener on "127.0.0.1" port 5001: listen tcp 127.0.0.1:5001: bind: address already in use
+    2024/06/24 09:30:50 [INFO] agent: joining: [127.0.0.1:7373 127.0.0.1:7374] replay: false
+    2024/06/24 09:30:50 [INFO] agent.ipc: Accepted client: 127.0.0.1:35998
+    2024/06/24 09:30:50 [ERR] agent.ipc: failed to decode request header: codec.decoder: Only encoded map or array can be decoded into a struct. (valueType: 2)
+    2024/06/24 09:30:50 [INFO] agent.ipc: Accepted client: 127.0.0.1:54276
+    2024/06/24 09:30:50 [ERR] agent.ipc: failed to decode request header: codec.decoder: Only encoded map or array can be decoded into a struct. (valueType: 2)
+    2024/06/24 09:30:50 [WARN] agent: error joining: 2 errors occurred:
+	* Failed to join 127.0.0.1: EOF
+	* Failed to join 127.0.0.1: EOF
+
+    2024/06/24 09:31:12 [INFO] agent.ipc: Accepted client: 127.0.0.1:36006
+==> Starting Serf agent...
+==> Failed to start the Serf agent: Error creating Serf: Failed to create memberlist: Could not set up network transport: failed to obtain an address: Failed to start TCP listener on "127.0.0.1" port 5000: listen tcp 127.0.0.1:5000: bind: address already in use
+    2024/06/24 09:31:12 [INFO] agent: joining: [127.0.0.1:7373 127.0.0.1:7374] replay: false
+    2024/06/24 09:31:12 [INFO] agent.ipc: Accepted client: 127.0.0.1:36008
+    2024/06/24 09:31:12 [ERR] agent.ipc: failed to decode request header: codec.decoder: Only encoded map or array can be decoded into a struct. (valueType: 2)
+    2024/06/24 09:31:12 [INFO] agent.ipc: Accepted client: 127.0.0.1:54286
+    2024/06/24 09:31:12 [ERR] agent.ipc: failed to decode request header: codec.decoder: Only encoded map or array can be decoded into a struct. (valueType: 2)
+    2024/06/24 09:31:12 [WARN] agent: error joining: 2 errors occurred:
+	* Failed to join 127.0.0.1: EOF
+	* Failed to join 127.0.0.1: EOF
+
+    2024/06/24 09:31:12 [INFO] agent.ipc: Accepted client: 127.0.0.1:54288
+==> Starting Serf agent...
+==> Failed to start the Serf agent: Error creating Serf: Failed to create memberlist: Could not set up network transport: failed to obtain an address: Failed to start TCP listener on "127.0.0.1" port 5001: listen tcp 127.0.0.1:5001: bind: address already in use
+    2024/06/24 09:31:13 [INFO] agent: joining: [127.0.0.1:7373 127.0.0.1:7374] replay: false
+    2024/06/24 09:31:13 [INFO] agent.ipc: Accepted client: 127.0.0.1:36014
+    2024/06/24 09:31:13 [ERR] agent.ipc: failed to decode request header: codec.decoder: Only encoded map or array can be decoded into a struct. (valueType: 2)
+    2024/06/24 09:31:13 [INFO] agent.ipc: Accepted client: 127.0.0.1:54292
+    2024/06/24 09:31:13 [ERR] agent.ipc: failed to decode request header: codec.decoder: Only encoded map or array can be decoded into a struct. (valueType: 2)
+    2024/06/24 09:31:13 [WARN] agent: error joining: 2 errors occurred:
+	* Failed to join 127.0.0.1: EOF
+	* Failed to join 127.0.0.1: EOF
+
+    2024/06/24 09:31:57 [INFO] agent.ipc: Accepted client: 127.0.0.1:36018
+==> Starting Serf agent...
+==> Failed to start the Serf agent: Error creating Serf: Failed to create memberlist: Could not set up network transport: failed to obtain an address: Failed to start TCP listener on "127.0.0.1" port 5000: listen tcp 127.0.0.1:5000: bind: address already in use
+    2024/06/24 09:31:57 [INFO] agent: joining: [127.0.0.1:7373 127.0.0.1:7374] replay: false
+    2024/06/24 09:31:57 [INFO] agent.ipc: Accepted client: 127.0.0.1:36020
+    2024/06/24 09:31:57 [ERR] agent.ipc: failed to decode request header: codec.decoder: Only encoded map or array can be decoded into a struct. (valueType: 2)
+    2024/06/24 09:31:57 [INFO] agent.ipc: Accepted client: 127.0.0.1:54298
+    2024/06/24 09:31:57 [ERR] agent.ipc: failed to decode request header: codec.decoder: Only encoded map or array can be decoded into a struct. (valueType: 2)
+    2024/06/24 09:31:57 [WARN] agent: error joining: 2 errors occurred:
+	* Failed to join 127.0.0.1: EOF
+	* Failed to join 127.0.0.1: EOF
+
+    2024/06/24 09:31:57 [INFO] agent.ipc: Accepted client: 127.0.0.1:54300
+==> Starting Serf agent...
+==> Failed to start the Serf agent: Error creating Serf: Failed to create memberlist: Could not set up network transport: failed to obtain an address: Failed to start TCP listener on "127.0.0.1" port 5001: listen tcp 127.0.0.1:5001: bind: address already in use
+    2024/06/24 09:31:57 [INFO] agent: joining: [127.0.0.1:7373 127.0.0.1:7374] replay: false
+    2024/06/24 09:31:57 [INFO] agent.ipc: Accepted client: 127.0.0.1:36026
+    2024/06/24 09:31:57 [ERR] agent.ipc: failed to decode request header: codec.decoder: Only encoded map or array can be decoded into a struct. (valueType: 2)
+    2024/06/24 09:31:57 [INFO] agent.ipc: Accepted client: 127.0.0.1:54304
+    2024/06/24 09:31:57 [ERR] agent.ipc: failed to decode request header: codec.decoder: Only encoded map or array can be decoded into a struct. (valueType: 2)
+    2024/06/24 09:31:57 [WARN] agent: error joining: 2 errors occurred:
+	* Failed to join 127.0.0.1: EOF
+	* Failed to join 127.0.0.1: EOF
+
+    2024/06/24 09:32:18 [INFO] agent.ipc: Accepted client: 127.0.0.1:36034
+==> Starting Serf agent...
+==> Failed to start the Serf agent: Error creating Serf: Failed to create memberlist: Could not set up network transport: failed to obtain an address: Failed to start TCP listener on "127.0.0.1" port 5000: listen tcp 127.0.0.1:5000: bind: address already in use
+    2024/06/24 09:32:18 [INFO] agent: joining: [127.0.0.1:7373 127.0.0.1:7374] replay: false
+    2024/06/24 09:32:18 [INFO] agent.ipc: Accepted client: 127.0.0.1:36036
+    2024/06/24 09:32:18 [ERR] agent.ipc: failed to decode request header: codec.decoder: Only encoded map or array can be decoded into a struct. (valueType: 2)
+    2024/06/24 09:32:18 [INFO] agent.ipc: Accepted client: 127.0.0.1:54314
+    2024/06/24 09:32:18 [ERR] agent.ipc: failed to decode request header: codec.decoder: Only encoded map or array can be decoded into a struct. (valueType: 2)
+    2024/06/24 09:32:18 [WARN] agent: error joining: 2 errors occurred:
+	* Failed to join 127.0.0.1: EOF
+	* Failed to join 127.0.0.1: EOF
+
+    2024/06/24 09:32:18 [INFO] agent.ipc: Accepted client: 127.0.0.1:54316
+==> Starting Serf agent...
+==> Failed to start the Serf agent: Error creating Serf: Failed to create memberlist: Could not set up network transport: failed to obtain an address: Failed to start TCP listener on "127.0.0.1" port 5001: listen tcp 127.0.0.1:5001: bind: address already in use
+    2024/06/24 09:32:18 [INFO] agent: joining: [127.0.0.1:7373 127.0.0.1:7374] replay: false
+    2024/06/24 09:32:18 [INFO] agent.ipc: Accepted client: 127.0.0.1:36042
+    2024/06/24 09:32:18 [ERR] agent.ipc: failed to decode request header: codec.decoder: Only encoded map or array can be decoded into a struct. (valueType: 2)
+    2024/06/24 09:32:18 [INFO] agent.ipc: Accepted client: 127.0.0.1:54320
+    2024/06/24 09:32:18 [ERR] agent.ipc: failed to decode request header: codec.decoder: Only encoded map or array can be decoded into a struct. (valueType: 2)
+    2024/06/24 09:32:18 [WARN] agent: error joining: 2 errors occurred:
+	* Failed to join 127.0.0.1: EOF
+	* Failed to join 127.0.0.1: EOF
+
+    2024/06/24 09:32:48 [INFO] agent.ipc: Accepted client: 127.0.0.1:36046
+    2024/06/24 09:34:21 [INFO] agent.ipc: Accepted client: 127.0.0.1:36052
+==> Starting Serf agent...
+==> Failed to start the Serf agent: Error creating Serf: Failed to create memberlist: Could not set up network transport: failed to obtain an address: Failed to start TCP listener on "127.0.0.1" port 5000: listen tcp 127.0.0.1:5000: bind: address already in use
+    2024/06/24 09:34:21 [INFO] agent: joining: [127.0.0.1:5000 127.0.0.1:5001] replay: false
+    2024/06/24 09:34:21 [INFO] serf: EventMemberJoin: zna2 127.0.0.1    2024/06/24 09:34:21 [INFO] serf: EventMemberJoin: zna 127.0.0.1
+
+    2024/06/24 09:34:21 [INFO] agent: joined: 2 nodes
+    2024/06/24 09:34:21 [INFO] agent.ipc: Accepted client: 127.0.0.1:54334
+==> Starting Serf agent...
+==> Failed to start the Serf agent: Error creating Serf: Failed to create memberlist: Could not set up network transport: failed to obtain an address: Failed to start TCP listener on "127.0.0.1" port 5001: listen tcp 127.0.0.1:5001: bind: address already in use
+    2024/06/24 09:34:21 [INFO] agent: joining: [127.0.0.1:5000 127.0.0.1:5001] replay: false
+    2024/06/24 09:34:21 [INFO] agent: joined: 2 nodes
+    2024/06/24 09:34:22 [INFO] agent: Received event: member-join
+    2024/06/24 09:34:22 [INFO] agent: Received event: member-join
+    2024/06/24 09:34:31 [INFO] agent.ipc: Accepted client: 127.0.0.1:36064
+    2024/06/24 09:35:02 [INFO] agent.ipc: Accepted client: 127.0.0.1:36072
+    2024/06/24 09:35:02 [INFO] agent.ipc: Graceful leave triggered
+    2024/06/24 09:35:02 [INFO] agent: requesting graceful leave from Serf
+    2024/06/24 09:35:02 [INFO] serf: EventMemberLeave: zna 127.0.0.1
+    2024/06/24 09:35:02 [INFO] serf: EventMemberLeave: zna 127.0.0.1
+    2024/06/24 09:35:03 [INFO] agent: Received event: member-leave
+    2024/06/24 09:35:03 [INFO] agent: Received event: member-leave
+    2024/06/24 09:35:04 [INFO] agent: requesting serf shutdown
+    2024/06/24 09:35:04 [INFO] agent: shutdown complete
+    2024/06/24 09:35:04 [WARN] agent: Serf shutdown detected, quitting
+==> Caught signal: terminated
+    2024/06/24 09:35:09 [INFO] agent: requesting serf shutdown
+    2024/06/24 09:35:09 [WARN] serf: Shutdown without a Leave
+    2024/06/24 09:35:09 [INFO] agent: shutdown complete
+    2024/06/24 09:35:09 [WARN] agent: Serf shutdown detected, quitting==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: 'zna'
+         Bind addr: '127.0.0.1:5000'
+                       RPC addr: '127.0.0.1:7373'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+
+==> Log data will now stream in as it occurs:
+
+    2024/06/24 09:35:18 [INFO] agent: Serf agent starting
+    2024/06/24 09:35:18 [INFO] serf: EventMemberJoin: zna 127.0.0.1
+    2024/06/24 09:35:18 [INFO] agent.ipc: Accepted client: 127.0.0.1:37872
+    2024/06/24 09:35:18 [INFO] agent: joining: [127.0.0.1:5000 127.0.0.1:5001] replay: false
+    2024/06/24 09:35:18 [INFO] agent: joined: 1 nodes
+==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: 'zna2'
+         Bind addr: '127.0.0.1:5001'
+                       RPC addr: '127.0.0.1:7374'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+
+==> Log data will now stream in as it occurs:
+
+    2024/06/24 09:35:18 [INFO] agent: Serf agent starting
+    2024/06/24 09:35:18 [INFO] serf: EventMemberJoin: zna2 127.0.0.1
+    2024/06/24 09:35:18 [INFO] agent.ipc: Accepted client: 127.0.0.1:35344
+    2024/06/24 09:35:19 [INFO] agent: joining: [127.0.0.1:5000 127.0.0.1:5001] replay: false
+    2024/06/24 09:35:19 [INFO] serf: EventMemberJoin: zna2 127.0.0.1
+    2024/06/24 09:35:19 [INFO] serf: EventMemberJoin: zna 127.0.0.1
+    2024/06/24 09:35:19 [INFO] agent: joined: 2 nodes
+    2024/06/24 09:35:20 [INFO] agent: Received event: member-join
+    2024/06/24 09:35:20 [INFO] agent: Received event: member-join
+    2024/06/24 09:37:42 [INFO] agent.ipc: Accepted client: 127.0.0.1:45322
+    2024/06/24 09:37:46 [INFO] agent.ipc: Accepted client: 127.0.0.1:45324
+    2024/06/24 09:37:46 [INFO] agent.ipc: Graceful leave triggered
+    2024/06/24 09:37:46 [INFO] agent: requesting graceful leave from Serf
+    2024/06/24 09:37:46 [INFO] serf: EventMemberLeave: zna 127.0.0.1
+    2024/06/24 09:37:46 [INFO] serf: EventMemberLeave: zna 127.0.0.1
+    2024/06/24 09:37:47 [INFO] agent: Received event: member-leave
+    2024/06/24 09:37:47 [INFO] agent: Received event: member-leave
+    2024/06/24 09:37:48 [INFO] agent: requesting serf shutdown
+    2024/06/24 09:37:48 [INFO] agent: shutdown complete
+    2024/06/24 09:37:48 [WARN] agent: Serf shutdown detected, quitting==> Caught signal: terminated
+    2024/06/24 09:37:53 [INFO] agent: requesting serf shutdown
+    2024/06/24 09:37:53 [WARN] serf: Shutdown without a Leave
+    2024/06/24 09:37:53 [INFO] agent: shutdown complete
+    2024/06/24 09:37:53 [WARN] agent: Serf shutdown detected, quitting==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: 'zna'
+         Bind addr: '127.0.0.1:5000'
+                       RPC addr: '127.0.0.1:7373'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+
+==> Log data will now stream in as it occurs:
+
+    2024/06/24 09:38:17 [INFO] agent: Serf agent starting
+    2024/06/24 09:38:17 [INFO] serf: EventMemberJoin: zna 127.0.0.1
+    2024/06/24 09:38:17 [INFO] agent.ipc: Accepted client: 127.0.0.1:47664
+    2024/06/24 09:38:17 [INFO] agent: joining: [127.0.0.1:5000 127.0.0.1:5001] replay: false
+    2024/06/24 09:38:17 [INFO] agent: joined: 1 nodes
+==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: 'zna2'
+         Bind addr: '127.0.0.1:5001'
+                       RPC addr: '127.0.0.1:7374'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+
+==> Log data will now stream in as it occurs:
+
+    2024/06/24 09:38:17 [INFO] agent: Serf agent starting
+    2024/06/24 09:38:17 [INFO] serf: EventMemberJoin: zna2 127.0.0.1
+    2024/06/24 09:38:17 [INFO] agent.ipc: Accepted client: 127.0.0.1:44080
+    2024/06/24 09:38:17 [INFO] agent: joining: [127.0.0.1:5000 127.0.0.1:5001] replay: false
+    2024/06/24 09:38:17 [INFO] serf: EventMemberJoin: zna2 127.0.0.1
+    2024/06/24 09:38:17 [INFO] serf: EventMemberJoin: zna 127.0.0.1
+    2024/06/24 09:38:17 [INFO] agent: joined: 2 nodes
+    2024/06/24 09:38:18 [INFO] agent: Received event: member-join
+    2024/06/24 09:38:18 [INFO] agent: Received event: member-join
+    2024/06/24 09:43:49 [INFO] agent.ipc: Accepted client: 127.0.0.1:54084
+==> Starting Serf agent...
+==> Failed to start the Serf agent: Error creating Serf: Failed to create memberlist: Could not set up network transport: failed to obtain an address: Failed to start TCP listener on "127.0.0.1" port 5000: listen tcp 127.0.0.1:5000: bind: address already in use
+    2024/06/24 09:43:49 [INFO] agent: joining: [127.0.0.1:5000 127.0.0.1:5001] replay: false
+    2024/06/24 09:43:49 [INFO] agent: joined: 2 nodes
+    2024/06/24 09:43:49 [INFO] agent.ipc: Accepted client: 127.0.0.1:44134
+==> Starting Serf agent...
+==> Failed to start the Serf agent: Error creating Serf: Failed to create memberlist: Could not set up network transport: failed to obtain an address: Failed to start TCP listener on "127.0.0.1" port 5001: listen tcp 127.0.0.1:5001: bind: address already in use
+    2024/06/24 09:43:49 [INFO] agent: joining: [127.0.0.1:5000 127.0.0.1:5001] replay: false
+    2024/06/24 09:43:49 [INFO] agent: joined: 2 nodes
+    2024/06/24 09:43:49 [INFO] agent.ipc: Graceful leave triggered
+    2024/06/24 09:43:49 [INFO] agent: requesting graceful leave from Serf
+    2024/06/24 09:43:50 [INFO] serf: EventMemberLeave: zna 127.0.0.1
+    2024/06/24 09:43:50 [INFO] serf: EventMemberLeave: zna 127.0.0.1
+    2024/06/24 09:43:51 [INFO] agent: Received event: member-leave
+    2024/06/24 09:43:51 [INFO] agent: Received event: member-leave
+    2024/06/24 09:43:52 [INFO] agent: requesting serf shutdown
+    2024/06/24 09:43:52 [INFO] agent: shutdown complete
+    2024/06/24 09:43:52 [WARN] agent: Serf shutdown detected, quitting==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: 'zna'
+         Bind addr: '127.0.0.1:5000'
+                       RPC addr: '127.0.0.1:7373'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+
+==> Log data will now stream in as it occurs:
+
+    2024/06/24 09:46:40 [INFO] agent: Serf agent starting
+    2024/06/24 09:46:40 [INFO] serf: EventMemberJoin: zna 127.0.0.1
+    2024/06/24 09:46:40 [INFO] agent.ipc: Accepted client: 127.0.0.1:56838
+    2024/06/24 09:46:40 [INFO] agent: joining: [127.0.0.1:5000 127.0.0.1:5001] replay: false
+    2024/06/24 09:46:40 [INFO] serf: EventMemberJoin: zna 127.0.0.1    2024/06/24 09:46:40 [INFO] serf: EventMemberJoin: zna2 127.0.0.1
+
+    2024/06/24 09:46:40 [INFO] agent: joined: 2 nodes
+    2024/06/24 09:46:40 [INFO] agent.ipc: Accepted client: 127.0.0.1:46888
+==> Starting Serf agent...
+==> Failed to start the Serf agent: Error creating Serf: Failed to create memberlist: Could not set up network transport: failed to obtain an address: Failed to start TCP listener on "127.0.0.1" port 5001: listen tcp 127.0.0.1:5001: bind: address already in use
+    2024/06/24 09:46:41 [INFO] agent: joining: [127.0.0.1:5000 127.0.0.1:5001] replay: false
+    2024/06/24 09:46:41 [INFO] agent: joined: 2 nodes
+    2024/06/24 09:46:41 [INFO] agent.ipc: Graceful leave triggered
+    2024/06/24 09:46:41 [INFO] agent: requesting graceful leave from Serf
+    2024/06/24 09:46:41 [INFO] serf: EventMemberLeave: zna 127.0.0.1
+    2024/06/24 09:46:41 [INFO] agent: Received event: member-join
+    2024/06/24 09:46:41 [INFO] serf: EventMemberLeave: zna 127.0.0.1
+    2024/06/24 09:46:42 [INFO] agent: Received event: member-join
+    2024/06/24 09:46:42 [INFO] agent: Received event: member-leave
+    2024/06/24 09:46:42 [ERR] agent.ipc: Failed to stream event to ipc.client: 127.0.0.1:56838: write tcp 127.0.0.1:7373->127.0.0.1:56838: write: broken pipe
+    2024/06/24 09:46:42 [INFO] agent: Received event: member-leave
+    2024/06/24 09:46:43 [INFO] agent: requesting serf shutdown
+    2024/06/24 09:46:43 [INFO] agent: shutdown complete
+    2024/06/24 09:46:43 [ERR] agent.ipc: Failed to evaluate request: write tcp 127.0.0.1:7373->127.0.0.1:56838: write: broken pipe==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: 'zna'
+         Bind addr: '127.0.0.1:5000'
+                       RPC addr: '127.0.0.1:7373'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+
+==> Log data will now stream in as it occurs:
+
+    2024/06/24 09:47:35 [INFO] agent: Serf agent starting
+    2024/06/24 09:47:35 [INFO] serf: EventMemberJoin: zna 127.0.0.1
+    2024/06/24 09:47:35 [INFO] agent.ipc: Accepted client: 127.0.0.1:58818
+    2024/06/24 09:47:35 [INFO] agent: joining: [127.0.0.1:5000 127.0.0.1:5001] replay: false
+    2024/06/24 09:47:35 [INFO] serf: EventMemberJoin: zna 127.0.0.1    2024/06/24 09:47:35 [INFO] serf: EventMemberJoin: zna2 127.0.0.1
+
+    2024/06/24 09:47:35 [INFO] agent: joined: 2 nodes
+    2024/06/24 09:47:35 [INFO] agent.ipc: Accepted client: 127.0.0.1:48868
+==> Starting Serf agent...
+==> Failed to start the Serf agent: Error creating Serf: Failed to create memberlist: Could not set up network transport: failed to obtain an address: Failed to start TCP listener on "127.0.0.1" port 5001: listen tcp 127.0.0.1:5001: bind: address already in use
+    2024/06/24 09:47:35 [INFO] agent: joining: [127.0.0.1:5000 127.0.0.1:5001] replay: false
+    2024/06/24 09:47:35 [INFO] agent: joined: 2 nodes
+    2024/06/24 09:47:35 [INFO] agent.ipc: Graceful leave triggered
+    2024/06/24 09:47:35 [INFO] agent: requesting graceful leave from Serf
+    2024/06/24 09:47:36 [INFO] serf: EventMemberLeave: zna 127.0.0.1
+    2024/06/24 09:47:36 [INFO] agent: Received event: member-join
+    2024/06/24 09:47:36 [INFO] serf: EventMemberLeave: zna 127.0.0.1
+    2024/06/24 09:47:37 [INFO] agent: Received event: member-leave
+    2024/06/24 09:47:37 [INFO] agent: Received event: member-join
+    2024/06/24 09:47:37 [ERR] agent.ipc: Failed to stream event to ipc.client: 127.0.0.1:58818: write tcp 127.0.0.1:7373->127.0.0.1:58818: write: broken pipe
+    2024/06/24 09:47:37 [INFO] agent: Received event: member-leave
+    2024/06/24 09:47:38 [INFO] agent: requesting serf shutdown
+    2024/06/24 09:47:38 [INFO] agent: shutdown complete
+    2024/06/24 09:47:38 [ERR] agent.ipc: Failed to evaluate request: write tcp 127.0.0.1:7373->127.0.0.1:58818: write: broken pipe
+==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: 'zna'
+         Bind addr: '127.0.0.1:5000'
+                       RPC addr: '127.0.0.1:7373'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+
+==> Log data will now stream in as it occurs:
+
+    2024/06/24 09:48:34 [INFO] agent: Serf agent starting
+    2024/06/24 09:48:34 [INFO] serf: EventMemberJoin: zna 127.0.0.1
+    2024/06/24 09:48:34 [INFO] agent.ipc: Accepted client: 127.0.0.1:33478
+    2024/06/24 09:48:34 [INFO] agent: joining: [127.0.0.1:5000 127.0.0.1:5001] replay: false
+    2024/06/24 09:48:34 [INFO] serf: EventMemberJoin: zna 127.0.0.1    2024/06/24 09:48:34 [INFO] serf: EventMemberJoin: zna2 127.0.0.1
+
+    2024/06/24 09:48:34 [INFO] agent: joined: 2 nodes
+    2024/06/24 09:48:34 [INFO] agent.ipc: Accepted client: 127.0.0.1:51760
+==> Starting Serf agent...
+==> Failed to start the Serf agent: Error creating Serf: Failed to create memberlist: Could not set up network transport: failed to obtain an address: Failed to start TCP listener on "127.0.0.1" port 5001: listen tcp 127.0.0.1:5001: bind: address already in use
+    2024/06/24 09:48:34 [INFO] agent: joining: [127.0.0.1:5000 127.0.0.1:5001] replay: false
+    2024/06/24 09:48:34 [INFO] agent: joined: 2 nodes
+    2024/06/24 09:48:35 [INFO] agent.ipc: Graceful leave triggered
+    2024/06/24 09:48:35 [INFO] agent: requesting graceful leave from Serf
+    2024/06/24 09:48:35 [INFO] serf: EventMemberLeave: zna 127.0.0.1
+    2024/06/24 09:48:35 [INFO] agent: Received event: member-join
+    2024/06/24 09:48:35 [INFO] serf: EventMemberLeave: zna 127.0.0.1
+    2024/06/24 09:48:36 [INFO] agent: Received event: member-join
+    2024/06/24 09:48:36 [INFO] agent: Received event: member-leave
+    2024/06/24 09:48:36 [ERR] agent.ipc: Failed to stream event to ipc.client: 127.0.0.1:33478: write tcp 127.0.0.1:7373->127.0.0.1:33478: write: broken pipe
+    2024/06/24 09:48:36 [INFO] agent: Received event: member-leave
+    2024/06/24 09:48:37 [INFO] agent: requesting serf shutdown
+    2024/06/24 09:48:37 [INFO] agent: shutdown complete
+    2024/06/24 09:48:37 [WARN] agent: Serf shutdown detected, quitting==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: 'zna'
+         Bind addr: '127.0.0.1:5000'
+                       RPC addr: '127.0.0.1:7373'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+
+==> Log data will now stream in as it occurs:
+
+    2024/06/24 09:49:47 [INFO] agent: Serf agent starting
+    2024/06/24 09:49:47 [INFO] serf: EventMemberJoin: zna 127.0.0.1
+    2024/06/24 09:49:47 [INFO] agent.ipc: Accepted client: 127.0.0.1:35686
+    2024/06/24 09:49:47 [INFO] agent: joining: [127.0.0.1:5000 127.0.0.1:5001] replay: false
+    2024/06/24 09:49:47 [INFO] serf: EventMemberJoin: zna 127.0.0.1    2024/06/24 09:49:47 [INFO] serf: EventMemberJoin: zna2 127.0.0.1
+
+    2024/06/24 09:49:47 [INFO] agent: joined: 2 nodes
+    2024/06/24 09:49:47 [INFO] agent.ipc: Accepted client: 127.0.0.1:53968
+==> Starting Serf agent...
+==> Failed to start the Serf agent: Error creating Serf: Failed to create memberlist: Could not set up network transport: failed to obtain an address: Failed to start TCP listener on "127.0.0.1" port 5001: listen tcp 127.0.0.1:5001: bind: address already in use
+    2024/06/24 09:49:48 [INFO] agent: joining: [127.0.0.1:5000 127.0.0.1:5001] replay: false
+    2024/06/24 09:49:48 [INFO] agent: joined: 2 nodes
+    2024/06/24 09:49:48 [INFO] agent.ipc: Graceful leave triggered
+    2024/06/24 09:49:48 [INFO] agent: requesting graceful leave from Serf
+    2024/06/24 09:49:48 [INFO] serf: EventMemberLeave: zna 127.0.0.1
+    2024/06/24 09:49:48 [INFO] serf: EventMemberLeave: zna 127.0.0.1
+    2024/06/24 09:49:49 [INFO] agent: Received event: member-join
+    2024/06/24 09:49:49 [INFO] agent: Received event: member-leave
+    2024/06/24 09:49:50 [INFO] agent: requesting serf shutdown
+    2024/06/24 09:49:50 [INFO] agent: shutdown complete
+    2024/06/24 09:49:50 [WARN] agent: Serf shutdown detected, quitting==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: 'zna'
+         Bind addr: '127.0.0.1:5000'
+                       RPC addr: '127.0.0.1:7373'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+
+==> Log data will now stream in as it occurs:
+
+    2024/06/24 09:51:12 [INFO] agent: Serf agent starting
+    2024/06/24 09:51:12 [INFO] serf: EventMemberJoin: zna 127.0.0.1
+    2024/06/24 09:51:12 [INFO] agent.ipc: Accepted client: 127.0.0.1:37788
+    2024/06/24 09:51:12 [INFO] agent: joining: [127.0.0.1:5000 127.0.0.1:5001] replay: false
+    2024/06/24 09:51:12 [INFO] serf: EventMemberJoin: zna 127.0.0.1    2024/06/24 09:51:12 [INFO] serf: EventMemberJoin: zna2 127.0.0.1
+
+    2024/06/24 09:51:12 [INFO] agent: joined: 2 nodes
+    2024/06/24 09:51:12 [INFO] agent.ipc: Accepted client: 127.0.0.1:56070
+==> Starting Serf agent...
+==> Failed to start the Serf agent: Error creating Serf: Failed to create memberlist: Could not set up network transport: failed to obtain an address: Failed to start TCP listener on "127.0.0.1" port 5001: listen tcp 127.0.0.1:5001: bind: address already in use
+    2024/06/24 09:51:12 [INFO] agent: joining: [127.0.0.1:5000 127.0.0.1:5001] replay: false
+    2024/06/24 09:51:12 [INFO] agent: joined: 2 nodes
+    2024/06/24 09:51:12 [INFO] agent.ipc: Graceful leave triggered
+    2024/06/24 09:51:12 [INFO] agent: requesting graceful leave from Serf
+    2024/06/24 09:51:13 [INFO] serf: EventMemberLeave: zna 127.0.0.1
+    2024/06/24 09:51:13 [INFO] agent: Received event: member-join
+    2024/06/24 09:51:13 [INFO] serf: EventMemberLeave: zna 127.0.0.1
+    2024/06/24 09:51:14 [INFO] agent: Received event: member-leave
+    2024/06/24 09:51:14 [INFO] agent: Received event: member-join
+    2024/06/24 09:51:14 [ERR] agent.ipc: Failed to stream event to ipc.client: 127.0.0.1:37788: write tcp 127.0.0.1:7373->127.0.0.1:37788: write: broken pipe
+    2024/06/24 09:51:14 [INFO] agent: Received event: member-leave
+    2024/06/24 09:51:15 [INFO] agent: requesting serf shutdown
+    2024/06/24 09:51:15 [INFO] agent: shutdown complete
+    2024/06/24 09:51:15 [ERR] agent.ipc: Failed to evaluate request: write tcp 127.0.0.1:7373->127.0.0.1:37788: write: broken pipe==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: 'zna'
+         Bind addr: '127.0.0.1:5000'
+                       RPC addr: '127.0.0.1:7373'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+
+==> Log data will now stream in as it occurs:
+
+    2024/06/24 09:52:14 [INFO] agent: Serf agent starting
+    2024/06/24 09:52:14 [INFO] serf: EventMemberJoin: zna 127.0.0.1
+    2024/06/24 09:52:14 [INFO] agent.ipc: Accepted client: 127.0.0.1:39992
+    2024/06/24 09:52:14 [INFO] agent: joining: [127.0.0.1:5000 127.0.0.1:5001] replay: false
+    2024/06/24 09:52:14 [INFO] serf: EventMemberJoin: zna 127.0.0.1    2024/06/24 09:52:14 [INFO] serf: EventMemberJoin: zna2 127.0.0.1
+
+    2024/06/24 09:52:14 [INFO] agent: joined: 2 nodes
+    2024/06/24 09:52:14 [INFO] agent.ipc: Accepted client: 127.0.0.1:58274
+==> Starting Serf agent...
+==> Failed to start the Serf agent: Error creating Serf: Failed to create memberlist: Could not set up network transport: failed to obtain an address: Failed to start TCP listener on "127.0.0.1" port 5001: listen tcp 127.0.0.1:5001: bind: address already in use
+    2024/06/24 09:52:14 [INFO] agent: joining: [127.0.0.1:5000 127.0.0.1:5001] replay: false
+    2024/06/24 09:52:14 [INFO] agent: joined: 2 nodes
+    2024/06/24 09:52:14 [INFO] agent.ipc: Graceful leave triggered
+    2024/06/24 09:52:14 [INFO] agent: requesting graceful leave from Serf
+    2024/06/24 09:52:15 [INFO] serf: EventMemberLeave: zna 127.0.0.1
+    2024/06/24 09:52:15 [INFO] serf: EventMemberLeave: zna 127.0.0.1
+    2024/06/24 09:52:16 [INFO] agent: Received event: member-leave
+    2024/06/24 09:52:16 [INFO] agent: Received event: member-join
+    2024/06/24 09:52:16 [INFO] agent: requesting serf shutdown
+    2024/06/24 09:52:16 [INFO] agent: shutdown complete
+    2024/06/24 09:52:16 [WARN] agent: Serf shutdown detected, quitting==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: 'zna'
+         Bind addr: '127.0.0.1:5000'
+                       RPC addr: '127.0.0.1:7373'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+
+==> Log data will now stream in as it occurs:
+
+    2024/06/24 09:52:41 [INFO] agent: Serf agent starting
+    2024/06/24 09:52:41 [INFO] serf: EventMemberJoin: zna 127.0.0.1
+    2024/06/24 09:52:41 [INFO] agent.ipc: Accepted client: 127.0.0.1:42076
+    2024/06/24 09:52:41 [INFO] agent: joining: [127.0.0.1:5000 127.0.0.1:5001] replay: false
+    2024/06/24 09:52:41 [WARN] memberlist: Refuting a suspect message (from: zna)
+    2024/06/24 09:52:41 [INFO] serf: EventMemberJoin: zna2 127.0.0.1
+    2024/06/24 09:52:41 [INFO] agent: joined: 2 nodes
+    2024/06/24 09:52:41 [INFO] agent.ipc: Accepted client: 127.0.0.1:60358
+==> Starting Serf agent...
+==> Failed to start the Serf agent: Error creating Serf: Failed to create memberlist: Could not set up network transport: failed to obtain an address: Failed to start TCP listener on "127.0.0.1" port 5001: listen tcp 127.0.0.1:5001: bind: address already in use
+    2024/06/24 09:52:41 [INFO] serf: EventMemberJoin: zna 127.0.0.1
+    2024/06/24 09:52:41 [INFO] agent: joining: [127.0.0.1:5000 127.0.0.1:5001] replay: false
+    2024/06/24 09:52:41 [INFO] agent: joined: 2 nodes
+    2024/06/24 09:52:41 [INFO] agent.ipc: Graceful leave triggered
+    2024/06/24 09:52:41 [INFO] agent: requesting graceful leave from Serf
+    2024/06/24 09:52:42 [INFO] serf: EventMemberLeave: zna 127.0.0.1
+    2024/06/24 09:52:42 [INFO] serf: EventMemberLeave: zna 127.0.0.1
+    2024/06/24 09:52:43 [INFO] agent: Received event: member-leave
+    2024/06/24 09:52:43 [INFO] agent: Received event: member-join
+    2024/06/24 09:52:43 [INFO] agent: requesting serf shutdown
+    2024/06/24 09:52:43 [INFO] agent: shutdown complete
+    2024/06/24 09:52:43 [WARN] agent: Serf shutdown detected, quitting==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: 'zna'
+         Bind addr: '127.0.0.1:5000'
+                       RPC addr: '127.0.0.1:7373'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+
+==> Log data will now stream in as it occurs:
+
+    2024/06/24 09:52:58 [INFO] agent: Serf agent starting
+    2024/06/24 09:52:58 [INFO] serf: EventMemberJoin: zna 127.0.0.1
+    2024/06/24 09:52:58 [INFO] agent.ipc: Accepted client: 127.0.0.1:43830
+    2024/06/24 09:52:58 [INFO] agent: joining: [127.0.0.1:5000 127.0.0.1:5001] replay: false
+    2024/06/24 09:52:58 [INFO] serf: EventMemberJoin: zna2 127.0.0.1
+    2024/06/24 09:52:58 [WARN] memberlist: Refuting a suspect message (from: zna)
+    2024/06/24 09:52:58 [INFO] agent: joined: 2 nodes
+    2024/06/24 09:52:58 [INFO] agent.ipc: Accepted client: 127.0.0.1:33880
+==> Starting Serf agent...
+==> Failed to start the Serf agent: Error creating Serf: Failed to create memberlist: Could not set up network transport: failed to obtain an address: Failed to start TCP listener on "127.0.0.1" port 5001: listen tcp 127.0.0.1:5001: bind: address already in use
+    2024/06/24 09:52:58 [INFO] serf: EventMemberJoin: zna 127.0.0.1
+    2024/06/24 09:52:58 [INFO] agent: joining: [127.0.0.1:5000 127.0.0.1:5001] replay: false
+    2024/06/24 09:52:58 [INFO] agent: joined: 2 nodes
+    2024/06/24 09:52:58 [INFO] agent.ipc: Graceful leave triggered
+    2024/06/24 09:52:58 [INFO] agent: requesting graceful leave from Serf
+    2024/06/24 09:52:59 [INFO] serf: EventMemberLeave: zna 127.0.0.1
+    2024/06/24 09:52:59 [INFO] serf: EventMemberLeave: zna 127.0.0.1
+==> Caught signal: interrupt
+==> Gracefully shutting down agent...
+    2024/06/24 09:52:59 [INFO] agent: requesting graceful leave from Serf
+==> Error: Leave already in progress
+    2024/06/24 09:53:00 [INFO] agent: Received event: member-leave
+    2024/06/24 09:53:00 [INFO] agent: Received event: member-join
+    2024/06/24 09:53:00 [ERR] agent.ipc: Failed to stream event to ipc.client: 127.0.0.1:43830: write tcp 127.0.0.1:7373->127.0.0.1:43830: write: broken pipe
+    2024/06/24 09:53:01 [INFO] agent: requesting serf shutdown
+    2024/06/24 09:53:01 [INFO] agent: shutdown complete
+    2024/06/24 09:53:01 [ERR] agent.ipc: Failed to evaluate request: write tcp 127.0.0.1:7373->127.0.0.1:43830: write: broken pipe
+    2024/06/24 09:53:01 [WARN] agent: Serf shutdown detected, quitting
+==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: 'zna'
+         Bind addr: '127.0.0.1:5000'
+                       RPC addr: '127.0.0.1:7373'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+
+==> Log data will now stream in as it occurs:
+
+    2024/06/24 09:53:21 [INFO] agent: Serf agent starting
+    2024/06/24 09:53:21 [INFO] serf: EventMemberJoin: zna 127.0.0.1
+    2024/06/24 09:53:21 [INFO] agent.ipc: Accepted client: 127.0.0.1:46036
+    2024/06/24 09:53:21 [INFO] agent: joining: [127.0.0.1:5000 127.0.0.1:5001] replay: false
+    2024/06/24 09:53:21 [WARN] memberlist: Refuting a suspect message (from: zna)
+    2024/06/24 09:53:21 [INFO] serf: EventMemberJoin: zna2 127.0.0.1
+    2024/06/24 09:53:21 [INFO] agent: joined: 2 nodes
+    2024/06/24 09:53:21 [INFO] agent.ipc: Accepted client: 127.0.0.1:36086
+==> Starting Serf agent...
+==> Failed to start the Serf agent: Error creating Serf: Failed to create memberlist: Could not set up network transport: failed to obtain an address: Failed to start TCP listener on "127.0.0.1" port 5001: listen tcp 127.0.0.1:5001: bind: address already in use
+    2024/06/24 09:53:21 [INFO] serf: EventMemberJoin: zna 127.0.0.1
+    2024/06/24 09:53:22 [INFO] agent: joining: [127.0.0.1:5000 127.0.0.1:5001] replay: false
+    2024/06/24 09:53:22 [INFO] agent: joined: 2 nodes
+    2024/06/24 09:53:22 [INFO] agent: Received event: member-join
+    2024/06/24 09:53:22 [INFO] agent: Received event: member-join
+    2024/06/24 09:55:32 [INFO] agent.ipc: Accepted client: 127.0.0.1:46062
+    2024/06/24 09:55:34 [INFO] agent.ipc: Accepted client: 127.0.0.1:46064
+==> Starting Serf agent...
+==> Failed to start the Serf agent: Error creating Serf: Failed to create memberlist: Could not set up network transport: failed to obtain an address: Failed to start TCP listener on "127.0.0.1" port 5000: listen tcp 127.0.0.1:5000: bind: address already in use
+    2024/06/24 09:55:34 [INFO] agent: joining: [127.0.0.1:5000 127.0.0.1:5001] replay: false
+    2024/06/24 09:55:34 [INFO] agent: joined: 2 nodes
+    2024/06/24 09:55:34 [INFO] agent.ipc: Accepted client: 127.0.0.1:36114
+==> Starting Serf agent...
+==> Failed to start the Serf agent: Error creating Serf: Failed to create memberlist: Could not set up network transport: failed to obtain an address: Failed to start TCP listener on "127.0.0.1" port 5001: listen tcp 127.0.0.1:5001: bind: address already in use
+    2024/06/24 09:55:34 [INFO] agent: joining: [127.0.0.1:5000 127.0.0.1:5001] replay: false
+    2024/06/24 09:55:34 [INFO] agent: joined: 2 nodes
+    2024/06/24 09:55:56 [INFO] agent.ipc: Accepted client: 127.0.0.1:46078
+    2024/06/24 09:55:56 [INFO] agent.ipc: Graceful leave triggered
+    2024/06/24 09:55:56 [INFO] agent: requesting graceful leave from Serf
+    2024/06/24 09:55:57 [INFO] serf: EventMemberLeave: zna 127.0.0.1
+    2024/06/24 09:55:57 [INFO] serf: EventMemberLeave: zna 127.0.0.1
+    2024/06/24 09:55:58 [INFO] agent: Received event: member-leave
+    2024/06/24 09:55:58 [INFO] agent: Received event: member-leave
+    2024/06/24 09:55:58 [INFO] agent: requesting serf shutdown
+    2024/06/24 09:55:58 [INFO] agent: shutdown complete
+    2024/06/24 09:55:58 [WARN] agent: Serf shutdown detected, quitting==> Caught signal: terminated
+    2024/06/24 09:56:06 [INFO] agent: requesting serf shutdown
+    2024/06/24 09:56:06 [WARN] serf: Shutdown without a Leave
+    2024/06/24 09:56:06 [INFO] agent: shutdown complete
+==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: 'zna'
+         Bind addr: '127.0.0.1:5000'
+                       RPC addr: '127.0.0.1:7373'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+
+==> Log data will now stream in as it occurs:
+
+    2024/06/24 09:56:24 [INFO] agent: Serf agent starting
+    2024/06/24 09:56:24 [INFO] serf: EventMemberJoin: zna 127.0.0.1
+    2024/06/24 09:56:24 [INFO] agent.ipc: Accepted client: 127.0.0.1:48452
+    2024/06/24 09:56:24 [INFO] agent: joining: [127.0.0.1:5000 127.0.0.1:5001] replay: false
+    2024/06/24 09:56:24 [INFO] agent: joined: 1 nodes
+==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: 'zna2'
+         Bind addr: '127.0.0.1:5001'
+                       RPC addr: '127.0.0.1:7374'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+
+==> Log data will now stream in as it occurs:
+
+    2024/06/24 09:56:25 [INFO] agent: Serf agent starting
+    2024/06/24 09:56:25 [INFO] serf: EventMemberJoin: zna2 127.0.0.1
+    2024/06/24 09:56:25 [INFO] agent.ipc: Accepted client: 127.0.0.1:40754
+    2024/06/24 09:56:25 [INFO] agent: joining: [127.0.0.1:5000 127.0.0.1:5001] replay: false
+    2024/06/24 09:56:25 [INFO] serf: EventMemberJoin: zna2 127.0.0.1
+    2024/06/24 09:56:25 [INFO] serf: EventMemberJoin: zna 127.0.0.1
+    2024/06/24 09:56:25 [INFO] agent: joined: 2 nodes
+    2024/06/24 09:56:25 [INFO] agent.ipc: Graceful leave triggered
+    2024/06/24 09:56:25 [INFO] agent: requesting graceful leave from Serf
+    2024/06/24 09:56:25 [INFO] serf: EventMemberLeave: zna 127.0.0.1
+    2024/06/24 09:56:26 [INFO] serf: EventMemberLeave: zna 127.0.0.1
+    2024/06/24 09:56:26 [INFO] agent: Received event: member-join
+    2024/06/24 09:56:26 [INFO] agent: Received event: member-leave
+    2024/06/24 09:56:27 [INFO] agent: Received event: member-join
+    2024/06/24 09:56:27 [INFO] agent: Received event: member-leave
+    2024/06/24 09:56:27 [INFO] agent: requesting serf shutdown
+    2024/06/24 09:56:27 [INFO] agent: shutdown complete
+    2024/06/24 09:56:27 [WARN] agent: Serf shutdown detected, quitting==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: 'zna'
+         Bind addr: '127.0.0.1:5000'
+                       RPC addr: '127.0.0.1:7373'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+
+==> Log data will now stream in as it occurs:
+
+    2024/06/24 09:59:25 [INFO] agent: Serf agent starting
+    2024/06/24 09:59:25 [INFO] serf: EventMemberJoin: zna 127.0.0.1
+    2024/06/24 09:59:25 [INFO] agent.ipc: Accepted client: 127.0.0.1:54650
+    2024/06/24 09:59:25 [INFO] agent: joining: [127.0.0.1:5000 127.0.0.1:5001] replay: false
+    2024/06/24 09:59:25 [INFO] serf: EventMemberJoin: zna 127.0.0.1    2024/06/24 09:59:25 [INFO] serf: EventMemberJoin: zna2 127.0.0.1
+
+    2024/06/24 09:59:25 [INFO] agent: joined: 2 nodes
+    2024/06/24 09:59:25 [INFO] agent.ipc: Accepted client: 127.0.0.1:44700
+==> Starting Serf agent...
+==> Failed to start the Serf agent: Error creating Serf: Failed to create memberlist: Could not set up network transport: failed to obtain an address: Failed to start TCP listener on "127.0.0.1" port 5001: listen tcp 127.0.0.1:5001: bind: address already in use
+    2024/06/24 09:59:25 [INFO] agent: joining: [127.0.0.1:5000 127.0.0.1:5001] replay: false
+    2024/06/24 09:59:25 [INFO] agent: joined: 2 nodes
+    2024/06/24 09:59:25 [INFO] agent.ipc: Graceful leave triggered
+    2024/06/24 09:59:25 [INFO] agent: requesting graceful leave from Serf
+    2024/06/24 09:59:26 [INFO] serf: EventMemberLeave: zna 127.0.0.1
+    2024/06/24 09:59:26 [INFO] serf: EventMemberLeave: zna 127.0.0.1
+    2024/06/24 09:59:27 [INFO] agent: Received event: member-leave
+    2024/06/24 09:59:27 [INFO] agent: Received event: member-join
+    2024/06/24 09:59:27 [INFO] agent: requesting serf shutdown
+    2024/06/24 09:59:27 [INFO] agent: shutdown complete
+    2024/06/24 09:59:27 [WARN] agent: Serf shutdown detected, quitting==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: 'zna'
+         Bind addr: '127.0.0.1:5000'
+                       RPC addr: '127.0.0.1:7373'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+
+==> Log data will now stream in as it occurs:
+
+    2024/06/24 10:00:26 [INFO] agent: Serf agent starting
+    2024/06/24 10:00:26 [INFO] serf: EventMemberJoin: zna 127.0.0.1
+    2024/06/24 10:00:26 [INFO] agent.ipc: Accepted client: 127.0.0.1:58738
+    2024/06/24 10:00:26 [INFO] agent: joining: [127.0.0.1:5001] replay: false
+    2024/06/24 10:00:26 [INFO] serf: EventMemberJoin: zna 127.0.0.1    2024/06/24 10:00:26 [INFO] serf: EventMemberJoin: zna2 127.0.0.1
+
+    2024/06/24 10:00:26 [INFO] agent: joined: 1 nodes
+    2024/06/24 10:00:26 [INFO] agent.ipc: Accepted client: 127.0.0.1:48786
+==> Starting Serf agent...
+==> Failed to start the Serf agent: Error creating Serf: Failed to create memberlist: Could not set up network transport: failed to obtain an address: Failed to start TCP listener on "127.0.0.1" port 5001: listen tcp 127.0.0.1:5001: bind: address already in use
+    2024/06/24 10:00:26 [INFO] agent: joining: [127.0.0.1:5001] replay: false
+    2024/06/24 10:00:26 [INFO] agent: joined: 1 nodes
+    2024/06/24 10:00:26 [INFO] agent.ipc: Graceful leave triggered
+    2024/06/24 10:00:26 [INFO] agent: requesting graceful leave from Serf
+    2024/06/24 10:00:27 [INFO] serf: EventMemberLeave: zna 127.0.0.1
+    2024/06/24 10:00:27 [INFO] agent: Received event: member-join
+    2024/06/24 10:00:27 [INFO] serf: EventMemberLeave: zna 127.0.0.1
+    2024/06/24 10:00:28 [INFO] agent: Received event: member-join
+    2024/06/24 10:00:28 [INFO] agent: Received event: member-leave
+    2024/06/24 10:00:28 [ERR] agent.ipc: Failed to stream event to ipc.client: 127.0.0.1:58738: write tcp 127.0.0.1:7373->127.0.0.1:58738: write: broken pipe
+    2024/06/24 10:00:28 [INFO] agent: Received event: member-leave
+    2024/06/24 10:00:29 [INFO] agent: requesting serf shutdown
+    2024/06/24 10:00:29 [INFO] agent: shutdown complete
+    2024/06/24 10:00:29 [ERR] agent.ipc: Failed to evaluate request: write tcp 127.0.0.1:7373->127.0.0.1:58738: write: broken pipe==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: 'zna'
+         Bind addr: '127.0.0.1:5000'
+                       RPC addr: '127.0.0.1:7373'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+
+==> Log data will now stream in as it occurs:
+
+    2024/06/24 10:01:30 [INFO] agent: Serf agent starting
+    2024/06/24 10:01:30 [INFO] serf: EventMemberJoin: zna 127.0.0.1
+    2024/06/24 10:01:30 [INFO] agent.ipc: Accepted client: 127.0.0.1:60972
+    2024/06/24 10:01:30 [INFO] agent: joining: [127.0.0.1:5001] replay: false
+    2024/06/24 10:01:30 [INFO] serf: EventMemberJoin: zna 127.0.0.1
+    2024/06/24 10:01:30 [INFO] serf: EventMemberJoin: zna2 127.0.0.1
+    2024/06/24 10:01:30 [INFO] agent: joined: 1 nodes
+    2024/06/24 10:01:30 [INFO] agent.ipc: Accepted client: 127.0.0.1:51020
+==> Starting Serf agent...
+==> Failed to start the Serf agent: Error creating Serf: Failed to create memberlist: Could not set up network transport: failed to obtain an address: Failed to start TCP listener on "127.0.0.1" port 5001: listen tcp 127.0.0.1:5001: bind: address already in use
+    2024/06/24 10:01:30 [INFO] agent: joining: [127.0.0.1:5001] replay: false
+    2024/06/24 10:01:30 [INFO] agent: joined: 1 nodes
+    2024/06/24 10:01:30 [INFO] agent.ipc: Graceful leave triggered
+    2024/06/24 10:01:30 [INFO] agent: requesting graceful leave from Serf
+    2024/06/24 10:01:31 [INFO] serf: EventMemberLeave: zna 127.0.0.1
+    2024/06/24 10:01:31 [INFO] agent: Received event: member-join
+    2024/06/24 10:01:31 [INFO] serf: EventMemberLeave: zna 127.0.0.1
+    2024/06/24 10:01:32 [INFO] agent: Received event: member-leave
+    2024/06/24 10:01:32 [INFO] agent: Received event: member-join
+    2024/06/24 10:01:32 [ERR] agent.ipc: Failed to stream event to ipc.client: 127.0.0.1:60972: write tcp 127.0.0.1:7373->127.0.0.1:60972: write: broken pipe
+    2024/06/24 10:01:32 [INFO] agent: Received event: member-leave
+    2024/06/24 10:01:33 [INFO] agent: requesting serf shutdown
+    2024/06/24 10:01:33 [INFO] agent: shutdown complete
+    2024/06/24 10:01:33 [ERR] agent.ipc: Failed to evaluate request: write tcp 127.0.0.1:7373->127.0.0.1:60972: write: broken pipe==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: 'zna'
+         Bind addr: '127.0.0.1:7373'
+                       RPC addr: '127.0.0.1:5000'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+
+==> Log data will now stream in as it occurs:
+
+    2024/06/24 10:02:25 [INFO] agent: Serf agent starting
+    2024/06/24 10:02:25 [INFO] serf: EventMemberJoin: zna 127.0.0.1
+    2024/06/24 10:02:25 [INFO] agent.ipc: Accepted client: 127.0.0.1:48514
+    2024/06/24 10:02:26 [INFO] agent: Received event: member-join
+    2024/06/24 10:02:30 [ERR] memberlist: Received invalid msgType (130) from=127.0.0.1:35344
+    2024/06/24 10:02:35 [ERR] memberlist: Received invalid msgType (130) from=127.0.0.1:35346
+==> Caught signal: terminated
+    2024/06/24 10:02:43 [INFO] agent: requesting serf shutdown
+    2024/06/24 10:02:43 [WARN] serf: Shutdown without a Leave
+    2024/06/24 10:02:43 [INFO] agent: shutdown complete
+    2024/06/24 10:02:43 [WARN] agent: Serf shutdown detected, quitting==> Caught signal: terminated
+    2024/06/24 10:02:47 [INFO] agent: requesting serf shutdown
+    2024/06/24 10:02:47 [WARN] serf: Shutdown without a Leave
+    2024/06/24 10:02:47 [INFO] agent: shutdown complete
+==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: 'zna'
+         Bind addr: '127.0.0.1:7373'
+                       RPC addr: '127.0.0.1:5000'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+
+==> Log data will now stream in as it occurs:
+
+    2024/06/24 10:02:51 [INFO] agent: Serf agent starting
+    2024/06/24 10:02:51 [INFO] serf: EventMemberJoin: zna 127.0.0.1
+    2024/06/24 10:02:51 [INFO] agent.ipc: Accepted client: 127.0.0.1:50612
+    2024/06/24 10:02:52 [INFO] agent: Received event: member-join
+==> Caught signal: terminated
+    2024/06/24 10:03:12 [INFO] agent: requesting serf shutdown
+    2024/06/24 10:03:12 [WARN] serf: Shutdown without a Leave
+    2024/06/24 10:03:12 [INFO] agent: shutdown complete
+==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: 'zna'
+         Bind addr: '127.0.0.1:5000'
+                       RPC addr: '127.0.0.1:7373'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+
+==> Log data will now stream in as it occurs:
+
+    2024/06/24 10:05:17 [INFO] agent: Serf agent starting
+    2024/06/24 10:05:17 [INFO] serf: EventMemberJoin: zna 127.0.0.1
+    2024/06/24 10:05:17 [INFO] agent.ipc: Accepted client: 127.0.0.1:39798
+    2024/06/24 10:05:17 [INFO] agent: joining: [127.0.0.1:5001] replay: false
+    2024/06/24 10:05:17 [WARN] agent: error joining: 1 error occurred:
+	* Failed to join 127.0.0.1: dial tcp 127.0.0.1:5001: connect: connection refused
+
+==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: 'zna2'
+         Bind addr: '127.0.0.1:5001'
+                       RPC addr: '127.0.0.1:7374'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+
+==> Log data will now stream in as it occurs:
+
+    2024/06/24 10:05:17 [INFO] agent: Serf agent starting
+    2024/06/24 10:05:17 [INFO] serf: EventMemberJoin: zna2 127.0.0.1
+    2024/06/24 10:05:17 [INFO] agent.ipc: Accepted client: 127.0.0.1:60534
+    2024/06/24 10:05:17 [INFO] agent: joining: [127.0.0.1:5001] replay: false
+    2024/06/24 10:05:17 [INFO] agent: joined: 1 nodes
+    2024/06/24 10:05:17 [INFO] agent.ipc: Graceful leave triggered
+    2024/06/24 10:05:17 [INFO] agent: requesting graceful leave from Serf
+    2024/06/24 10:05:17 [INFO] serf: EventMemberLeave: zna 127.0.0.1
+    2024/06/24 10:05:18 [INFO] agent: Received event: member-join
+    2024/06/24 10:05:18 [INFO] agent: Received event: member-leave
+    2024/06/24 10:05:18 [INFO] agent: requesting serf shutdown
+    2024/06/24 10:05:18 [INFO] agent: shutdown complete
+    2024/06/24 10:05:18 [WARN] agent: Serf shutdown detected, quitting==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: 'zna'
+         Bind addr: '127.0.0.1:5000'
+                       RPC addr: '127.0.0.1:7373'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+
+==> Log data will now stream in as it occurs:
+
+    2024/06/24 10:05:31 [INFO] agent: Serf agent starting
+    2024/06/24 10:05:31 [INFO] serf: EventMemberJoin: zna 127.0.0.1
+    2024/06/24 10:05:31 [INFO] agent.ipc: Accepted client: 127.0.0.1:44508
+    2024/06/24 10:05:31 [INFO] agent: joining: [127.0.0.1:5001] replay: false
+    2024/06/24 10:05:31 [INFO] serf: EventMemberJoin: zna 127.0.0.1    2024/06/24 10:05:31 [INFO] serf: EventMemberJoin: zna2 127.0.0.1
+
+    2024/06/24 10:05:31 [INFO] agent: joined: 1 nodes
+    2024/06/24 10:05:31 [INFO] agent.ipc: Accepted client: 127.0.0.1:34556
+==> Starting Serf agent...
+==> Failed to start the Serf agent: Error creating Serf: Failed to create memberlist: Could not set up network transport: failed to obtain an address: Failed to start TCP listener on "127.0.0.1" port 5001: listen tcp 127.0.0.1:5001: bind: address already in use
+    2024/06/24 10:05:31 [INFO] agent: joining: [127.0.0.1:5001] replay: false
+    2024/06/24 10:05:31 [INFO] agent: joined: 1 nodes
+    2024/06/24 10:05:31 [INFO] agent.ipc: Graceful leave triggered
+    2024/06/24 10:05:31 [INFO] agent: requesting graceful leave from Serf
+    2024/06/24 10:05:32 [INFO] serf: EventMemberLeave: zna 127.0.0.1
+==> Caught signal: interrupt
+==> Gracefully shutting down agent...
+    2024/06/24 10:05:32 [INFO] agent: requesting graceful leave from Serf
+==> Error: Leave already in progress
+    2024/06/24 10:05:32 [INFO] agent: Received event: member-join
+    2024/06/24 10:05:32 [INFO] serf: EventMemberLeave: zna 127.0.0.1
+    2024/06/24 10:05:33 [INFO] agent: Received event: member-leave
+    2024/06/24 10:05:33 [INFO] agent: Received event: member-join
+    2024/06/24 10:05:33 [ERR] agent.ipc: Failed to stream event to ipc.client: 127.0.0.1:44508: write tcp 127.0.0.1:7373->127.0.0.1:44508: write: broken pipe
+    2024/06/24 10:05:33 [INFO] agent: Received event: member-leave
+    2024/06/24 10:05:33 [INFO] agent: requesting serf shutdown
+    2024/06/24 10:05:33 [INFO] agent: shutdown complete
+    2024/06/24 10:05:33 [ERR] agent.ipc: Failed to evaluate request: write tcp 127.0.0.1:7373->127.0.0.1:44508: write: broken pipe
+    2024/06/24 10:05:33 [WARN] agent: Serf shutdown detected, quitting
+==> Caught signal: terminated
+    2024/06/24 10:05:47 [INFO] agent: requesting serf shutdown
+    2024/06/24 10:05:47 [WARN] serf: Shutdown without a Leave
+    2024/06/24 10:05:47 [INFO] agent: shutdown complete
+    2024/06/24 10:05:47 [WARN] agent: Serf shutdown detected, quitting==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: 'zna'
+         Bind addr: '127.0.0.1:5000'
+                       RPC addr: '127.0.0.1:7373'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+
+==> Log data will now stream in as it occurs:
+
+    2024/06/24 10:05:54 [INFO] agent: Serf agent starting
+    2024/06/24 10:05:54 [INFO] serf: EventMemberJoin: zna 127.0.0.1
+    2024/06/24 10:05:54 [INFO] agent.ipc: Accepted client: 127.0.0.1:46808
+    2024/06/24 10:05:54 [INFO] agent: joining: [127.0.0.1:5001] replay: false
+    2024/06/24 10:05:54 [WARN] agent: error joining: 1 error occurred:
+	* Failed to join 127.0.0.1: dial tcp 127.0.0.1:5001: connect: connection refused
+
+==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: 'zna2'
+         Bind addr: '127.0.0.1:5001'
+                       RPC addr: '127.0.0.1:7374'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+
+==> Log data will now stream in as it occurs:
+
+    2024/06/24 10:05:54 [INFO] agent: Serf agent starting
+    2024/06/24 10:05:54 [INFO] serf: EventMemberJoin: zna2 127.0.0.1
+    2024/06/24 10:05:54 [INFO] agent.ipc: Accepted client: 127.0.0.1:38916
+    2024/06/24 10:05:54 [INFO] agent: joining: [127.0.0.1:5001] replay: false
+    2024/06/24 10:05:54 [INFO] agent: joined: 1 nodes
+    2024/06/24 10:05:54 [INFO] agent.ipc: Graceful leave triggered
+    2024/06/24 10:05:54 [INFO] agent: requesting graceful leave from Serf
+    2024/06/24 10:05:54 [INFO] serf: EventMemberLeave: zna 127.0.0.1
+    2024/06/24 10:05:55 [INFO] agent: Received event: member-join
+    2024/06/24 10:05:55 [INFO] agent: Received event: member-leave
+    2024/06/24 10:05:55 [INFO] agent: requesting serf shutdown
+    2024/06/24 10:05:55 [INFO] agent: shutdown complete
+    2024/06/24 10:05:55 [WARN] agent: Serf shutdown detected, quitting==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: 'zna'
+         Bind addr: '127.0.0.1:5000'
+                       RPC addr: '127.0.0.1:7373'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+
+==> Log data will now stream in as it occurs:
+
+    2024/06/24 10:08:08 [INFO] agent: Serf agent starting
+    2024/06/24 10:08:08 [INFO] serf: EventMemberJoin: zna 127.0.0.1
+    2024/06/24 10:08:08 [INFO] agent.ipc: Accepted client: 127.0.0.1:51046
+    2024/06/24 10:08:08 [INFO] agent.ipc: Accepted client: 127.0.0.1:41092
+==> Starting Serf agent...
+==> Failed to start the Serf agent: Error creating Serf: Failed to create memberlist: Could not set up network transport: failed to obtain an address: Failed to start TCP listener on "127.0.0.1" port 5001: listen tcp 127.0.0.1:5001: bind: address already in use
+    2024/06/24 10:08:08 [INFO] agent: joining: [127.0.0.1:5001] replay: false
+    2024/06/24 10:08:08 [INFO] serf: EventMemberJoin: zna 127.0.0.1    2024/06/24 10:08:08 [INFO] serf: EventMemberJoin: zna2 127.0.0.1
+
+    2024/06/24 10:08:08 [INFO] agent: joined: 1 nodes
+    2024/06/24 10:08:08 [INFO] agent.ipc: Graceful leave triggered
+    2024/06/24 10:08:09 [INFO] agent: requesting graceful leave from Serf
+    2024/06/24 10:08:09 [INFO] serf: EventMemberLeave: zna2 127.0.0.1
+    2024/06/24 10:08:09 [INFO] serf: EventMemberLeave: zna2 127.0.0.1
+    2024/06/24 10:08:10 [INFO] agent: Received event: member-leave
+    2024/06/24 10:08:10 [INFO] agent: Received event: member-join
+    2024/06/24 10:08:10 [INFO] agent: Received event: member-join
+    2024/06/24 10:08:10 [INFO] agent: Received event: member-leave
+    2024/06/24 10:08:11 [INFO] agent: requesting serf shutdown
+    2024/06/24 10:08:11 [INFO] agent: shutdown complete
+    2024/06/24 10:08:11 [WARN] agent: Serf shutdown detected, quitting    2024/06/24 10:08:11 [INFO] agent.ipc: Graceful leave triggered
+    2024/06/24 10:08:11 [INFO] agent: requesting graceful leave from Serf
+    2024/06/24 10:08:11 [INFO] serf: EventMemberLeave: zna 127.0.0.1
+    2024/06/24 10:08:12 [INFO] agent: Received event: member-leave
+    2024/06/24 10:08:12 [INFO] agent: requesting serf shutdown
+    2024/06/24 10:08:12 [INFO] agent: shutdown complete
+    2024/06/24 10:08:12 [WARN] agent: Serf shutdown detected, quitting==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: 'zna'
+         Bind addr: '127.0.0.1:5000'
+                       RPC addr: '127.0.0.1:7373'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+
+==> Log data will now stream in as it occurs:
+
+    2024/06/24 10:09:03 [INFO] agent: Serf agent starting
+    2024/06/24 10:09:03 [INFO] serf: EventMemberJoin: zna 127.0.0.1
+    2024/06/24 10:09:03 [INFO] agent.ipc: Accepted client: 127.0.0.1:55248
+==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: 'zna2'
+         Bind addr: '127.0.0.1:5001'
+                       RPC addr: '127.0.0.1:7374'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+
+==> Log data will now stream in as it occurs:
+
+    2024/06/24 10:09:03 [INFO] agent: Serf agent starting
+    2024/06/24 10:09:03 [INFO] serf: EventMemberJoin: zna2 127.0.0.1
+    2024/06/24 10:09:03 [INFO] agent.ipc: Accepted client: 127.0.0.1:47162
+    2024/06/24 10:09:03 [INFO] agent: joining: [127.0.0.1:5001] replay: false
+    2024/06/24 10:09:03 [INFO] serf: EventMemberJoin: zna 127.0.0.1    2024/06/24 10:09:03 [INFO] serf: EventMemberJoin: zna2 127.0.0.1
+
+    2024/06/24 10:09:03 [INFO] agent: joined: 1 nodes
+    2024/06/24 10:09:04 [INFO] agent: Received event: member-join    2024/06/24 10:09:04 [INFO] agent: Received event: member-join
+
+    2024/06/24 10:09:06 [INFO] agent.ipc: Accepted client: 127.0.0.1:57122
+==> Starting Serf agent...
+==> Failed to start the Serf agent: Error creating Serf: Failed to create memberlist: Could not set up network transport: failed to obtain an address: Failed to start TCP listener on "127.0.0.1" port 5000: listen tcp 127.0.0.1:5000: bind: address already in use
+    2024/06/24 10:09:06 [INFO] agent.ipc: Accepted client: 127.0.0.1:47168
+==> Starting Serf agent...
+==> Failed to start the Serf agent: Error creating Serf: Failed to create memberlist: Could not set up network transport: failed to obtain an address: Failed to start TCP listener on "127.0.0.1" port 5001: listen tcp 127.0.0.1:5001: bind: address already in use
+    2024/06/24 10:09:06 [INFO] agent: joining: [127.0.0.1:5001] replay: false
+    2024/06/24 10:09:06 [INFO] agent: joined: 1 nodes
+    2024/06/24 10:09:31 [INFO] agent.ipc: Accepted client: 127.0.0.1:57128
+==> Starting Serf agent...
+==> Failed to start the Serf agent: Error creating Serf: Failed to create memberlist: Could not set up network transport: failed to obtain an address: Failed to start TCP listener on "127.0.0.1" port 5000: listen tcp 127.0.0.1:5000: bind: address already in use
+    2024/06/24 10:09:31 [INFO] agent.ipc: Accepted client: 127.0.0.1:47174
+==> Starting Serf agent...
+==> Failed to start the Serf agent: Error creating Serf: Failed to create memberlist: Could not set up network transport: failed to obtain an address: Failed to start TCP listener on "127.0.0.1" port 5001: listen tcp 127.0.0.1:5001: bind: address already in use
+    2024/06/24 10:09:32 [INFO] agent: joining: [127.0.0.1:5001] replay: false
+    2024/06/24 10:09:32 [INFO] agent: joined: 1 nodes
+    2024/06/24 10:09:32 [INFO] agent.ipc: Graceful leave triggered
+    2024/06/24 10:09:32 [INFO] agent: requesting graceful leave from Serf
+    2024/06/24 10:09:32 [INFO] serf: EventMemberLeave: zna 127.0.0.1
+    2024/06/24 10:09:32 [INFO] serf: EventMemberLeave: zna 127.0.0.1
+    2024/06/24 10:09:33 [INFO] agent: Received event: member-leave
+    2024/06/24 10:09:33 [INFO] agent: Received event: member-leave
+    2024/06/24 10:09:34 [INFO] agent: requesting serf shutdown
+    2024/06/24 10:09:34 [INFO] agent: shutdown complete
+    2024/06/24 10:09:34 [WARN] agent: Serf shutdown detected, quitting==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: 'zna'
+         Bind addr: '127.0.0.1:5000'
+                       RPC addr: '127.0.0.1:7373'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+
+==> Log data will now stream in as it occurs:
+
+    2024/06/24 10:09:36 [INFO] agent: Serf agent starting
+    2024/06/24 10:09:36 [INFO] serf: EventMemberJoin: zna 127.0.0.1
+    2024/06/24 10:09:36 [INFO] agent.ipc: Accepted client: 127.0.0.1:60916
+    2024/06/24 10:09:36 [INFO] agent.ipc: Accepted client: 127.0.0.1:50962
+==> Starting Serf agent...
+==> Failed to start the Serf agent: Error creating Serf: Failed to create memberlist: Could not set up network transport: failed to obtain an address: Failed to start TCP listener on "127.0.0.1" port 5001: listen tcp 127.0.0.1:5001: bind: address already in use
+    2024/06/24 10:09:36 [INFO] agent: joining: [127.0.0.1:5001] replay: false
+    2024/06/24 10:09:36 [WARN] memberlist: Refuting a suspect message (from: zna)
+    2024/06/24 10:09:36 [INFO] serf: EventMemberJoin: zna2 127.0.0.1
+    2024/06/24 10:09:36 [INFO] agent: joined: 1 nodes
+    2024/06/24 10:09:36 [INFO] serf: EventMemberJoin: zna 127.0.0.1
+    2024/06/24 10:09:36 [INFO] agent.ipc: Graceful leave triggered
+    2024/06/24 10:09:36 [INFO] agent: requesting graceful leave from Serf
+    2024/06/24 10:09:36 [INFO] serf: EventMemberLeave: zna 127.0.0.1
+    2024/06/24 10:09:37 [INFO] serf: EventMemberLeave: zna 127.0.0.1
+    2024/06/24 10:09:37 [INFO] agent: Received event: member-leave
+    2024/06/24 10:09:37 [INFO] agent: Received event: member-join
+    2024/06/24 10:09:38 [INFO] agent: requesting serf shutdown
+    2024/06/24 10:09:38 [INFO] agent: shutdown complete
+    2024/06/24 10:09:38 [WARN] agent: Serf shutdown detected, quitting==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: 'zna'
+         Bind addr: '127.0.0.1:5000'
+                       RPC addr: '127.0.0.1:7373'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+
+==> Log data will now stream in as it occurs:
+
+    2024/06/24 10:09:39 [INFO] agent: Serf agent starting
+    2024/06/24 10:09:39 [INFO] serf: EventMemberJoin: zna 127.0.0.1
+    2024/06/24 10:09:39 [INFO] agent.ipc: Accepted client: 127.0.0.1:35054
+    2024/06/24 10:09:39 [INFO] agent.ipc: Accepted client: 127.0.0.1:53332
+==> Starting Serf agent...
+==> Failed to start the Serf agent: Error creating Serf: Failed to create memberlist: Could not set up network transport: failed to obtain an address: Failed to start TCP listener on "127.0.0.1" port 5001: listen tcp 127.0.0.1:5001: bind: address already in use
+    2024/06/24 10:09:39 [INFO] agent: joining: [127.0.0.1:5001] replay: false
+    2024/06/24 10:09:39 [WARN] memberlist: Refuting a suspect message (from: zna)
+    2024/06/24 10:09:39 [INFO] serf: EventMemberJoin: zna2 127.0.0.1
+    2024/06/24 10:09:39 [INFO] agent: joined: 1 nodes
+    2024/06/24 10:09:39 [INFO] serf: EventMemberJoin: zna 127.0.0.1
+    2024/06/24 10:09:39 [INFO] agent.ipc: Graceful leave triggered
+    2024/06/24 10:09:39 [INFO] agent: requesting graceful leave from Serf
+    2024/06/24 10:09:40 [INFO] serf: EventMemberLeave: zna 127.0.0.1
+    2024/06/24 10:09:40 [INFO] serf: EventMemberLeave: zna 127.0.0.1
+    2024/06/24 10:09:41 [INFO] agent: Received event: member-leave
+    2024/06/24 10:09:41 [INFO] agent: Received event: member-join
+    2024/06/24 10:09:41 [INFO] agent: requesting serf shutdown
+    2024/06/24 10:09:41 [INFO] agent: shutdown complete
+    2024/06/24 10:09:41 [WARN] agent: Serf shutdown detected, quitting==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: 'zna'
+         Bind addr: '127.0.0.1:5000'
+                       RPC addr: '127.0.0.1:7373'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+
+==> Log data will now stream in as it occurs:
+
+    2024/06/24 10:10:09 [INFO] agent: Serf agent starting
+    2024/06/24 10:10:09 [INFO] serf: EventMemberJoin: zna 127.0.0.1
+    2024/06/24 10:10:09 [INFO] agent.ipc: Accepted client: 127.0.0.1:37254
+    2024/06/24 10:10:09 [INFO] agent.ipc: Accepted client: 127.0.0.1:55532
+==> Starting Serf agent...
+==> Failed to start the Serf agent: Error creating Serf: Failed to create memberlist: Could not set up network transport: failed to obtain an address: Failed to start TCP listener on "127.0.0.1" port 5001: listen tcp 127.0.0.1:5001: bind: address already in use
+    2024/06/24 10:10:09 [INFO] agent: joining: [127.0.0.1:5001] replay: false
+    2024/06/24 10:10:09 [INFO] serf: EventMemberJoin: zna2 127.0.0.1
+    2024/06/24 10:10:09 [WARN] memberlist: Refuting a suspect message (from: zna)
+    2024/06/24 10:10:09 [INFO] agent: joined: 1 nodes
+    2024/06/24 10:10:09 [INFO] serf: EventMemberJoin: zna 127.0.0.1
+    2024/06/24 10:10:09 [INFO] agent.ipc: Graceful leave triggered
+    2024/06/24 10:10:09 [INFO] agent: requesting graceful leave from Serf
+    2024/06/24 10:10:09 [INFO] serf: EventMemberLeave: zna 127.0.0.1
+    2024/06/24 10:10:10 [INFO] serf: EventMemberLeave: zna 127.0.0.1
+==> Caught signal: interrupt
+==> Gracefully shutting down agent...
+    2024/06/24 10:10:10 [INFO] agent: requesting graceful leave from Serf
+==> Error: Leave already in progress
+    2024/06/24 10:10:10 [INFO] agent: Received event: member-leave
+    2024/06/24 10:10:10 [INFO] agent: Received event: member-join
+    2024/06/24 10:10:10 [ERR] agent.ipc: Failed to stream event to ipc.client: 127.0.0.1:37254: write tcp 127.0.0.1:7373->127.0.0.1:37254: write: broken pipe
+    2024/06/24 10:10:11 [INFO] agent: requesting serf shutdown
+    2024/06/24 10:10:11 [INFO] agent: shutdown complete
+    2024/06/24 10:10:11 [ERR] agent.ipc: Failed to evaluate request: write tcp 127.0.0.1:7373->127.0.0.1:37254: write: broken pipe
+    2024/06/24 10:10:11 [WARN] agent: Serf shutdown detected, quitting
+==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: 'zna'
+         Bind addr: '127.0.0.1:5000'
+                       RPC addr: '127.0.0.1:7373'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+
+==> Log data will now stream in as it occurs:
+
+    2024/06/24 10:10:21 [INFO] agent: Serf agent starting
+    2024/06/24 10:10:21 [INFO] serf: EventMemberJoin: zna 127.0.0.1
+    2024/06/24 10:10:21 [INFO] agent.ipc: Accepted client: 127.0.0.1:39714
+    2024/06/24 10:10:21 [INFO] agent.ipc: Accepted client: 127.0.0.1:57992
+==> Starting Serf agent...
+==> Failed to start the Serf agent: Error creating Serf: Failed to create memberlist: Could not set up network transport: failed to obtain an address: Failed to start TCP listener on "127.0.0.1" port 5001: listen tcp 127.0.0.1:5001: bind: address already in use
+    2024/06/24 10:10:22 [INFO] agent: joining: [127.0.0.1:5001] replay: false
+    2024/06/24 10:10:22 [WARN] memberlist: Refuting a suspect message (from: zna)
+    2024/06/24 10:10:22 [INFO] serf: EventMemberJoin: zna2 127.0.0.1
+    2024/06/24 10:10:22 [INFO] agent: joined: 1 nodes
+    2024/06/24 10:10:22 [INFO] serf: EventMemberJoin: zna 127.0.0.1
+    2024/06/24 10:10:22 [INFO] agent.ipc: Graceful leave triggered
+    2024/06/24 10:10:22 [INFO] agent: requesting graceful leave from Serf
+    2024/06/24 10:10:22 [INFO] serf: EventMemberLeave: zna2 127.0.0.1
+    2024/06/24 10:10:23 [INFO] agent: Received event: member-join
+    2024/06/24 10:10:23 [INFO] serf: EventMemberLeave: zna2 127.0.0.1
+    2024/06/24 10:10:23 [INFO] agent: Received event: member-leave
+    2024/06/24 10:10:23 [INFO] agent: Received event: member-join
+    2024/06/24 10:10:24 [INFO] agent: Received event: member-leave
+    2024/06/24 10:10:24 [INFO] agent: requesting serf shutdown
+    2024/06/24 10:10:24 [INFO] agent: shutdown complete
+    2024/06/24 10:10:24 [WARN] agent: Serf shutdown detected, quitting    2024/06/24 10:10:24 [INFO] agent.ipc: Graceful leave triggered
+    2024/06/24 10:10:24 [INFO] agent: requesting graceful leave from Serf
+    2024/06/24 10:10:24 [INFO] serf: EventMemberLeave: zna 127.0.0.1
+    2024/06/24 10:10:25 [INFO] agent: requesting serf shutdown
+    2024/06/24 10:10:25 [INFO] agent: Received event: member-leave
+    2024/06/24 10:10:25 [INFO] agent: shutdown complete
+    2024/06/24 10:10:25 [WARN] agent: Serf shutdown detected, quitting==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: 'zna'
+         Bind addr: '127.0.0.1:5000'
+                       RPC addr: '127.0.0.1:7373'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+
+==> Log data will now stream in as it occurs:
+
+    2024/06/24 10:11:58 [INFO] agent: Serf agent starting
+    2024/06/24 10:11:58 [INFO] serf: EventMemberJoin: zna 127.0.0.1
+    2024/06/24 10:11:58 [INFO] agent.ipc: Accepted client: 127.0.0.1:42076
+    2024/06/24 10:11:58 [INFO] agent: joining: [127.0.0.1:5001] replay: false
+    2024/06/24 10:11:58 [WARN] agent: error joining: 1 error occurred:
+	* Failed to join 127.0.0.1: dial tcp 127.0.0.1:5001: connect: connection refused
+
+==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: 'zna2'
+         Bind addr: '127.0.0.1:5001'
+                       RPC addr: '127.0.0.1:7374'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+
+==> Log data will now stream in as it occurs:
+
+    2024/06/24 10:11:58 [INFO] agent: Serf agent starting
+    2024/06/24 10:11:58 [INFO] serf: EventMemberJoin: zna2 127.0.0.1
+    2024/06/24 10:11:58 [INFO] agent.ipc: Accepted client: 127.0.0.1:34120
+    2024/06/24 10:11:58 [INFO] agent: joining: [127.0.0.1:5001] replay: false
+    2024/06/24 10:11:58 [INFO] agent: joined: 1 nodes
+    2024/06/24 10:11:58 [INFO] agent.ipc: Graceful leave triggered
+    2024/06/24 10:11:58 [INFO] agent: requesting graceful leave from Serf
+    2024/06/24 10:11:58 [INFO] serf: EventMemberLeave: zna 127.0.0.1
+    2024/06/24 10:11:59 [INFO] agent: Received event: member-join
+    2024/06/24 10:11:59 [INFO] agent: requesting serf shutdown
+    2024/06/24 10:11:59 [INFO] agent: Received event: member-leave
+    2024/06/24 10:11:59 [WARN] agent: Serf shutdown detected, quitting
+    2024/06/24 10:11:59 [INFO] agent: shutdown complete
+==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: 'zna'
+         Bind addr: '127.0.0.1:5000'
+                       RPC addr: '127.0.0.1:7373'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+
+==> Log data will now stream in as it occurs:
+
+    2024/06/24 10:12:39 [INFO] agent: Serf agent starting
+    2024/06/24 10:12:39 [INFO] serf: EventMemberJoin: zna 127.0.0.1
+    2024/06/24 10:12:39 [INFO] agent.ipc: Accepted client: 127.0.0.1:46390
+    2024/06/24 10:12:39 [INFO] agent: joining: [127.0.0.1:5001] replay: false
+    2024/06/24 10:12:39 [INFO] serf: EventMemberJoin: zna 127.0.0.1
+    2024/06/24 10:12:39 [INFO] serf: EventMemberJoin: zna2 127.0.0.1
+    2024/06/24 10:12:39 [INFO] agent: joined: 1 nodes
+    2024/06/24 10:12:39 [INFO] agent.ipc: Accepted client: 127.0.0.1:36438
+==> Starting Serf agent...
+==> Failed to start the Serf agent: Error creating Serf: Failed to create memberlist: Could not set up network transport: failed to obtain an address: Failed to start TCP listener on "127.0.0.1" port 5001: listen tcp 127.0.0.1:5001: bind: address already in use
+    2024/06/24 10:12:39 [INFO] agent: joining: [127.0.0.1:5001] replay: false
+    2024/06/24 10:12:39 [INFO] agent: joined: 1 nodes
+    2024/06/24 10:12:40 [INFO] agent: Received event: member-join
+    2024/06/24 10:12:40 [INFO] agent: Received event: member-join
+    2024/06/24 10:12:47 [INFO] agent.ipc: Accepted client: 127.0.0.1:46398
+==> Starting Serf agent...
+==> Failed to start the Serf agent: Error creating Serf: Failed to create memberlist: Could not set up network transport: failed to obtain an address: Failed to start TCP listener on "127.0.0.1" port 5000: listen tcp 127.0.0.1:5000: bind: address already in use
+    2024/06/24 10:12:48 [INFO] agent: joining: [127.0.0.1:5001] replay: false
+    2024/06/24 10:12:48 [INFO] agent: joined: 1 nodes
+    2024/06/24 10:12:48 [INFO] agent.ipc: Accepted client: 127.0.0.1:36446
+==> Starting Serf agent...
+==> Failed to start the Serf agent: Error creating Serf: Failed to create memberlist: Could not set up network transport: failed to obtain an address: Failed to start TCP listener on "127.0.0.1" port 5001: listen tcp 127.0.0.1:5001: bind: address already in use
+    2024/06/24 10:12:48 [INFO] agent: joining: [127.0.0.1:5001] replay: false
+    2024/06/24 10:12:48 [INFO] agent: joined: 1 nodes
+    2024/06/24 10:12:49 [INFO] agent.ipc: Accepted client: 127.0.0.1:46406
+==> Starting Serf agent...
+==> Failed to start the Serf agent: Error creating Serf: Failed to create memberlist: Could not set up network transport: failed to obtain an address: Failed to start TCP listener on "127.0.0.1" port 5000: listen tcp 127.0.0.1:5000: bind: address already in use
+    2024/06/24 10:12:49 [INFO] agent: joining: [127.0.0.1:5001] replay: false
+    2024/06/24 10:12:49 [INFO] agent: joined: 1 nodes
+    2024/06/24 10:12:49 [INFO] agent.ipc: Accepted client: 127.0.0.1:36454
+==> Starting Serf agent...
+==> Failed to start the Serf agent: Error creating Serf: Failed to create memberlist: Could not set up network transport: failed to obtain an address: Failed to start TCP listener on "127.0.0.1" port 5001: listen tcp 127.0.0.1:5001: bind: address already in use
+    2024/06/24 10:12:50 [INFO] agent: joining: [127.0.0.1:5001] replay: false
+    2024/06/24 10:12:50 [INFO] agent: joined: 1 nodes
+    2024/06/24 10:12:51 [INFO] agent.ipc: Accepted client: 127.0.0.1:46414
+==> Starting Serf agent...
+==> Failed to start the Serf agent: Error creating Serf: Failed to create memberlist: Could not set up network transport: failed to obtain an address: Failed to start TCP listener on "127.0.0.1" port 5000: listen tcp 127.0.0.1:5000: bind: address already in use
+    2024/06/24 10:12:51 [INFO] agent: joining: [127.0.0.1:5001] replay: false
+    2024/06/24 10:12:51 [INFO] agent: joined: 1 nodes
+    2024/06/24 10:12:51 [INFO] agent.ipc: Accepted client: 127.0.0.1:36462
+==> Starting Serf agent...
+==> Failed to start the Serf agent: Error creating Serf: Failed to create memberlist: Could not set up network transport: failed to obtain an address: Failed to start TCP listener on "127.0.0.1" port 5001: listen tcp 127.0.0.1:5001: bind: address already in use
+    2024/06/24 10:12:51 [INFO] agent: joining: [127.0.0.1:5001] replay: false
+    2024/06/24 10:12:51 [INFO] agent: joined: 1 nodes
+    2024/06/24 10:12:51 [INFO] agent.ipc: Accepted client: 127.0.0.1:46422
+==> Starting Serf agent...
+==> Failed to start the Serf agent: Error creating Serf: Failed to create memberlist: Could not set up network transport: failed to obtain an address: Failed to start TCP listener on "127.0.0.1" port 5000: listen tcp 127.0.0.1:5000: bind: address already in use
+    2024/06/24 10:12:51 [INFO] agent: joining: [127.0.0.1:5001] replay: false
+    2024/06/24 10:12:51 [INFO] agent: joined: 1 nodes
+    2024/06/24 10:12:52 [INFO] agent.ipc: Accepted client: 127.0.0.1:36470
+==> Starting Serf agent...
+==> Failed to start the Serf agent: Error creating Serf: Failed to create memberlist: Could not set up network transport: failed to obtain an address: Failed to start TCP listener on "127.0.0.1" port 5001: listen tcp 127.0.0.1:5001: bind: address already in use
+    2024/06/24 10:12:52 [INFO] agent: joining: [127.0.0.1:5001] replay: false
+    2024/06/24 10:12:52 [INFO] agent: joined: 1 nodes
+    2024/06/24 10:12:52 [INFO] agent.ipc: Accepted client: 127.0.0.1:46430
+==> Starting Serf agent...
+==> Failed to start the Serf agent: Error creating Serf: Failed to create memberlist: Could not set up network transport: failed to obtain an address: Failed to start TCP listener on "127.0.0.1" port 5000: listen tcp 127.0.0.1:5000: bind: address already in use
+    2024/06/24 10:12:52 [INFO] agent: joining: [127.0.0.1:5001] replay: false
+    2024/06/24 10:12:52 [INFO] agent: joined: 1 nodes
+    2024/06/24 10:12:52 [INFO] agent.ipc: Accepted client: 127.0.0.1:36478
+==> Starting Serf agent...
+==> Failed to start the Serf agent: Error creating Serf: Failed to create memberlist: Could not set up network transport: failed to obtain an address: Failed to start TCP listener on "127.0.0.1" port 5001: listen tcp 127.0.0.1:5001: bind: address already in use
+    2024/06/24 10:12:53 [INFO] agent: joining: [127.0.0.1:5001] replay: false
+    2024/06/24 10:12:53 [INFO] agent: joined: 1 nodes
+    2024/06/24 10:13:12 [INFO] agent.ipc: Accepted client: 127.0.0.1:46440
+==> Starting Serf agent...
+==> Failed to start the Serf agent: Error creating Serf: Failed to create memberlist: Could not set up network transport: failed to obtain an address: Failed to start TCP listener on "127.0.0.1" port 5000: listen tcp 127.0.0.1:5000: bind: address already in use
+    2024/06/24 10:13:12 [INFO] agent: joining: [127.0.0.1:5001] replay: false
+    2024/06/24 10:13:12 [INFO] agent: joined: 1 nodes
+    2024/06/24 10:13:12 [INFO] agent.ipc: Accepted client: 127.0.0.1:36488
+==> Starting Serf agent...
+==> Failed to start the Serf agent: Error creating Serf: Failed to create memberlist: Could not set up network transport: failed to obtain an address: Failed to start TCP listener on "127.0.0.1" port 5001: listen tcp 127.0.0.1:5001: bind: address already in use
+    2024/06/24 10:13:12 [INFO] agent: joining: [127.0.0.1:5001] replay: false
+    2024/06/24 10:13:12 [INFO] agent: joined: 1 nodes
+    2024/06/24 10:13:29 [INFO] agent.ipc: Accepted client: 127.0.0.1:46452
+    2024/06/24 10:14:09 [INFO] agent.ipc: Accepted client: 127.0.0.1:46458
+    2024/06/24 10:14:10 [INFO] agent.ipc: Accepted client: 127.0.0.1:46460
+==> Starting Serf agent...
+==> Failed to start the Serf agent: Error creating Serf: Failed to create memberlist: Could not set up network transport: failed to obtain an address: Failed to start TCP listener on "127.0.0.1" port 5000: listen tcp 127.0.0.1:5000: bind: address already in use
+    2024/06/24 10:14:11 [INFO] agent: joining: [127.0.0.1:5001] replay: false
+    2024/06/24 10:14:11 [INFO] agent: joined: 1 nodes
+    2024/06/24 10:14:11 [INFO] agent.ipc: Accepted client: 127.0.0.1:36508
+==> Starting Serf agent...
+==> Failed to start the Serf agent: Error creating Serf: Failed to create memberlist: Could not set up network transport: failed to obtain an address: Failed to start TCP listener on "127.0.0.1" port 5001: listen tcp 127.0.0.1:5001: bind: address already in use
+    2024/06/24 10:14:11 [INFO] agent: joining: [127.0.0.1:5001] replay: false
+    2024/06/24 10:14:11 [INFO] agent: joined: 1 nodes
+    2024/06/24 10:14:46 [INFO] agent.ipc: Accepted client: 127.0.0.1:46472
+==> Starting Serf agent...
+==> Failed to start the Serf agent: Error creating Serf: Failed to create memberlist: Could not set up network transport: failed to obtain an address: Failed to start TCP listener on "127.0.0.1" port 5000: listen tcp 127.0.0.1:5000: bind: address already in use
+    2024/06/24 10:14:46 [INFO] agent: joining: [127.0.0.1:5001] replay: false
+    2024/06/24 10:14:46 [INFO] agent: joined: 1 nodes
+    2024/06/24 10:14:46 [INFO] agent.ipc: Accepted client: 127.0.0.1:36520
+==> Starting Serf agent...
+==> Failed to start the Serf agent: Error creating Serf: Failed to create memberlist: Could not set up network transport: failed to obtain an address: Failed to start TCP listener on "127.0.0.1" port 5001: listen tcp 127.0.0.1:5001: bind: address already in use
+    2024/06/24 10:14:46 [INFO] agent: joining: [127.0.0.1:5001] replay: false
+    2024/06/24 10:14:46 [INFO] agent: joined: 1 nodes
+    2024/06/24 10:15:39 [INFO] agent.ipc: Accepted client: 127.0.0.1:46488
+==> Starting Serf agent...
+==> Failed to start the Serf agent: Error creating Serf: Failed to create memberlist: Could not set up network transport: failed to obtain an address: Failed to start TCP listener on "127.0.0.1" port 5000: listen tcp 127.0.0.1:5000: bind: address already in use
+    2024/06/24 10:15:39 [INFO] agent: joining: [127.0.0.1:5000] replay: false
+    2024/06/24 10:15:39 [INFO] agent: joined: 1 nodes
+    2024/06/24 10:15:39 [INFO] agent.ipc: Accepted client: 127.0.0.1:36536
+==> Starting Serf agent...
+==> Failed to start the Serf agent: Error creating Serf: Failed to create memberlist: Could not set up network transport: failed to obtain an address: Failed to start TCP listener on "127.0.0.1" port 5001: listen tcp 127.0.0.1:5001: bind: address already in use
+    2024/06/24 10:15:39 [INFO] agent: joining: [127.0.0.1:5000] replay: false
+    2024/06/24 10:15:39 [INFO] agent: joined: 1 nodes
+    2024/06/24 10:16:08 [INFO] agent.ipc: Accepted client: 127.0.0.1:46500
+    2024/06/24 10:16:58 [INFO] agent.ipc: Accepted client: 127.0.0.1:46514
+    2024/06/24 10:17:00 [INFO] agent.ipc: Accepted client: 127.0.0.1:46516
+==> Starting Serf agent...
+==> Failed to start the Serf agent: Error creating Serf: Failed to create memberlist: Could not set up network transport: failed to obtain an address: Failed to start TCP listener on "127.0.0.1" port 5000: listen tcp 127.0.0.1:5000: bind: address already in use
+    2024/06/24 10:17:00 [INFO] agent.ipc: Accepted client: 127.0.0.1:36562
+==> Starting Serf agent...
+==> Failed to start the Serf agent: Error creating Serf: Failed to create memberlist: Could not set up network transport: failed to obtain an address: Failed to start TCP listener on "127.0.0.1" port 5001: listen tcp 127.0.0.1:5001: bind: address already in use
+    2024/06/24 10:17:00 [INFO] agent: joining: [127.0.0.1:5001] replay: false
+    2024/06/24 10:17:00 [INFO] agent: joined: 1 nodes
+    2024/06/24 10:17:03 [INFO] agent.ipc: Accepted client: 127.0.0.1:46522
+==> Starting Serf agent...
+==> Failed to start the Serf agent: Error creating Serf: Failed to create memberlist: Could not set up network transport: failed to obtain an address: Failed to start TCP listener on "127.0.0.1" port 5000: listen tcp 127.0.0.1:5000: bind: address already in use
+    2024/06/24 10:17:04 [INFO] agent.ipc: Accepted client: 127.0.0.1:36568
+==> Starting Serf agent...
+==> Failed to start the Serf agent: Error creating Serf: Failed to create memberlist: Could not set up network transport: failed to obtain an address: Failed to start TCP listener on "127.0.0.1" port 5001: listen tcp 127.0.0.1:5001: bind: address already in use
+    2024/06/24 10:17:04 [INFO] agent: joining: [127.0.0.1:5001] replay: false
+    2024/06/24 10:17:04 [INFO] agent: joined: 1 nodes
+    2024/06/24 10:17:04 [INFO] agent.ipc: Accepted client: 127.0.0.1:46528
+==> Starting Serf agent...
+==> Failed to start the Serf agent: Error creating Serf: Failed to create memberlist: Could not set up network transport: failed to obtain an address: Failed to start TCP listener on "127.0.0.1" port 5000: listen tcp 127.0.0.1:5000: bind: address already in use
+    2024/06/24 10:17:04 [INFO] agent.ipc: Accepted client: 127.0.0.1:36574
+==> Starting Serf agent...
+==> Failed to start the Serf agent: Error creating Serf: Failed to create memberlist: Could not set up network transport: failed to obtain an address: Failed to start TCP listener on "127.0.0.1" port 5001: listen tcp 127.0.0.1:5001: bind: address already in use
+    2024/06/24 10:17:04 [INFO] agent: joining: [127.0.0.1:5001] replay: false
+    2024/06/24 10:17:04 [INFO] agent: joined: 1 nodes
+    2024/06/24 10:17:14 [INFO] agent.ipc: Accepted client: 127.0.0.1:46534
+    2024/06/24 10:17:15 [INFO] agent.ipc: Accepted client: 127.0.0.1:46536
+==> Starting Serf agent...
+==> Failed to start the Serf agent: Error creating Serf: Failed to create memberlist: Could not set up network transport: failed to obtain an address: Failed to start TCP listener on "127.0.0.1" port 5000: listen tcp 127.0.0.1:5000: bind: address already in use
+    2024/06/24 10:17:15 [INFO] agent.ipc: Accepted client: 127.0.0.1:36582
+==> Starting Serf agent...
+==> Failed to start the Serf agent: Error creating Serf: Failed to create memberlist: Could not set up network transport: failed to obtain an address: Failed to start TCP listener on "127.0.0.1" port 5001: listen tcp 127.0.0.1:5001: bind: address already in use
+    2024/06/24 10:17:15 [INFO] agent: joining: [127.0.0.1:5001] replay: false
+    2024/06/24 10:17:15 [INFO] agent: joined: 1 nodes
+    2024/06/24 10:17:36 [INFO] agent.ipc: Accepted client: 127.0.0.1:46550
+==> Starting Serf agent...
+==> Failed to start the Serf agent: Error creating Serf: Failed to create memberlist: Could not set up network transport: failed to obtain an address: Failed to start TCP listener on "127.0.0.1" port 5000: listen tcp 127.0.0.1:5000: bind: address already in use
+    2024/06/24 10:17:36 [INFO] agent.ipc: Accepted client: 127.0.0.1:36596
+==> Starting Serf agent...
+==> Failed to start the Serf agent: Error creating Serf: Failed to create memberlist: Could not set up network transport: failed to obtain an address: Failed to start TCP listener on "127.0.0.1" port 5001: listen tcp 127.0.0.1:5001: bind: address already in use
+    2024/06/24 10:17:36 [INFO] agent: joining: [127.0.0.1:5001] replay: false
+    2024/06/24 10:17:36 [INFO] agent: joined: 1 nodes
+    2024/06/24 10:17:36 [INFO] agent.ipc: Graceful leave triggered
+    2024/06/24 10:17:36 [INFO] agent: requesting graceful leave from Serf
+    2024/06/24 10:17:37 [INFO] serf: EventMemberLeave: zna2 127.0.0.1
+    2024/06/24 10:17:37 [INFO] serf: EventMemberLeave: zna2 127.0.0.1
+    2024/06/24 10:17:38 [INFO] agent: Received event: member-leave
+    2024/06/24 10:17:38 [INFO] agent: Received event: member-leave
+    2024/06/24 10:17:39 [INFO] agent: requesting serf shutdown
+    2024/06/24 10:17:39 [INFO] agent: shutdown complete
+    2024/06/24 10:17:39 [WARN] agent: Serf shutdown detected, quitting    2024/06/24 10:18:41 [INFO] agent.ipc: Accepted client: 127.0.0.1:46556
+==> Starting Serf agent...
+==> Failed to start the Serf agent: Error creating Serf: Failed to create memberlist: Could not set up network transport: failed to obtain an address: Failed to start TCP listener on "127.0.0.1" port 5000: listen tcp 127.0.0.1:5000: bind: address already in use
+    2024/06/24 10:18:41 [INFO] agent: joining: [127.0.0.1:5000] replay: false
+    2024/06/24 10:18:41 [INFO] agent: joined: 1 nodes
+==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: 'zna2'
+         Bind addr: '127.0.0.1:5001'
+                       RPC addr: '127.0.0.1:7374'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+
+==> Log data will now stream in as it occurs:
+
+    2024/06/24 10:18:41 [INFO] agent: Serf agent starting
+    2024/06/24 10:18:41 [INFO] serf: EventMemberJoin: zna2 127.0.0.1
+    2024/06/24 10:18:41 [INFO] agent.ipc: Accepted client: 127.0.0.1:38980
+    2024/06/24 10:18:41 [INFO] agent: joining: [127.0.0.1:5000] replay: false
+    2024/06/24 10:18:41 [INFO] serf: EventMemberJoin: zna2 127.0.0.1    2024/06/24 10:18:41 [INFO] serf: EventMemberJoin: zna 127.0.0.1
+
+    2024/06/24 10:18:41 [INFO] agent: joined: 1 nodes
+    2024/06/24 10:18:41 [INFO] agent.ipc: Graceful leave triggered
+    2024/06/24 10:18:41 [INFO] agent: requesting graceful leave from Serf
+    2024/06/24 10:18:42 [INFO] serf: EventMemberLeave: zna 127.0.0.1
+    2024/06/24 10:18:42 [INFO] serf: EventMemberLeave: zna 127.0.0.1
+    2024/06/24 10:18:43 [INFO] agent: Received event: member-join
+    2024/06/24 10:18:43 [INFO] agent: Received event: member-leave
+    2024/06/24 10:18:43 [INFO] agent: Received event: member-join
+    2024/06/24 10:18:43 [INFO] agent: Received event: member-leave
+    2024/06/24 10:18:43 [INFO] agent: requesting serf shutdown
+    2024/06/24 10:18:43 [INFO] agent: shutdown complete
+    2024/06/24 10:18:43 [WARN] agent: Serf shutdown detected, quitting==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: 'zna'
+         Bind addr: '127.0.0.1:5000'
+                       RPC addr: '127.0.0.1:7373'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+
+==> Log data will now stream in as it occurs:
+
+    2024/06/24 10:19:22 [INFO] agent: Serf agent starting
+    2024/06/24 10:19:22 [INFO] serf: EventMemberJoin: zna 127.0.0.1
+    2024/06/24 10:19:22 [INFO] agent.ipc: Accepted client: 127.0.0.1:51006
+    2024/06/24 10:19:22 [INFO] agent: joining: [127.0.0.1:5000] replay: false
+    2024/06/24 10:19:22 [INFO] agent: joined: 1 nodes
+    2024/06/24 10:19:22 [INFO] agent.ipc: Accepted client: 127.0.0.1:41054
+==> Starting Serf agent...
+==> Failed to start the Serf agent: Error creating Serf: Failed to create memberlist: Could not set up network transport: failed to obtain an address: Failed to start TCP listener on "127.0.0.1" port 5001: listen tcp 127.0.0.1:5001: bind: address already in use
+    2024/06/24 10:19:22 [INFO] agent: joining: [127.0.0.1:5000] replay: false
+    2024/06/24 10:19:22 [INFO] serf: EventMemberJoin: zna2 127.0.0.1    2024/06/24 10:19:22 [INFO] serf: EventMemberJoin: zna 127.0.0.1
+
+    2024/06/24 10:19:22 [INFO] agent: joined: 1 nodes
+    2024/06/24 10:19:22 [INFO] agent.ipc: Graceful leave triggered
+    2024/06/24 10:19:22 [INFO] agent: requesting graceful leave from Serf
+    2024/06/24 10:19:23 [INFO] serf: EventMemberLeave: zna 127.0.0.1
+    2024/06/24 10:19:23 [INFO] agent: Received event: member-join
+    2024/06/24 10:19:23 [INFO] serf: EventMemberLeave: zna 127.0.0.1
+    2024/06/24 10:19:24 [INFO] agent: Received event: member-leave
+    2024/06/24 10:19:24 [INFO] agent: Received event: member-join
+    2024/06/24 10:19:24 [INFO] agent: Received event: member-leave
+    2024/06/24 10:19:25 [INFO] agent: requesting serf shutdown
+    2024/06/24 10:19:25 [INFO] agent: shutdown complete
+    2024/06/24 10:19:25 [WARN] agent: Serf shutdown detected, quitting==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: 'zna'
+         Bind addr: '127.0.0.1:5000'
+                       RPC addr: '127.0.0.1:7373'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+
+==> Log data will now stream in as it occurs:
+
+    2024/06/24 10:20:47 [INFO] agent: Serf agent starting
+    2024/06/24 10:20:47 [INFO] serf: EventMemberJoin: zna 127.0.0.1
+    2024/06/24 10:20:47 [INFO] agent.ipc: Accepted client: 127.0.0.1:53266
+    2024/06/24 10:20:48 [INFO] agent: joining: [127.0.0.1:5000] replay: false
+    2024/06/24 10:20:48 [INFO] agent: joined: 1 nodes
+    2024/06/24 10:20:48 [INFO] agent.ipc: Accepted client: 127.0.0.1:43314
+==> Starting Serf agent...
+==> Failed to start the Serf agent: Error creating Serf: Failed to create memberlist: Could not set up network transport: failed to obtain an address: Failed to start TCP listener on "127.0.0.1" port 5001: listen tcp 127.0.0.1:5001: bind: address already in use
+    2024/06/24 10:20:48 [INFO] agent: joining: [127.0.0.1:5000] replay: false
+    2024/06/24 10:20:48 [INFO] serf: EventMemberJoin: zna2 127.0.0.1    2024/06/24 10:20:48 [INFO] serf: EventMemberJoin: zna 127.0.0.1
+
+    2024/06/24 10:20:48 [INFO] agent: joined: 1 nodes
+    2024/06/24 10:20:48 [INFO] agent.ipc: Graceful leave triggered
+    2024/06/24 10:20:48 [INFO] agent: requesting graceful leave from Serf
+    2024/06/24 10:20:48 [INFO] serf: EventMemberLeave: zna 127.0.0.1
+    2024/06/24 10:20:49 [INFO] serf: EventMemberLeave: zna 127.0.0.1
+    2024/06/24 10:20:49 [INFO] agent: Received event: member-leave
+    2024/06/24 10:20:49 [INFO] agent: Received event: member-join
+    2024/06/24 10:20:50 [INFO] agent: requesting serf shutdown
+    2024/06/24 10:20:50 [INFO] agent: shutdown complete
+    2024/06/24 10:20:50 [WARN] agent: Serf shutdown detected, quitting==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: 'zna'
+         Bind addr: '127.0.0.1:5000'
+                       RPC addr: '127.0.0.1:7373'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+
+==> Log data will now stream in as it occurs:
+
+    2024/06/24 10:21:41 [INFO] agent: Serf agent starting
+    2024/06/24 10:21:41 [INFO] serf: EventMemberJoin: zna 127.0.0.1
+    2024/06/24 10:21:41 [INFO] agent.ipc: Accepted client: 127.0.0.1:55974
+    2024/06/24 10:21:41 [INFO] agent: joining: [127.0.0.1:5000] replay: false
+    2024/06/24 10:21:41 [INFO] agent: joined: 1 nodes
+    2024/06/24 10:21:41 [INFO] agent.ipc: Accepted client: 127.0.0.1:46022
+==> Starting Serf agent...
+==> Failed to start the Serf agent: Error creating Serf: Failed to create memberlist: Could not set up network transport: failed to obtain an address: Failed to start TCP listener on "127.0.0.1" port 5001: listen tcp 127.0.0.1:5001: bind: address already in use
+    2024/06/24 10:21:41 [INFO] agent: joining: [127.0.0.1:5000] replay: false
+    2024/06/24 10:21:41 [INFO] serf: EventMemberJoin: zna2 127.0.0.1    2024/06/24 10:21:41 [INFO] serf: EventMemberJoin: zna 127.0.0.1
+
+    2024/06/24 10:21:41 [INFO] agent: joined: 1 nodes
+    2024/06/24 10:21:42 [INFO] agent.ipc: Graceful leave triggered
+    2024/06/24 10:21:42 [INFO] agent: requesting graceful leave from Serf
+    2024/06/24 10:21:42 [INFO] serf: EventMemberLeave: zna 127.0.0.1
+    2024/06/24 10:21:42 [INFO] serf: EventMemberLeave: zna 127.0.0.1
+    2024/06/24 10:21:43 [INFO] agent: Received event: member-join
+    2024/06/24 10:21:43 [INFO] agent: Received event: member-leave
+    2024/06/24 10:21:44 [INFO] agent: requesting serf shutdown
+    2024/06/24 10:21:44 [INFO] agent: shutdown complete
+    2024/06/24 10:21:44 [WARN] agent: Serf shutdown detected, quitting
+==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: 'zna'
+         Bind addr: '127.0.0.1:5000'
+                       RPC addr: '127.0.0.1:7373'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+
+==> Log data will now stream in as it occurs:
+
+    2024/06/24 10:22:18 [INFO] agent: Serf agent starting
+    2024/06/24 10:22:18 [INFO] serf: EventMemberJoin: zna 127.0.0.1
+    2024/06/24 10:22:18 [INFO] agent.ipc: Accepted client: 127.0.0.1:58144
+    2024/06/24 10:22:18 [INFO] agent: joining: [127.0.0.1:5000] replay: false
+    2024/06/24 10:22:18 [INFO] agent: joined: 1 nodes
+    2024/06/24 10:22:18 [INFO] agent.ipc: Accepted client: 127.0.0.1:48192
+==> Starting Serf agent...
+==> Failed to start the Serf agent: Error creating Serf: Failed to create memberlist: Could not set up network transport: failed to obtain an address: Failed to start TCP listener on "127.0.0.1" port 5001: listen tcp 127.0.0.1:5001: bind: address already in use
+    2024/06/24 10:22:18 [INFO] agent: joining: [127.0.0.1:5000] replay: false
+    2024/06/24 10:22:18 [INFO] serf: EventMemberJoin: zna2 127.0.0.1    2024/06/24 10:22:18 [INFO] serf: EventMemberJoin: zna 127.0.0.1
+
+    2024/06/24 10:22:18 [INFO] agent: joined: 1 nodes
+    2024/06/24 10:22:18 [INFO] agent.ipc: Graceful leave triggered
+    2024/06/24 10:22:18 [INFO] agent: requesting graceful leave from Serf
+    2024/06/24 10:22:19 [INFO] serf: EventMemberLeave: zna 127.0.0.1
+    2024/06/24 10:22:19 [INFO] serf: EventMemberLeave: zna 127.0.0.1
+    2024/06/24 10:22:20 [INFO] agent: Received event: member-join
+    2024/06/24 10:22:20 [INFO] agent: Received event: member-leave
+    2024/06/24 10:22:21 [INFO] agent: requesting serf shutdown
+    2024/06/24 10:22:21 [INFO] agent: shutdown complete
+    2024/06/24 10:22:21 [WARN] agent: Serf shutdown detected, quitting==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: 'zna'
+         Bind addr: '127.0.0.1:5000'
+                       RPC addr: '127.0.0.1:7373'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+
+==> Log data will now stream in as it occurs:
+
+    2024/06/24 12:35:50 [INFO] agent: Serf agent starting
+    2024/06/24 12:35:50 [INFO] serf: EventMemberJoin: zna 127.0.0.1
+    2024/06/24 12:35:50 [INFO] agent.ipc: Accepted client: 127.0.0.1:44608
+    2024/06/24 12:35:50 [INFO] agent: joining: [127.0.0.1:5000] replay: false
+    2024/06/24 12:35:50 [INFO] agent: joined: 1 nodes
+    2024/06/24 12:35:50 [INFO] agent.ipc: Accepted client: 127.0.0.1:34656
+==> Starting Serf agent...
+==> Failed to start the Serf agent: Error creating Serf: Failed to create memberlist: Could not set up network transport: failed to obtain an address: Failed to start TCP listener on "127.0.0.1" port 5001: listen tcp 127.0.0.1:5001: bind: address already in use
+    2024/06/24 12:35:50 [INFO] agent: joining: [127.0.0.1:5000] replay: false
+    2024/06/24 12:35:50 [INFO] serf: EventMemberJoin: zna2 127.0.0.1    2024/06/24 12:35:50 [INFO] serf: EventMemberJoin: zna 127.0.0.1
+
+    2024/06/24 12:35:50 [INFO] agent: joined: 1 nodes
+    2024/06/24 12:35:50 [INFO] agent.ipc: Graceful leave triggered
+    2024/06/24 12:35:50 [INFO] agent: requesting graceful leave from Serf
+    2024/06/24 12:35:51 [INFO] serf: EventMemberLeave: zna 127.0.0.1
+    2024/06/24 12:35:51 [INFO] serf: EventMemberLeave: zna 127.0.0.1
+    2024/06/24 12:35:52 [INFO] agent: Received event: member-join
+    2024/06/24 12:35:52 [INFO] agent: Received event: member-leave
+    2024/06/24 12:35:53 [INFO] agent: requesting serf shutdown
+    2024/06/24 12:35:53 [INFO] agent: shutdown complete
+    2024/06/24 12:35:53 [WARN] agent: Serf shutdown detected, quitting==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: 'zna'
+         Bind addr: '127.0.0.1:5000'
+                       RPC addr: '127.0.0.1:7373'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+
+==> Log data will now stream in as it occurs:
+
+    2024/06/24 12:35:59 [INFO] agent: Serf agent starting
+    2024/06/24 12:35:59 [INFO] serf: EventMemberJoin: zna 127.0.0.1
+    2024/06/24 12:35:59 [INFO] agent.ipc: Accepted client: 127.0.0.1:46628
+    2024/06/24 12:35:59 [INFO] agent: joining: [127.0.0.1:5000] replay: false
+    2024/06/24 12:35:59 [INFO] agent: joined: 1 nodes
+    2024/06/24 12:35:59 [INFO] agent.ipc: Accepted client: 127.0.0.1:36676
+==> Starting Serf agent...
+==> Failed to start the Serf agent: Error creating Serf: Failed to create memberlist: Could not set up network transport: failed to obtain an address: Failed to start TCP listener on "127.0.0.1" port 5001: listen tcp 127.0.0.1:5001: bind: address already in use
+    2024/06/24 12:35:59 [INFO] agent: joining: [127.0.0.1:5000] replay: false
+    2024/06/24 12:35:59 [INFO] serf: EventMemberJoin: zna2 127.0.0.1    2024/06/24 12:35:59 [INFO] agent: joined: 1 nodes
+
+    2024/06/24 12:35:59 [WARN] memberlist: Refuting a suspect message (from: zna)
+    2024/06/24 12:35:59 [INFO] agent.ipc: Graceful leave triggered
+    2024/06/24 12:35:59 [INFO] agent: requesting graceful leave from Serf
+    2024/06/24 12:35:59 [INFO] serf: EventMemberJoin: zna 127.0.0.1
+    2024/06/24 12:36:00 [INFO] serf: EventMemberLeave: zna 127.0.0.1
+    2024/06/24 12:36:00 [INFO] serf: EventMemberLeave: zna 127.0.0.1
+    2024/06/24 12:36:01 [INFO] agent: Received event: member-leave
+    2024/06/24 12:36:01 [INFO] agent: Received event: member-join
+    2024/06/24 12:36:01 [INFO] agent: requesting serf shutdown
+    2024/06/24 12:36:01 [INFO] agent: shutdown complete
+    2024/06/24 12:36:01 [WARN] agent: Serf shutdown detected, quitting==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: 'zna'
+         Bind addr: '127.0.0.1:5000'
+                       RPC addr: '127.0.0.1:7373'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+
+==> Log data will now stream in as it occurs:
+
+    2024/06/24 12:36:24 [INFO] agent: Serf agent starting
+    2024/06/24 12:36:24 [INFO] serf: EventMemberJoin: zna 127.0.0.1
+    2024/06/24 12:36:24 [INFO] agent.ipc: Accepted client: 127.0.0.1:49132
+    2024/06/24 12:36:24 [INFO] agent: joining: [127.0.0.1:5000] replay: false
+    2024/06/24 12:36:24 [INFO] agent: joined: 1 nodes
+    2024/06/24 12:36:24 [INFO] agent.ipc: Accepted client: 127.0.0.1:39180
+==> Starting Serf agent...
+==> Failed to start the Serf agent: Error creating Serf: Failed to create memberlist: Could not set up network transport: failed to obtain an address: Failed to start TCP listener on "127.0.0.1" port 5001: listen tcp 127.0.0.1:5001: bind: address already in use
+    2024/06/24 12:36:24 [INFO] agent: joining: [127.0.0.1:5000] replay: false
+    2024/06/24 12:36:24 [WARN] memberlist: Refuting a suspect message (from: zna)    2024/06/24 12:36:24 [INFO] agent: joined: 1 nodes
+
+    2024/06/24 12:36:24 [INFO] serf: EventMemberJoin: zna2 127.0.0.1
+    2024/06/24 12:36:24 [INFO] agent.ipc: Graceful leave triggered
+    2024/06/24 12:36:24 [INFO] agent: requesting graceful leave from Serf
+    2024/06/24 12:36:24 [INFO] serf: EventMemberJoin: zna 127.0.0.1
+    2024/06/24 12:36:25 [INFO] serf: EventMemberLeave: zna 127.0.0.1
+    2024/06/24 12:36:25 [INFO] serf: EventMemberLeave: zna 127.0.0.1
+==> Caught signal: interrupt
+==> Gracefully shutting down agent...
+    2024/06/24 12:36:26 [INFO] agent: requesting graceful leave from Serf
+==> Error: Leave already in progress
+    2024/06/24 12:36:26 [INFO] agent: Received event: member-leave
+    2024/06/24 12:36:26 [INFO] agent: Received event: member-join
+    2024/06/24 12:36:26 [ERR] agent.ipc: Failed to stream event to ipc.client: 127.0.0.1:49132: write tcp 127.0.0.1:7373->127.0.0.1:49132: write: broken pipe
+    2024/06/24 12:36:27 [INFO] agent: requesting serf shutdown
+    2024/06/24 12:36:27 [INFO] agent: shutdown complete
+    2024/06/24 12:36:27 [ERR] agent.ipc: Failed to evaluate request: write tcp 127.0.0.1:7373->127.0.0.1:49132: write: broken pipe
+    2024/06/24 12:36:27 [WARN] agent: Serf shutdown detected, quitting
+==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: 'zna'
+         Bind addr: '127.0.0.1:5000'
+                       RPC addr: '127.0.0.1:7373'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+
+==> Log data will now stream in as it occurs:
+
+    2024/06/24 12:36:42 [INFO] agent: Serf agent starting
+    2024/06/24 12:36:42 [INFO] serf: EventMemberJoin: zna 127.0.0.1
+    2024/06/24 12:36:42 [INFO] agent.ipc: Accepted client: 127.0.0.1:51648
+    2024/06/24 12:36:42 [INFO] agent: joining: [127.0.0.1:5000] replay: false
+    2024/06/24 12:36:42 [INFO] agent: joined: 1 nodes
+    2024/06/24 12:36:42 [INFO] agent.ipc: Accepted client: 127.0.0.1:41696
+==> Starting Serf agent...
+==> Failed to start the Serf agent: Error creating Serf: Failed to create memberlist: Could not set up network transport: failed to obtain an address: Failed to start TCP listener on "127.0.0.1" port 5001: listen tcp 127.0.0.1:5001: bind: address already in use
+    2024/06/24 12:36:43 [INFO] agent: Received event: member-join
+    2024/06/24 12:36:56 [INFO] agent.ipc: Accepted client: 127.0.0.1:51654
+==> Starting Serf agent...
+==> Failed to start the Serf agent: Error creating Serf: Failed to create memberlist: Could not set up network transport: failed to obtain an address: Failed to start TCP listener on "127.0.0.1" port 5000: listen tcp 127.0.0.1:5000: bind: address already in use
+    2024/06/24 12:36:57 [INFO] agent.ipc: Accepted client: 127.0.0.1:51656
+==> Starting Serf agent...
+==> Failed to start the Serf agent: Error creating Serf: Failed to create memberlist: Could not set up network transport: failed to obtain an address: Failed to start TCP listener on "127.0.0.1" port 5000: listen tcp 127.0.0.1:5000: bind: address already in use
+==> Caught signal: terminated
+    2024/06/24 12:37:10 [INFO] agent: requesting serf shutdown
+    2024/06/24 12:37:10 [WARN] serf: Shutdown without a Leave
+    2024/06/24 12:37:10 [INFO] agent: shutdown complete
+==> Caught signal: terminated
+    2024/06/24 12:37:14 [INFO] agent: requesting serf shutdown
+    2024/06/24 12:37:14 [WARN] serf: Shutdown without a Leave
+    2024/06/24 12:37:14 [INFO] agent: shutdown complete
+==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: 'zna'
+         Bind addr: '127.0.0.1:5000'
+                       RPC addr: '127.0.0.1:7373'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+
+==> Log data will now stream in as it occurs:
+
+    2024/06/24 12:37:17 [INFO] agent: Serf agent starting
+    2024/06/24 12:37:17 [INFO] serf: EventMemberJoin: zna 127.0.0.1
+    2024/06/24 12:37:17 [INFO] agent.ipc: Accepted client: 127.0.0.1:53972
+    2024/06/24 12:37:17 [INFO] agent: joining: [127.0.0.1:5000] replay: false
+    2024/06/24 12:37:17 [INFO] agent: joined: 1 nodes
+==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: 'zna2'
+         Bind addr: '127.0.0.1:5001'
+                       RPC addr: '127.0.0.1:7374'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+
+==> Log data will now stream in as it occurs:
+
+    2024/06/24 12:37:17 [INFO] agent: Serf agent starting
+    2024/06/24 12:37:17 [INFO] serf: EventMemberJoin: zna2 127.0.0.1
+    2024/06/24 12:37:17 [INFO] agent.ipc: Accepted client: 127.0.0.1:46694
+    2024/06/24 12:37:17 [INFO] agent: joining: [127.0.0.1:5000] replay: false
+    2024/06/24 12:37:17 [INFO] serf: EventMemberJoin: zna2 127.0.0.1    2024/06/24 12:37:17 [INFO] serf: EventMemberJoin: zna 127.0.0.1
+
+    2024/06/24 12:37:17 [INFO] agent: joined: 1 nodes
+    2024/06/24 12:37:17 [INFO] agent.ipc: Graceful leave triggered
+    2024/06/24 12:37:17 [INFO] agent: requesting graceful leave from Serf
+    2024/06/24 12:37:18 [INFO] serf: EventMemberLeave: zna 127.0.0.1
+    2024/06/24 12:37:18 [INFO] serf: EventMemberLeave: zna 127.0.0.1
+    2024/06/24 12:37:19 [INFO] agent: Received event: member-leave
+    2024/06/24 12:37:19 [INFO] agent: Received event: member-join
+    2024/06/24 12:37:19 [INFO] agent: Received event: member-leave
+    2024/06/24 12:37:19 [INFO] agent: Received event: member-join
+    2024/06/24 12:37:20 [INFO] agent: requesting serf shutdown
+    2024/06/24 12:37:20 [INFO] agent: shutdown complete
+    2024/06/24 12:37:20 [WARN] agent: Serf shutdown detected, quitting==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: 'zna'
+         Bind addr: '127.0.0.1:5000'
+                       RPC addr: '127.0.0.1:7373'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+
+==> Log data will now stream in as it occurs:
+
+    2024/06/24 12:37:24 [INFO] agent: Serf agent starting
+    2024/06/24 12:37:24 [INFO] serf: EventMemberJoin: zna 127.0.0.1
+    2024/06/24 12:37:24 [INFO] agent.ipc: Accepted client: 127.0.0.1:59368
+    2024/06/24 12:37:24 [INFO] agent: joining: [127.0.0.1:5000] replay: false
+    2024/06/24 12:37:24 [INFO] agent: joined: 1 nodes
+    2024/06/24 12:37:24 [INFO] agent.ipc: Accepted client: 127.0.0.1:49416
+==> Starting Serf agent...
+==> Failed to start the Serf agent: Error creating Serf: Failed to create memberlist: Could not set up network transport: failed to obtain an address: Failed to start TCP listener on "127.0.0.1" port 5001: listen tcp 127.0.0.1:5001: bind: address already in use
+    2024/06/24 12:37:25 [INFO] agent: Received event: member-join
+    2024/06/24 12:38:27 [INFO] agent.ipc: Accepted client: 127.0.0.1:59374
+==> Starting Serf agent...
+==> Failed to start the Serf agent: Error creating Serf: Failed to create memberlist: Could not set up network transport: failed to obtain an address: Failed to start TCP listener on "127.0.0.1" port 5000: listen tcp 127.0.0.1:5000: bind: address already in use
+    2024/06/24 12:38:31 [INFO] agent.ipc: Accepted client: 127.0.0.1:59376
+==> Starting Serf agent...
+==> Failed to start the Serf agent: Error creating Serf: Failed to create memberlist: Could not set up network transport: failed to obtain an address: Failed to start TCP listener on "127.0.0.1" port 5000: listen tcp 127.0.0.1:5000: bind: address already in use
+==> Caught signal: terminated
+    2024/06/24 12:39:51 [INFO] agent: requesting serf shutdown
+    2024/06/24 12:39:51 [WARN] serf: Shutdown without a Leave
+    2024/06/24 12:39:51 [INFO] agent: shutdown complete
+==> Caught signal: terminated
+    2024/06/24 12:39:57 [INFO] agent: requesting serf shutdown
+    2024/06/24 12:39:57 [WARN] serf: Shutdown without a Leave
+    2024/06/24 12:39:57 [INFO] agent: shutdown complete
+==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: 'zna'
+         Bind addr: '127.0.0.1:5000'
+                       RPC addr: '127.0.0.1:7373'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+
+==> Log data will now stream in as it occurs:
+
+    2024/06/24 12:42:00 [INFO] agent: Serf agent starting
+    2024/06/24 12:42:00 [INFO] serf: EventMemberJoin: zna 127.0.0.1
+    2024/06/24 12:42:00 [INFO] agent.ipc: Accepted client: 127.0.0.1:33590
+    2024/06/24 12:42:00 [INFO] agent: joining: [127.0.0.1:5000] replay: false
+    2024/06/24 12:42:00 [INFO] agent: joined: 1 nodes
+==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: 'zna2'
+         Bind addr: '127.0.0.1:5001'
+                       RPC addr: '127.0.0.1:7374'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+
+==> Log data will now stream in as it occurs:
+
+    2024/06/24 12:42:00 [INFO] agent: Serf agent starting
+    2024/06/24 12:42:00 [INFO] serf: EventMemberJoin: zna2 127.0.0.1
+    2024/06/24 12:42:00 [INFO] agent.ipc: Accepted client: 127.0.0.1:55028
+    2024/06/24 12:42:00 [INFO] agent: joining: [127.0.0.1:5000] replay: false
+    2024/06/24 12:42:00 [INFO] serf: EventMemberJoin: zna2 127.0.0.1
+    2024/06/24 12:42:00 [INFO] serf: EventMemberJoin: zna 127.0.0.1
+    2024/06/24 12:42:00 [INFO] agent: joined: 1 nodes
+    2024/06/24 12:42:00 [INFO] agent.ipc: Graceful leave triggered
+    2024/06/24 12:42:00 [INFO] agent: requesting graceful leave from Serf
+    2024/06/24 12:42:01 [INFO] serf: EventMemberLeave: zna 127.0.0.1
+    2024/06/24 12:42:01 [INFO] serf: EventMemberLeave: zna 127.0.0.1
+    2024/06/24 12:42:02 [INFO] agent: Received event: member-join
+    2024/06/24 12:42:02 [INFO] agent: Received event: member-leave
+    2024/06/24 12:42:02 [INFO] agent: Received event: member-leave
+    2024/06/24 12:42:02 [INFO] agent: Received event: member-join
+    2024/06/24 12:42:02 [INFO] agent: requesting serf shutdown
+    2024/06/24 12:42:02 [INFO] agent: shutdown complete
+    2024/06/24 12:42:02 [WARN] agent: Serf shutdown detected, quitting==> Caught signal: interrupt
+==> Gracefully shutting down agent...
+    2024/06/24 12:42:11 [INFO] agent: requesting graceful leave from Serf
+    2024/06/24 12:42:11 [INFO] serf: EventMemberLeave: zna2 127.0.0.1
+    2024/06/24 12:42:12 [INFO] agent: Received event: member-leave
+    2024/06/24 12:42:12 [INFO] agent: requesting serf shutdown
+    2024/06/24 12:42:12 [INFO] agent: shutdown complete
+==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: 'zna'
+         Bind addr: '127.0.0.1:5000'
+                       RPC addr: '127.0.0.1:7373'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+
+==> Log data will now stream in as it occurs:
+
+    2024/06/24 12:42:46 [INFO] agent: Serf agent starting
+    2024/06/24 12:42:46 [INFO] serf: EventMemberJoin: zna 127.0.0.1
+    2024/06/24 12:42:46 [INFO] agent.ipc: Accepted client: 127.0.0.1:39464
+    2024/06/24 12:42:46 [INFO] agent: joining: [127.0.0.1:5000] replay: false
+    2024/06/24 12:42:46 [INFO] agent: joined: 1 nodes
+==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: 'zna2'
+         Bind addr: '127.0.0.1:5001'
+                       RPC addr: '127.0.0.1:7374'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+
+==> Log data will now stream in as it occurs:
+
+    2024/06/24 12:42:46 [INFO] agent: Serf agent starting
+    2024/06/24 12:42:46 [INFO] serf: EventMemberJoin: zna2 127.0.0.1
+    2024/06/24 12:42:46 [INFO] agent.ipc: Accepted client: 127.0.0.1:60066
+    2024/06/24 12:42:46 [INFO] agent: joining: [127.0.0.1:5000] replay: false
+    2024/06/24 12:42:46 [INFO] serf: EventMemberJoin: zna2 127.0.0.1
+    2024/06/24 12:42:46 [INFO] serf: EventMemberJoin: zna 127.0.0.1
+    2024/06/24 12:42:46 [INFO] agent: joined: 1 nodes
+    2024/06/24 12:42:47 [INFO] agent.ipc: Graceful leave triggered
+    2024/06/24 12:42:47 [INFO] agent: requesting graceful leave from Serf
+    2024/06/24 12:42:47 [INFO] serf: EventMemberLeave: zna 127.0.0.1
+    2024/06/24 12:42:47 [INFO] serf: EventMemberLeave: zna 127.0.0.1
+    2024/06/24 12:42:48 [INFO] agent: Received event: member-leave
+    2024/06/24 12:42:48 [INFO] agent: Received event: member-join
+    2024/06/24 12:42:48 [INFO] agent: Received event: member-join
+    2024/06/24 12:42:48 [INFO] agent: Received event: member-leave
+    2024/06/24 12:42:49 [INFO] agent: requesting serf shutdown
+    2024/06/24 12:42:49 [INFO] agent: shutdown complete
+    2024/06/24 12:42:49 [WARN] agent: Serf shutdown detected, quitting==> Caught signal: interrupt
+==> Gracefully shutting down agent...
+    2024/06/24 12:47:16 [INFO] agent: requesting graceful leave from Serf
+    2024/06/24 12:47:16 [INFO] serf: EventMemberLeave: zna2 127.0.0.1
+    2024/06/24 12:47:17 [INFO] agent: Received event: member-leave
+    2024/06/24 12:47:17 [INFO] agent: requesting serf shutdown
+    2024/06/24 12:47:17 [INFO] agent: shutdown complete
+==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: 'zna'
+         Bind addr: '127.0.0.1:5000'
+                       RPC addr: '127.0.0.1:7373'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+
+==> Log data will now stream in as it occurs:
+
+    2024/06/24 13:30:51 [INFO] agent: Serf agent starting
+    2024/06/24 13:30:51 [INFO] serf: EventMemberJoin: zna 127.0.0.1
+    2024/06/24 13:30:51 [INFO] agent.ipc: Accepted client: 127.0.0.1:48942
+==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: 'zna2'
+         Bind addr: '127.0.0.1:5001'
+                       RPC addr: '127.0.0.1:7374'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+
+==> Log data will now stream in as it occurs:
+
+    2024/06/24 13:30:51 [INFO] agent: Serf agent starting
+    2024/06/24 13:30:51 [INFO] serf: EventMemberJoin: zna2 127.0.0.1
+    2024/06/24 13:30:51 [INFO] agent.ipc: Accepted client: 127.0.0.1:41840
+    2024/06/24 13:30:51 [INFO] agent: joining: [127.0.0.1:5001] replay: false
+    2024/06/24 13:30:51 [INFO] serf: EventMemberJoin: zna 127.0.0.1    2024/06/24 13:30:51 [INFO] serf: EventMemberJoin: zna2 127.0.0.1
+
+    2024/06/24 13:30:51 [INFO] agent: joined: 1 nodes
+    2024/06/24 13:30:52 [INFO] agent: Received event: member-join    2024/06/24 13:30:52 [INFO] agent: Received event: member-join
+
+==> Caught signal: terminated
+    2024/06/24 13:46:18 [INFO] agent: requesting serf shutdown
+    2024/06/24 13:46:18 [WARN] serf: Shutdown without a Leave
+    2024/06/24 13:46:18 [INFO] agent: shutdown complete
+    2024/06/24 13:46:18 [ERR] agent.ipc: failed to decode request header: read tcp 127.0.0.1:7373->127.0.0.1:48942: read: connection reset by peer
+    2024/06/24 13:46:21 [INFO] memberlist: Suspect zna2 has failed, no acks received
+    2024/06/24 13:46:24 [INFO] memberlist: Suspect zna2 has failed, no acks received
+    2024/06/24 13:46:25 [INFO] memberlist: Marking zna2 as failed, suspect timeout reached (0 peer confirmations)
+    2024/06/24 13:46:25 [INFO] serf: EventMemberFailed: zna2 127.0.0.1
+    2024/06/24 13:46:26 [INFO] agent: Received event: member-failed
+    2024/06/24 13:46:28 [INFO] memberlist: Suspect zna2 has failed, no acks received
+==> Caught signal: terminated
+    2024/06/24 13:46:50 [INFO] agent: requesting serf shutdown
+    2024/06/24 13:46:50 [WARN] serf: Shutdown without a Leave
+    2024/06/24 13:46:50 [INFO] agent: shutdown complete
+==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: 'zna'
+         Bind addr: '127.0.0.1:5000'
+                       RPC addr: '127.0.0.1:7373'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+
+==> Log data will now stream in as it occurs:
+
+    2024/06/24 13:47:34 [INFO] agent: Serf agent starting
+    2024/06/24 13:47:34 [INFO] serf: EventMemberJoin: zna 127.0.0.1
+    2024/06/24 13:47:34 [INFO] agent.ipc: Accepted client: 127.0.0.1:54492
+    2024/06/24 13:47:34 [INFO] agent: joining: [127.0.0.1:5000 127.0.0.1:5001] replay: false
+    2024/06/24 13:47:34 [INFO] agent: joined: 1 nodes
+==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: 'zna2'
+         Bind addr: '127.0.0.1:5001'
+                       RPC addr: '127.0.0.1:7374'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+
+==> Log data will now stream in as it occurs:
+
+    2024/06/24 13:47:34 [INFO] agent: Serf agent starting
+    2024/06/24 13:47:34 [INFO] serf: EventMemberJoin: zna2 127.0.0.1
+    2024/06/24 13:47:34 [INFO] agent.ipc: Accepted client: 127.0.0.1:46780
+    2024/06/24 13:47:34 [INFO] agent: joining: [127.0.0.1:5000 127.0.0.1:5001] replay: false
+    2024/06/24 13:47:34 [INFO] serf: EventMemberJoin: zna2 127.0.0.1
+    2024/06/24 13:47:34 [INFO] serf: EventMemberJoin: zna 127.0.0.1
+    2024/06/24 13:47:34 [INFO] agent: joined: 2 nodes
+    2024/06/24 13:47:34 [INFO] agent.ipc: Graceful leave triggered
+    2024/06/24 13:47:34 [INFO] agent: requesting graceful leave from Serf
+    2024/06/24 13:47:35 [INFO] serf: EventMemberLeave: zna 127.0.0.1
+    2024/06/24 13:47:35 [INFO] serf: EventMemberLeave: zna 127.0.0.1
+    2024/06/24 13:47:36 [INFO] agent: Received event: member-leave
+    2024/06/24 13:47:36 [INFO] agent: Received event: member-join
+    2024/06/24 13:47:36 [INFO] agent: Received event: member-join
+    2024/06/24 13:47:36 [INFO] agent: Received event: member-leave
+    2024/06/24 13:47:36 [INFO] agent: requesting serf shutdown
+    2024/06/24 13:47:36 [INFO] agent: shutdown complete
+    2024/06/24 13:47:36 [WARN] agent: Serf shutdown detected, quitting    2024/06/24 13:47:41 [INFO] agent.ipc: Graceful leave triggered
+    2024/06/24 13:47:41 [INFO] agent: requesting graceful leave from Serf
+    2024/06/24 13:47:41 [INFO] serf: EventMemberLeave: zna2 127.0.0.1
+    2024/06/24 13:47:42 [INFO] agent: requesting serf shutdown
+    2024/06/24 13:47:42 [INFO] agent: Received event: member-leave
+    2024/06/24 13:47:42 [WARN] agent: Serf shutdown detected, quitting
+    2024/06/24 13:47:42 [INFO] agent: shutdown complete
+==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: 'zna'
+         Bind addr: '127.0.0.1:5000'
+                       RPC addr: '127.0.0.1:7373'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+
+==> Log data will now stream in as it occurs:
+
+    2024/06/24 13:47:48 [INFO] agent: Serf agent starting
+    2024/06/24 13:47:48 [INFO] serf: EventMemberJoin: zna 127.0.0.1
+    2024/06/24 13:47:48 [INFO] agent.ipc: Accepted client: 127.0.0.1:59504
+    2024/06/24 13:47:48 [INFO] agent: joining: [127.0.0.1:5000 127.0.0.1:5001] replay: false
+    2024/06/24 13:47:49 [INFO] agent: joined: 1 nodes
+==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: 'zna2'
+         Bind addr: '127.0.0.1:5001'
+                       RPC addr: '127.0.0.1:7374'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+
+==> Log data will now stream in as it occurs:
+
+    2024/06/24 13:47:49 [INFO] agent: Serf agent starting
+    2024/06/24 13:47:49 [INFO] serf: EventMemberJoin: zna2 127.0.0.1
+    2024/06/24 13:47:49 [INFO] agent.ipc: Accepted client: 127.0.0.1:53002
+    2024/06/24 13:47:49 [INFO] agent: joining: [127.0.0.1:5000 127.0.0.1:5001] replay: false
+    2024/06/24 13:47:49 [INFO] serf: EventMemberJoin: zna2 127.0.0.1
+    2024/06/24 13:47:49 [INFO] serf: EventMemberJoin: zna 127.0.0.1
+    2024/06/24 13:47:49 [INFO] agent: joined: 2 nodes
+    2024/06/24 13:47:49 [INFO] agent.ipc: Graceful leave triggered
+    2024/06/24 13:47:49 [INFO] agent: requesting graceful leave from Serf
+    2024/06/24 13:47:49 [INFO] serf: EventMemberLeave: zna 127.0.0.1
+    2024/06/24 13:47:50 [INFO] serf: EventMemberLeave: zna 127.0.0.1
+    2024/06/24 13:47:50 [INFO] agent: Received event: member-leave
+    2024/06/24 13:47:50 [INFO] agent: Received event: member-join
+    2024/06/24 13:47:51 [INFO] agent: Received event: member-leave
+    2024/06/24 13:47:51 [INFO] agent: Received event: member-join
+    2024/06/24 13:47:51 [INFO] agent: requesting serf shutdown
+    2024/06/24 13:47:51 [INFO] agent: shutdown complete
+    2024/06/24 13:47:51 [WARN] agent: Serf shutdown detected, quitting    2024/06/24 13:47:56 [INFO] agent.ipc: Graceful leave triggered
+    2024/06/24 13:47:56 [INFO] agent: requesting graceful leave from Serf
+    2024/06/24 13:47:56 [INFO] serf: EventMemberLeave: zna2 127.0.0.1
+    2024/06/24 13:47:57 [INFO] agent: Received event: member-leave
+    2024/06/24 13:47:57 [INFO] agent: requesting serf shutdown
+    2024/06/24 13:47:57 [INFO] agent: shutdown complete
+    2024/06/24 13:47:57 [WARN] agent: Serf shutdown detected, quitting==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: 'zna'
+         Bind addr: '127.0.0.1:5000'
+                       RPC addr: '127.0.0.1:7373'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+
+==> Log data will now stream in as it occurs:
+
+    2024/06/24 13:48:40 [INFO] agent: Serf agent starting
+    2024/06/24 13:48:40 [INFO] serf: EventMemberJoin: zna 127.0.0.1
+    2024/06/24 13:48:40 [INFO] agent.ipc: Accepted client: 127.0.0.1:37216
+    2024/06/24 13:48:40 [INFO] agent: joining: [127.0.0.1:5000 127.0.0.1:5001] replay: false
+    2024/06/24 13:48:40 [INFO] agent: joined: 1 nodes
+==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: 'zna2'
+         Bind addr: '127.0.0.1:5001'
+                       RPC addr: '127.0.0.1:7374'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+
+==> Log data will now stream in as it occurs:
+
+    2024/06/24 13:48:40 [INFO] agent: Serf agent starting
+    2024/06/24 13:48:40 [INFO] serf: EventMemberJoin: zna2 127.0.0.1
+    2024/06/24 13:48:40 [INFO] agent.ipc: Accepted client: 127.0.0.1:57820
+    2024/06/24 13:48:40 [INFO] agent: joining: [127.0.0.1:5000 127.0.0.1:5001] replay: false
+    2024/06/24 13:48:40 [INFO] serf: EventMemberJoin: zna2 127.0.0.1
+    2024/06/24 13:48:40 [INFO] serf: EventMemberJoin: zna 127.0.0.1
+    2024/06/24 13:48:40 [INFO] agent: joined: 2 nodes
+    2024/06/24 13:48:40 [INFO] agent.ipc: Graceful leave triggered
+    2024/06/24 13:48:40 [INFO] agent: requesting graceful leave from Serf
+    2024/06/24 13:48:41 [INFO] serf: EventMemberLeave: zna 127.0.0.1
+    2024/06/24 13:48:41 [INFO] serf: EventMemberLeave: zna 127.0.0.1
+    2024/06/24 13:48:42 [INFO] agent: Received event: member-join
+    2024/06/24 13:48:42 [INFO] agent: Received event: member-leave
+    2024/06/24 13:48:42 [INFO] agent: Received event: member-join
+    2024/06/24 13:48:42 [INFO] agent: Received event: member-leave
+    2024/06/24 13:48:42 [INFO] agent: requesting serf shutdown
+    2024/06/24 13:48:42 [INFO] agent: shutdown complete
+    2024/06/24 13:48:42 [WARN] agent: Serf shutdown detected, quitting    2024/06/24 13:48:47 [INFO] agent.ipc: Graceful leave triggered
+    2024/06/24 13:48:47 [INFO] agent: requesting graceful leave from Serf
+    2024/06/24 13:48:47 [INFO] serf: EventMemberLeave: zna2 127.0.0.1
+    2024/06/24 13:48:48 [INFO] agent: Received event: member-leave
+    2024/06/24 13:48:48 [INFO] agent: requesting serf shutdown
+    2024/06/24 13:48:48 [INFO] agent: shutdown complete
+    2024/06/24 13:48:48 [WARN] agent: Serf shutdown detected, quitting
+==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: 'zna'
+         Bind addr: '127.0.0.1:5000'
+                       RPC addr: '127.0.0.1:7373'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+
+==> Log data will now stream in as it occurs:
+
+    2024/06/24 13:49:44 [INFO] agent: Serf agent starting
+    2024/06/24 13:49:44 [INFO] serf: EventMemberJoin: zna 127.0.0.1
+    2024/06/24 13:49:44 [INFO] agent.ipc: Accepted client: 127.0.0.1:42428
+    2024/06/24 13:49:44 [INFO] agent: joining: [127.0.0.1:5000 127.0.0.1:5001] replay: false
+    2024/06/24 13:49:44 [INFO] agent: joined: 1 nodes
+==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: 'zna2'
+         Bind addr: '127.0.0.1:5001'
+                       RPC addr: '127.0.0.1:7374'
+                      Encrypted: false
+                       Snapshot: false
+                        Profile: lan
+    Message Compression Enabled: true
+
+==> Log data will now stream in as it occurs:
+
+    2024/06/24 13:49:44 [INFO] agent: Serf agent starting
+    2024/06/24 13:49:44 [INFO] serf: EventMemberJoin: zna2 127.0.0.1
+    2024/06/24 13:49:44 [INFO] agent.ipc: Accepted client: 127.0.0.1:35018
+    2024/06/24 13:49:44 [INFO] agent: joining: [127.0.0.1:5000 127.0.0.1:5001] replay: false
+    2024/06/24 13:49:44 [INFO] serf: EventMemberJoin: zna2 127.0.0.1    2024/06/24 13:49:44 [INFO] serf: EventMemberJoin: zna 127.0.0.1
+
+    2024/06/24 13:49:44 [INFO] agent: joined: 2 nodes
+    2024/06/24 13:49:45 [INFO] agent: Received event: member-join
+    2024/06/24 13:49:45 [INFO] agent: Received event: member-join
+    2024/06/24 14:10:53 [INFO] agent.ipc: Accepted client: 127.0.0.1:45144
+==> Caught signal: interrupt==> Caught signal: interrupt
+
+==> Gracefully shutting down agent...==> Gracefully shutting down agent...
+
+    2024/06/24 15:03:47 [INFO] agent: requesting graceful leave from Serf    2024/06/24 15:03:47 [INFO] agent: requesting graceful leave from Serf
+
+    2024/06/24 15:03:47 [INFO] serf: EventMemberLeave: zna2 127.0.0.1
+    2024/06/24 15:03:47 [INFO] serf: EventMemberLeave: zna 127.0.0.1
+    2024/06/24 15:03:47 [INFO] serf: EventMemberLeave: zna2 127.0.0.1
+    2024/06/24 15:03:47 [INFO] serf: EventMemberLeave: zna 127.0.0.1
+    2024/06/24 15:03:47 [INFO] agent: requesting serf shutdown    2024/06/24 15:03:47 [INFO] agent: requesting serf shutdown
+
+    2024/06/24 15:03:47 [WARN] serf: Shutdown without a Leave    2024/06/24 15:03:47 [WARN] serf: Shutdown without a Leave
+
+    2024/06/24 15:03:47 [INFO] agent: shutdown complete    2024/06/24 15:03:47 [INFO] agent: shutdown complete
+
+    2024/06/24 15:03:47 [WARN] agent: Serf shutdown detected, quitting

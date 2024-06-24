@@ -5,6 +5,10 @@
 #include <unistd.h> // For sleep()
 #include "serf-cpp/Config.h"
 #include <regex>
+#include<thread>
+#ifndef SerfModule
+
+#define SerfModule
 
 namespace SerfCpp
 { 
@@ -15,34 +19,56 @@ class SerfAgent {
 public:
 //"serf agent -node=" + nodeConfig.getNodeName() + "-bind=" + nodeConfig.getIPAddress() +":"+ nodeConfig.getPort()
     void Create(Config &nodeConfig){
-        Config currentConfig("dummy",m_ip,m_port,m_rpcAddr,m_rpcPort);
+        this->instanceConfig = nodeConfig;
+        Config currentConfig ;
         if(currentConfig == nodeConfig){
             throw std::runtime_error("Already created a serf agent with this config");
         }
-        std::string command = "serf agent -node=" + nodeConfig.getNodeName() + 
-        " -bind=" + nodeConfig.getIPAddress() +":"+ nodeConfig.getPort() +
-        " -rpc-addr="+nodeConfig.getrpcAddress()+":"+nodeConfig.getRpcPort()+" >> agent.log &"; 
+            workerThread = std::thread(&SerfAgent::RunAgent, this);
+            initializeSerfAgent(nodeConfig.getIPAddress(), nodeConfig.getPort(),nodeConfig.getrpcAddress(),nodeConfig.getRpcPort()); 
+            SerfClient::SerfResponse resp;
+            while (!m_client.IsConnected()) {
+             resp = m_client.Connect(m_rpcAddr, static_cast<uint16_t>(std::stoi(m_rpcPort)));
+
+            }
+            std::string connected = m_client.IsConnected()?"Connected!":"Not Connected!!!!";
+            std::cout<<connected<<std::endl;
+        // std::string command = "serf agent -node=" + nodeConfig.getNodeName() + 
+        // " -bind=" + nodeConfig.getIPAddress() +":"+ nodeConfig.getPort() +
+        // " -rpc-addr="+nodeConfig.getrpcAddress()+":"+nodeConfig.getRpcPort()+" >> agent.log &"; 
+        
+        // if(system(command.c_str()) == 0){
+
+        //     std::cout << "Command executed successfully." << std::endl;
+        //     initializeSerfAgent(nodeConfig.getIPAddress(), nodeConfig.getPort(),nodeConfig.getrpcAddress(),nodeConfig.getRpcPort()); 
+        //     //================================ Creation Phase Done, Connection Phase Start ==================================//
+        //     std::cout<<"Trying to connect ....."<<std::endl;
+        //    // usleep(50000); //20 ms for startup of serf agent and logging in file
+        //     SerfClient::SerfResponse resp;
+        //     while (!m_client.IsConnected()) {
+        //      //   std::cout<<"m_ip : "<<m_ip<<" m_port : "<<m_port<<std::endl;
+        //      //   throw std::runtime_error("Failed to connect to serf agent with the current config ");
+        //      resp = m_client.Connect(m_rpcAddr, static_cast<uint16_t>(std::stoi(m_rpcPort)));
+        //     }
+        //     std::string connected = m_client.IsConnected()?"Connected!":"Not Connected!!!!";
+        //     std::cout<<connected<<std::endl;
+        // } else {
+        //     throw std::runtime_error("Failed to create serf agent with the specified config");
+        // }
+    }
+    void RunAgent() {
+            std::string command = "serf agent -node=" + instanceConfig.getNodeName() + 
+        " -bind=" + instanceConfig.getIPAddress() +":"+ instanceConfig.getPort() +
+        " -rpc-addr="+instanceConfig.getrpcAddress()+":"+instanceConfig.getRpcPort()+" >> agent.log"; 
         
         if(system(command.c_str()) == 0){
 
             std::cout << "Command executed successfully." << std::endl;
-            initializeSerfAgent(nodeConfig.getIPAddress(), nodeConfig.getPort(),nodeConfig.getrpcAddress(),nodeConfig.getRpcPort()); 
-            //================================ Creation Phase Done, Connection Phase Start ==================================//
-            std::cout<<"Trying to connect ....."<<std::endl;
-           // usleep(50000); //20 ms for startup of serf agent and logging in file
-            SerfClient::SerfResponse resp;
-            while (!m_client.IsConnected()) {
-             //   std::cout<<"m_ip : "<<m_ip<<" m_port : "<<m_port<<std::endl;
-             //   throw std::runtime_error("Failed to connect to serf agent with the current config ");
-             resp = m_client.Connect(m_rpcAddr, static_cast<uint16_t>(std::stoi(m_rpcPort)));
-            }
-            std::string connected = m_client.IsConnected()?"Connected!":"Not Connected!!!!";
-            std::cout<<connected<<std::endl;
+         
         } else {
             throw std::runtime_error("Failed to create serf agent with the specified config");
         }
     }
-
     void Connect(){
         SerfClient::SerfResponse resp = m_client.Connect(m_ip, static_cast<uint16_t>(std::stoi(m_port)));
         if (resp != SerfClient::SUCCESS) {
@@ -155,6 +181,9 @@ public:
     void Version(uint32_t &major, uint32_t &minor, uint32_t &patch){
         m_client.Version(major, minor, patch);
     }
+     void wait() {
+        workerThread.join();
+    }
 private:
     void initializeSerfAgent(const std::string& ip, const std::string& port, const std::string& rpcAddr, const std::string& rpcPort){
         m_ip = ip;
@@ -162,6 +191,7 @@ private:
         m_rpcAddr = rpcAddr;
         m_rpcPort = rpcPort;
     } 
+    
     // Client for usage after intialization 
     SerfClient m_client;
 //  bool isIntialized;
@@ -170,7 +200,13 @@ private:
     std::string m_port;
     std::string m_rpcAddr;
     std::string m_rpcPort;
+    std::thread workerThread;
+    Config instanceConfig;
+    
 };
 }
 
 
+
+
+#endif

@@ -17,7 +17,7 @@ using grpc::ClientReaderWriter;
   ProduceResponse MyClient::Produce(std::string a) {
     // Data to be sent to server
     Record  * myRecord = new Record();
-    myRecord->set_value("mostafa");
+    myRecord->set_value(a);
 
     ProduceRequest request;
     request.set_allocated_record(myRecord);

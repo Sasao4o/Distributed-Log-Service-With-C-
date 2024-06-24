@@ -3,9 +3,20 @@
 #include <regex>
 #include <stdexcept>
 
+#ifndef ConfigHeader
+#define ConfigHeader
 class Config {
 public:
-    Config(const std::string& nodeName, const std::string& ipAddress, const std::string& port, const std::string& rpcAddress, const std::string& rpcPort) {
+    Config() {
+        this->nodeName = "default";
+        this->ipAddress = "127.0.0.1";
+        this->port = "7946";
+        this->rpcAddress = "127.0.0.1";
+        this->rpcPort = "7373";
+        this->ipAddresses = {};
+        this->ports = {};
+    }
+    Config(const std::string& nodeName, const std::string& ipAddress, const std::string& port, const std::string& rpcAddress, const std::string& rpcPort ,  std::vector<std::string>&ipAddresses,std::vector<std::string>&ports) {
         // if (!isValidIPAddress(ipAddress) || !isValidPort(port)) {
         //     //std::cerr << "Invalid IP address or port. Configuration aborted." << std::endl;
         //     // Destroy the object by throwing an exception
@@ -17,6 +28,8 @@ public:
         this->port = port;
         this->rpcAddress = rpcAddress;
         this->rpcPort = rpcPort;
+        this->ipAddresses = ipAddresses;
+        this->ports = ports;
     }
 
     bool isValidIPAddress(const std::string& str) {
@@ -50,6 +63,13 @@ public:
     std::string getRpcPort() const {
         return rpcPort;
     }
+    std::vector<std::string> getPorts() const {
+        return ports;
+    }
+
+      std::vector<std::string> getIPAddresses() const {
+        return ipAddresses;
+    }
 
     bool operator==(const Config& other) const {
         return (ipAddress == other.ipAddress && port == other.port);
@@ -60,4 +80,8 @@ private:
     std::string port;
     std::string rpcAddress;
     std::string rpcPort;
+    std::vector<std::string>ipAddresses;
+    std::vector<std::string>ports;
 };
+
+#endif
