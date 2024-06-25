@@ -4,3 +4,5 @@
 -you could optimize this further and make the locks per segment rather than across the whole log
 
 -ShutDown the RPC in safe way? there is SHUTDOWN method? when we shutdown are there singals handlers?
+
+- Replicator is just a second enhanced client.

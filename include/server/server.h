@@ -25,7 +25,7 @@ using namespace logModule;
     // }
 
 
-    void RunServer();
+    void RunServer(std::string server_address);
     void ShutServer();
     Logging::Service * GetService();
     Logging::Service *service;

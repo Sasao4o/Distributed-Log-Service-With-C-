@@ -21,7 +21,7 @@ int main() {
   lg.SetUp();
   LogImplementation service(&lg);
   BussinessServer s(&service);
-  s.RunServer();
+  s.RunServer("0.0.0.0:50051");
  
 
 }

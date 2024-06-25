@@ -24,7 +24,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 project(PROLOG C CXX)
 
 set(CPP_LIST ${})
-list(APPEND CPP_LIST ${CPP_LIST}  "./src/log/log.cpp" "./src/disk/file.cpp" "./src/segment/segment.cpp" "./src/store/store.cpp" "./src/index/index.cpp" "./src/server/server.cpp" "./src/server/client.cpp")
+list(APPEND CPP_LIST ${CPP_LIST}  "./src/log/log.cpp" "./src/disk/file.cpp" "./src/segment/segment.cpp" "./src/store/store.cpp" "./src/index/index.cpp" "./src/server/server.cpp" "./src/server/client.cpp" "./src/server/replicator.cpp")
 # set(CPP_SEGMENT_LIST ${})
 # list(APPEND CPP_SEGMENT_LIST ${CPP_SEGMENT_LIST} ${CPP_LIST}) 
 # list(APPEND CPP_SEGMENT_LIST ${CPP_SEGMENT_LIST} "./cmake/build/logprog.pb.cc")
@@ -88,10 +88,14 @@ add_executable(segment_test
 
 add_executable(grpc_test
     "./test/grpc/grpc_test.cpp" "./src/log/log.cpp" "./cmake/build/logprog.pb.cc" "./src/disk/File.cpp" "./src/segment/segment.cpp" "./src/index/index.cpp" "./src/store/store.cpp" "./src/server/server.cpp" "./src/server/client.cpp")
- 
+
+add_executable(replicator_test
+    "./test/grpc/replicator_test.cpp" "./src/log/log.cpp" "./cmake/build/logprog.pb.cc" "./src/disk/File.cpp" "./src/segment/segment.cpp" "./src/index/index.cpp" "./src/store/store.cpp" "./src/server/server.cpp" "./src/server/client.cpp" "./src/server/replicator.cpp")
+
 target_compile_options(log_test PRIVATE -lprotobuf-c -pthread)
 target_compile_options(segment_test PRIVATE -lprotobuf-c -pthread)
 target_compile_options(grpc_test PRIVATE -lprotobuf-c -pthread)
+target_compile_options(replicator_test PRIVATE -lprotobuf-c -pthread)
 target_compile_options(store_test PRIVATE -pthread)
 target_link_libraries(segment_test
     logprog_grpc_proto
@@ -113,7 +117,12 @@ target_link_libraries(log_test
     ${_PROTOBUF_LIBPROTOBUF}
     )
 
-
+    target_link_libraries(replicator_test
+    logprog_grpc_proto
+    ${_REFLECTION}
+    ${_GRPC_GRPCPP}
+    ${_PROTOBUF_LIBPROTOBUF}
+    )
     
     target_link_libraries(store_test
     PRIVATE

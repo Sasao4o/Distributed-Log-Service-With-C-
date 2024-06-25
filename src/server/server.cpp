@@ -120,8 +120,8 @@ Status LogImplementation::ConsumeStream(ServerContext* context,const ConsumeRequ
 BussinessServer::BussinessServer(Logging::Service *service) {
  this->service = service;
 }
-void BussinessServer::RunServer() {
-  std::string server_address("0.0.0.0:50051");
+void BussinessServer::RunServer(std::string server_address) {
+  //std::string server_address("0.0.0.0:50051");
  
   
  
