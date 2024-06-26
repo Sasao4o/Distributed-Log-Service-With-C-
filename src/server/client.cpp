@@ -107,16 +107,22 @@ using grpc::ClientReaderWriter;
     ClientContext context;
    std::shared_ptr<grpc::ClientReader<ConsumeResponse>> stream(
             stub_->ConsumeStream(&context, request));
-
+    
+    
     // Actual Remote Procedure Call
      while(1) {
       if (stream->Read(&response)){
        std::cout << "Response is " << response.record().value() << std::endl;
+     }else {
+      break;
      }
+     records.push_back(response.record());
      }
-  // Status status = stream->Finish();
-  //   // Returns results based on RPC status
-  //   if (status.ok()) {
+  Status status = stream->Finish();
+    // Returns results based on RPC status
+    if (!status.ok()) {
+      std::cerr << "consumeStream RPC failed: " << status.error_message() << std::endl;
+    }
   //    std::cout << "Consume Success" << std::endl;
   //    std::cout << "Response is " << response.record().value() << std::endl;
   //   } else {

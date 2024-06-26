@@ -54,33 +54,37 @@ MyClient ClientConnection(std::string addr) {
   BussinessServer * bs = new BussinessServer();
   std::string addr = "0.0.0.0:50051";
   std::thread serverOneThread(RunServer, bs, addr);
-   std::this_thread::sleep_for(std::chrono::milliseconds(500));
+   //std::this_thread::sleep_for(std::chrono::milliseconds(500));
  
   MyClient b = ClientConnection(addr);
   b.Produce("mostafa");
-  //b.produce("Ali");
-  ConsumeResponse response = b.Consume(0);
+  b.Produce("Ali");
+  ConsumeResponse response = b.Consume(1);
   std::cout << response.record().value() << std::endl;
-  assert(response.record().value() == "mostafa");
+  assert(response.record().value() == "Ali");
 
 // Second Server is up
   BussinessServer * bs2 = new BussinessServer();
   std::string addr2 = "0.0.0.0:50052";
   std::thread serverTwoThread(RunServer2, bs2, addr2);
+   
    std::this_thread::sleep_for(std::chrono::milliseconds(500));
 
   Replicator replicator(addr2);
+
   replicator.Join("Node Two",addr);
   
-  replicator.Close();
+  //replicator.Close();
 
-  MyClient c = ClientConnection(addr2);
-  ConsumeResponse response2 = c.Consume(0);
-  std::cout << response2.record().value() << std::endl;
-  assert(response2.record().value() == "mostafa");
- 
-  bs->ShutServer();
+  std::cout<<"REPLICATOR RECORDS SIZE :: "<<replicator.records.size()<<std::endl;
+  //MyClient c = ClientConnection(addr2);
+  // ConsumeResponse response2 = replicator.getLocalClient()->Consume(0);
+  // std::cout << response2.record().value() << std::endl;
+  assert(b.records.size() == replicator.records.size());
+  std::cout<<"REPLICATOR RECORDS SIZE AGAIN :: "<<replicator.records.size()<<std::endl;
+
   bs2->ShutServer();
+  bs->ShutServer();
   serverOneThread.join();
   serverTwoThread.join();
   

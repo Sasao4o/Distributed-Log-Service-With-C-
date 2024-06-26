@@ -3,6 +3,7 @@
 #include <map>
 #include <mutex>
 #include <condition_variable>
+#include "../../include/server/client.h"
 #include "../../cmake/build/logprog.grpc.pb.h"
 
 using namespace logprog::v1;
@@ -14,11 +15,8 @@ using grpc::ClientReaderWriter;
 
 class Replicator {
 public:
-    std::unique_ptr<Logging::Stub> LocalClient;
-    std::mutex mu;
-    std::map<std::string, std::shared_ptr<std::condition_variable>> servers;
-    bool closed = false;
-    std::shared_ptr<std::condition_variable> close;
+
+    std::vector<Record> records;
 
     Replicator(std::string address) {
         init(address);
@@ -34,12 +32,13 @@ public:
 
         if (servers.find(name) != servers.end()) {
             // already replicating so skip
+
             return;
         }
-
+        
         servers[name] = std::make_shared<std::condition_variable>();
-
-        std::thread(&Replicator::replicate, this, addr, servers[name]).detach();
+        std::cout<<"HERRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRE"<< std::endl;
+        std::thread(&Replicator::replicate,this,addr, servers[name]).detach();
     }
 
     void replicate(const std::string& addr, std::shared_ptr<std::condition_variable> leave) {
@@ -48,50 +47,39 @@ public:
 
         ClientContext context;
         ConsumeRequest request;
+        ConsumeResponse response;
         request.set_offset(0);
 
         std::shared_ptr<grpc::ClientReader<ConsumeResponse>> stream(
             client->ConsumeStream(&context, request));
 
+        std::cout<<"REPLI_____________HERRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRE"<< std::endl;
         if (!stream) {
             //logError("failed to consume", addr);
             std::cerr << "failed to consume" << std::endl;
             return;
         }
 
-        //std::vector<Record> records;
-
         while (true) {
-            
-
-            ConsumeResponse response;
-            if (!stream->Read(&response)) {
-                //logError("failed to receive", addr);
-                std::cerr << "failed to receive" << std::endl;
-                return;
+        
+            if(stream->Read(&response)){
+                std::cout << "Response is " << response.record().value() << std::endl;
+            } else {
+                std::cout << "No response" << std::endl;
+                break;
             }
-            //records.push_back(response.record());
-
-            //for (auto& record : records) {
-            ProduceRequest produce_request;
-            Record * rec = new Record();
-            rec->set_value(response.record().value());
-            rec->set_offset(response.record().offset());
-            produce_request.set_allocated_record(rec);
-            ClientContext produce_context;
-            Status status = LocalClient->Produce(&produce_context, produce_request, nullptr);
-            if (!status.ok()) {
-                //logError("failed to produce", addr);
-                std::cerr << "failed to produce" << std::endl;
-                return;
-            }
+                
+            records.push_back(response.record());
 
             std::unique_lock<std::mutex> lock(mu);
             // If this client (We are consuming from) notifies its leave we will break or We closed ofcourse 
             if (closed || leave->wait_for(lock, std::chrono::milliseconds(150)) == std::cv_status::timeout) {
-                break;
+                return;
             }
             //}
+        }
+        for(auto& record : records){
+            LocalClient->Produce(record.value());
         }
     }
 
@@ -117,11 +105,12 @@ public:
         close->notify_all();
     }
 
+    MyClient* getLocalClient(){
+        return LocalClient;
+    }
 private:
     void init(std::string address) {
-
-        auto channel = grpc::CreateChannel(address, grpc::InsecureChannelCredentials());
-        LocalClient = Logging::NewStub(channel);
+        LocalClient = new MyClient(grpc::CreateChannel(address, grpc::InsecureChannelCredentials()));
 
         if (servers.empty()) {
             servers = std::map<std::string, std::shared_ptr<std::condition_variable>>();
@@ -131,6 +120,11 @@ private:
         }
     }
 
+    MyClient* LocalClient;
+    std::mutex mu;
+    std::map<std::string, std::shared_ptr<std::condition_variable>> servers;
+    bool closed = false;
+    std::shared_ptr<std::condition_variable> close;
     // void logError(const std::string& msg, const std::string& addr) {
     //     logger->Error(msg, {{"addr", addr}});
     // }

@@ -84,18 +84,17 @@ using grpc::ServerWriter;
 Status LogImplementation::ConsumeStream(ServerContext* context,const ConsumeRequest* req,  ServerWriter<ConsumeResponse>* writer)  {
           uint64_t offset = req->offset();
             while (1) {
-             
+              
             ConsumeResponse res;
              ConsumeRequest newReq;
             newReq.set_offset(offset);
             Status status = Consume(context, &newReq, &res);
             if (status.ok()) {
-                if (!writer->Write(res)) {
-                    return grpc::Status(grpc::StatusCode::INTERNAL, "Failed to write response");
-                }
+              std::cerr<<"WRITING RESPONSE  :: "<< res.record().value() <<std::endl;
+                writer->Write(res);
                  offset++;
             } else {
-              continue;
+              break;
             }
             // else if (status.error_code() == grpc::StatusCode::NOT_FOUND) {
             //   std::cout << "NO FOUND " << std::endl;

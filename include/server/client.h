@@ -21,6 +21,8 @@ public:
 
     void ConsumeStream(uint64_t offset);
 
+    std::vector<Record> records; // For testing
+
 private:
     std::unique_ptr<Logging::Stub> stub_;
 };
