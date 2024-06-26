@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-logsData/
-cmake/
-build/
-=======
 logsData/
 cmake/
 build/
@@ -39,4 +34,3 @@ serf-cpp/*.lib
 serf-cpp/*.exe
 serf-cpp/*.out
 serf-cpp/*.app
->>>>>>> origin/WaelBranch
