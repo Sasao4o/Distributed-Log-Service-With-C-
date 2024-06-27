@@ -18,8 +18,8 @@ public:
 
     std::vector<Record> records;
 
-    Replicator(std::string address) {
-        init(address);
+    Replicator(MyClient client) {
+        init(client);
     }
 
     void Join(const std::string& name, const std::string& addr) {
@@ -38,10 +38,12 @@ public:
         
         servers[name] = std::make_shared<std::condition_variable>();
         std::cout<<"HERRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRE"<< std::endl;
-        std::thread(&Replicator::replicate,this,addr, servers[name]).detach();
+        std::thread th(&Replicator::replicate,this,addr, servers[name]);
+        th.join();
     }
 
     void replicate(const std::string& addr, std::shared_ptr<std::condition_variable> leave) {
+        records.clear();
         auto channel = grpc::CreateChannel(addr, grpc::InsecureChannelCredentials());
         std::unique_ptr<Logging::Stub> client = Logging::NewStub(channel);
 
@@ -63,23 +65,26 @@ public:
         while (true) {
         
             if(stream->Read(&response)){
-                std::cout << "Response is " << response.record().value() << std::endl;
-            } else {
+                std::cout << "Response isssss " << response.record().value() << std::endl;
+                records.push_back(response.record());
+            } 
+            else {
                 std::cout << "No response" << std::endl;
                 break;
             }
                 
-            records.push_back(response.record());
+            // records.push_back(response.record());
 
-            std::unique_lock<std::mutex> lock(mu);
+            // std::unique_lock<std::mutex> lock(mu);
             // If this client (We are consuming from) notifies its leave we will break or We closed ofcourse 
-            if (closed || leave->wait_for(lock, std::chrono::milliseconds(150)) == std::cv_status::timeout) {
-                return;
-            }
+            // || leave->wait_for(lock, std::chrono::milliseconds(150)) == std::cv_status::timeout
+            // if (closed) {
+                // return;
+            // }
             //}
         }
         for(auto& record : records){
-            LocalClient->Produce(record.value());
+            LocalClient.Produce(record.value());
         }
     }
 
@@ -105,13 +110,13 @@ public:
         close->notify_all();
     }
 
-    MyClient* getLocalClient(){
+    MyClient getLocalClient(){
         return LocalClient;
     }
 private:
-    void init(std::string address) {
-        LocalClient = new MyClient(grpc::CreateChannel(address, grpc::InsecureChannelCredentials()));
-
+    void init(MyClient client) {
+        // LocalClient = new MyClient(grpc::CreateChannel(address, grpc::InsecureChannelCredentials()));
+        LocalClient = client;
         if (servers.empty()) {
             servers = std::map<std::string, std::shared_ptr<std::condition_variable>>();
         }
@@ -120,7 +125,7 @@ private:
         }
     }
 
-    MyClient* LocalClient;
+    MyClient LocalClient;
     std::mutex mu;
     std::map<std::string, std::shared_ptr<std::condition_variable>> servers;
     bool closed = false;

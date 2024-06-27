@@ -11,7 +11,7 @@ using grpc::ClientReaderWriter;
  
  
   MyClient::MyClient(std::shared_ptr<Channel> channel)
-      : stub_(Logging::NewStub(channel)) {}
+      : stub_(Logging::NewStub(channel)), channel_(channel) {}
 
   // Assembles client payload, sends it to the server, and returns its response
   ProduceResponse MyClient::Produce(std::string a) {
@@ -110,19 +110,18 @@ using grpc::ClientReaderWriter;
     
     
     // Actual Remote Procedure Call
-     while(1) {
-      if (stream->Read(&response)){
-       std::cout << "Response is " << response.record().value() << std::endl;
-     }else {
-      break;
-     }
-     records.push_back(response.record());
+     while(stream->Read(&response)) {
+       std::cout << "Response is From Client.cpp" << response.record().value() << std::endl;
+       records.push_back(response.record());
      }
   Status status = stream->Finish();
     // Returns results based on RPC status
+   
     if (!status.ok()) {
-      std::cerr << "consumeStream RPC failed: " << status.error_message() << std::endl;
-    }
+  std::cerr << "consumeStream RPC failed: " << status.error_message()
+            << " (" << status.error_code() << "): " << status.error_details() << std::endl;
+}
+
   //    std::cout << "Consume Success" << std::endl;
   //    std::cout << "Response is " << response.record().value() << std::endl;
   //   } else {
@@ -134,7 +133,24 @@ using grpc::ClientReaderWriter;
 
   }
  
+MyClient::MyClient(const MyClient& other)
+    : channel_(other.channel_), 
+      stub_(Logging::NewStub(other.channel_)) {}
 
+
+ MyClient& MyClient::operator=(const MyClient& other) {
+    if (this == &other) {
+        return *this; // Handle self-assignment
+    }
+
+    // Copy channel
+    channel_ = other.channel_;
+
+    // Recreate the stub with the copied channel
+    stub_ = Logging::NewStub(other.channel_);
+ 
+    return *this;
+}
 //   int main() {
 //     std::string target_address("0.0.0.0:50051");
 //   // Instantiates the client

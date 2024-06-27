@@ -101,6 +101,7 @@ namespace logModule {
   return segments[0]->getBaseOffset();
  }
 uint64_t Log::HighestOffset() {
+    std::lock_guard<std::mutex> lock(mtx);
    if (segments.size() == 0) {
     return 0; //what error can i return here? LOOK HERE
    }

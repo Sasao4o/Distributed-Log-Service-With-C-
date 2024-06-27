@@ -11,8 +11,12 @@ using namespace logprog::v1;
 
 class MyClient {
 public:
+    MyClient() {};
     MyClient(std::shared_ptr<grpc::Channel> channel);
-
+   
+    MyClient& operator=(const MyClient& other);
+    MyClient(const MyClient& other);
+ 
     ProduceResponse Produce(std::string a);
 
     ConsumeResponse Consume(uint64_t offset);
@@ -25,6 +29,7 @@ public:
 
 private:
     std::unique_ptr<Logging::Stub> stub_;
+    std::shared_ptr<grpc::Channel> channel_;
 };
 
 #endif  

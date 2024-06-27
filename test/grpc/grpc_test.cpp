@@ -54,7 +54,7 @@ MyClient ClientConnection(std::string target_address) {
    BussinessServer * bs = new BussinessServer();
   std::string addr = "0.0.0.0:50051";
   std::thread serverOneThread(RunServer, bs, addr);
-   //std::this_thread::sleep_for(std::chrono::milliseconds(500));
+      std::this_thread::sleep_for(std::chrono::milliseconds(2000));
  
   MyClient b = ClientConnection(addr);
   b.Produce("mostafa");
@@ -67,7 +67,7 @@ MyClient ClientConnection(std::string target_address) {
   BussinessServer * bs2 = new BussinessServer();
   std::string addr2 = "0.0.0.0:50052";
   std::thread serverTwoThread(RunServer2, bs2, addr2);
-   std::this_thread::sleep_for(std::chrono::milliseconds(500));
+   std::this_thread::sleep_for(std::chrono::milliseconds(2000));
 
   //Replicator replicator(addr2);
   //replicator.Join("Node Two",addr);
@@ -89,8 +89,8 @@ MyClient ClientConnection(std::string target_address) {
   // std::cout << response2.record().value() << std::endl;
   // assert(response2.record().value() == "mostafa");
  
-  bs2->ShutServer();
-  bs->ShutServer();
+    bs2->ShutServer();
+    bs->ShutServer();
   serverOneThread.join();
   serverTwoThread.join();
   

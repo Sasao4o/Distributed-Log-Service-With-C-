@@ -30,6 +30,7 @@ using namespace logModule;
     Logging::Service * GetService();
     Logging::Service *service;
     std::unique_ptr< grpc::Server> server;
+    bool running = false;
  };
 
  

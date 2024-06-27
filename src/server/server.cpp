@@ -42,13 +42,20 @@ using grpc::ServerWriter;
     uint64_t offset = request->offset();
 
   std::cout << "offset is " << offset << std::endl;
+  try {
     Record * record  = commitLog_->Read(offset);
-    if (record == nullptr) {
-      std::cout << "Record is nullptr " << std::endl;
+      response->set_allocated_record(record);
+  } 
+  catch (const std::runtime_error& e) {
+      std::cout << "From The Catch of Consume Server.cpp " << std::endl;
       return Status::CANCELLED;
-    }
+  }
+    // if (record == nullptr) {
+    //   std::cout << "Record is nullptr " << std::endl;
+    //   return Status::CANCELLED;
+    // }
 
-    response->set_allocated_record(record);
+    // response->set_allocated_record(record);
 
     
     return Status::OK;
@@ -83,8 +90,9 @@ using grpc::ServerWriter;
 
 Status LogImplementation::ConsumeStream(ServerContext* context,const ConsumeRequest* req,  ServerWriter<ConsumeResponse>* writer)  {
           uint64_t offset = req->offset();
+          
             while (1) {
-              
+                 std::cout << "Hello World From ConsumeStream" << std::endl;
             ConsumeResponse res;
              ConsumeRequest newReq;
             newReq.set_offset(offset);
@@ -94,6 +102,7 @@ Status LogImplementation::ConsumeStream(ServerContext* context,const ConsumeRequ
                 writer->Write(res);
                  offset++;
             } else {
+              std::cerr << "Consume failed with error: " << status.error_message() << std::endl;
               break;
             }
             // else if (status.error_code() == grpc::StatusCode::NOT_FOUND) {
@@ -107,6 +116,12 @@ Status LogImplementation::ConsumeStream(ServerContext* context,const ConsumeRequ
                 break;
             }
         }
+
+           if (context->IsCancelled()) {
+              std::cout << "Context is Cancelled " << std::endl;
+        
+            }
+            std::cout << "WE COULD EVER EXIST AGAIN!?" << std::endl;
         return grpc::Status::OK;
 
   }
@@ -121,7 +136,7 @@ BussinessServer::BussinessServer(Logging::Service *service) {
 }
 void BussinessServer::RunServer(std::string server_address) {
   //std::string server_address("0.0.0.0:50051");
- 
+
   
  
   ServerBuilder builder;
@@ -134,13 +149,19 @@ void BussinessServer::RunServer(std::string server_address) {
     // std::unique_ptr<Server> server(builder.BuildAndStart());
     server = std::unique_ptr<Server>(builder.BuildAndStart());
   std::cout << "Server listening on port: " << server_address << std::endl;
-
+  running = true;
   server->Wait();
-  
+  std::cout << "9:05" << std::endl;
+  running = false;
+
+
 }
  
   void BussinessServer::ShutServer() {
     std::cout << "Shut Downning the Server" << std::endl;
+    if (!running) {
+      std::cout <<  "Server is Already Off" << std::endl;
+    }
     if (server == nullptr) {
       std::cout << "CANOTTT" << std::endl;
     }
@@ -151,3 +172,6 @@ void BussinessServer::RunServer(std::string server_address) {
  Logging::Service * BussinessServer::GetService() {
   return service;
  }
+
+
+ //Record is nullptr mtb3t4
