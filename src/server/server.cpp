@@ -83,7 +83,7 @@ using grpc::ServerWriter;
 
 Status LogImplementation::ConsumeStream(ServerContext* context,const ConsumeRequest* req,  ServerWriter<ConsumeResponse>* writer)  {
           uint64_t offset = req->offset();
-            while (1) {
+            while (offset < commitLog_->HighestOffset() + 1) {
               
             ConsumeResponse res;
              ConsumeRequest newReq;
