@@ -8,11 +8,11 @@
 #include <netdb.h>
 #include <sys/socket.h>
 #include <unistd.h>
-#include "serf-cpp/ISerfListener.h"
-#include "serf-cpp/SerfClient.h"
-#include "serf-cpp/SerfMsgStructs.h"
-#include "serf-cpp/SerfAgent.h"
-#include "serf-cpp/Config.h"
+#include "../include/serf-cpp/ISerfListener.h"
+#include "../include/serf-cpp/SerfClient.h"
+#include "../include/serf-cpp/SerfMsgStructs.h"
+#include "../include/serf-cpp/SerfAgent.h"
+#include "../include/serf-cpp/Config.h"
 //#include "serf-cpp/Config.h"
 
 using namespace SerfCpp; 

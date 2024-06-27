@@ -5,7 +5,7 @@
 #include <mutex>
 #include <thread>
 
-#include "serf-cpp/SerfMsgStructs.h"
+#include "../include/serf-cpp/SerfMsgStructs.h"
 
 namespace SerfCpp {
 

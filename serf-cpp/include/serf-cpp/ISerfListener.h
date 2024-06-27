@@ -1,6 +1,6 @@
 #pragma once
 
-#include "serf-cpp/SerfMsgStructs.h"
+#include "SerfMsgStructs.h"
 
 namespace SerfCpp {
 

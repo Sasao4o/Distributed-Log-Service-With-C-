@@ -4,4 +4,8 @@
   - It gives a whole lot of options to give over just using a list like the compile options and 
     ability to link multiple libraries together. "And other stuff like enabling certain configs in the projects"
 2 - What are the cmake generator expressions?
-    
+
+3 - To make u don't get the protobuf error run this command : sudo find / -name cmake | grep protobuf 
+    Then locate this file : /home/ahmed/grpc/cmake/build/third_party/protobuf/cmake and 
+    Finally add its path to cmake in that manner : list(APPEND CMAKE_PREFIX_PATH ~/grpc/cmake/build/third_party/protobuf/cmake/protobuf/protobuf-config.cmake)
+    "Add it to the CMAKE_PREFIX_PATH"
