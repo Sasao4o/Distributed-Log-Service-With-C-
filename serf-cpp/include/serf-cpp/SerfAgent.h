@@ -1,14 +1,12 @@
+#pragma once
 #include <cstdlib> // For system function
 #include <iostream>
 #include <string>
-#include "serf-cpp/SerfClient.h"
+#include "SerfClient.h"
 #include <unistd.h> // For sleep()
-#include "serf-cpp/Config.h"
+#include "Config.h"
 #include <regex>
 #include<thread>
-#ifndef SerfModule
-
-#define SerfModule
 
 namespace SerfCpp
 { 
@@ -209,4 +207,3 @@ private:
 
 
 
-#endif
