@@ -1,2 +1,3 @@
  
 protoc --cpp_out=. log.proto   //Compile Protocol Buffer
+cd ../.. && rm -rf cmake && mkdir -p cmake/build && cd cmake/build && cmake ../.. && make -j 6

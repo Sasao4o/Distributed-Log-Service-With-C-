@@ -26,7 +26,7 @@ using grpc::ServerWriter;
     uint64_t *offset = new uint64_t();
 
      commitLog_->Append(&rec, offset);
-    std::cout << rec.value() << std::endl;
+ 
     // if (ok == false){
     //   return Status::CANCELLED;
     // }
@@ -41,13 +41,13 @@ using grpc::ServerWriter;
     // Obtains the original string from the request
     uint64_t offset = request->offset();
 
-  std::cout << "offset is " << offset << std::endl;
+ 
   try {
     Record * record  = commitLog_->Read(offset);
       response->set_allocated_record(record);
   } 
   catch (const std::runtime_error& e) {
-      std::cout << "From The Catch of Consume Server.cpp " << std::endl;
+ 
       return Status::CANCELLED;
   }
     // if (record == nullptr) {
@@ -92,7 +92,7 @@ Status LogImplementation::ConsumeStream(ServerContext* context,const ConsumeRequ
           uint64_t offset = req->offset();
           
             while (1) {
-                 std::cout << "Hello World From ConsumeStream" << std::endl;
+ 
             ConsumeResponse res;
              ConsumeRequest newReq;
             newReq.set_offset(offset);
@@ -121,7 +121,7 @@ Status LogImplementation::ConsumeStream(ServerContext* context,const ConsumeRequ
               std::cout << "Context is Cancelled " << std::endl;
         
             }
-            std::cout << "WE COULD EVER EXIST AGAIN!?" << std::endl;
+   
         return grpc::Status::OK;
 
   }
@@ -151,7 +151,7 @@ void BussinessServer::RunServer(std::string server_address) {
   std::cout << "Server listening on port: " << server_address << std::endl;
   running = true;
   server->Wait();
-  std::cout << "9:05" << std::endl;
+ 
   running = false;
 
 
@@ -162,9 +162,7 @@ void BussinessServer::RunServer(std::string server_address) {
     if (!running) {
       std::cout <<  "Server is Already Off" << std::endl;
     }
-    if (server == nullptr) {
-      std::cout << "CANOTTT" << std::endl;
-    }
+   
     if (server != nullptr) {
       server->Shutdown();
     }

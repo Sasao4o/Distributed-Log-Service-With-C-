@@ -5,6 +5,7 @@
 
 #ifndef ConfigHeader
 #define ConfigHeader
+namespace SerfCpp {
 class Config {
 public:
     Config() {
@@ -83,5 +84,5 @@ private:
     std::vector<std::string>ipAddresses;
     std::vector<std::string>ports;
 };
-
+}
 #endif

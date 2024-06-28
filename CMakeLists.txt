@@ -27,7 +27,7 @@ project(PROLOG C CXX)
 list(APPEND CMAKE_PREFIX_PATH ~/grpc/cmake/build/third_party/protobuf/cmake/protobuf/protobuf-config.cmake)
 
 set(CPP_LIST ${})
-list(APPEND CPP_LIST ${CPP_LIST}  "./src/log/log.cpp" "./src/disk/file.cpp" "./src/segment/segment.cpp" "./src/store/store.cpp" "./src/index/index.cpp" "./src/server/server.cpp" "./src/server/client.cpp" "./src/server/replicator.cpp")
+list(APPEND CPP_LIST ${CPP_LIST}  "./src/log/log.cpp" "./src/disk/file.cpp" "./src/segment/segment.cpp" "./src/store/store.cpp" "./src/index/index.cpp" "./src/server/server.cpp" "./src/server/client.cpp" "./src/replicator/replicator.cpp")
 # set(CPP_SEGMENT_LIST ${})
 # list(APPEND CPP_SEGMENT_LIST ${CPP_SEGMENT_LIST} ${CPP_LIST}) 
 # list(APPEND CPP_SEGMENT_LIST ${CPP_SEGMENT_LIST} "./cmake/build/logprog.pb.cc")
@@ -77,10 +77,13 @@ target_link_libraries(logprog_grpc_proto
 #   ${_PROTOBUF_LIBPROTOBUF})
 
 # Tests executables "temporary"
-add_executable(Serf_Agent "./serf-cpp/example/SerfAgentExample.cpp" "./serf-cpp/src/SerfChannel.cpp" "./serf-cpp/src/SerfChannel.h" 
+add_executable(Serf_Agent  "./src/runnable/runnable.cpp" "./src/membership/membership.cpp"
+"./serf-cpp/src/SerfChannel.cpp" "./serf-cpp/src/SerfChannel.h" 
 "./serf-cpp/src/SerfClient.cpp" "./serf-cpp/src/SerfIoThread.cpp" "./serf-cpp/src/SerfIoThread.h" "./serf-cpp/src/SerfMsgStructs.cpp"
 "./serf-cpp/include/serf-cpp/SerfAgent.h" "./serf-cpp/include/serf-cpp/SerfClient.h" "./serf-cpp/src/ISerfListener.cpp" 
-"./serf-cpp/include/serf-cpp/ISerfListener.h" "./serf-cpp/include/serf-cpp/SerfMsgStructs.h")
+"./serf-cpp/include/serf-cpp/ISerfListener.h" ${CPP_LIST})
+
+ 
 add_executable(File_test
     "./test/disk/File_test.cpp" "./src/disk/File.cpp")
 add_executable(index_test
@@ -97,14 +100,14 @@ add_executable(grpc_test
     "./test/grpc/grpc_test.cpp" "./src/log/log.cpp" "./cmake/build/logprog.pb.cc" "./src/disk/File.cpp" "./src/segment/segment.cpp" "./src/index/index.cpp" "./src/store/store.cpp" "./src/server/server.cpp" "./src/server/client.cpp")
 
 add_executable(replicator_test
-    "./test/grpc/replicator_test.cpp" "./src/log/log.cpp" "./cmake/build/logprog.pb.cc" "./src/disk/File.cpp" "./src/segment/segment.cpp" "./src/index/index.cpp" "./src/store/store.cpp" "./src/server/server.cpp" "./src/server/client.cpp" "./src/server/replicator.cpp")
+    "./test/grpc/replicator_test.cpp" "./src/log/log.cpp" "./cmake/build/logprog.pb.cc" "./src/disk/File.cpp" "./src/segment/segment.cpp" "./src/index/index.cpp" "./src/store/store.cpp" "./src/server/server.cpp" "./src/server/client.cpp" "./src/replicator/replicator.cpp")
 
 target_compile_options(log_test PRIVATE -lprotobuf-c -pthread)
 target_compile_options(segment_test PRIVATE -lprotobuf-c -pthread)
 target_compile_options(grpc_test PRIVATE -lprotobuf-c -pthread)
 target_compile_options(replicator_test PRIVATE -lprotobuf-c -pthread)
 target_compile_options(store_test PRIVATE -pthread)
-target_compile_options(Serf_Agent PRIVATE -pthread)
+target_compile_options(Serf_Agent PRIVATE -lprotobuf-c -pthread)
 target_link_libraries(segment_test
     logprog_grpc_proto
     ${_REFLECTION}
@@ -137,10 +140,18 @@ target_link_libraries(log_test
     pthread
     )
 
+    # target_link_libraries(Serf_Agent
+    # PRIVATE
+    # pthread
+    # )
+    
     target_link_libraries(Serf_Agent
-    PRIVATE
-    pthread
+    logprog_grpc_proto
+    ${_REFLECTION}
+    ${_GRPC_GRPCPP}
+    ${_PROTOBUF_LIBPROTOBUF}
     )
+    
 # Targets route_guide_(client|server)
 foreach(_target client server)
     file(GLOB RUNNER_FILE "./src/server/${_target}_runner.cpp")

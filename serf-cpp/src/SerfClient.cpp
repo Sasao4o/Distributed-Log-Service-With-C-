@@ -209,7 +209,7 @@ SerfClient::SerfResponse SerfClient::Members(MembersResponse &members) {
 
         //channel.m_dataPending = true;
         if (channel.m_dataPending) {
-            std::cout<<"HERE...."<<"\n";
+       
             members = channel.m_data;
             return (channel.m_hdr.Error.empty()) ? SerfClient::SUCCESS : SerfClient::FAILURE;
         } else {
@@ -449,7 +449,7 @@ SerfClient::SerfResponse SerfClient::Stream(const std::string &type, ISerfEventL
             SerfClient::SerfResponse resp = (channel.m_hdr.Error.empty()) ? SerfClient::SUCCESS : SerfClient::FAILURE;
 
             if (resp == SerfClient::SUCCESS) {
-                std::cout<<"Adding Event Channel"<< std::endl;
+                // std::cout<<"Adding Event Channel"<< std::endl;
                 m_pImpl->m_serfThread.addEventChannel(channel.m_hdr.Seq, listener);
                 seq = channel.m_hdr.Seq;
             }

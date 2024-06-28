@@ -17,11 +17,12 @@ class SerfAgent {
 public:
 //"serf agent -node=" + nodeConfig.getNodeName() + "-bind=" + nodeConfig.getIPAddress() +":"+ nodeConfig.getPort()
     void Create(Config &nodeConfig){
+
         this->instanceConfig = nodeConfig;
         Config currentConfig ;
-        if(currentConfig == nodeConfig){
-            throw std::runtime_error("Already created a serf agent with this config");
-        }
+        // if(currentConfig == nodeConfig){
+        //     throw std::runtime_error("Already created a serf agent with this config");
+        // }
             workerThread = std::thread(&SerfAgent::RunAgent, this);
             initializeSerfAgent(nodeConfig.getIPAddress(), nodeConfig.getPort(),nodeConfig.getrpcAddress(),nodeConfig.getRpcPort()); 
             SerfClient::SerfResponse resp;
@@ -58,7 +59,7 @@ public:
             std::string command = "serf agent -node=" + instanceConfig.getNodeName() + 
         " -bind=" + instanceConfig.getIPAddress() +":"+ instanceConfig.getPort() +
         " -rpc-addr="+instanceConfig.getrpcAddress()+":"+instanceConfig.getRpcPort()+" >> agent.log"; 
-        
+        std::cout << "Running The Serf Agent...." << std::endl;
         if(system(command.c_str()) == 0){
 
             std::cout << "Command executed successfully." << std::endl;

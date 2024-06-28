@@ -1,6 +1,6 @@
 #include <cstdint>
 #ifndef ConfigModule
-#define ConfigMoudle
+#define ConfigModule
 struct Config {
     uint64_t  MaxStoreBytes = 1024;  
 	uint64_t 	MaxIndexBytes = 1024; 

@@ -4,7 +4,7 @@
 #include "../../include/log/log.h"
 #include "../../include/server/server.h"
 #include "../../include/server/client.h"
-#include "../../src/server/replicator.cpp"
+#include "../../include/replicator/replicator.h"
 #include<iostream>
 #include <thread>
 
@@ -72,8 +72,8 @@ MyClient ClientConnection(std::string addr) {
    MyClient client2 = ClientConnection(addr2);
  
   Replicator replicator(client2);
-
-  replicator.Join("Node Two",addr);
+  std::string nodeName = "Node Two";
+  replicator.Join(nodeName,addr);
   
   //replicator.Close();
 
